@@ -1,5 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
+
+#HEEEELLLLLPPPPPPP
 """
 This experiment was created using PsychoPy2 Experiment Builder (v1.85.1),
     on Mon Feb 19 14:40:12 2018
