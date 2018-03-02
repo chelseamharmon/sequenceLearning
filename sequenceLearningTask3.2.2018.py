@@ -3,7 +3,7 @@
 
 #Chelsea Harmon 
 #cmh2228@columbia.edu
-#February 2018 
+#March 2018 
 
 """
 This experiment was created using PsychoPy2 Experiment Builder (v1.85.1),
@@ -753,360 +753,364 @@ for thisComponent in instructions2Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
 
+#
+#
 # set up handler to look after randomisation of conditions etc
-trials_2 = data.TrialHandler(nReps=25, method='random', 
+#trials_1 = data.TrialHandler(nReps=25, method='random', 
+#    extraInfo=expInfo, originPath=-1,
+#    trialList=data.importConditions(u'random.xlsx'),
+#    seed=None, name='trials_1')
+#thisExp.addLoop(trials_1)  # add the loop to the experiment
+#thisTrial_1 = trials_1.trialList[0]  # so we can initialise stimuli with some values
+# abbreviate parameter names if possible (e.g. rgb = thisTrial_1.rgb)
+#if thisTrial_1 != None:
+#    for paramName in thisTrial_1.keys():
+#        exec(paramName + '= thisTrial_1.' + paramName)
+#
+#for thisTrial_1 in trials_1:
+#    currentLoop = trials_1
+#    # abbreviate parameter names if possible (e.g. rgb = thisTrial_1.rgb)
+#    if thisTrial_1 != None:
+#        for paramName in thisTrial_1.keys():
+#            exec(paramName + '= thisTrial_1.' + paramName)
+#            
+#    # ------Prepare to start Routine "randomStim"-------
+#    t = 0
+#    randomStimClock.reset()  # clock
+#    frameN = -1
+#    continueRoutine = True
+#    # update component parameters for each repeat
+#    image.setImage(randomPaw)
+#    key_resp_9 = event.BuilderKeyResponse()
+#    # keep track of which components have finished
+#    randomStimComponents = [image, key_resp_9]
+#    for thisComponent in randomStimComponents:
+#        if hasattr(thisComponent, 'status'):
+#            thisComponent.status = NOT_STARTED
+#    
+#    # -------Start Routine "randomStim"-------
+#    while continueRoutine:
+#        # get current time
+#        t = randomStimClock.getTime()
+#        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+#        # update/draw components on each frame
+#        
+#        # *image* updates
+#        if t >= 0.0 and image.status == NOT_STARTED:
+#            # keep track of start time/frame for later
+#            image.tStart = t
+#            image.frameNStart = frameN  # exact frame index
+#            image.setAutoDraw(True)
+#        frameRemains = 0.0 + 50.0- win.monitorFramePeriod * 0.75  # most of one frame period left
+#        if image.status == STARTED and t >= frameRemains:
+#            image.setAutoDraw(False)
+#        
+#        # *key_resp_9* updates
+#        if t >= 0.0 and key_resp_9.status == NOT_STARTED:
+#            # keep track of start time/frame for later
+#            key_resp_9.tStart = t
+#            key_resp_9.frameNStart = frameN  # exact frame index
+#            key_resp_9.status = STARTED
+#            # AllowedKeys looks like a variable named `allowableKey`
+#            if not type(allowableKey) in [list, tuple, np.ndarray]:
+#                if not isinstance(allowableKey, basestring):
+#                    logging.error('AllowedKeys variable `allowableKey` is not string- or list-like.')
+#                    core.quit()
+#                elif not ',' in allowableKey: allowableKey = (allowableKey,)
+#                else:  allowableKey = eval(allowableKey)
+#            # keyboard checking is just starting
+#            win.callOnFlip(key_resp_9.clock.reset)  # t=0 on next screen flip
+#        if key_resp_9.status == STARTED:
+#            theseKeys = event.getKeys(keyList=list(allowableKey))
+#            
+#            # check for quit:
+#            if "escape" in theseKeys:
+#                endExpNow = True
+#            if len(theseKeys) > 0:  # at least one key was pressed
+#                key_resp_9.keys.extend(theseKeys)  # storing all keys
+#                key_resp_9.rt.append(key_resp_9.clock.getTime())
+#                print('you pressed: ')
+#                print(theseKeys)
+#                print('correct key was ')
+#                print(correctKey)
+#                # was this 'correct'?
+#                #if (theseKeys) == (correctKey):
+#                if ((theseKeys) == (correctKey)): 
+#                #if (key_resp_9.keys == str(u'correctKey')) or (key_resp_9.keys == u'correctKey'):
+#                    print('you got it right!!!')
+#                    print('length of response key:')
+#                    if len(key_resp_9.keys) == 1:
+#                        key_resp_9_corr = 1
+#                        #print('key resp 9 corr should be 1:')
+#                        #print(key_resp_9_corr)
+#                        trialCorrect = 1
+#                        trials_1.addData('trialCorrect',trialCorrect)
+#                    else: 
+#                        key_resp_9_corr = 0
+#                        #print('the first element was not right: should be 0')
+#                        #print(key_resp_9_corr)
+#                        trialCorrect = 0
+#                        trials_1.addData('trialCorrect',trialCorrect)
+#                    #key_resp_9.corr = 1
+#                    continueRoutine = False
+#                else:
+#                    #key_resp_9.corr = 0
+#                    continueRoutine = True
+#                # a response ends the routine
+#                #continueRoutine = True
+#        
+#        # check if all components have finished
+#        if not continueRoutine:  # a component has requested a forced-end of Routine
+#            break
+#        continueRoutine = False  # will revert to True if at least one component still running
+#        for thisComponent in randomStimComponents:
+#            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+#                continueRoutine = True
+#                break  # at least one component has not yet finished
+#        
+#        # check for quit (the Esc key)
+#        if endExpNow or event.getKeys(keyList=["escape"]):
+#            core.quit()
+#        
+#        # refresh the screen
+#        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+#            win.flip()
+#    
+#    # -------Ending Routine "randomStim"-------
+#    for thisComponent in randomStimComponents:
+#        if hasattr(thisComponent, "setAutoDraw"):
+#            thisComponent.setAutoDraw(False)
+#    # check responses
+#    if key_resp_9.keys in ['', [], None]:  # No response was made
+#        key_resp_9.keys=None
+#        # was no response the correct answer?!
+#        if str(u'correctKey').lower() == 'none':
+#           key_resp_9.corr = 1  # correct non-response
+#        else:
+#           key_resp_9.corr = 0  # failed to respond (incorrectly)
+#    # store data for trials_2 (TrialHandler)
+#    trials_1.addData('key_resp_9.keys',key_resp_9.keys)
+#    trials_1.addData('key_resp_9.corr', key_resp_9.corr)
+#    if key_resp_9.keys != None:  # we had a response
+#        trials_1.addData('key_resp_9.rt', key_resp_9.rt)
+#    # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
+#    routineTimer.reset()
+#    
+#    # ------Prepare to start Routine "stimBlank"-------
+#    t = 0
+#    stimBlankClock.reset()  # clock
+#    frameN = -1
+#    continueRoutine = True
+#    routineTimer.add(0.500000)
+#    # update component parameters for each repeat
+#    blankImage.setImage(blank)
+#    # keep track of which components have finished
+#    stimBlankComponents = [blankImage]
+#    for thisComponent in stimBlankComponents:
+#        if hasattr(thisComponent, 'status'):
+#            thisComponent.status = NOT_STARTED
+#    
+#    # -------Start Routine "stimBlank"-------
+#    while continueRoutine and routineTimer.getTime() > 0:
+#        # get current time
+#        t = stimBlankClock.getTime()
+#        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+#        # update/draw components on each frame
+#        
+#        # *blankImage* updates
+#        if t >= 0.0 and blankImage.status == NOT_STARTED:
+#            # keep track of start time/frame for later
+#            blankImage.tStart = t
+#            blankImage.frameNStart = frameN  # exact frame index
+#            blankImage.setAutoDraw(True)
+#        frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
+#        if blankImage.status == STARTED and t >= frameRemains:
+#            blankImage.setAutoDraw(False)
+#        
+#        # check if all components have finished
+#        if not continueRoutine:  # a component has requested a forced-end of Routine
+#            break
+#        continueRoutine = False  # will revert to True if at least one component still running
+#        for thisComponent in stimBlankComponents:
+#            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+#                continueRoutine = True
+#                break  # at least one component has not yet finished
+#        
+#        # check for quit (the Esc key)
+#        if endExpNow or event.getKeys(keyList=["escape"]):
+#            core.quit()
+#        
+#        # refresh the screen
+#        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+#            win.flip()
+#    
+#    # -------Ending Routine "stimBlank"-------
+#    for thisComponent in stimBlankComponents:
+#        if hasattr(thisComponent, "setAutoDraw"):
+#            thisComponent.setAutoDraw(False)
+#    thisExp.nextEntry()
+#    
+# completed 25 repeats of 'trials_1'
+#
+#
+# ------Prepare to start Routine "break_2"-------
+#t = 0
+#break_2Clock.reset()  # clock
+#frameN = -1
+#continueRoutine = True
+#routineTimer.add(120.000000) #How long the screen will be up for 
+# update component parameters for each repeat
+#break_2Response = event.BuilderKeyResponse()
+# keep track of which components have finished
+#break_2Components = [text_7, break_2Response]
+#for thisComponent in break_2Components:
+#    if hasattr(thisComponent, 'status'):
+#        thisComponent.status = NOT_STARTED
+#
+#-------Start Routine "break_2"-------
+#while continueRoutine and routineTimer.getTime() > 0:
+#    # get current time
+#    t = break_2Clock.getTime()
+#    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+#    # update/draw components on each frame
+#            
+#    # *text_7* updates
+#    if t >= 0.0 and text_7.status == NOT_STARTED:
+#        #keep track of start time/frame for later 
+#        text_7.tStart = t 
+#        text_7.frameNStart = frameN #extract frame index
+#        text_7.setAutoDraw(True)
+#    frameRemains = 0.0 + 120.0- win.monitorFramePeriod * 0.75 #most of one frame period left
+#    if text_7.status == STARTED and t >= frameRemains: 
+#        text_7.setAutoDraw(False) 
+#            
+#     # *break_2Response* updates
+#    if t >= 0.0 and break_2Response.status == NOT_STARTED:
+#        # keep track of start time/frame for later
+#        break_2Response.tStart = t
+#        break_2Response.frameNStart = frameN  # exact frame index
+#        break_2Response.status = STARTED 
+#        # keyboard checking is just startgin
+#    frameRemains = 0.0 + 120- win.monitorFramePeriod * 0.75  # most of one frame period left
+#    if break_2Response.status == STARTED and t >= frameRemains:
+#        break_2Response.status == STOPPED
+#    if break_2Response.status == STARTED: 
+#        theseKeys = event.getKeys(keyList=['space', 'enter', 'return'])
+#        
+#        # check for quit:
+#        if "escape" in theseKeys:
+#            endExpNow = True
+#        if len(theseKeys) > 0:  # at least one key was pressed
+#            # a response ends the routine
+#            continueRoutine = False
+#                
+#    # check if all components have finished
+#    if not continueRoutine:  # a component has requested a forced-end of Routine
+#        break
+#    continueRoutine = False  # will revert to True if at least one component still running
+#    for thisComponent in break_2Components:
+#        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+#            continueRoutine = True
+#            break  # at least one component has not yet finished
+#    
+#    # check for quit (the Esc key)
+#    if endExpNow or event.getKeys(keyList=["escape"]):
+#        core.quit()
+#    
+#    # refresh the screen
+#    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+#        win.flip()
+#
+# -------Ending Routine "break_2"-------
+#for thisComponent in break_2Components:
+#    if hasattr(thisComponent, "setAutoDraw"):
+#        thisComponent.setAutoDraw(False)
+#
+# ------Prepare to start Routine "instructions2"-------
+#t = 0
+#instructions2Clock.reset()  # clock
+#frameN = -1
+#continueRoutine = True
+#routineTimer.add(2.000000)
+# update component parameters for each repeat
+# keep track of which components have finished
+#instructions2Components = [text_5, text_6]
+#for thisComponent in instructions2Components:
+#    if hasattr(thisComponent, 'status'):
+#        thisComponent.status = NOT_STARTED
+#
+# -------Start Routine "instructions2"-------
+#while continueRoutine and routineTimer.getTime() > 0:
+#    # get current time
+#    t = instructions2Clock.getTime()
+#    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+#    # update/draw components on each frame
+#    
+#    # *text_5* updates
+#    if t >= 0.0 and text_5.status == NOT_STARTED:
+#        # keep track of start time/frame for later
+#        text_5.tStart = t
+#        text_5.frameNStart = frameN  # exact frame index
+#        text_5.setAutoDraw(True)
+#    frameRemains = 0.0 + 1.0- win.monitorFramePeriod * 0.75  # most of one frame period left
+#    if text_5.status == STARTED and t >= frameRemains:
+#        text_5.setAutoDraw(False)
+#    
+#    # *text_6* updates
+#    if t >= 1 and text_6.status == NOT_STARTED:
+#        # keep track of start time/frame for later
+#        text_6.tStart = t
+#        text_6.frameNStart = frameN  # exact frame index
+#        text_6.setAutoDraw(True)
+#    frameRemains = 1 + 1.0- win.monitorFramePeriod * 0.75  # most of one frame period left
+#    if text_6.status == STARTED and t >= frameRemains:
+#        text_6.setAutoDraw(False)
+#    
+#    # check if all components have finished
+#    if not continueRoutine:  # a component has requested a forced-end of Routine
+#        break
+#    continueRoutine = False  # will revert to True if at least one component still running
+#    for thisComponent in instructions2Components:
+#        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+#            continueRoutine = True
+#            break  # at least one component has not yet finished
+#    
+#    # check for quit (the Esc key)
+#    if endExpNow or event.getKeys(keyList=["escape"]):
+#        core.quit()
+#    
+#    # refresh the screen
+#    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+#        win.flip()
+#
+# -------Ending Routine "instructions2"-------
+#for thisComponent in instructions2Components:
+#    if hasattr(thisComponent, "setAutoDraw"):
+#        thisComponent.setAutoDraw(False)
+#
+
+
+
+# -------Setting Up Repition-------
+# set up handler to look after randomisation of conditions etc
+trials_2 = data.TrialHandler(nReps=10, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions(u'random.xlsx'),
+    trialList=data.importConditions('pawStimuli.xlsx'),
     seed=None, name='trials_2')
 thisExp.addLoop(trials_2)  # add the loop to the experiment
 thisTrial_2 = trials_2.trialList[0]  # so we can initialise stimuli with some values
-# abbreviate parameter names if possible (e.g. rgb = thisTrial_2.rgb)
+# abbreviate parameter names if possible (e.g. rgb = thisTrial_3.rgb)
 if thisTrial_2 != None:
     for paramName in thisTrial_2.keys():
         exec(paramName + '= thisTrial_2.' + paramName)
 
 for thisTrial_2 in trials_2:
     currentLoop = trials_2
-    # abbreviate parameter names if possible (e.g. rgb = thisTrial_2.rgb)
+    # abbreviate parameter names if possible (e.g. rgb = thisTrial_3.rgb)
     if thisTrial_2 != None:
         for paramName in thisTrial_2.keys():
             exec(paramName + '= thisTrial_2.' + paramName)
             
-    # ------Prepare to start Routine "randomStim"-------
-    t = 0
-    randomStimClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
-    # update component parameters for each repeat
-    image.setImage(randomPaw)
-    key_resp_9 = event.BuilderKeyResponse()
-    # keep track of which components have finished
-    randomStimComponents = [image, key_resp_9]
-    for thisComponent in randomStimComponents:
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    
-    # -------Start Routine "randomStim"-------
-    while continueRoutine:
-        # get current time
-        t = randomStimClock.getTime()
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # *image* updates
-        if t >= 0.0 and image.status == NOT_STARTED:
-            # keep track of start time/frame for later
-            image.tStart = t
-            image.frameNStart = frameN  # exact frame index
-            image.setAutoDraw(True)
-        frameRemains = 0.0 + 50.0- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if image.status == STARTED and t >= frameRemains:
-            image.setAutoDraw(False)
-        
-        # *key_resp_9* updates
-        if t >= 0.0 and key_resp_9.status == NOT_STARTED:
-            # keep track of start time/frame for later
-            key_resp_9.tStart = t
-            key_resp_9.frameNStart = frameN  # exact frame index
-            key_resp_9.status = STARTED
-            # AllowedKeys looks like a variable named `allowableKey`
-            if not type(allowableKey) in [list, tuple, np.ndarray]:
-                if not isinstance(allowableKey, basestring):
-                    logging.error('AllowedKeys variable `allowableKey` is not string- or list-like.')
-                    core.quit()
-                elif not ',' in allowableKey: allowableKey = (allowableKey,)
-                else:  allowableKey = eval(allowableKey)
-            # keyboard checking is just starting
-            win.callOnFlip(key_resp_9.clock.reset)  # t=0 on next screen flip
-        if key_resp_9.status == STARTED:
-            theseKeys = event.getKeys(keyList=list(allowableKey))
-            
-            # check for quit:
-            if "escape" in theseKeys:
-                endExpNow = True
-            if len(theseKeys) > 0:  # at least one key was pressed
-                key_resp_9.keys.extend(theseKeys)  # storing all keys
-                key_resp_9.rt.append(key_resp_9.clock.getTime())
-                print('you pressed: ')
-                print(theseKeys)
-                print('correct key was ')
-                print(correctKey)
-                # was this 'correct'?
-                #if (theseKeys) == (correctKey):
-                if ((theseKeys) == (correctKey)): 
-                #if (key_resp_9.keys == str(u'correctKey')) or (key_resp_9.keys == u'correctKey'):
-                    print('you got it right!!!')
-                    print('length of response key:')
-                    if len(key_resp_9.keys) == 1:
-                        key_resp_9_corr = 1
-                        print('key resp 9 corr should be 1:')
-                        print(key_resp_9_corr)
-                        trialCorrect = 1
-                        trials_2.addData('trialCorrect',trialCorrect)
-                    else: 
-                        key_resp_9_corr = 0
-                        print('the first element was not right: should be 0')
-                        print(key_resp_9_corr)
-                        trialCorrect = 0
-                        trials_2.addData('trialCorrect',trialCorrect)
-                    #key_resp_9.corr = 1
-                    continueRoutine = False
-                else:
-                    #key_resp_9.corr = 0
-                    continueRoutine = True
-                # a response ends the routine
-                #continueRoutine = True
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in randomStimComponents:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # check for quit (the Esc key)
-        if endExpNow or event.getKeys(keyList=["escape"]):
-            core.quit()
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # -------Ending Routine "randomStim"-------
-    for thisComponent in randomStimComponents:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    # check responses
-    if key_resp_9.keys in ['', [], None]:  # No response was made
-        key_resp_9.keys=None
-        # was no response the correct answer?!
-        if str(u'correctKey').lower() == 'none':
-           key_resp_9.corr = 1  # correct non-response
-        else:
-           key_resp_9.corr = 0  # failed to respond (incorrectly)
-    # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
-    if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
-    # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
-    
-    # ------Prepare to start Routine "stimBlank"-------
-    t = 0
-    stimBlankClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
-    routineTimer.add(0.500000)
-    # update component parameters for each repeat
-    blankImage.setImage(blank)
-    # keep track of which components have finished
-    stimBlankComponents = [blankImage]
-    for thisComponent in stimBlankComponents:
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    
-    # -------Start Routine "stimBlank"-------
-    while continueRoutine and routineTimer.getTime() > 0:
-        # get current time
-        t = stimBlankClock.getTime()
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # *blankImage* updates
-        if t >= 0.0 and blankImage.status == NOT_STARTED:
-            # keep track of start time/frame for later
-            blankImage.tStart = t
-            blankImage.frameNStart = frameN  # exact frame index
-            blankImage.setAutoDraw(True)
-        frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if blankImage.status == STARTED and t >= frameRemains:
-            blankImage.setAutoDraw(False)
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in stimBlankComponents:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # check for quit (the Esc key)
-        if endExpNow or event.getKeys(keyList=["escape"]):
-            core.quit()
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # -------Ending Routine "stimBlank"-------
-    for thisComponent in stimBlankComponents:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    thisExp.nextEntry()
-    
-# completed 25 repeats of 'trials_2'
-
-
-# ------Prepare to start Routine "break_2"-------
-t = 0
-break_2Clock.reset()  # clock
-frameN = -1
-continueRoutine = True
-routineTimer.add(120.000000) #How long the screen will be up for 
-# update component parameters for each repeat
-break_2Response = event.BuilderKeyResponse()
-# keep track of which components have finished
-break_2Components = [text_7, break_2Response]
-for thisComponent in break_2Components:
-    if hasattr(thisComponent, 'status'):
-        thisComponent.status = NOT_STARTED
-
-#-------Start Routine "break_2"-------
-while continueRoutine and routineTimer.getTime() > 0:
-    # get current time
-    t = break_2Clock.getTime()
-    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-    # update/draw components on each frame
-            
-    # *text_7* updates
-    if t >= 0.0 and text_7.status == NOT_STARTED:
-        #keep track of start time/frame for later 
-        text_7.tStart = t 
-        text_7.frameNStart = frameN #extract frame index
-        text_7.setAutoDraw(True)
-    frameRemains = 0.0 + 120.0- win.monitorFramePeriod * 0.75 #most of one frame period left
-    if text_7.status == STARTED and t >= frameRemains: 
-        text_7.setAutoDraw(False) 
-            
-     # *break_2Response* updates
-    if t >= 0.0 and break_2Response.status == NOT_STARTED:
-        # keep track of start time/frame for later
-        break_2Response.tStart = t
-        break_2Response.frameNStart = frameN  # exact frame index
-        break_2Response.status = STARTED 
-        # keyboard checking is just startgin
-    frameRemains = 0.0 + 120- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if break_2Response.status == STARTED and t >= frameRemains:
-        break_2Response.status == STOPPED
-    if break_2Response.status == STARTED: 
-        theseKeys = event.getKeys(keyList=['space', 'enter', 'return'])
-        
-        # check for quit:
-        if "escape" in theseKeys:
-            endExpNow = True
-        if len(theseKeys) > 0:  # at least one key was pressed
-            # a response ends the routine
-            continueRoutine = False
-                
-    # check if all components have finished
-    if not continueRoutine:  # a component has requested a forced-end of Routine
-        break
-    continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in break_2Components:
-        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-            continueRoutine = True
-            break  # at least one component has not yet finished
-    
-    # check for quit (the Esc key)
-    if endExpNow or event.getKeys(keyList=["escape"]):
-        core.quit()
-    
-    # refresh the screen
-    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-        win.flip()
-
-# -------Ending Routine "break_2"-------
-for thisComponent in break_2Components:
-    if hasattr(thisComponent, "setAutoDraw"):
-        thisComponent.setAutoDraw(False)
-
-# ------Prepare to start Routine "instructions2"-------
-t = 0
-instructions2Clock.reset()  # clock
-frameN = -1
-continueRoutine = True
-routineTimer.add(2.000000)
-# update component parameters for each repeat
-# keep track of which components have finished
-instructions2Components = [text_5, text_6]
-for thisComponent in instructions2Components:
-    if hasattr(thisComponent, 'status'):
-        thisComponent.status = NOT_STARTED
-
-# -------Start Routine "instructions2"-------
-while continueRoutine and routineTimer.getTime() > 0:
-    # get current time
-    t = instructions2Clock.getTime()
-    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-    # update/draw components on each frame
-    
-    # *text_5* updates
-    if t >= 0.0 and text_5.status == NOT_STARTED:
-        # keep track of start time/frame for later
-        text_5.tStart = t
-        text_5.frameNStart = frameN  # exact frame index
-        text_5.setAutoDraw(True)
-    frameRemains = 0.0 + 1.0- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_5.status == STARTED and t >= frameRemains:
-        text_5.setAutoDraw(False)
-    
-    # *text_6* updates
-    if t >= 1 and text_6.status == NOT_STARTED:
-        # keep track of start time/frame for later
-        text_6.tStart = t
-        text_6.frameNStart = frameN  # exact frame index
-        text_6.setAutoDraw(True)
-    frameRemains = 1 + 1.0- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_6.status == STARTED and t >= frameRemains:
-        text_6.setAutoDraw(False)
-    
-    # check if all components have finished
-    if not continueRoutine:  # a component has requested a forced-end of Routine
-        break
-    continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in instructions2Components:
-        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-            continueRoutine = True
-            break  # at least one component has not yet finished
-    
-    # check for quit (the Esc key)
-    if endExpNow or event.getKeys(keyList=["escape"]):
-        core.quit()
-    
-    # refresh the screen
-    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-        win.flip()
-
-# -------Ending Routine "instructions2"-------
-for thisComponent in instructions2Components:
-    if hasattr(thisComponent, "setAutoDraw"):
-        thisComponent.setAutoDraw(False)
-
-
-# -------Setting Up Repition-------
-# set up handler to look after randomisation of conditions etc
-trials_3 = data.TrialHandler(nReps=10, method='sequential', 
-    extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('pawStimuli.xlsx'),
-    seed=None, name='trials_3')
-thisExp.addLoop(trials_3)  # add the loop to the experiment
-thisTrial_3 = trials_3.trialList[0]  # so we can initialise stimuli with some values
-# abbreviate parameter names if possible (e.g. rgb = thisTrial_3.rgb)
-if thisTrial_3 != None:
-    for paramName in thisTrial_3.keys():
-        exec(paramName + '= thisTrial_3.' + paramName)
-
-for thisTrial_3 in trials_3:
-    currentLoop = trials_3
-    # abbreviate parameter names if possible (e.g. rgb = thisTrial_3.rgb)
-    if thisTrial_3 != None:
-        for paramName in thisTrial_3.keys():
-            exec(paramName + '= thisTrial_3.' + paramName)
-            
     # ------Prepare to start Routine "stim1"-------
     t = 0
     stim1Clock.reset()  # clock
@@ -1114,9 +1118,9 @@ for thisTrial_3 in trials_3:
     continueRoutine = True
     # update component parameters for each repeat
     pos1.setImage(pawPatrol1)
-    key_resp_9 = event.BuilderKeyResponse()
+    key_resp_1 = event.BuilderKeyResponse()
     # keep track of which components have finished
-    stim1Components = [pos1, key_resp_9]
+    stim1Components = [pos1, key_resp_1]
     for thisComponent in stim1Components:
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
@@ -1141,38 +1145,34 @@ for thisTrial_3 in trials_3:
             pos1.setPos((0, 0), log=False)
         
         # *key_resp_5* updates
-        if t >= 0.0 and key_resp_9.status == NOT_STARTED:
+        if t >= 0.0 and key_resp_1.status == NOT_STARTED:
             # keep track of start time/frame for later
-            key_resp_9.tStart = t
-            key_resp_9.frameNStart = frameN  # exact frame index
-            key_resp_9.status = STARTED
+            key_resp_1.tStart = t
+            key_resp_1.frameNStart = frameN  # exact frame index
+            key_resp_1.status = STARTED
             # keyboard checking is just starting
-            win.callOnFlip(key_resp_9.clock.reset)  # t=0 on next screen flip
-        if key_resp_9.status == STARTED:
+            win.callOnFlip(key_resp_1.clock.reset)  # t=0 on next screen flip
+        if key_resp_1.status == STARTED:
             theseKeys = event.getKeys(keyList=['1', '2', '3', '4'])
             
             # check for quit:
             if "escape" in theseKeys:
                 endExpNow = True
             if len(theseKeys) > 0:  # at least one key was pressed
-                key_resp_9.keys.extend(theseKeys)  # storing all keys
-                key_resp_9.rt.append(key_resp_9.clock.getTime())
+                key_resp_1.keys.extend(theseKeys)  # storing all keys
+                key_resp_1.rt.append(key_resp_1.clock.getTime())
                 # was this 'correct'?
-                #if (theseKeys) == (correctKey):
                 if ((theseKeys) == (['1'])): 
-                #if (key_resp_9.keys == str(u'correctKey')) or (key_resp_9.keys == u'correctKey'):
-                    if len(key_resp_9.keys) == 1:
-                        key_resp_9_corr = 1
+                    if len(key_resp_1.keys) == 1:
+                        key_resp_1_corr = 1
                         trialCorrect = 1
                         trials_2.addData('trialCorrect',trialCorrect)
                     else: 
-                        key_resp_5_corr = 0
+                        key_resp_1_corr = 0
                         trialCorrect = 0
                         trials_2.addData('trialCorrect',trialCorrect)
-                    #key_resp_9.corr = 1
                     continueRoutine = False
                 else:
-                    #key_resp_9.corr = 0
                     continueRoutine = True
                 # a response ends the routine
                 #continueRoutine = True
@@ -1199,10 +1199,10 @@ for thisTrial_3 in trials_3:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
-    if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
+    trials_2.addData('key_resp_1.keys',key_resp_1.keys)
+    trials_2.addData('key_resp_1.corr', key_resp_1.corr)
+    if key_resp_1.keys != None:  # we had a response
+        trials_2.addData('key_resp_1.rt', key_resp_1.rt)
     # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -1266,9 +1266,9 @@ for thisTrial_3 in trials_3:
     continueRoutine = True
     # update component parameters for each repeat
     image_4.setImage(pawPatrol3)
-    key_resp_7 = event.BuilderKeyResponse()
+    key_resp_2 = event.BuilderKeyResponse()
     # keep track of which components have finished
-    stim3Components = [image_4, key_resp_9]
+    stim3Components = [image_4, key_resp_2]
     for thisComponent in stim3Components:
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
@@ -1291,38 +1291,34 @@ for thisTrial_3 in trials_3:
             image_4.setAutoDraw(False)
         
         # *key_resp_7* updates
-        if t >= 0.0 and key_resp_9.status == NOT_STARTED:
+        if t >= 0.0 and key_resp_2.status == NOT_STARTED:
             # keep track of start time/frame for later
-            key_resp_9.tStart = t
-            key_resp_9.frameNStart = frameN  # exact frame index
-            key_resp_9.status = STARTED
+            key_resp_2.tStart = t
+            key_resp_2.frameNStart = frameN  # exact frame index
+            key_resp_2.status = STARTED
             # keyboard checking is just starting
-            win.callOnFlip(key_resp_9.clock.reset)  # t=0 on next screen flip
-        if key_resp_9.status == STARTED:
+            win.callOnFlip(key_resp_2.clock.reset)  # t=0 on next screen flip
+        if key_resp_2.status == STARTED:
             theseKeys = event.getKeys(keyList=['3', '1', '2', '4'])
             
             # check for quit:
             if "escape" in theseKeys:
                 endExpNow = True
             if len(theseKeys) > 0:  # at least one key was pressed
-                key_resp_9.keys.extend(theseKeys)  # storing all keys
-                key_resp_9.rt.append(key_resp_9.clock.getTime())
+                key_resp_2.keys.extend(theseKeys)  # storing all keys
+                key_resp_2.rt.append(key_resp_2.clock.getTime())
                 # was this 'correct'?
-                #if (theseKeys) == (correctKey):
                 if ((theseKeys) == (['3'])): 
-                #if (key_resp_9.keys == str(u'correctKey')) or (key_resp_9.keys == u'correctKey'):
-                    if len(key_resp_9.keys) == 1:
-                        key_resp_9_corr = 1
+                    if len(key_resp_2.keys) == 1:
+                        key_resp_2_corr = 1
                         trialCorrect = 1
                         trials_2.addData('trialCorrect',trialCorrect)
                     else: 
-                        key_resp_5_corr = 0
+                        key_resp_2_corr = 0
                         trialCorrect = 0
                         trials_2.addData('trialCorrect',trialCorrect)
-                    #key_resp_9.corr = 1
                     continueRoutine = False
                 else:
-                    #key_resp_9.corr = 0
                     continueRoutine = True
                 # a response ends the routine
                 #continueRoutine = True
@@ -1349,10 +1345,452 @@ for thisTrial_3 in trials_3:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
-    if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
+    trials_2.addData('key_resp_2.keys',key_resp_2.keys)
+    trials_2.addData('key_resp_2.corr', key_resp_2.corr)
+    if key_resp_2.keys != None:  # we had a response
+        trials_2.addData('key_resp_2.rt', key_resp_2.rt)
+    # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    
+    # ------Prepare to start Routine "stimBlank"-------
+    t = 0
+    stimBlankClock.reset()  # clock
+    frameN = -1
+    continueRoutine = True
+    routineTimer.add(0.500000)
+    # update component parameters for each repeat
+    blankImage.setImage(blank)
+    # keep track of which components have finished
+    stimBlankComponents = [blankImage]
+    for thisComponent in stimBlankComponents:
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    
+    # -------Start Routine "stimBlank"-------
+    while continueRoutine and routineTimer.getTime() > 0:
+        # get current time
+        t = stimBlankClock.getTime()
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *blankImage* updates
+        if t >= 0.0 and blankImage.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            blankImage.tStart = t
+            blankImage.frameNStart = frameN  # exact frame index
+            blankImage.setAutoDraw(True)
+        frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
+        if blankImage.status == STARTED and t >= frameRemains:
+            blankImage.setAutoDraw(False)
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in stimBlankComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # check for quit (the Esc key)
+        if endExpNow or event.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "stimBlank"-------
+    for thisComponent in stimBlankComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    
+    # ------Prepare to start Routine "stim2"-------
+    t = 0
+    stim2Clock.reset()  # clock
+    frameN = -1
+    continueRoutine = True
+    # update component parameters for each repeat
+    image_3.setImage(pawPatrol2)
+    key_resp_3 = event.BuilderKeyResponse()
+    # keep track of which components have finished
+    stim2Components = [image_3, key_resp_3]
+    for thisComponent in stim2Components:
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    
+    # -------Start Routine "stim2"-------
+    while continueRoutine:
+        # get current time
+        t = stim2Clock.getTime()
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *image_3* updates
+        if t >= 0.0 and image_3.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            image_3.tStart = t
+            image_3.frameNStart = frameN  # exact frame index
+            image_3.setAutoDraw(True)
+        frameRemains = 0.0 + 50.0- win.monitorFramePeriod * 0.75  # most of one frame period left
+        if image_3.status == STARTED and t >= frameRemains:
+            image_3.setAutoDraw(False)
+        
+        # *key_resp_6* updates
+        if t >= 0.0 and key_resp_3.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            key_resp_3.tStart = t
+            key_resp_3.frameNStart = frameN  # exact frame index
+            key_resp_3.status = STARTED
+            # keyboard checking is just starting
+            win.callOnFlip(key_resp_3.clock.reset)  # t=0 on next screen flip
+        if key_resp_3.status == STARTED:
+            theseKeys = event.getKeys(keyList=['2', '1', '3', '4'])
+            
+            # check for quit:
+            if "escape" in theseKeys:
+                endExpNow = True
+            if len(theseKeys) > 0:  # at least one key was pressed
+                key_resp_3.keys.extend(theseKeys)  # storing all keys
+                key_resp_3.rt.append(key_resp_3.clock.getTime())
+                # was this 'correct'?
+                if ((theseKeys) == (['2'])): 
+                    if len(key_resp_3.keys) == 1:
+                        key_resp_3_corr = 1
+                        trialCorrect = 1
+                        trials_2.addData('trialCorrect',trialCorrect)
+                    else: 
+                        key_resp_3_corr = 0
+                        trialCorrect = 0
+                        trials_2.addData('trialCorrect',trialCorrect)
+                    continueRoutine = False
+                else:
+                    continueRoutine = True
+                # a response ends the routine
+                #continueRoutine = True
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in stim2Components:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # check for quit (the Esc key)
+        if endExpNow or event.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "stim2"-------
+    for thisComponent in stim2Components:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    # store data for trials_2 (TrialHandler)
+    trials_2.addData('key_resp_3.keys',key_resp_3.keys)
+    trials_2.addData('key_resp_3.corr', key_resp_3.corr)
+    if key_resp_3.keys != None:  # we had a response
+        trials_2.addData('key_resp_3.rt', key_resp_3.rt)
+    # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    
+    # ------Prepare to start Routine "stimBlank"-------
+    t = 0
+    stimBlankClock.reset()  # clock
+    frameN = -1
+    continueRoutine = True
+    routineTimer.add(0.500000)
+    # update component parameters for each repeat
+    blankImage.setImage(blank)
+    # keep track of which components have finished
+    stimBlankComponents = [blankImage]
+    for thisComponent in stimBlankComponents:
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    
+    # -------Start Routine "stimBlank"-------
+    while continueRoutine and routineTimer.getTime() > 0:
+        # get current time
+        t = stimBlankClock.getTime()
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *blankImage* updates
+        if t >= 0.0 and blankImage.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            blankImage.tStart = t
+            blankImage.frameNStart = frameN  # exact frame index
+            blankImage.setAutoDraw(True)
+        frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
+        if blankImage.status == STARTED and t >= frameRemains:
+            blankImage.setAutoDraw(False)
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in stimBlankComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # check for quit (the Esc key)
+        if endExpNow or event.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "stimBlank"-------
+    for thisComponent in stimBlankComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    
+    # ------Prepare to start Routine "stim4"-------
+    t = 0
+    stim4Clock.reset()  # clock
+    frameN = -1
+    continueRoutine = True
+    # update component parameters for each repeat
+    image_5.setImage(pawPatrol4)
+    key_resp_4 = event.BuilderKeyResponse()
+    # keep track of which components have finished
+    stim4Components = [image_5, key_resp_4]
+    for thisComponent in stim4Components:
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    
+    # -------Start Routine "stim4"-------
+    while continueRoutine:
+        # get current time
+        t = stim4Clock.getTime()
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *image_5* updates
+        if t >= 0.0 and image_5.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            image_5.tStart = t
+            image_5.frameNStart = frameN  # exact frame index
+            image_5.setAutoDraw(True)
+        frameRemains = 0.0 + 50.0- win.monitorFramePeriod * 0.75  # most of one frame period left
+        if image_5.status == STARTED and t >= frameRemains:
+            image_5.setAutoDraw(False)
+        
+        # *key_resp_8* updates
+        if t >= 0.0 and key_resp_4.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            key_resp_4.tStart = t
+            key_resp_4.frameNStart = frameN  # exact frame index
+            key_resp_4.status = STARTED
+            # keyboard checking is just starting
+            win.callOnFlip(key_resp_4.clock.reset)  # t=0 on next screen flip
+        if key_resp_4.status == STARTED:
+            theseKeys = event.getKeys(keyList=['4', '1', '2', '3'])
+            
+            # check for quit:
+            if "escape" in theseKeys:
+                endExpNow = True
+            if len(theseKeys) > 0:  # at least one key was pressed
+                key_resp_4.keys.extend(theseKeys)  # storing all keys
+                key_resp_4.rt.append(key_resp_4.clock.getTime())
+                # was this 'correct'?
+                #if (theseKeys) == (correctKey):
+                if ((theseKeys) == (['4'])): 
+                    if len(key_resp_4.keys) == 1:
+                        key_resp_4_corr = 1
+                        trialCorrect = 1
+                        trials_2.addData('trialCorrect',trialCorrect)
+                    else: 
+                        key_resp_4_corr = 0
+                        trialCorrect = 0
+                        trials_2.addData('trialCorrect',trialCorrect)
+                    continueRoutine = False
+                else:
+                    #key_resp_9.corr = 0
+                    continueRoutine = True
+                # a response ends the routine
+                #continueRoutine = True
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in stim4Components:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # check for quit (the Esc key)
+        if endExpNow or event.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "stim4"-------
+    for thisComponent in stim4Components:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    # store data for trials_2 (TrialHandler)
+    trials_2.addData('key_resp_4.keys',key_resp_4.keys)
+    trials_2.addData('key_resp_4.corr', key_resp_4.corr)
+    if key_resp_4.keys != None:  # we had a response
+        trials_2.addData('key_resp_4.rt', key_resp_4.rt)
+    # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    
+    # ------Prepare to start Routine "stimBlank"-------
+    t = 0
+    stimBlankClock.reset()  # clock
+    frameN = -1
+    continueRoutine = True
+    routineTimer.add(0.500000)
+    # update component parameters for each repeat
+    blankImage.setImage(blank)
+    # keep track of which components have finished
+    stimBlankComponents = [blankImage]
+    for thisComponent in stimBlankComponents:
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    
+    # -------Start Routine "stimBlank"-------
+    while continueRoutine and routineTimer.getTime() > 0:
+        # get current time
+        t = stimBlankClock.getTime()
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *blankImage* updates
+        if t >= 0.0 and blankImage.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            blankImage.tStart = t
+            blankImage.frameNStart = frameN  # exact frame index
+            blankImage.setAutoDraw(True)
+        frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
+        if blankImage.status == STARTED and t >= frameRemains:
+            blankImage.setAutoDraw(False)
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in stimBlankComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # check for quit (the Esc key)
+        if endExpNow or event.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "stimBlank"-------
+    for thisComponent in stimBlankComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    
+    # ------Prepare to start Routine "stim4"-------
+    t = 0
+    stim4Clock.reset()  # clock
+    frameN = -1
+    continueRoutine = True
+    # update component parameters for each repeat
+    image_5.setImage(pawPatrol4)
+    key_resp_5 = event.BuilderKeyResponse()
+    # keep track of which components have finished
+    stim4Components = [image_5, key_resp_5]
+    for thisComponent in stim4Components:
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    
+    # -------Start Routine "stim4"-------
+    while continueRoutine:
+        # get current time
+        t = stim4Clock.getTime()
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *image_5* updates
+        if t >= 0.0 and image_5.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            image_5.tStart = t
+            image_5.frameNStart = frameN  # exact frame index
+            image_5.setAutoDraw(True)
+        frameRemains = 0.0 + 50.0- win.monitorFramePeriod * 0.75  # most of one frame period left
+        if image_5.status == STARTED and t >= frameRemains:
+            image_5.setAutoDraw(False)
+        
+        # *key_resp_5* updates
+        if t >= 0.0 and key_resp_5.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            key_resp_5.tStart = t
+            key_resp_5.frameNStart = frameN  # exact frame index
+            key_resp_5.status = STARTED
+            # keyboard checking is just starting
+            win.callOnFlip(key_resp_5.clock.reset)  # t=0 on next screen flip
+        if key_resp_5.status == STARTED:
+            theseKeys = event.getKeys(keyList=['4', '1', '2', '3'])
+            
+            # check for quit:
+            if "escape" in theseKeys:
+                endExpNow = True
+            if len(theseKeys) > 0:  # at least one key was pressed
+                key_resp_5.keys.extend(theseKeys)  # storing all keys
+                key_resp_5.rt.append(key_resp_5.clock.getTime())
+                # was this 'correct'?
+                if ((theseKeys) == (['4'])): 
+                    if len(key_resp_5.keys) == 1:
+                        key_resp_5_corr = 1
+                        trialCorrect = 1
+                        trials_2.addData('trialCorrect',trialCorrect)
+                    else: 
+                        key_resp_5_corr = 0
+                        trialCorrect = 0
+                        trials_2.addData('trialCorrect',trialCorrect)
+                    #key_resp_9.corr = 1
+                    continueRoutine = False
+                else:
+                    #key_resp_9.corr = 0
+                    continueRoutine = True
+                # a response ends the routine
+                #continueRoutine = True
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in stim4Components:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # check for quit (the Esc key)
+        if endExpNow or event.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "stim4"-------
+    for thisComponent in stim4Components:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    # store data for trials_2 (TrialHandler)
+    trials_2.addData('key_resp_5.keys',key_resp_5.keys)
+    trials_2.addData('key_resp_5.corr', key_resp_5.corr)
+    if key_resp_5.keys != None:  # we had a response
+        trials_2.addData('key_resp_5.rt', key_resp_5.rt)
     # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -1418,7 +1856,7 @@ for thisTrial_3 in trials_3:
     image_3.setImage(pawPatrol2)
     key_resp_6 = event.BuilderKeyResponse()
     # keep track of which components have finished
-    stim2Components = [image_3, key_resp_9]
+    stim2Components = [image_3, key_resp_6]
     for thisComponent in stim2Components:
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
@@ -1441,38 +1879,35 @@ for thisTrial_3 in trials_3:
             image_3.setAutoDraw(False)
         
         # *key_resp_6* updates
-        if t >= 0.0 and key_resp_9.status == NOT_STARTED:
+        if t >= 0.0 and key_resp_6.status == NOT_STARTED:
             # keep track of start time/frame for later
-            key_resp_9.tStart = t
-            key_resp_9.frameNStart = frameN  # exact frame index
-            key_resp_9.status = STARTED
+            key_resp_6.tStart = t
+            key_resp_6.frameNStart = frameN  # exact frame index
+            key_resp_6.status = STARTED
             # keyboard checking is just starting
-            win.callOnFlip(key_resp_9.clock.reset)  # t=0 on next screen flip
-        if key_resp_9.status == STARTED:
+            win.callOnFlip(key_resp_6.clock.reset)  # t=0 on next screen flip
+        if key_resp_6.status == STARTED:
             theseKeys = event.getKeys(keyList=['2', '1', '3', '4'])
             
             # check for quit:
             if "escape" in theseKeys:
                 endExpNow = True
             if len(theseKeys) > 0:  # at least one key was pressed
-                key_resp_9.keys.extend(theseKeys)  # storing all keys
-                key_resp_9.rt.append(key_resp_9.clock.getTime())
+                key_resp_6.keys.extend(theseKeys)  # storing all keys
+                key_resp_6.rt.append(key_resp_6.clock.getTime())
                 # was this 'correct'?
                 #if (theseKeys) == (correctKey):
                 if ((theseKeys) == (['2'])): 
-                #if (key_resp_9.keys == str(u'correctKey')) or (key_resp_9.keys == u'correctKey'):
-                    if len(key_resp_9.keys) == 1:
-                        key_resp_9_corr = 1
+                    if len(key_resp_6.keys) == 1:
+                        key_resp_6_corr = 1
                         trialCorrect = 1
                         trials_2.addData('trialCorrect',trialCorrect)
                     else: 
-                        key_resp_5_corr = 0
+                        key_resp_6_corr = 0
                         trialCorrect = 0
                         trials_2.addData('trialCorrect',trialCorrect)
-                    #key_resp_9.corr = 1
                     continueRoutine = False
                 else:
-                    #key_resp_9.corr = 0
                     continueRoutine = True
                 # a response ends the routine
                 #continueRoutine = True
@@ -1499,460 +1934,10 @@ for thisTrial_3 in trials_3:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
-    if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
-    # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
-    
-    # ------Prepare to start Routine "stimBlank"-------
-    t = 0
-    stimBlankClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
-    routineTimer.add(0.500000)
-    # update component parameters for each repeat
-    blankImage.setImage(blank)
-    # keep track of which components have finished
-    stimBlankComponents = [blankImage]
-    for thisComponent in stimBlankComponents:
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    
-    # -------Start Routine "stimBlank"-------
-    while continueRoutine and routineTimer.getTime() > 0:
-        # get current time
-        t = stimBlankClock.getTime()
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # *blankImage* updates
-        if t >= 0.0 and blankImage.status == NOT_STARTED:
-            # keep track of start time/frame for later
-            blankImage.tStart = t
-            blankImage.frameNStart = frameN  # exact frame index
-            blankImage.setAutoDraw(True)
-        frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if blankImage.status == STARTED and t >= frameRemains:
-            blankImage.setAutoDraw(False)
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in stimBlankComponents:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # check for quit (the Esc key)
-        if endExpNow or event.getKeys(keyList=["escape"]):
-            core.quit()
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # -------Ending Routine "stimBlank"-------
-    for thisComponent in stimBlankComponents:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    
-    # ------Prepare to start Routine "stim4"-------
-    t = 0
-    stim4Clock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
-    # update component parameters for each repeat
-    image_5.setImage(pawPatrol4)
-    key_resp_9 = event.BuilderKeyResponse()
-    # keep track of which components have finished
-    stim4Components = [image_5, key_resp_9]
-    for thisComponent in stim4Components:
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    
-    # -------Start Routine "stim4"-------
-    while continueRoutine:
-        # get current time
-        t = stim4Clock.getTime()
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # *image_5* updates
-        if t >= 0.0 and image_5.status == NOT_STARTED:
-            # keep track of start time/frame for later
-            image_5.tStart = t
-            image_5.frameNStart = frameN  # exact frame index
-            image_5.setAutoDraw(True)
-        frameRemains = 0.0 + 50.0- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if image_5.status == STARTED and t >= frameRemains:
-            image_5.setAutoDraw(False)
-        
-        # *key_resp_8* updates
-        if t >= 0.0 and key_resp_9.status == NOT_STARTED:
-            # keep track of start time/frame for later
-            key_resp_9.tStart = t
-            key_resp_9.frameNStart = frameN  # exact frame index
-            key_resp_9.status = STARTED
-            # keyboard checking is just starting
-            win.callOnFlip(key_resp_9.clock.reset)  # t=0 on next screen flip
-        if key_resp_9.status == STARTED:
-            theseKeys = event.getKeys(keyList=['4', '1', '2', '3'])
-            
-            # check for quit:
-            if "escape" in theseKeys:
-                endExpNow = True
-            if len(theseKeys) > 0:  # at least one key was pressed
-                key_resp_9.keys.extend(theseKeys)  # storing all keys
-                key_resp_9.rt.append(key_resp_9.clock.getTime())
-                # was this 'correct'?
-                #if (theseKeys) == (correctKey):
-                if ((theseKeys) == (['4'])): 
-                #if (key_resp_9.keys == str(u'correctKey')) or (key_resp_9.keys == u'correctKey'):
-                    if len(key_resp_9.keys) == 1:
-                        key_resp_9_corr = 1
-                        trialCorrect = 1
-                        trials_2.addData('trialCorrect',trialCorrect)
-                    else: 
-                        key_resp_5_corr = 0
-                        trialCorrect = 0
-                        trials_2.addData('trialCorrect',trialCorrect)
-                    #key_resp_9.corr = 1
-                    continueRoutine = False
-                else:
-                    #key_resp_9.corr = 0
-                    continueRoutine = True
-                # a response ends the routine
-                #continueRoutine = True
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in stim4Components:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # check for quit (the Esc key)
-        if endExpNow or event.getKeys(keyList=["escape"]):
-            core.quit()
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # -------Ending Routine "stim4"-------
-    for thisComponent in stim4Components:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
-    if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
-    # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
-    
-    # ------Prepare to start Routine "stimBlank"-------
-    t = 0
-    stimBlankClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
-    routineTimer.add(0.500000)
-    # update component parameters for each repeat
-    blankImage.setImage(blank)
-    # keep track of which components have finished
-    stimBlankComponents = [blankImage]
-    for thisComponent in stimBlankComponents:
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    
-    # -------Start Routine "stimBlank"-------
-    while continueRoutine and routineTimer.getTime() > 0:
-        # get current time
-        t = stimBlankClock.getTime()
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # *blankImage* updates
-        if t >= 0.0 and blankImage.status == NOT_STARTED:
-            # keep track of start time/frame for later
-            blankImage.tStart = t
-            blankImage.frameNStart = frameN  # exact frame index
-            blankImage.setAutoDraw(True)
-        frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if blankImage.status == STARTED and t >= frameRemains:
-            blankImage.setAutoDraw(False)
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in stimBlankComponents:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # check for quit (the Esc key)
-        if endExpNow or event.getKeys(keyList=["escape"]):
-            core.quit()
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # -------Ending Routine "stimBlank"-------
-    for thisComponent in stimBlankComponents:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    
-    # ------Prepare to start Routine "stim4"-------
-    t = 0
-    stim4Clock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
-    # update component parameters for each repeat
-    image_5.setImage(pawPatrol4)
-    key_resp_9 = event.BuilderKeyResponse()
-    # keep track of which components have finished
-    stim4Components = [image_5, key_resp_9]
-    for thisComponent in stim4Components:
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    
-    # -------Start Routine "stim4"-------
-    while continueRoutine:
-        # get current time
-        t = stim4Clock.getTime()
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # *image_5* updates
-        if t >= 0.0 and image_5.status == NOT_STARTED:
-            # keep track of start time/frame for later
-            image_5.tStart = t
-            image_5.frameNStart = frameN  # exact frame index
-            image_5.setAutoDraw(True)
-        frameRemains = 0.0 + 50.0- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if image_5.status == STARTED and t >= frameRemains:
-            image_5.setAutoDraw(False)
-        
-        # *key_resp_8* updates
-        if t >= 0.0 and key_resp_9.status == NOT_STARTED:
-            # keep track of start time/frame for later
-            key_resp_9.tStart = t
-            key_resp_9.frameNStart = frameN  # exact frame index
-            key_resp_9.status = STARTED
-            # keyboard checking is just starting
-            win.callOnFlip(key_resp_9.clock.reset)  # t=0 on next screen flip
-        if key_resp_9.status == STARTED:
-            theseKeys = event.getKeys(keyList=['4', '1', '2', '3'])
-            
-            # check for quit:
-            if "escape" in theseKeys:
-                endExpNow = True
-            if len(theseKeys) > 0:  # at least one key was pressed
-                key_resp_9.keys.extend(theseKeys)  # storing all keys
-                key_resp_9.rt.append(key_resp_9.clock.getTime())
-                # was this 'correct'?
-                #if (theseKeys) == (correctKey):
-                if ((theseKeys) == (['4'])): 
-                #if (key_resp_9.keys == str(u'correctKey')) or (key_resp_9.keys == u'correctKey'):
-                    if len(key_resp_9.keys) == 1:
-                        key_resp_9_corr = 1
-                        trialCorrect = 1
-                        trials_2.addData('trialCorrect',trialCorrect)
-                    else: 
-                        key_resp_5_corr = 0
-                        trialCorrect = 0
-                        trials_2.addData('trialCorrect',trialCorrect)
-                    #key_resp_9.corr = 1
-                    continueRoutine = False
-                else:
-                    #key_resp_9.corr = 0
-                    continueRoutine = True
-                # a response ends the routine
-                #continueRoutine = True
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in stim4Components:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # check for quit (the Esc key)
-        if endExpNow or event.getKeys(keyList=["escape"]):
-            core.quit()
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # -------Ending Routine "stim4"-------
-    for thisComponent in stim4Components:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
-    if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
-    # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
-    
-    # ------Prepare to start Routine "stimBlank"-------
-    t = 0
-    stimBlankClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
-    routineTimer.add(0.500000)
-    # update component parameters for each repeat
-    blankImage.setImage(blank)
-    # keep track of which components have finished
-    stimBlankComponents = [blankImage]
-    for thisComponent in stimBlankComponents:
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    
-    # -------Start Routine "stimBlank"-------
-    while continueRoutine and routineTimer.getTime() > 0:
-        # get current time
-        t = stimBlankClock.getTime()
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # *blankImage* updates
-        if t >= 0.0 and blankImage.status == NOT_STARTED:
-            # keep track of start time/frame for later
-            blankImage.tStart = t
-            blankImage.frameNStart = frameN  # exact frame index
-            blankImage.setAutoDraw(True)
-        frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if blankImage.status == STARTED and t >= frameRemains:
-            blankImage.setAutoDraw(False)
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in stimBlankComponents:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # check for quit (the Esc key)
-        if endExpNow or event.getKeys(keyList=["escape"]):
-            core.quit()
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # -------Ending Routine "stimBlank"-------
-    for thisComponent in stimBlankComponents:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    
-    # ------Prepare to start Routine "stim2"-------
-    t = 0
-    stim2Clock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
-    # update component parameters for each repeat
-    image_3.setImage(pawPatrol2)
-    key_resp_9 = event.BuilderKeyResponse()
-    # keep track of which components have finished
-    stim2Components = [image_3, key_resp_9]
-    for thisComponent in stim2Components:
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    
-    # -------Start Routine "stim2"-------
-    while continueRoutine:
-        # get current time
-        t = stim2Clock.getTime()
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # *image_3* updates
-        if t >= 0.0 and image_3.status == NOT_STARTED:
-            # keep track of start time/frame for later
-            image_3.tStart = t
-            image_3.frameNStart = frameN  # exact frame index
-            image_3.setAutoDraw(True)
-        frameRemains = 0.0 + 50.0- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if image_3.status == STARTED and t >= frameRemains:
-            image_3.setAutoDraw(False)
-        
-        # *key_resp_6* updates
-        if t >= 0.0 and key_resp_9.status == NOT_STARTED:
-            # keep track of start time/frame for later
-            key_resp_9.tStart = t
-            key_resp_9.frameNStart = frameN  # exact frame index
-            key_resp_9.status = STARTED
-            # keyboard checking is just starting
-            win.callOnFlip(key_resp_9.clock.reset)  # t=0 on next screen flip
-        if key_resp_9.status == STARTED:
-            theseKeys = event.getKeys(keyList=['2', '1', '3', '4'])
-            
-            # check for quit:
-            if "escape" in theseKeys:
-                endExpNow = True
-            if len(theseKeys) > 0:  # at least one key was pressed
-                key_resp_9.keys.extend(theseKeys)  # storing all keys
-                key_resp_9.rt.append(key_resp_9.clock.getTime())
-                # was this 'correct'?
-                #if (theseKeys) == (correctKey):
-                if ((theseKeys) == (['2'])): 
-                #if (key_resp_9.keys == str(u'correctKey')) or (key_resp_9.keys == u'correctKey'):
-                    if len(key_resp_9.keys) == 1:
-                        key_resp_9_corr = 1
-                        trialCorrect = 1
-                        trials_2.addData('trialCorrect',trialCorrect)
-                    else: 
-                        key_resp_9_corr = 0
-                        trialCorrect = 0
-                        trials_2.addData('trialCorrect',trialCorrect)
-                    #key_resp_9.corr = 1
-                    continueRoutine = False
-                else:
-                    #key_resp_9.corr = 0
-                    continueRoutine = True
-                # a response ends the routine
-                #continueRoutine = True
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in stim2Components:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # check for quit (the Esc key)
-        if endExpNow or event.getKeys(keyList=["escape"]):
-            core.quit()
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # -------Ending Routine "stim2"-------
-    for thisComponent in stim2Components:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
-    if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
+    trials_2.addData('key_resp_6.keys',key_resp_6.keys)
+    trials_2.addData('key_resp_6.corr', key_resp_6.corr)
+    if key_resp_6.keys != None:  # we had a response
+        trials_2.addData('key_resp_6.rt', key_resp_6.rt)
     # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -2016,9 +2001,9 @@ for thisTrial_3 in trials_3:
     continueRoutine = True
     # update component parameters for each repeat
     image_4.setImage(pawPatrol3)
-    key_resp_9 = event.BuilderKeyResponse()
+    key_resp_7 = event.BuilderKeyResponse()
     # keep track of which components have finished
-    stim3Components = [image_4, key_resp_9]
+    stim3Components = [image_4, key_resp_7]
     for thisComponent in stim3Components:
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
@@ -2041,38 +2026,34 @@ for thisTrial_3 in trials_3:
             image_4.setAutoDraw(False)
         
         # *key_resp_7* updates
-        if t >= 0.0 and key_resp_9.status == NOT_STARTED:
+        if t >= 0.0 and key_resp_7.status == NOT_STARTED:
             # keep track of start time/frame for later
-            key_resp_9.tStart = t
-            key_resp_9.frameNStart = frameN  # exact frame index
-            key_resp_9.status = STARTED
+            key_resp_7.tStart = t
+            key_resp_7.frameNStart = frameN  # exact frame index
+            key_resp_7.status = STARTED
             # keyboard checking is just starting
-            win.callOnFlip(key_resp_9.clock.reset)  # t=0 on next screen flip
-        if key_resp_9.status == STARTED:
+            win.callOnFlip(key_resp_7.clock.reset)  # t=0 on next screen flip
+        if key_resp_7.status == STARTED:
             theseKeys = event.getKeys(keyList=['3', '1', '2', '4'])
             
             # check for quit:
             if "escape" in theseKeys:
                 endExpNow = True
             if len(theseKeys) > 0:  # at least one key was pressed
-                key_resp_9.keys.extend(theseKeys)  # storing all keys
-                key_resp_9.rt.append(key_resp_9.clock.getTime())
+                key_resp_7.keys.extend(theseKeys)  # storing all keys
+                key_resp_7.rt.append(key_resp_7.clock.getTime())
                 # was this 'correct'?
-                #if (theseKeys) == (correctKey):
                 if ((theseKeys) == (['3'])): 
-                #if (key_resp_9.keys == str(u'correctKey')) or (key_resp_9.keys == u'correctKey'):
-                    if len(key_resp_9.keys) == 1:
-                        key_resp_9_corr = 1
+                    if len(key_resp_7.keys) == 1:
+                        key_resp_7_corr = 1
                         trialCorrect = 1
                         trials_2.addData('trialCorrect',trialCorrect)
                     else: 
-                        key_resp_5_corr = 0
+                        key_resp_7_corr = 0
                         trialCorrect = 0
                         trials_2.addData('trialCorrect',trialCorrect)
-                    #key_resp_9.corr = 1
                     continueRoutine = False
                 else:
-                    #key_resp_9.corr = 0
                     continueRoutine = True
                 # a response ends the routine
                 #continueRoutine = True
@@ -2099,10 +2080,10 @@ for thisTrial_3 in trials_3:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
-    if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
+    trials_2.addData('key_resp_7.keys',key_resp_7.keys)
+    trials_2.addData('key_resp_7.corr', key_resp_7.corr)
+    if key_resp_7.keys != None:  # we had a response
+        trials_2.addData('key_resp_7.rt', key_resp_7.rt)
     # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -2166,9 +2147,9 @@ for thisTrial_3 in trials_3:
     continueRoutine = True
     # update component parameters for each repeat
     image_5.setImage(pawPatrol4)
-    key_resp_9 = event.BuilderKeyResponse()
+    key_resp_8 = event.BuilderKeyResponse()
     # keep track of which components have finished
-    stim4Components = [image_5, key_resp_9]
+    stim4Components = [image_5, key_resp_8]
     for thisComponent in stim4Components:
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
@@ -2191,38 +2172,34 @@ for thisTrial_3 in trials_3:
             image_5.setAutoDraw(False)
         
         # *key_resp_8* updates
-        if t >= 0.0 and key_resp_9.status == NOT_STARTED:
+        if t >= 0.0 and key_resp_8.status == NOT_STARTED:
             # keep track of start time/frame for later
-            key_resp_9.tStart = t
-            key_resp_9.frameNStart = frameN  # exact frame index
-            key_resp_9.status = STARTED
+            key_resp_8.tStart = t
+            key_resp_8.frameNStart = frameN  # exact frame index
+            key_resp_8.status = STARTED
             # keyboard checking is just starting
-            win.callOnFlip(key_resp_9.clock.reset)  # t=0 on next screen flip
-        if key_resp_9.status == STARTED:
+            win.callOnFlip(key_resp_8.clock.reset)  # t=0 on next screen flip
+        if key_resp_8.status == STARTED:
             theseKeys = event.getKeys(keyList=['4', '1', '2', '3'])
             
             # check for quit:
             if "escape" in theseKeys:
                 endExpNow = True
             if len(theseKeys) > 0:  # at least one key was pressed
-                key_resp_9.keys.extend(theseKeys)  # storing all keys
-                key_resp_9.rt.append(key_resp_9.clock.getTime())
+                key_resp_8.keys.extend(theseKeys)  # storing all keys
+                key_resp_8.rt.append(key_resp_8.clock.getTime())
                 # was this 'correct'?
-                #if (theseKeys) == (correctKey):
                 if ((theseKeys) == (['4'])): 
-                #if (key_resp_9.keys == str(u'correctKey')) or (key_resp_9.keys == u'correctKey'):
-                    if len(key_resp_9.keys) == 1:
-                        key_resp_9_corr = 1
+                    if len(key_resp_8.keys) == 1:
+                        key_resp_8_corr = 1
                         trialCorrect = 1
                         trials_2.addData('trialCorrect',trialCorrect)
                     else: 
-                        key_resp_5_corr = 0
+                        key_resp_8_corr = 0
                         trialCorrect = 0
                         trials_2.addData('trialCorrect',trialCorrect)
-                    #key_resp_9.corr = 1
                     continueRoutine = False
                 else:
-                    #key_resp_9.corr = 0
                     continueRoutine = True
                 # a response ends the routine
                 #continueRoutine = True
@@ -2249,10 +2226,10 @@ for thisTrial_3 in trials_3:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
-    if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
+    trials_2.addData('key_resp_8.keys',key_resp_8.keys)
+    trials_2.addData('key_resp_8.corr', key_resp_8.corr)
+    if key_resp_8.keys != None:  # we had a response
+        trials_2.addData('key_resp_8.rt', key_resp_8.rt)
     # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -2316,9 +2293,9 @@ for thisTrial_3 in trials_3:
     continueRoutine = True
     # update component parameters for each repeat
     image_3.setImage(pawPatrol2)
-    key_resp_9 = event.BuilderKeyResponse()
+    key_resp_10 = event.BuilderKeyResponse()
     # keep track of which components have finished
-    stim2Components = [image_3, key_resp_9]
+    stim2Components = [image_3, key_resp_10]
     for thisComponent in stim2Components:
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
@@ -2340,39 +2317,36 @@ for thisTrial_3 in trials_3:
         if image_3.status == STARTED and t >= frameRemains:
             image_3.setAutoDraw(False)
         
-        # *key_resp_6* updates
-        if t >= 0.0 and key_resp_9.status == NOT_STARTED:
+        # *key_resp_10* updates
+        if t >= 0.0 and key_resp_10.status == NOT_STARTED:
             # keep track of start time/frame for later
-            key_resp_9.tStart = t
-            key_resp_9.frameNStart = frameN  # exact frame index
-            key_resp_9.status = STARTED
+            key_resp_10.tStart = t
+            key_resp_10.frameNStart = frameN  # exact frame index
+            key_resp_10.status = STARTED
             # keyboard checking is just starting
-            win.callOnFlip(key_resp_9.clock.reset)  # t=0 on next screen flip
-        if key_resp_9.status == STARTED:
+            win.callOnFlip(key_resp_10.clock.reset)  # t=0 on next screen flip
+        if key_resp_10.status == STARTED:
             theseKeys = event.getKeys(keyList=['2', '1', '3', '4'])
             
             # check for quit:
             if "escape" in theseKeys:
                 endExpNow = True
             if len(theseKeys) > 0:  # at least one key was pressed
-                key_resp_9.keys.extend(theseKeys)  # storing all keys
-                key_resp_9.rt.append(key_resp_9.clock.getTime())
+                key_resp_10.keys.extend(theseKeys)  # storing all keys
+                key_resp_10.rt.append(key_resp_10.clock.getTime())
                 # was this 'correct'?
                 #if (theseKeys) == (correctKey):
                 if ((theseKeys) == (['2'])): 
-                #if (key_resp_9.keys == str(u'correctKey')) or (key_resp_9.keys == u'correctKey'):
-                    if len(key_resp_9.keys) == 1:
-                        key_resp_9_corr = 1
+                    if len(key_resp_10.keys) == 1:
+                        key_resp_10_corr = 1
                         trialCorrect = 1
                         trials_2.addData('trialCorrect',trialCorrect)
                     else: 
-                        key_resp_5_corr = 0
+                        key_resp_10_corr = 0
                         trialCorrect = 0
                         trials_2.addData('trialCorrect',trialCorrect)
-                    #key_resp_9.corr = 1
                     continueRoutine = False
                 else:
-                    #key_resp_9.corr = 0
                     continueRoutine = True
                 # a response ends the routine
                 #continueRoutine = True
@@ -2399,10 +2373,10 @@ for thisTrial_3 in trials_3:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
-    if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
+    trials_2.addData('key_resp_10.keys',key_resp_10.keys)
+    trials_2.addData('key_resp_10.corr', key_resp_10.corr)
+    if key_resp_10.keys != None:  # we had a response
+        trials_2.addData('key_resp_10.rt', key_resp_10.rt)
     # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -2466,9 +2440,9 @@ for thisTrial_3 in trials_3:
     continueRoutine = True
     # update component parameters for each repeat
     image_5.setImage(pawPatrol4)
-    key_resp_9 = event.BuilderKeyResponse()
+    key_resp_11 = event.BuilderKeyResponse()
     # keep track of which components have finished
-    stim4Components = [image_5, key_resp_9]
+    stim4Components = [image_5, key_resp_11]
     for thisComponent in stim4Components:
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
@@ -2490,39 +2464,36 @@ for thisTrial_3 in trials_3:
         if image_5.status == STARTED and t >= frameRemains:
             image_5.setAutoDraw(False)
         
-        # *key_resp_8* updates
-        if t >= 0.0 and key_resp_9.status == NOT_STARTED:
+        # *key_resp_11* updates
+        if t >= 0.0 and key_resp_11.status == NOT_STARTED:
             # keep track of start time/frame for later
-            key_resp_9.tStart = t
-            key_resp_9.frameNStart = frameN  # exact frame index
-            key_resp_9.status = STARTED
+            key_resp_11.tStart = t
+            key_resp_11.frameNStart = frameN  # exact frame index
+            key_resp_11.status = STARTED
             # keyboard checking is just starting
-            win.callOnFlip(key_resp_9.clock.reset)  # t=0 on next screen flip
-        if key_resp_9.status == STARTED:
+            win.callOnFlip(key_resp_11.clock.reset)  # t=0 on next screen flip
+        if key_resp_11.status == STARTED:
             theseKeys = event.getKeys(keyList=['4', '1', '2', '3'])
             
             # check for quit:
             if "escape" in theseKeys:
                 endExpNow = True
             if len(theseKeys) > 0:  # at least one key was pressed
-                key_resp_9.keys.extend(theseKeys)  # storing all keys
-                key_resp_9.rt.append(key_resp_9.clock.getTime())
+                key_resp_11.keys.extend(theseKeys)  # storing all keys
+                key_resp_11.rt.append(key_resp_11.clock.getTime())
                 # was this 'correct'?
                 #if (theseKeys) == (correctKey):
                 if ((theseKeys) == (['4'])): 
-                #if (key_resp_9.keys == str(u'correctKey')) or (key_resp_9.keys == u'correctKey'):
-                    if len(key_resp_9.keys) == 1:
-                        key_resp_9_corr = 1
+                    if len(key_resp_11.keys) == 1:
+                        key_resp_11_corr = 1
                         trialCorrect = 1
                         trials_2.addData('trialCorrect',trialCorrect)
                     else: 
-                        key_resp_5_corr = 0
+                        key_resp_11_corr = 0
                         trialCorrect = 0
                         trials_2.addData('trialCorrect',trialCorrect)
-                    #key_resp_9.corr = 1
                     continueRoutine = False
                 else:
-                    #key_resp_9.corr = 0
                     continueRoutine = True
                 # a response ends the routine
                 #continueRoutine = True
@@ -2549,10 +2520,10 @@ for thisTrial_3 in trials_3:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
-    if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
+    trials_2.addData('key_resp_11.keys',key_resp_11.keys)
+    trials_2.addData('key_resp_11.corr', key_resp_11.corr)
+    if key_resp_11.keys != None:  # we had a response
+        trials_2.addData('key_resp_11.rt', key_resp_11.rt)
     # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -2750,6 +2721,8 @@ for thisComponent in instructions2Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
 
+
+
 # -------Setting Up Repition-------
 # set up handler to look after randomisation of conditions etc
 trials_3 = data.TrialHandler(nReps=10, method='sequential', 
@@ -2827,11 +2800,11 @@ for thisTrial_3 in trials_3:
                     if len(key_resp_9.keys) == 1:
                         key_resp_9_corr = 1
                         trialCorrect = 1
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     else: 
                         key_resp_5_corr = 0
                         trialCorrect = 0
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     #key_resp_9.corr = 1
                     continueRoutine = False
                 else:
@@ -2862,10 +2835,10 @@ for thisTrial_3 in trials_3:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
+    trials_3.addData('key_resp_9.keys',key_resp_9.keys)
+    trials_3.addData('key_resp_9.corr', key_resp_9.corr)
     if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
+        trials_3.addData('key_resp_9.rt', key_resp_9.rt)
     # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -2977,11 +2950,11 @@ for thisTrial_3 in trials_3:
                     if len(key_resp_9.keys) == 1:
                         key_resp_9_corr = 1
                         trialCorrect = 1
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     else: 
                         key_resp_5_corr = 0
                         trialCorrect = 0
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     #key_resp_9.corr = 1
                     continueRoutine = False
                 else:
@@ -3012,10 +2985,10 @@ for thisTrial_3 in trials_3:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
+    trials_3.addData('key_resp_9.keys',key_resp_9.keys)
+    trials_3.addData('key_resp_9.corr', key_resp_9.corr)
     if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
+        trials_3.addData('key_resp_9.rt', key_resp_9.rt)
     # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -3127,11 +3100,11 @@ for thisTrial_3 in trials_3:
                     if len(key_resp_9.keys) == 1:
                         key_resp_9_corr = 1
                         trialCorrect = 1
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     else: 
                         key_resp_5_corr = 0
                         trialCorrect = 0
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     #key_resp_9.corr = 1
                     continueRoutine = False
                 else:
@@ -3162,10 +3135,10 @@ for thisTrial_3 in trials_3:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
+    trials_3.addData('key_resp_9.keys',key_resp_9.keys)
+    trials_3.addData('key_resp_9.corr', key_resp_9.corr)
     if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
+        trials_3.addData('key_resp_9.rt', key_resp_9.rt)
     # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -3277,11 +3250,11 @@ for thisTrial_3 in trials_3:
                     if len(key_resp_9.keys) == 1:
                         key_resp_9_corr = 1
                         trialCorrect = 1
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     else: 
                         key_resp_5_corr = 0
                         trialCorrect = 0
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     #key_resp_9.corr = 1
                     continueRoutine = False
                 else:
@@ -3312,10 +3285,10 @@ for thisTrial_3 in trials_3:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
+    trials_3.addData('key_resp_9.keys',key_resp_9.keys)
+    trials_3.addData('key_resp_9.corr', key_resp_9.corr)
     if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
+        trials_3.addData('key_resp_9.rt', key_resp_9.rt)
     # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -3427,11 +3400,11 @@ for thisTrial_3 in trials_3:
                     if len(key_resp_9.keys) == 1:
                         key_resp_9_corr = 1
                         trialCorrect = 1
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     else: 
                         key_resp_5_corr = 0
                         trialCorrect = 0
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     #key_resp_9.corr = 1
                     continueRoutine = False
                 else:
@@ -3462,10 +3435,10 @@ for thisTrial_3 in trials_3:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
+    trials_3.addData('key_resp_9.keys',key_resp_9.keys)
+    trials_3.addData('key_resp_9.corr', key_resp_9.corr)
     if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
+        trials_3.addData('key_resp_9.rt', key_resp_9.rt)
     # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -3577,11 +3550,11 @@ for thisTrial_3 in trials_3:
                     if len(key_resp_9.keys) == 1:
                         key_resp_9_corr = 1
                         trialCorrect = 1
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     else: 
                         key_resp_9_corr = 0
                         trialCorrect = 0
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     #key_resp_9.corr = 1
                     continueRoutine = False
                 else:
@@ -3612,10 +3585,10 @@ for thisTrial_3 in trials_3:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
+    trials_3.addData('key_resp_9.keys',key_resp_9.keys)
+    trials_3.addData('key_resp_9.corr', key_resp_9.corr)
     if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
+        trials_3.addData('key_resp_9.rt', key_resp_9.rt)
     # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -3727,11 +3700,11 @@ for thisTrial_3 in trials_3:
                     if len(key_resp_9.keys) == 1:
                         key_resp_9_corr = 1
                         trialCorrect = 1
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     else: 
                         key_resp_5_corr = 0
                         trialCorrect = 0
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     #key_resp_9.corr = 1
                     continueRoutine = False
                 else:
@@ -3762,10 +3735,10 @@ for thisTrial_3 in trials_3:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
+    trials_3.addData('key_resp_9.keys',key_resp_9.keys)
+    trials_3.addData('key_resp_9.corr', key_resp_9.corr)
     if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
+        trials_3.addData('key_resp_9.rt', key_resp_9.rt)
     # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -3877,11 +3850,11 @@ for thisTrial_3 in trials_3:
                     if len(key_resp_9.keys) == 1:
                         key_resp_9_corr = 1
                         trialCorrect = 1
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     else: 
                         key_resp_5_corr = 0
                         trialCorrect = 0
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     #key_resp_9.corr = 1
                     continueRoutine = False
                 else:
@@ -3912,10 +3885,10 @@ for thisTrial_3 in trials_3:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
+    trials_3.addData('key_resp_9.keys',key_resp_9.keys)
+    trials_3.addData('key_resp_9.corr', key_resp_9.corr)
     if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
+        trials_3.addData('key_resp_9.rt', key_resp_9.rt)
     # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -4027,11 +4000,11 @@ for thisTrial_3 in trials_3:
                     if len(key_resp_9.keys) == 1:
                         key_resp_9_corr = 1
                         trialCorrect = 1
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     else: 
                         key_resp_5_corr = 0
                         trialCorrect = 0
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     #key_resp_9.corr = 1
                     continueRoutine = False
                 else:
@@ -4062,10 +4035,10 @@ for thisTrial_3 in trials_3:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
+    trials_3.addData('key_resp_9.keys',key_resp_9.keys)
+    trials_3.addData('key_resp_9.corr', key_resp_9.corr)
     if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
+        trials_3.addData('key_resp_9.rt', key_resp_9.rt)
     # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -4177,11 +4150,11 @@ for thisTrial_3 in trials_3:
                     if len(key_resp_9.keys) == 1:
                         key_resp_9_corr = 1
                         trialCorrect = 1
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     else: 
                         key_resp_5_corr = 0
                         trialCorrect = 0
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_3.addData('trialCorrect',trialCorrect)
                     #key_resp_9.corr = 1
                     continueRoutine = False
                 else:
@@ -4212,10 +4185,10 @@ for thisTrial_3 in trials_3:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
+    trials_3.addData('key_resp_9.keys',key_resp_9.keys)
+    trials_3.addData('key_resp_9.corr', key_resp_9.corr)
     if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
+        trials_3.addData('key_resp_9.rt', key_resp_9.rt)
     # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -4414,6 +4387,7 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in instructions2Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
+
 
 # set up handler to look after randomisation of conditions etc
 trials_4 = data.TrialHandler(nReps=25, method='random', 
@@ -4504,13 +4478,13 @@ for thisTrial_4 in trials_4:
                         print('key resp 9 corr should be 1:')
                         print(key_resp_9_corr)
                         trialCorrect = 1
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_4.addData('trialCorrect',trialCorrect)
                     else: 
                         key_resp_9_corr = 0
                         print('the first element was not right: should be 0')
                         print(key_resp_9_corr)
                         trialCorrect = 0
-                        trials_2.addData('trialCorrect',trialCorrect)
+                        trials_4.addData('trialCorrect',trialCorrect)
                     #key_resp_9.corr = 1
                     continueRoutine = False
                 else:
@@ -4549,10 +4523,10 @@ for thisTrial_4 in trials_4:
         else:
            key_resp_9.corr = 0  # failed to respond (incorrectly)
     # store data for trials_2 (TrialHandler)
-    trials_2.addData('key_resp_9.keys',key_resp_9.keys)
-    trials_2.addData('key_resp_9.corr', key_resp_9.corr)
+    trials_4.addData('key_resp_9.keys',key_resp_9.keys)
+    trials_4.addData('key_resp_9.corr', key_resp_9.corr)
     if key_resp_9.keys != None:  # we had a response
-        trials_2.addData('key_resp_9.rt', key_resp_9.rt)
+        trials_4.addData('key_resp_9.rt', key_resp_9.rt)
     # the Routine "randomStim" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     

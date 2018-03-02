@@ -1,0 +1,7 @@
+pawPatrol1,pawPatrol2,pawPatrol3,pawPatrol4,blank,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,trials_2.thisRepN,trials_2.thisTrialN,trials_2.thisN,trials_2.thisIndex,trials_3.thisRepN,trials_3.thisTrialN,trials_3.thisN,trials_3.thisIndex,trialCorrect,key_resp_9.keys,key_resp_9.corr,key_resp_9.rt,date,frameRate,expName,session,participant,
+min1.png,min2.png,min3.png,min4.png,allBlank.png,,,,,,,,,0,0,0,0,0,"['3', '4']",0,"[0.18606090545654297, 0.4033658504486084]",2018_Feb_21_0953,59.7578798746,sequenceLearningTask,001,001,
+min1.png,min2.png,min3.png,min4.png,allBlank.png,,,,,,,,,1,0,1,0,0,"['3', '4']",0,"[0.16916704177856445, 0.41910505294799805]",2018_Feb_21_0953,59.7578798746,sequenceLearningTask,001,001,
+min1.png,min2.png,min3.png,min4.png,allBlank.png,,,,,,,,,2,0,2,0,0,"['3', '4']",0,"[0.0005640983581542969, 0.5028491020202637]",2018_Feb_21_0953,59.7578798746,sequenceLearningTask,001,001,
+min1.png,min2.png,min3.png,min4.png,allBlank.png,,,,,,,,,3,0,3,0,1,['4'],0,[0.5511898994445801],2018_Feb_21_0953,59.7578798746,sequenceLearningTask,001,001,
+min1.png,min2.png,min3.png,min4.png,allBlank.png,,,,,,,,,4,0,4,0,1,['4'],0,[0.2695600986480713],2018_Feb_21_0953,59.7578798746,sequenceLearningTask,001,001,
+min1.png,min2.png,min3.png,min4.png,allBlank.png,,,,,,,,,5,0,5,0,1,['4'],0,[0.25280213356018066],2018_Feb_21_0953,59.7578798746,sequenceLearningTask,001,001,

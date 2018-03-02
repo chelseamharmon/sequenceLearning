@@ -1,0 +1,4078 @@
+3.0043 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+5.7088 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([ 0.,  0.,  0.]), colorSpace='rgb', fullscr=UNKNOWN, gamma=None, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x113261c50>, multiSample=False, name='window1', numSamples=2, pos=[0, 0], screen=0, size=array([1440,  900]), stereo=False, units=u'norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+5.7088 	EXP 	window1: recordFrameIntervals = False
+5.8652 	EXP 	window1: recordFrameIntervals = True
+6.0495 	EXP 	window1: recordFrameIntervals = False
+6.1421 	EXP 	Created instructionsGeneral = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='instructionsGeneral', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text=unicode(...), units=u'norm', win=Window(...), wrapWidth=1)
+6.1440 	EXP 	Created image_paw1 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_paw1', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.1512 	EXP 	Created text = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text', opacity=1.0, ori=0, pos=array([ 0. ,  0.8]), rgb=array([ 1.,  1.,  1.]), text=u'Press 1 when a minion is here ', units=u'norm', win=Window(...), wrapWidth=1)
+6.1527 	EXP 	Created image_paw2 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_paw2', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.1583 	EXP 	Created text_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_2', opacity=1.0, ori=0, pos=array([ 0. ,  0.8]), rgb=array([ 1.,  1.,  1.]), text=u'Press 2 when a minion is here ', units=u'norm', win=Window(...), wrapWidth=1)
+6.1598 	EXP 	Created image_paw3 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_paw3', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.1654 	EXP 	Created text_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_3', opacity=1.0, ori=0, pos=array([ 0. ,  0.8]), rgb=array([ 1.,  1.,  1.]), text=u'Press 3 when a minion is here ', units=u'norm', win=Window(...), wrapWidth=1)
+6.1669 	EXP 	Created image_paw4 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_paw4', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.1726 	EXP 	Created text_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_4', opacity=1.0, ori=0, pos=array([ 0. ,  0.8]), rgb=array([ 1.,  1.,  1.]), text=u'Press 4 when a minion is here ', units=u'norm', win=Window(...), wrapWidth=1)
+6.1782 	EXP 	Created text_5 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_5', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'Get Ready...', units=u'norm', win=Window(...), wrapWidth=1)
+6.1824 	EXP 	Created text_6 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_6', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'GO!', units=u'norm', win=Window(...), wrapWidth=1)
+6.1845 	EXP 	Created image = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.1862 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.1971 	EXP 	Created text_7 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_7', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=unicode(...), units=u'norm', win=Window(...), wrapWidth=1)
+6.2004 	EXP 	Created text_5 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_5', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'Get Ready...', units=u'norm', win=Window(...), wrapWidth=1)
+6.2026 	EXP 	Created text_6 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_6', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'GO!', units=u'norm', win=Window(...), wrapWidth=1)
+6.2041 	EXP 	Created pos1 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='pos1', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2054 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2069 	EXP 	Created image_4 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_4', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2083 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2106 	EXP 	Created image_3 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_3', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2122 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2139 	EXP 	Created image_5 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2155 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2175 	EXP 	Created image_5 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2190 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2204 	EXP 	Created image_3 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_3', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2217 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2233 	EXP 	Created image_4 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_4', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2247 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2262 	EXP 	Created image_5 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2278 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2296 	EXP 	Created image_3 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_3', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2311 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2325 	EXP 	Created image_5 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2340 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2424 	EXP 	Created text_7 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_7', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=unicode(...), units=u'norm', win=Window(...), wrapWidth=1)
+6.2459 	EXP 	Created text_5 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_5', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'Get Ready...', units=u'norm', win=Window(...), wrapWidth=1)
+6.2480 	EXP 	Created text_6 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_6', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'GO!', units=u'norm', win=Window(...), wrapWidth=1)
+6.2496 	EXP 	Created pos1 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='pos1', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2511 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2525 	EXP 	Created image_4 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_4', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2539 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2555 	EXP 	Created image_3 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_3', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2569 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2584 	EXP 	Created image_5 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2598 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2614 	EXP 	Created image_5 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2627 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2643 	EXP 	Created image_3 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_3', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2658 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2674 	EXP 	Created image_4 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_4', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2688 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2701 	EXP 	Created image_5 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2715 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2731 	EXP 	Created image_3 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_3', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2746 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2760 	EXP 	Created image_5 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2774 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2861 	EXP 	Created text_7 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_7', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=unicode(...), units=u'norm', win=Window(...), wrapWidth=1)
+6.2915 	EXP 	Created text_5 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_5', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'Get Ready to catch the minions!...', units=u'norm', win=Window(...), wrapWidth=1)
+6.2938 	EXP 	Created text_6 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_6', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'GO!', units=u'norm', win=Window(...), wrapWidth=1)
+6.2953 	EXP 	Created image = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.2968 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2. ,  2.5]), texRes=128, units=u'norm', win=Window(...))
+6.3075 	EXP 	Created goodJob = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='goodJob', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=unicode(...), units=u'norm', win=Window(...), wrapWidth=1)
+6.3123 	EXP 	window1: blendMode = 'avg'
+6.3316 	EXP 	instructionsGeneral: color = 'white (named)'
+6.3316 	EXP 	instructionsGeneral: autoDraw = True
+6.3346 	EXP 	window1: blendMode = 'avg'
+6.3485 	EXP 	window1: blendMode = 'avg'
+6.3657 	EXP 	window1: blendMode = 'avg'
+6.3831 	EXP 	window1: blendMode = 'avg'
+6.3993 	EXP 	window1: blendMode = 'avg'
+6.4163 	EXP 	window1: blendMode = 'avg'
+6.4324 	EXP 	window1: blendMode = 'avg'
+6.4496 	EXP 	window1: blendMode = 'avg'
+6.4656 	EXP 	window1: blendMode = 'avg'
+6.4844 	EXP 	window1: blendMode = 'avg'
+6.4989 	EXP 	window1: blendMode = 'avg'
+6.5164 	EXP 	window1: blendMode = 'avg'
+6.5332 	EXP 	window1: blendMode = 'avg'
+6.5500 	EXP 	window1: blendMode = 'avg'
+6.5672 	EXP 	window1: blendMode = 'avg'
+6.5830 	EXP 	window1: blendMode = 'avg'
+6.5997 	EXP 	window1: blendMode = 'avg'
+6.6165 	EXP 	window1: blendMode = 'avg'
+6.6331 	EXP 	window1: blendMode = 'avg'
+6.6498 	EXP 	window1: blendMode = 'avg'
+6.6658 	EXP 	window1: blendMode = 'avg'
+6.6832 	EXP 	window1: blendMode = 'avg'
+6.7000 	EXP 	window1: blendMode = 'avg'
+6.7156 	EXP 	window1: blendMode = 'avg'
+6.7330 	EXP 	window1: blendMode = 'avg'
+6.7495 	EXP 	window1: blendMode = 'avg'
+6.7660 	EXP 	window1: blendMode = 'avg'
+6.7826 	EXP 	window1: blendMode = 'avg'
+6.7988 	EXP 	window1: blendMode = 'avg'
+6.8186 	DATA 	Keypress: space
+6.8235 	EXP 	Imported pawStimuli.xlsx as conditions, 1 conditions, 5 params
+6.8237 	EXP 	Created sequence: sequential, trialTypes=1, nReps=1, seed=None
+6.8241 	EXP 	New trial (rep=0, index=0): {'pawPatrol1': u'min1.png', 'pawPatrol2': u'min2.png', 'pawPatrol3': u'min3.png', 'pawPatrol4': u'min4.png', 'blank': u'allBlank.png'}
+6.8949 	EXP 	window1: blendMode = 'avg'
+6.9150 	EXP 	instructionsGeneral: autoDraw = False
+6.9150 	EXP 	image_paw1: image = u'min1.png'
+6.9150 	EXP 	text: color = 'black (named)'
+6.9150 	EXP 	image_paw1: autoDraw = True
+6.9150 	EXP 	text: autoDraw = True
+6.9164 	EXP 	window1: blendMode = 'avg'
+6.9326 	EXP 	window1: blendMode = 'avg'
+6.9486 	EXP 	window1: blendMode = 'avg'
+6.9660 	EXP 	window1: blendMode = 'avg'
+6.9827 	EXP 	window1: blendMode = 'avg'
+7.0005 	DATA 	Keypress: space
+7.0294 	EXP 	window1: blendMode = 'avg'
+7.0482 	EXP 	image_paw1: autoDraw = False
+7.0482 	EXP 	text: autoDraw = False
+7.0482 	EXP 	image_paw2: image = u'min2.png'
+7.0482 	EXP 	text_2: color = 'black (named)'
+7.0482 	EXP 	image_paw2: autoDraw = True
+7.0482 	EXP 	text_2: autoDraw = True
+7.0492 	EXP 	window1: blendMode = 'avg'
+7.0665 	EXP 	window1: blendMode = 'avg'
+7.0827 	EXP 	window1: blendMode = 'avg'
+7.0998 	EXP 	window1: blendMode = 'avg'
+7.1160 	EXP 	window1: blendMode = 'avg'
+7.1323 	EXP 	window1: blendMode = 'avg'
+7.1493 	EXP 	window1: blendMode = 'avg'
+7.1661 	EXP 	window1: blendMode = 'avg'
+7.1837 	DATA 	Keypress: space
+7.2143 	EXP 	window1: blendMode = 'avg'
+7.2320 	EXP 	image_paw2: autoDraw = False
+7.2320 	EXP 	text_2: autoDraw = False
+7.2320 	EXP 	image_paw3: image = u'min3.png'
+7.2320 	EXP 	text_3: color = 'black (named)'
+7.2320 	EXP 	image_paw3: autoDraw = True
+7.2320 	EXP 	text_3: autoDraw = True
+7.2330 	EXP 	window1: blendMode = 'avg'
+7.2486 	EXP 	window1: blendMode = 'avg'
+7.2659 	EXP 	window1: blendMode = 'avg'
+7.2813 	EXP 	window1: blendMode = 'avg'
+7.2991 	EXP 	window1: blendMode = 'avg'
+7.3154 	EXP 	window1: blendMode = 'avg'
+7.3327 	EXP 	window1: blendMode = 'avg'
+7.3489 	EXP 	window1: blendMode = 'avg'
+7.3670 	DATA 	Keypress: space
+7.3960 	EXP 	window1: blendMode = 'avg'
+7.4145 	EXP 	image_paw3: autoDraw = False
+7.4145 	EXP 	text_3: autoDraw = False
+7.4145 	EXP 	image_paw4: image = u'min4.png'
+7.4145 	EXP 	text_4: color = 'black (named)'
+7.4145 	EXP 	image_paw4: autoDraw = True
+7.4145 	EXP 	text_4: autoDraw = True
+7.4155 	EXP 	window1: blendMode = 'avg'
+7.4329 	EXP 	window1: blendMode = 'avg'
+7.4495 	EXP 	window1: blendMode = 'avg'
+7.4663 	EXP 	window1: blendMode = 'avg'
+7.4827 	EXP 	window1: blendMode = 'avg'
+7.4997 	DATA 	Keypress: space
+7.5009 	EXP 	window1: blendMode = 'avg'
+7.5151 	EXP 	image_paw4: autoDraw = False
+7.5151 	EXP 	text_4: autoDraw = False
+7.5151 	EXP 	text_5: autoDraw = True
+7.5158 	EXP 	window1: blendMode = 'avg'
+7.5326 	EXP 	window1: blendMode = 'avg'
+7.5494 	EXP 	window1: blendMode = 'avg'
+7.5655 	EXP 	window1: blendMode = 'avg'
+7.5825 	EXP 	window1: blendMode = 'avg'
+7.5991 	EXP 	window1: blendMode = 'avg'
+7.6158 	EXP 	window1: blendMode = 'avg'
+7.6325 	EXP 	window1: blendMode = 'avg'
+7.6493 	EXP 	window1: blendMode = 'avg'
+7.6662 	EXP 	window1: blendMode = 'avg'
+7.6824 	EXP 	window1: blendMode = 'avg'
+7.6992 	EXP 	window1: blendMode = 'avg'
+7.7159 	EXP 	window1: blendMode = 'avg'
+7.7326 	EXP 	window1: blendMode = 'avg'
+7.7494 	EXP 	window1: blendMode = 'avg'
+7.7658 	EXP 	window1: blendMode = 'avg'
+7.7825 	EXP 	window1: blendMode = 'avg'
+7.7992 	EXP 	window1: blendMode = 'avg'
+7.8160 	EXP 	window1: blendMode = 'avg'
+7.8327 	EXP 	window1: blendMode = 'avg'
+7.8491 	EXP 	window1: blendMode = 'avg'
+7.8658 	EXP 	window1: blendMode = 'avg'
+7.8826 	EXP 	window1: blendMode = 'avg'
+7.8993 	EXP 	window1: blendMode = 'avg'
+7.9160 	EXP 	window1: blendMode = 'avg'
+7.9323 	EXP 	window1: blendMode = 'avg'
+7.9490 	EXP 	window1: blendMode = 'avg'
+7.9656 	EXP 	window1: blendMode = 'avg'
+7.9823 	EXP 	window1: blendMode = 'avg'
+7.9990 	EXP 	window1: blendMode = 'avg'
+8.0157 	EXP 	window1: blendMode = 'avg'
+8.0325 	EXP 	window1: blendMode = 'avg'
+8.0492 	EXP 	window1: blendMode = 'avg'
+8.0659 	EXP 	window1: blendMode = 'avg'
+8.0827 	EXP 	window1: blendMode = 'avg'
+8.0991 	EXP 	window1: blendMode = 'avg'
+8.1159 	EXP 	window1: blendMode = 'avg'
+8.1326 	EXP 	window1: blendMode = 'avg'
+8.1493 	EXP 	window1: blendMode = 'avg'
+8.1658 	EXP 	window1: blendMode = 'avg'
+8.1825 	EXP 	window1: blendMode = 'avg'
+8.1992 	EXP 	window1: blendMode = 'avg'
+8.2160 	EXP 	window1: blendMode = 'avg'
+8.2313 	EXP 	window1: blendMode = 'avg'
+8.2490 	EXP 	window1: blendMode = 'avg'
+8.2658 	EXP 	window1: blendMode = 'avg'
+8.2828 	EXP 	window1: blendMode = 'avg'
+8.2991 	EXP 	window1: blendMode = 'avg'
+8.3156 	EXP 	window1: blendMode = 'avg'
+8.3322 	EXP 	window1: blendMode = 'avg'
+8.3491 	EXP 	window1: blendMode = 'avg'
+8.3658 	EXP 	window1: blendMode = 'avg'
+8.3817 	EXP 	window1: blendMode = 'avg'
+8.3990 	EXP 	window1: blendMode = 'avg'
+8.4156 	EXP 	window1: blendMode = 'avg'
+8.4323 	EXP 	window1: blendMode = 'avg'
+8.4491 	EXP 	window1: blendMode = 'avg'
+8.4658 	EXP 	window1: blendMode = 'avg'
+8.4826 	EXP 	window1: blendMode = 'avg'
+8.5150 	EXP 	text_5: autoDraw = False
+8.5161 	EXP 	window1: blendMode = 'avg'
+8.5317 	EXP 	text_6: autoDraw = True
+8.5325 	EXP 	window1: blendMode = 'avg'
+8.5492 	EXP 	window1: blendMode = 'avg'
+8.5659 	EXP 	window1: blendMode = 'avg'
+8.5826 	EXP 	window1: blendMode = 'avg'
+8.5994 	EXP 	window1: blendMode = 'avg'
+8.6157 	EXP 	window1: blendMode = 'avg'
+8.6325 	EXP 	window1: blendMode = 'avg'
+8.6492 	EXP 	window1: blendMode = 'avg'
+8.6661 	EXP 	window1: blendMode = 'avg'
+8.6824 	EXP 	window1: blendMode = 'avg'
+8.6992 	EXP 	window1: blendMode = 'avg'
+8.7159 	EXP 	window1: blendMode = 'avg'
+8.7327 	EXP 	window1: blendMode = 'avg'
+8.7491 	EXP 	window1: blendMode = 'avg'
+8.7659 	EXP 	window1: blendMode = 'avg'
+8.7826 	EXP 	window1: blendMode = 'avg'
+8.7993 	EXP 	window1: blendMode = 'avg'
+8.8149 	EXP 	window1: blendMode = 'avg'
+8.8327 	EXP 	window1: blendMode = 'avg'
+8.8491 	EXP 	window1: blendMode = 'avg'
+8.8648 	EXP 	window1: blendMode = 'avg'
+8.8815 	EXP 	window1: blendMode = 'avg'
+8.8993 	EXP 	window1: blendMode = 'avg'
+8.9158 	EXP 	window1: blendMode = 'avg'
+8.9329 	EXP 	window1: blendMode = 'avg'
+8.9491 	EXP 	window1: blendMode = 'avg'
+8.9651 	EXP 	window1: blendMode = 'avg'
+8.9824 	EXP 	window1: blendMode = 'avg'
+8.9987 	EXP 	window1: blendMode = 'avg'
+9.0157 	EXP 	window1: blendMode = 'avg'
+9.0325 	EXP 	window1: blendMode = 'avg'
+9.0492 	EXP 	window1: blendMode = 'avg'
+9.0660 	EXP 	window1: blendMode = 'avg'
+9.0824 	EXP 	window1: blendMode = 'avg'
+9.0987 	EXP 	window1: blendMode = 'avg'
+9.1157 	EXP 	window1: blendMode = 'avg'
+9.1324 	EXP 	window1: blendMode = 'avg'
+9.1492 	EXP 	window1: blendMode = 'avg'
+9.1658 	EXP 	window1: blendMode = 'avg'
+9.1826 	EXP 	window1: blendMode = 'avg'
+9.1994 	EXP 	window1: blendMode = 'avg'
+9.2157 	EXP 	window1: blendMode = 'avg'
+9.2327 	EXP 	window1: blendMode = 'avg'
+9.2491 	EXP 	window1: blendMode = 'avg'
+9.2658 	EXP 	window1: blendMode = 'avg'
+9.2822 	EXP 	window1: blendMode = 'avg'
+9.2990 	EXP 	window1: blendMode = 'avg'
+9.3158 	EXP 	window1: blendMode = 'avg'
+9.3327 	EXP 	window1: blendMode = 'avg'
+9.3491 	EXP 	window1: blendMode = 'avg'
+9.3658 	EXP 	window1: blendMode = 'avg'
+9.3825 	EXP 	window1: blendMode = 'avg'
+9.3993 	EXP 	window1: blendMode = 'avg'
+9.4160 	EXP 	window1: blendMode = 'avg'
+9.4327 	EXP 	window1: blendMode = 'avg'
+9.4490 	EXP 	window1: blendMode = 'avg'
+9.4657 	EXP 	window1: blendMode = 'avg'
+9.4825 	EXP 	window1: blendMode = 'avg'
+9.5037 	EXP 	Imported random.xlsx as conditions, 4 conditions, 4 params
+9.5042 	EXP 	Created sequence: random, trialTypes=4, nReps=25, seed=None
+9.5047 	EXP 	New trial (rep=0, index=0): {'randomPaw': u'min2.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['2'], 'blank': u'allBlank.png'}
+9.5483 	EXP 	text_6: autoDraw = False
+9.5483 	EXP 	text_5: autoDraw = False
+9.5483 	EXP 	text_6: autoDraw = False
+9.5483 	EXP 	pos1: image = u'min1.png'
+9.5483 	EXP 	pos1: autoDraw = True
+9.9837 	DATA 	Keypress: 1
+10.0311 	EXP 	pos1: autoDraw = False
+10.0311 	EXP 	blankImage: image = u'allBlank.png'
+10.0311 	EXP 	blankImage: autoDraw = True
+10.5310 	EXP 	blankImage: autoDraw = False
+10.5310 	EXP 	blankImage: autoDraw = False
+10.5310 	EXP 	image_4: image = u'min3.png'
+10.5310 	EXP 	image_4: autoDraw = True
+10.7837 	DATA 	Keypress: 3
+10.8315 	EXP 	image_4: autoDraw = False
+10.8315 	EXP 	blankImage: image = u'allBlank.png'
+10.8315 	EXP 	blankImage: autoDraw = True
+11.3318 	EXP 	blankImage: autoDraw = False
+11.3318 	EXP 	blankImage: autoDraw = False
+11.3318 	EXP 	image_3: image = u'min2.png'
+11.3318 	EXP 	image_3: autoDraw = True
+11.5842 	DATA 	Keypress: 2
+11.6155 	EXP 	image_3: autoDraw = False
+11.6155 	EXP 	blankImage: image = u'allBlank.png'
+11.6155 	EXP 	blankImage: autoDraw = True
+12.1313 	EXP 	blankImage: autoDraw = False
+12.1313 	EXP 	blankImage: autoDraw = False
+12.1313 	EXP 	image_5: image = u'min4.png'
+12.1313 	EXP 	image_5: autoDraw = True
+12.4321 	DATA 	Keypress: 4
+12.4640 	EXP 	image_5: autoDraw = False
+12.4640 	EXP 	blankImage: image = u'allBlank.png'
+12.4640 	EXP 	blankImage: autoDraw = True
+12.9649 	EXP 	blankImage: autoDraw = False
+12.9649 	EXP 	blankImage: autoDraw = False
+12.9649 	EXP 	image_5: image = u'min4.png'
+12.9649 	EXP 	image_5: autoDraw = True
+13.1170 	DATA 	Keypress: 4
+13.1479 	EXP 	image_5: autoDraw = False
+13.1479 	EXP 	blankImage: image = u'allBlank.png'
+13.1479 	EXP 	blankImage: autoDraw = True
+13.6482 	EXP 	blankImage: autoDraw = False
+13.6482 	EXP 	blankImage: autoDraw = False
+13.6482 	EXP 	image_3: image = u'min2.png'
+13.6482 	EXP 	image_3: autoDraw = True
+13.8667 	DATA 	Keypress: 2
+13.8983 	EXP 	image_3: autoDraw = False
+13.8983 	EXP 	blankImage: image = u'allBlank.png'
+13.8983 	EXP 	blankImage: autoDraw = True
+14.3983 	EXP 	blankImage: autoDraw = False
+14.3983 	EXP 	blankImage: autoDraw = False
+14.3983 	EXP 	image_4: image = u'min3.png'
+14.3983 	EXP 	image_4: autoDraw = True
+14.5003 	DATA 	Keypress: 3
+14.5314 	EXP 	image_4: autoDraw = False
+14.5314 	EXP 	blankImage: image = u'allBlank.png'
+14.5314 	EXP 	blankImage: autoDraw = True
+15.0314 	EXP 	blankImage: autoDraw = False
+15.0314 	EXP 	blankImage: autoDraw = False
+15.0314 	EXP 	image_5: image = u'min4.png'
+15.0314 	EXP 	image_5: autoDraw = True
+15.1335 	DATA 	Keypress: 1
+15.6838 	DATA 	Keypress: 4
+15.7145 	EXP 	image_5: autoDraw = False
+15.7145 	EXP 	blankImage: image = u'allBlank.png'
+15.7145 	EXP 	blankImage: autoDraw = True
+16.2143 	EXP 	blankImage: autoDraw = False
+16.2143 	EXP 	blankImage: autoDraw = False
+16.2143 	EXP 	image_3: image = u'min2.png'
+16.2143 	EXP 	image_3: autoDraw = True
+16.5169 	DATA 	Keypress: 2
+16.5479 	EXP 	image_3: autoDraw = False
+16.5479 	EXP 	blankImage: image = u'allBlank.png'
+16.5479 	EXP 	blankImage: autoDraw = True
+17.0482 	EXP 	blankImage: autoDraw = False
+17.0482 	EXP 	blankImage: autoDraw = False
+17.0482 	EXP 	image_5: image = u'min4.png'
+17.0482 	EXP 	image_5: autoDraw = True
+17.5669 	DATA 	Keypress: 2
+18.0335 	DATA 	Keypress: 3
+18.6326 	DATA 	Keypress: 4
+18.6638 	EXP 	image_5: autoDraw = False
+18.6638 	EXP 	blankImage: image = u'allBlank.png'
+18.6638 	EXP 	blankImage: autoDraw = True
+19.1329 	EXP 	New trial (rep=0, index=1): {'randomPaw': u'min3.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['3'], 'blank': u'allBlank.png'}
+19.1652 	EXP 	blankImage: autoDraw = False
+19.1652 	EXP 	blankImage: autoDraw = False
+19.1652 	EXP 	pos1: image = u'min1.png'
+19.1652 	EXP 	pos1: autoDraw = True
+19.4836 	DATA 	Keypress: 1
+19.5144 	EXP 	pos1: autoDraw = False
+19.5144 	EXP 	blankImage: image = u'allBlank.png'
+19.5144 	EXP 	blankImage: autoDraw = True
+20.0143 	EXP 	blankImage: autoDraw = False
+20.0143 	EXP 	blankImage: autoDraw = False
+20.0143 	EXP 	image_4: image = u'min3.png'
+20.0143 	EXP 	image_4: autoDraw = True
+20.2335 	DATA 	Keypress: 3
+20.2646 	EXP 	image_4: autoDraw = False
+20.2646 	EXP 	blankImage: image = u'allBlank.png'
+20.2646 	EXP 	blankImage: autoDraw = True
+20.7644 	EXP 	blankImage: autoDraw = False
+20.7644 	EXP 	blankImage: autoDraw = False
+20.7644 	EXP 	image_3: image = u'min2.png'
+20.7644 	EXP 	image_3: autoDraw = True
+20.9513 	DATA 	Keypress: 2
+20.9981 	EXP 	image_3: autoDraw = False
+20.9981 	EXP 	blankImage: image = u'allBlank.png'
+20.9981 	EXP 	blankImage: autoDraw = True
+21.4982 	EXP 	blankImage: autoDraw = False
+21.4982 	EXP 	blankImage: autoDraw = False
+21.4982 	EXP 	image_5: image = u'min4.png'
+21.4982 	EXP 	image_5: autoDraw = True
+21.6340 	DATA 	Keypress: 4
+21.6647 	EXP 	image_5: autoDraw = False
+21.6647 	EXP 	blankImage: image = u'allBlank.png'
+21.6647 	EXP 	blankImage: autoDraw = True
+22.1811 	EXP 	blankImage: autoDraw = False
+22.1811 	EXP 	blankImage: autoDraw = False
+22.1811 	EXP 	image_5: image = u'min4.png'
+22.1811 	EXP 	image_5: autoDraw = True
+22.3505 	DATA 	Keypress: 1
+22.9002 	DATA 	Keypress: 4
+22.9312 	EXP 	image_5: autoDraw = False
+22.9312 	EXP 	blankImage: image = u'allBlank.png'
+22.9312 	EXP 	blankImage: autoDraw = True
+23.4309 	EXP 	blankImage: autoDraw = False
+23.4309 	EXP 	blankImage: autoDraw = False
+23.4309 	EXP 	image_3: image = u'min2.png'
+23.4309 	EXP 	image_3: autoDraw = True
+23.7670 	DATA 	Keypress: 2
+23.7976 	EXP 	image_3: autoDraw = False
+23.7976 	EXP 	blankImage: image = u'allBlank.png'
+23.7976 	EXP 	blankImage: autoDraw = True
+24.3147 	EXP 	blankImage: autoDraw = False
+24.3147 	EXP 	blankImage: autoDraw = False
+24.3147 	EXP 	image_4: image = u'min3.png'
+24.3147 	EXP 	image_4: autoDraw = True
+24.5180 	DATA 	Keypress: 3
+24.5640 	EXP 	image_4: autoDraw = False
+24.5640 	EXP 	blankImage: image = u'allBlank.png'
+24.5640 	EXP 	blankImage: autoDraw = True
+25.0654 	EXP 	blankImage: autoDraw = False
+25.0654 	EXP 	blankImage: autoDraw = False
+25.0654 	EXP 	image_5: image = u'min4.png'
+25.0654 	EXP 	image_5: autoDraw = True
+25.5500 	DATA 	Keypress: 4
+25.5813 	EXP 	image_5: autoDraw = False
+25.5813 	EXP 	blankImage: image = u'allBlank.png'
+25.5813 	EXP 	blankImage: autoDraw = True
+26.0814 	EXP 	blankImage: autoDraw = False
+26.0814 	EXP 	blankImage: autoDraw = False
+26.0814 	EXP 	image_3: image = u'min2.png'
+26.0814 	EXP 	image_3: autoDraw = True
+26.3001 	DATA 	Keypress: 1
+26.6012 	DATA 	Keypress: 2
+26.6482 	EXP 	image_3: autoDraw = False
+26.6482 	EXP 	blankImage: image = u'allBlank.png'
+26.6482 	EXP 	blankImage: autoDraw = True
+27.1476 	EXP 	blankImage: autoDraw = False
+27.1476 	EXP 	blankImage: autoDraw = False
+27.1476 	EXP 	image_5: image = u'min4.png'
+27.1476 	EXP 	image_5: autoDraw = True
+27.4999 	DATA 	Keypress: 4
+27.5314 	EXP 	image_5: autoDraw = False
+27.5314 	EXP 	blankImage: image = u'allBlank.png'
+27.5314 	EXP 	blankImage: autoDraw = True
+27.9991 	EXP 	New trial (rep=0, index=2): {'randomPaw': u'min1.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['1'], 'blank': u'allBlank.png'}
+28.0312 	EXP 	blankImage: autoDraw = False
+28.0312 	EXP 	blankImage: autoDraw = False
+28.0312 	EXP 	pos1: image = u'min1.png'
+28.0312 	EXP 	pos1: autoDraw = True
+28.3839 	DATA 	Keypress: 1
+28.4144 	EXP 	pos1: autoDraw = False
+28.4144 	EXP 	blankImage: image = u'allBlank.png'
+28.4144 	EXP 	blankImage: autoDraw = True
+28.9168 	EXP 	blankImage: autoDraw = False
+28.9168 	EXP 	blankImage: autoDraw = False
+28.9168 	EXP 	image_4: image = u'min3.png'
+28.9168 	EXP 	image_4: autoDraw = True
+29.0502 	DATA 	Keypress: 3
+29.0811 	EXP 	image_4: autoDraw = False
+29.0811 	EXP 	blankImage: image = u'allBlank.png'
+29.0811 	EXP 	blankImage: autoDraw = True
+29.5812 	EXP 	blankImage: autoDraw = False
+29.5812 	EXP 	blankImage: autoDraw = False
+29.5812 	EXP 	image_3: image = u'min2.png'
+29.5812 	EXP 	image_3: autoDraw = True
+29.8169 	DATA 	Keypress: 2
+29.8488 	EXP 	image_3: autoDraw = False
+29.8488 	EXP 	blankImage: image = u'allBlank.png'
+29.8488 	EXP 	blankImage: autoDraw = True
+30.3481 	EXP 	blankImage: autoDraw = False
+30.3481 	EXP 	blankImage: autoDraw = False
+30.3481 	EXP 	image_5: image = u'min4.png'
+30.3481 	EXP 	image_5: autoDraw = True
+30.5825 	DATA 	Keypress: 4
+30.6145 	EXP 	image_5: autoDraw = False
+30.6145 	EXP 	blankImage: image = u'allBlank.png'
+30.6145 	EXP 	blankImage: autoDraw = True
+31.1149 	EXP 	blankImage: autoDraw = False
+31.1149 	EXP 	blankImage: autoDraw = False
+31.1149 	EXP 	image_5: image = u'min4.png'
+31.1149 	EXP 	image_5: autoDraw = True
+31.2836 	DATA 	Keypress: 4
+31.3145 	EXP 	image_5: autoDraw = False
+31.3145 	EXP 	blankImage: image = u'allBlank.png'
+31.3145 	EXP 	blankImage: autoDraw = True
+31.8150 	EXP 	blankImage: autoDraw = False
+31.8150 	EXP 	blankImage: autoDraw = False
+31.8150 	EXP 	image_3: image = u'min2.png'
+31.8150 	EXP 	image_3: autoDraw = True
+31.9503 	DATA 	Keypress: 3
+32.2669 	DATA 	Keypress: 2
+32.2974 	EXP 	image_3: autoDraw = False
+32.2974 	EXP 	blankImage: image = u'allBlank.png'
+32.2974 	EXP 	blankImage: autoDraw = True
+32.7981 	EXP 	blankImage: autoDraw = False
+32.7981 	EXP 	blankImage: autoDraw = False
+32.7981 	EXP 	image_4: image = u'min3.png'
+32.7981 	EXP 	image_4: autoDraw = True
+33.0496 	DATA 	Keypress: 3
+33.0814 	EXP 	image_4: autoDraw = False
+33.0814 	EXP 	blankImage: image = u'allBlank.png'
+33.0814 	EXP 	blankImage: autoDraw = True
+33.5809 	EXP 	blankImage: autoDraw = False
+33.5809 	EXP 	blankImage: autoDraw = False
+33.5809 	EXP 	image_5: image = u'min4.png'
+33.5809 	EXP 	image_5: autoDraw = True
+33.8672 	DATA 	Keypress: 4
+33.9148 	EXP 	image_5: autoDraw = False
+33.9148 	EXP 	blankImage: image = u'allBlank.png'
+33.9148 	EXP 	blankImage: autoDraw = True
+34.4143 	EXP 	blankImage: autoDraw = False
+34.4143 	EXP 	blankImage: autoDraw = False
+34.4143 	EXP 	image_3: image = u'min2.png'
+34.4143 	EXP 	image_3: autoDraw = True
+34.6338 	DATA 	Keypress: 1
+34.9331 	DATA 	Keypress: 2
+34.9638 	EXP 	image_3: autoDraw = False
+34.9638 	EXP 	blankImage: image = u'allBlank.png'
+34.9638 	EXP 	blankImage: autoDraw = True
+35.4647 	EXP 	blankImage: autoDraw = False
+35.4647 	EXP 	blankImage: autoDraw = False
+35.4647 	EXP 	image_5: image = u'min4.png'
+35.4647 	EXP 	image_5: autoDraw = True
+35.6665 	DATA 	Keypress: 3
+35.9005 	DATA 	Keypress: 4
+35.9316 	EXP 	image_5: autoDraw = False
+35.9316 	EXP 	blankImage: image = u'allBlank.png'
+35.9316 	EXP 	blankImage: autoDraw = True
+36.3991 	EXP 	New trial (rep=0, index=3): {'randomPaw': u'min4.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['4'], 'blank': u'allBlank.png'}
+36.4315 	EXP 	blankImage: autoDraw = False
+36.4315 	EXP 	blankImage: autoDraw = False
+36.4315 	EXP 	pos1: image = u'min1.png'
+36.4315 	EXP 	pos1: autoDraw = True
+36.7505 	DATA 	Keypress: 1
+36.7813 	EXP 	pos1: autoDraw = False
+36.7813 	EXP 	blankImage: image = u'allBlank.png'
+36.7813 	EXP 	blankImage: autoDraw = True
+37.2819 	EXP 	blankImage: autoDraw = False
+37.2819 	EXP 	blankImage: autoDraw = False
+37.2819 	EXP 	image_4: image = u'min3.png'
+37.2819 	EXP 	image_4: autoDraw = True
+37.5666 	DATA 	Keypress: 4
+37.6338 	DATA 	Keypress: 3
+37.6646 	EXP 	image_4: autoDraw = False
+37.6646 	EXP 	blankImage: image = u'allBlank.png'
+37.6646 	EXP 	blankImage: autoDraw = True
+38.1654 	EXP 	blankImage: autoDraw = False
+38.1654 	EXP 	blankImage: autoDraw = False
+38.1654 	EXP 	image_3: image = u'min2.png'
+38.1654 	EXP 	image_3: autoDraw = True
+38.4338 	DATA 	Keypress: 2
+38.4644 	EXP 	image_3: autoDraw = False
+38.4644 	EXP 	blankImage: image = u'allBlank.png'
+38.4644 	EXP 	blankImage: autoDraw = True
+38.9646 	EXP 	blankImage: autoDraw = False
+38.9646 	EXP 	blankImage: autoDraw = False
+38.9646 	EXP 	image_5: image = u'min4.png'
+38.9646 	EXP 	image_5: autoDraw = True
+39.1004 	DATA 	Keypress: 4
+39.1314 	EXP 	image_5: autoDraw = False
+39.1314 	EXP 	blankImage: image = u'allBlank.png'
+39.1314 	EXP 	blankImage: autoDraw = True
+39.6311 	EXP 	blankImage: autoDraw = False
+39.6311 	EXP 	blankImage: autoDraw = False
+39.6311 	EXP 	image_5: image = u'min4.png'
+39.6311 	EXP 	image_5: autoDraw = True
+40.0162 	DATA 	Keypress: 4
+40.0473 	EXP 	image_5: autoDraw = False
+40.0473 	EXP 	blankImage: image = u'allBlank.png'
+40.0473 	EXP 	blankImage: autoDraw = True
+40.5483 	EXP 	blankImage: autoDraw = False
+40.5483 	EXP 	blankImage: autoDraw = False
+40.5483 	EXP 	image_3: image = u'min2.png'
+40.5483 	EXP 	image_3: autoDraw = True
+40.8503 	DATA 	Keypress: 2
+40.8811 	EXP 	image_3: autoDraw = False
+40.8811 	EXP 	blankImage: image = u'allBlank.png'
+40.8811 	EXP 	blankImage: autoDraw = True
+41.3812 	EXP 	blankImage: autoDraw = False
+41.3812 	EXP 	blankImage: autoDraw = False
+41.3812 	EXP 	image_4: image = u'min3.png'
+41.3812 	EXP 	image_4: autoDraw = True
+41.7500 	DATA 	Keypress: 3
+41.7810 	EXP 	image_4: autoDraw = False
+41.7810 	EXP 	blankImage: image = u'allBlank.png'
+41.7810 	EXP 	blankImage: autoDraw = True
+42.2809 	EXP 	blankImage: autoDraw = False
+42.2809 	EXP 	blankImage: autoDraw = False
+42.2809 	EXP 	image_5: image = u'min4.png'
+42.2809 	EXP 	image_5: autoDraw = True
+42.5335 	DATA 	Keypress: 4
+42.5641 	EXP 	image_5: autoDraw = False
+42.5641 	EXP 	blankImage: image = u'allBlank.png'
+42.5641 	EXP 	blankImage: autoDraw = True
+43.0642 	EXP 	blankImage: autoDraw = False
+43.0642 	EXP 	blankImage: autoDraw = False
+43.0642 	EXP 	image_3: image = u'min2.png'
+43.0642 	EXP 	image_3: autoDraw = True
+43.3170 	DATA 	Keypress: 2
+43.3480 	EXP 	image_3: autoDraw = False
+43.3480 	EXP 	blankImage: image = u'allBlank.png'
+43.3480 	EXP 	blankImage: autoDraw = True
+43.8481 	EXP 	blankImage: autoDraw = False
+43.8481 	EXP 	blankImage: autoDraw = False
+43.8481 	EXP 	image_5: image = u'min4.png'
+43.8481 	EXP 	image_5: autoDraw = True
+44.1505 	DATA 	Keypress: 4
+44.1810 	EXP 	image_5: autoDraw = False
+44.1810 	EXP 	blankImage: image = u'allBlank.png'
+44.1810 	EXP 	blankImage: autoDraw = True
+44.6492 	EXP 	New trial (rep=1, index=0): {'randomPaw': u'min4.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['4'], 'blank': u'allBlank.png'}
+44.6814 	EXP 	blankImage: autoDraw = False
+44.6814 	EXP 	blankImage: autoDraw = False
+44.6814 	EXP 	pos1: image = u'min1.png'
+44.6814 	EXP 	pos1: autoDraw = True
+45.0006 	DATA 	Keypress: 1
+45.0309 	EXP 	pos1: autoDraw = False
+45.0309 	EXP 	blankImage: image = u'allBlank.png'
+45.0309 	EXP 	blankImage: autoDraw = True
+45.5313 	EXP 	blankImage: autoDraw = False
+45.5313 	EXP 	blankImage: autoDraw = False
+45.5313 	EXP 	image_4: image = u'min3.png'
+45.5313 	EXP 	image_4: autoDraw = True
+45.7338 	DATA 	Keypress: 3
+45.7812 	EXP 	image_4: autoDraw = False
+45.7812 	EXP 	blankImage: image = u'allBlank.png'
+45.7812 	EXP 	blankImage: autoDraw = True
+46.2814 	EXP 	blankImage: autoDraw = False
+46.2814 	EXP 	blankImage: autoDraw = False
+46.2814 	EXP 	image_3: image = u'min2.png'
+46.2814 	EXP 	image_3: autoDraw = True
+46.5173 	DATA 	Keypress: 2
+46.5482 	EXP 	image_3: autoDraw = False
+46.5482 	EXP 	blankImage: image = u'allBlank.png'
+46.5482 	EXP 	blankImage: autoDraw = True
+47.0480 	EXP 	blankImage: autoDraw = False
+47.0480 	EXP 	blankImage: autoDraw = False
+47.0480 	EXP 	image_5: image = u'min4.png'
+47.0480 	EXP 	image_5: autoDraw = True
+47.3006 	DATA 	Keypress: 4
+47.3318 	EXP 	image_5: autoDraw = False
+47.3318 	EXP 	blankImage: image = u'allBlank.png'
+47.3318 	EXP 	blankImage: autoDraw = True
+47.8308 	EXP 	blankImage: autoDraw = False
+47.8308 	EXP 	blankImage: autoDraw = False
+47.8308 	EXP 	image_5: image = u'min4.png'
+47.8308 	EXP 	image_5: autoDraw = True
+48.2346 	DATA 	Keypress: 4
+48.2812 	EXP 	image_5: autoDraw = False
+48.2812 	EXP 	blankImage: image = u'allBlank.png'
+48.2812 	EXP 	blankImage: autoDraw = True
+48.7809 	EXP 	blankImage: autoDraw = False
+48.7809 	EXP 	blankImage: autoDraw = False
+48.7809 	EXP 	image_3: image = u'min2.png'
+48.7809 	EXP 	image_3: autoDraw = True
+49.1670 	DATA 	Keypress: 2
+49.1981 	EXP 	image_3: autoDraw = False
+49.1981 	EXP 	blankImage: image = u'allBlank.png'
+49.1981 	EXP 	blankImage: autoDraw = True
+49.6980 	EXP 	blankImage: autoDraw = False
+49.6980 	EXP 	blankImage: autoDraw = False
+49.6980 	EXP 	image_4: image = u'min3.png'
+49.6980 	EXP 	image_4: autoDraw = True
+49.9836 	DATA 	Keypress: 3
+50.0145 	EXP 	image_4: autoDraw = False
+50.0145 	EXP 	blankImage: image = u'allBlank.png'
+50.0145 	EXP 	blankImage: autoDraw = True
+50.5148 	EXP 	blankImage: autoDraw = False
+50.5148 	EXP 	blankImage: autoDraw = False
+50.5148 	EXP 	image_5: image = u'min4.png'
+50.5148 	EXP 	image_5: autoDraw = True
+50.7498 	DATA 	Keypress: 4
+50.7804 	EXP 	image_5: autoDraw = False
+50.7804 	EXP 	blankImage: image = u'allBlank.png'
+50.7804 	EXP 	blankImage: autoDraw = True
+51.2812 	EXP 	blankImage: autoDraw = False
+51.2812 	EXP 	blankImage: autoDraw = False
+51.2812 	EXP 	image_3: image = u'min2.png'
+51.2812 	EXP 	image_3: autoDraw = True
+51.5335 	DATA 	Keypress: 2
+51.5643 	EXP 	image_3: autoDraw = False
+51.5643 	EXP 	blankImage: image = u'allBlank.png'
+51.5643 	EXP 	blankImage: autoDraw = True
+52.0647 	EXP 	blankImage: autoDraw = False
+52.0647 	EXP 	blankImage: autoDraw = False
+52.0647 	EXP 	image_5: image = u'min4.png'
+52.0647 	EXP 	image_5: autoDraw = True
+52.3166 	DATA 	Keypress: 3
+52.5837 	DATA 	Keypress: 4
+52.6143 	EXP 	image_5: autoDraw = False
+52.6143 	EXP 	blankImage: image = u'allBlank.png'
+52.6143 	EXP 	blankImage: autoDraw = True
+53.0828 	EXP 	New trial (rep=1, index=1): {'randomPaw': u'min2.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['2'], 'blank': u'allBlank.png'}
+53.1152 	EXP 	blankImage: autoDraw = False
+53.1152 	EXP 	blankImage: autoDraw = False
+53.1152 	EXP 	pos1: image = u'min1.png'
+53.1152 	EXP 	pos1: autoDraw = True
+53.4503 	DATA 	Keypress: 1
+53.4809 	EXP 	pos1: autoDraw = False
+53.4809 	EXP 	blankImage: image = u'allBlank.png'
+53.4809 	EXP 	blankImage: autoDraw = True
+53.9808 	EXP 	blankImage: autoDraw = False
+53.9808 	EXP 	blankImage: autoDraw = False
+53.9808 	EXP 	image_4: image = u'min3.png'
+53.9808 	EXP 	image_4: autoDraw = True
+54.2670 	DATA 	Keypress: 3
+54.2979 	EXP 	image_4: autoDraw = False
+54.2979 	EXP 	blankImage: image = u'allBlank.png'
+54.2979 	EXP 	blankImage: autoDraw = True
+54.7976 	EXP 	blankImage: autoDraw = False
+54.7976 	EXP 	blankImage: autoDraw = False
+54.7976 	EXP 	image_3: image = u'min2.png'
+54.7976 	EXP 	image_3: autoDraw = True
+55.0495 	DATA 	Keypress: 2
+55.0814 	EXP 	image_3: autoDraw = False
+55.0814 	EXP 	blankImage: image = u'allBlank.png'
+55.0814 	EXP 	blankImage: autoDraw = True
+55.5814 	EXP 	blankImage: autoDraw = False
+55.5814 	EXP 	blankImage: autoDraw = False
+55.5814 	EXP 	image_5: image = u'min4.png'
+55.5814 	EXP 	image_5: autoDraw = True
+55.7835 	DATA 	Keypress: 4
+55.8146 	EXP 	image_5: autoDraw = False
+55.8146 	EXP 	blankImage: image = u'allBlank.png'
+55.8146 	EXP 	blankImage: autoDraw = True
+56.3142 	EXP 	blankImage: autoDraw = False
+56.3142 	EXP 	blankImage: autoDraw = False
+56.3142 	EXP 	image_5: image = u'min4.png'
+56.3142 	EXP 	image_5: autoDraw = True
+56.5503 	DATA 	Keypress: 4
+56.5812 	EXP 	image_5: autoDraw = False
+56.5812 	EXP 	blankImage: image = u'allBlank.png'
+56.5812 	EXP 	blankImage: autoDraw = True
+57.0808 	EXP 	blankImage: autoDraw = False
+57.0808 	EXP 	blankImage: autoDraw = False
+57.0808 	EXP 	image_3: image = u'min2.png'
+57.0808 	EXP 	image_3: autoDraw = True
+57.3003 	DATA 	Keypress: 2
+57.3309 	EXP 	image_3: autoDraw = False
+57.3309 	EXP 	blankImage: image = u'allBlank.png'
+57.3309 	EXP 	blankImage: autoDraw = True
+57.8314 	EXP 	blankImage: autoDraw = False
+57.8314 	EXP 	blankImage: autoDraw = False
+57.8314 	EXP 	image_4: image = u'min3.png'
+57.8314 	EXP 	image_4: autoDraw = True
+58.0335 	DATA 	Keypress: 3
+58.0649 	EXP 	image_4: autoDraw = False
+58.0649 	EXP 	blankImage: image = u'allBlank.png'
+58.0649 	EXP 	blankImage: autoDraw = True
+58.5645 	EXP 	blankImage: autoDraw = False
+58.5645 	EXP 	blankImage: autoDraw = False
+58.5645 	EXP 	image_5: image = u'min4.png'
+58.5645 	EXP 	image_5: autoDraw = True
+58.7997 	DATA 	Keypress: 4
+58.8313 	EXP 	image_5: autoDraw = False
+58.8313 	EXP 	blankImage: image = u'allBlank.png'
+58.8313 	EXP 	blankImage: autoDraw = True
+59.3314 	EXP 	blankImage: autoDraw = False
+59.3314 	EXP 	blankImage: autoDraw = False
+59.3314 	EXP 	image_3: image = u'min2.png'
+59.3314 	EXP 	image_3: autoDraw = True
+59.9336 	DATA 	Keypress: 2
+59.9642 	EXP 	image_3: autoDraw = False
+59.9642 	EXP 	blankImage: image = u'allBlank.png'
+59.9642 	EXP 	blankImage: autoDraw = True
+60.4646 	EXP 	blankImage: autoDraw = False
+60.4646 	EXP 	blankImage: autoDraw = False
+60.4646 	EXP 	image_5: image = u'min4.png'
+60.4646 	EXP 	image_5: autoDraw = True
+65.4483 	EXP 	image_5: autoDraw = False
+77.1837 	DATA 	Keypress: 1
+77.3501 	DATA 	Keypress: 2
+77.4671 	DATA 	Keypress: 3
+77.7168 	DATA 	Keypress: 4
+77.7479 	EXP 	image_5: autoDraw = False
+77.7479 	EXP 	blankImage: image = u'allBlank.png'
+77.7479 	EXP 	blankImage: autoDraw = True
+78.2159 	EXP 	New trial (rep=1, index=2): {'randomPaw': u'min3.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['3'], 'blank': u'allBlank.png'}
+78.2479 	EXP 	blankImage: autoDraw = False
+78.2479 	EXP 	blankImage: autoDraw = False
+78.2479 	EXP 	pos1: image = u'min1.png'
+78.2479 	EXP 	pos1: autoDraw = True
+78.8002 	DATA 	Keypress: 1
+78.8309 	EXP 	pos1: autoDraw = False
+78.8309 	EXP 	blankImage: image = u'allBlank.png'
+78.8309 	EXP 	blankImage: autoDraw = True
+79.3313 	EXP 	blankImage: autoDraw = False
+79.3313 	EXP 	blankImage: autoDraw = False
+79.3313 	EXP 	image_4: image = u'min3.png'
+79.3313 	EXP 	image_4: autoDraw = True
+79.7169 	DATA 	Keypress: 3
+79.7477 	EXP 	image_4: autoDraw = False
+79.7477 	EXP 	blankImage: image = u'allBlank.png'
+79.7477 	EXP 	blankImage: autoDraw = True
+80.2475 	EXP 	blankImage: autoDraw = False
+80.2475 	EXP 	blankImage: autoDraw = False
+80.2475 	EXP 	image_3: image = u'min2.png'
+80.2475 	EXP 	image_3: autoDraw = True
+80.6335 	DATA 	Keypress: 2
+80.6648 	EXP 	image_3: autoDraw = False
+80.6648 	EXP 	blankImage: image = u'allBlank.png'
+80.6648 	EXP 	blankImage: autoDraw = True
+81.1642 	EXP 	blankImage: autoDraw = False
+81.1642 	EXP 	blankImage: autoDraw = False
+81.1642 	EXP 	image_5: image = u'min4.png'
+81.1642 	EXP 	image_5: autoDraw = True
+81.3998 	DATA 	Keypress: 4
+81.4314 	EXP 	image_5: autoDraw = False
+81.4314 	EXP 	blankImage: image = u'allBlank.png'
+81.4314 	EXP 	blankImage: autoDraw = True
+81.9310 	EXP 	blankImage: autoDraw = False
+81.9310 	EXP 	blankImage: autoDraw = False
+81.9310 	EXP 	image_5: image = u'min4.png'
+81.9310 	EXP 	image_5: autoDraw = True
+82.2828 	DATA 	Keypress: 4
+82.3139 	EXP 	image_5: autoDraw = False
+82.3139 	EXP 	blankImage: image = u'allBlank.png'
+82.3139 	EXP 	blankImage: autoDraw = True
+82.8140 	EXP 	blankImage: autoDraw = False
+82.8140 	EXP 	blankImage: autoDraw = False
+82.8140 	EXP 	image_3: image = u'min2.png'
+82.8140 	EXP 	image_3: autoDraw = True
+83.0664 	DATA 	Keypress: 2
+83.0973 	EXP 	image_3: autoDraw = False
+83.0973 	EXP 	blankImage: image = u'allBlank.png'
+83.0973 	EXP 	blankImage: autoDraw = True
+83.5975 	EXP 	blankImage: autoDraw = False
+83.5975 	EXP 	blankImage: autoDraw = False
+83.5975 	EXP 	image_4: image = u'min3.png'
+83.5975 	EXP 	image_4: autoDraw = True
+83.8501 	DATA 	Keypress: 3
+83.8810 	EXP 	image_4: autoDraw = False
+83.8810 	EXP 	blankImage: image = u'allBlank.png'
+83.8810 	EXP 	blankImage: autoDraw = True
+84.3981 	EXP 	blankImage: autoDraw = False
+84.3981 	EXP 	blankImage: autoDraw = False
+84.3981 	EXP 	image_5: image = u'min4.png'
+84.3981 	EXP 	image_5: autoDraw = True
+84.5665 	DATA 	Keypress: 4
+84.5979 	EXP 	image_5: autoDraw = False
+84.5979 	EXP 	blankImage: image = u'allBlank.png'
+84.5979 	EXP 	blankImage: autoDraw = True
+85.0980 	EXP 	blankImage: autoDraw = False
+85.0980 	EXP 	blankImage: autoDraw = False
+85.0980 	EXP 	image_3: image = u'min2.png'
+85.0980 	EXP 	image_3: autoDraw = True
+85.3168 	DATA 	Keypress: 4
+85.6168 	DATA 	Keypress: 2
+85.6649 	EXP 	image_3: autoDraw = False
+85.6649 	EXP 	blankImage: image = u'allBlank.png'
+85.6649 	EXP 	blankImage: autoDraw = True
+86.1474 	EXP 	blankImage: autoDraw = False
+86.1474 	EXP 	blankImage: autoDraw = False
+86.1474 	EXP 	image_5: image = u'min4.png'
+86.1474 	EXP 	image_5: autoDraw = True
+86.2995 	DATA 	Keypress: 3
+86.6168 	DATA 	Keypress: 4
+86.6479 	EXP 	image_5: autoDraw = False
+86.6479 	EXP 	blankImage: image = u'allBlank.png'
+86.6479 	EXP 	blankImage: autoDraw = True
+87.1155 	EXP 	New trial (rep=1, index=3): {'randomPaw': u'min1.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['1'], 'blank': u'allBlank.png'}
+87.1475 	EXP 	blankImage: autoDraw = False
+87.1475 	EXP 	blankImage: autoDraw = False
+87.1475 	EXP 	pos1: image = u'min1.png'
+87.1475 	EXP 	pos1: autoDraw = True
+87.4490 	DATA 	Keypress: 1
+87.4809 	EXP 	pos1: autoDraw = False
+87.4809 	EXP 	blankImage: image = u'allBlank.png'
+87.4809 	EXP 	blankImage: autoDraw = True
+87.9816 	EXP 	blankImage: autoDraw = False
+87.9816 	EXP 	blankImage: autoDraw = False
+87.9816 	EXP 	image_4: image = u'min3.png'
+87.9816 	EXP 	image_4: autoDraw = True
+88.2006 	DATA 	Keypress: 3
+88.2475 	EXP 	image_4: autoDraw = False
+88.2475 	EXP 	blankImage: image = u'allBlank.png'
+88.2475 	EXP 	blankImage: autoDraw = True
+88.7483 	EXP 	blankImage: autoDraw = False
+88.7483 	EXP 	blankImage: autoDraw = False
+88.7483 	EXP 	image_3: image = u'min2.png'
+88.7483 	EXP 	image_3: autoDraw = True
+88.9492 	DATA 	Keypress: 2
+88.9814 	EXP 	image_3: autoDraw = False
+88.9814 	EXP 	blankImage: image = u'allBlank.png'
+88.9814 	EXP 	blankImage: autoDraw = True
+89.4813 	EXP 	blankImage: autoDraw = False
+89.4813 	EXP 	blankImage: autoDraw = False
+89.4813 	EXP 	image_5: image = u'min4.png'
+89.4813 	EXP 	image_5: autoDraw = True
+89.7176 	DATA 	Keypress: 4
+89.7651 	EXP 	image_5: autoDraw = False
+89.7651 	EXP 	blankImage: image = u'allBlank.png'
+89.7651 	EXP 	blankImage: autoDraw = True
+90.2642 	EXP 	blankImage: autoDraw = False
+90.2642 	EXP 	blankImage: autoDraw = False
+90.2642 	EXP 	image_5: image = u'min4.png'
+90.2642 	EXP 	image_5: autoDraw = True
+90.5344 	DATA 	Keypress: 4
+90.5804 	EXP 	image_5: autoDraw = False
+90.5804 	EXP 	blankImage: image = u'allBlank.png'
+90.5804 	EXP 	blankImage: autoDraw = True
+91.0814 	EXP 	blankImage: autoDraw = False
+91.0814 	EXP 	blankImage: autoDraw = False
+91.0814 	EXP 	image_3: image = u'min2.png'
+91.0814 	EXP 	image_3: autoDraw = True
+91.3994 	DATA 	Keypress: 2
+91.4309 	EXP 	image_3: autoDraw = False
+91.4309 	EXP 	blankImage: image = u'allBlank.png'
+91.4309 	EXP 	blankImage: autoDraw = True
+91.9315 	EXP 	blankImage: autoDraw = False
+91.9315 	EXP 	blankImage: autoDraw = False
+91.9315 	EXP 	image_4: image = u'min3.png'
+91.9315 	EXP 	image_4: autoDraw = True
+92.1325 	DATA 	Keypress: 3
+92.1639 	EXP 	image_4: autoDraw = False
+92.1639 	EXP 	blankImage: image = u'allBlank.png'
+92.1639 	EXP 	blankImage: autoDraw = True
+92.6647 	EXP 	blankImage: autoDraw = False
+92.6647 	EXP 	blankImage: autoDraw = False
+92.6647 	EXP 	image_5: image = u'min4.png'
+92.6647 	EXP 	image_5: autoDraw = True
+92.9330 	DATA 	Keypress: 4
+92.9642 	EXP 	image_5: autoDraw = False
+92.9642 	EXP 	blankImage: image = u'allBlank.png'
+92.9642 	EXP 	blankImage: autoDraw = True
+93.4645 	EXP 	blankImage: autoDraw = False
+93.4645 	EXP 	blankImage: autoDraw = False
+93.4645 	EXP 	image_3: image = u'min2.png'
+93.4645 	EXP 	image_3: autoDraw = True
+93.7838 	DATA 	Keypress: 2
+93.8141 	EXP 	image_3: autoDraw = False
+93.8141 	EXP 	blankImage: image = u'allBlank.png'
+93.8141 	EXP 	blankImage: autoDraw = True
+94.3147 	EXP 	blankImage: autoDraw = False
+94.3147 	EXP 	blankImage: autoDraw = False
+94.3147 	EXP 	image_5: image = u'min4.png'
+94.3147 	EXP 	image_5: autoDraw = True
+94.5997 	DATA 	Keypress: 4
+94.6306 	EXP 	image_5: autoDraw = False
+94.6306 	EXP 	blankImage: image = u'allBlank.png'
+94.6306 	EXP 	blankImage: autoDraw = True
+95.0989 	EXP 	New trial (rep=2, index=0): {'randomPaw': u'min4.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['4'], 'blank': u'allBlank.png'}
+95.1319 	EXP 	blankImage: autoDraw = False
+95.1319 	EXP 	blankImage: autoDraw = False
+95.1319 	EXP 	pos1: image = u'min1.png'
+95.1319 	EXP 	pos1: autoDraw = True
+95.4672 	DATA 	Keypress: 1
+95.5147 	EXP 	pos1: autoDraw = False
+95.5147 	EXP 	blankImage: image = u'allBlank.png'
+95.5147 	EXP 	blankImage: autoDraw = True
+96.0141 	EXP 	blankImage: autoDraw = False
+96.0141 	EXP 	blankImage: autoDraw = False
+96.0141 	EXP 	image_4: image = u'min3.png'
+96.0141 	EXP 	image_4: autoDraw = True
+96.2338 	DATA 	Keypress: 3
+96.2647 	EXP 	image_4: autoDraw = False
+96.2647 	EXP 	blankImage: image = u'allBlank.png'
+96.2647 	EXP 	blankImage: autoDraw = True
+96.7646 	EXP 	blankImage: autoDraw = False
+96.7646 	EXP 	blankImage: autoDraw = False
+96.7646 	EXP 	image_3: image = u'min2.png'
+96.7646 	EXP 	image_3: autoDraw = True
+97.0336 	DATA 	Keypress: 2
+97.0648 	EXP 	image_3: autoDraw = False
+97.0648 	EXP 	blankImage: image = u'allBlank.png'
+97.0648 	EXP 	blankImage: autoDraw = True
+97.5644 	EXP 	blankImage: autoDraw = False
+97.5644 	EXP 	blankImage: autoDraw = False
+97.5644 	EXP 	image_5: image = u'min4.png'
+97.5644 	EXP 	image_5: autoDraw = True
+97.7668 	DATA 	Keypress: 4
+97.7977 	EXP 	image_5: autoDraw = False
+97.7977 	EXP 	blankImage: image = u'allBlank.png'
+97.7977 	EXP 	blankImage: autoDraw = True
+98.2981 	EXP 	blankImage: autoDraw = False
+98.2981 	EXP 	blankImage: autoDraw = False
+98.2981 	EXP 	image_5: image = u'min4.png'
+98.2981 	EXP 	image_5: autoDraw = True
+98.6492 	DATA 	Keypress: 4
+98.6812 	EXP 	image_5: autoDraw = False
+98.6812 	EXP 	blankImage: image = u'allBlank.png'
+98.6812 	EXP 	blankImage: autoDraw = True
+99.1811 	EXP 	blankImage: autoDraw = False
+99.1811 	EXP 	blankImage: autoDraw = False
+99.1811 	EXP 	image_3: image = u'min2.png'
+99.1811 	EXP 	image_3: autoDraw = True
+99.3994 	DATA 	Keypress: 2
+99.4310 	EXP 	image_3: autoDraw = False
+99.4310 	EXP 	blankImage: image = u'allBlank.png'
+99.4310 	EXP 	blankImage: autoDraw = True
+99.9309 	EXP 	blankImage: autoDraw = False
+99.9309 	EXP 	blankImage: autoDraw = False
+99.9309 	EXP 	image_4: image = u'min3.png'
+99.9309 	EXP 	image_4: autoDraw = True
+100.1835 	DATA 	Keypress: 3
+100.2146 	EXP 	image_4: autoDraw = False
+100.2146 	EXP 	blankImage: image = u'allBlank.png'
+100.2146 	EXP 	blankImage: autoDraw = True
+100.7139 	EXP 	blankImage: autoDraw = False
+100.7139 	EXP 	blankImage: autoDraw = False
+100.7139 	EXP 	image_5: image = u'min4.png'
+100.7139 	EXP 	image_5: autoDraw = True
+100.9499 	DATA 	Keypress: 4
+100.9809 	EXP 	image_5: autoDraw = False
+100.9809 	EXP 	blankImage: image = u'allBlank.png'
+100.9809 	EXP 	blankImage: autoDraw = True
+101.4813 	EXP 	blankImage: autoDraw = False
+101.4813 	EXP 	blankImage: autoDraw = False
+101.4813 	EXP 	image_3: image = u'min2.png'
+101.4813 	EXP 	image_3: autoDraw = True
+101.8011 	DATA 	Keypress: 2
+101.8477 	EXP 	image_3: autoDraw = False
+101.8477 	EXP 	blankImage: image = u'allBlank.png'
+101.8477 	EXP 	blankImage: autoDraw = True
+102.3479 	EXP 	blankImage: autoDraw = False
+102.3479 	EXP 	blankImage: autoDraw = False
+102.3479 	EXP 	image_5: image = u'min4.png'
+102.3479 	EXP 	image_5: autoDraw = True
+102.8661 	DATA 	Keypress: 4
+102.8973 	EXP 	image_5: autoDraw = False
+102.8973 	EXP 	blankImage: image = u'allBlank.png'
+102.8973 	EXP 	blankImage: autoDraw = True
+103.3655 	EXP 	New trial (rep=2, index=1): {'randomPaw': u'min2.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['2'], 'blank': u'allBlank.png'}
+103.3983 	EXP 	blankImage: autoDraw = False
+103.3983 	EXP 	blankImage: autoDraw = False
+103.3983 	EXP 	pos1: image = u'min1.png'
+103.3983 	EXP 	pos1: autoDraw = True
+103.9669 	DATA 	Keypress: 1
+103.9980 	EXP 	pos1: autoDraw = False
+103.9980 	EXP 	blankImage: image = u'allBlank.png'
+103.9980 	EXP 	blankImage: autoDraw = True
+104.4979 	EXP 	blankImage: autoDraw = False
+104.4979 	EXP 	blankImage: autoDraw = False
+104.4979 	EXP 	image_4: image = u'min3.png'
+104.4979 	EXP 	image_4: autoDraw = True
+104.8001 	DATA 	Keypress: 3
+104.8310 	EXP 	image_4: autoDraw = False
+104.8310 	EXP 	blankImage: image = u'allBlank.png'
+104.8310 	EXP 	blankImage: autoDraw = True
+105.3312 	EXP 	blankImage: autoDraw = False
+105.3312 	EXP 	blankImage: autoDraw = False
+105.3312 	EXP 	image_3: image = u'min2.png'
+105.3312 	EXP 	image_3: autoDraw = True
+105.6156 	DATA 	Keypress: 2
+105.6480 	EXP 	image_3: autoDraw = False
+105.6480 	EXP 	blankImage: image = u'allBlank.png'
+105.6480 	EXP 	blankImage: autoDraw = True
+106.1473 	EXP 	blankImage: autoDraw = False
+106.1473 	EXP 	blankImage: autoDraw = False
+106.1473 	EXP 	image_5: image = u'min4.png'
+106.1473 	EXP 	image_5: autoDraw = True
+106.4002 	DATA 	Keypress: 4
+106.4471 	EXP 	image_5: autoDraw = False
+106.4471 	EXP 	blankImage: image = u'allBlank.png'
+106.4471 	EXP 	blankImage: autoDraw = True
+106.9482 	EXP 	blankImage: autoDraw = False
+106.9482 	EXP 	blankImage: autoDraw = False
+106.9482 	EXP 	image_5: image = u'min4.png'
+106.9482 	EXP 	image_5: autoDraw = True
+107.3000 	DATA 	Keypress: 4
+107.3310 	EXP 	image_5: autoDraw = False
+107.3310 	EXP 	blankImage: image = u'allBlank.png'
+107.3310 	EXP 	blankImage: autoDraw = True
+107.8312 	EXP 	blankImage: autoDraw = False
+107.8312 	EXP 	blankImage: autoDraw = False
+107.8312 	EXP 	image_3: image = u'min2.png'
+107.8312 	EXP 	image_3: autoDraw = True
+108.0669 	DATA 	Keypress: 2
+108.0975 	EXP 	image_3: autoDraw = False
+108.0975 	EXP 	blankImage: image = u'allBlank.png'
+108.0975 	EXP 	blankImage: autoDraw = True
+108.6141 	EXP 	blankImage: autoDraw = False
+108.6141 	EXP 	blankImage: autoDraw = False
+108.6141 	EXP 	image_4: image = u'min3.png'
+108.6141 	EXP 	image_4: autoDraw = True
+108.8499 	DATA 	Keypress: 4
+109.1497 	DATA 	Keypress: 3
+109.1813 	EXP 	image_4: autoDraw = False
+109.1813 	EXP 	blankImage: image = u'allBlank.png'
+109.1813 	EXP 	blankImage: autoDraw = True
+109.6813 	EXP 	blankImage: autoDraw = False
+109.6813 	EXP 	blankImage: autoDraw = False
+109.6813 	EXP 	image_5: image = u'min4.png'
+109.6813 	EXP 	image_5: autoDraw = True
+109.8837 	DATA 	Keypress: 4
+109.9145 	EXP 	image_5: autoDraw = False
+109.9145 	EXP 	blankImage: image = u'allBlank.png'
+109.9145 	EXP 	blankImage: autoDraw = True
+110.4146 	EXP 	blankImage: autoDraw = False
+110.4146 	EXP 	blankImage: autoDraw = False
+110.4146 	EXP 	image_3: image = u'min2.png'
+110.4146 	EXP 	image_3: autoDraw = True
+110.6668 	DATA 	Keypress: 2
+110.6978 	EXP 	image_3: autoDraw = False
+110.6978 	EXP 	blankImage: image = u'allBlank.png'
+110.6978 	EXP 	blankImage: autoDraw = True
+111.1979 	EXP 	blankImage: autoDraw = False
+111.1979 	EXP 	blankImage: autoDraw = False
+111.1979 	EXP 	image_5: image = u'min4.png'
+111.1979 	EXP 	image_5: autoDraw = True
+111.3667 	DATA 	Keypress: 3
+111.5836 	DATA 	Keypress: 4
+111.6148 	EXP 	image_5: autoDraw = False
+111.6148 	EXP 	blankImage: image = u'allBlank.png'
+111.6148 	EXP 	blankImage: autoDraw = True
+112.0821 	EXP 	New trial (rep=2, index=2): {'randomPaw': u'min1.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['1'], 'blank': u'allBlank.png'}
+112.1145 	EXP 	blankImage: autoDraw = False
+112.1145 	EXP 	blankImage: autoDraw = False
+112.1145 	EXP 	pos1: image = u'min1.png'
+112.1145 	EXP 	pos1: autoDraw = True
+112.5168 	DATA 	Keypress: 2
+112.7666 	DATA 	Keypress: 1
+112.7971 	EXP 	pos1: autoDraw = False
+112.7971 	EXP 	blankImage: image = u'allBlank.png'
+112.7971 	EXP 	blankImage: autoDraw = True
+113.2980 	EXP 	blankImage: autoDraw = False
+113.2980 	EXP 	blankImage: autoDraw = False
+113.2980 	EXP 	image_4: image = u'min3.png'
+113.2980 	EXP 	image_4: autoDraw = True
+113.5667 	DATA 	Keypress: 3
+113.5975 	EXP 	image_4: autoDraw = False
+113.5975 	EXP 	blankImage: image = u'allBlank.png'
+113.5975 	EXP 	blankImage: autoDraw = True
+114.0978 	EXP 	blankImage: autoDraw = False
+114.0978 	EXP 	blankImage: autoDraw = False
+114.0978 	EXP 	image_3: image = u'min2.png'
+114.0978 	EXP 	image_3: autoDraw = True
+114.1993 	DATA 	Keypress: 4
+114.4833 	DATA 	Keypress: 2
+114.5141 	EXP 	image_3: autoDraw = False
+114.5141 	EXP 	blankImage: image = u'allBlank.png'
+114.5141 	EXP 	blankImage: autoDraw = True
+115.0142 	EXP 	blankImage: autoDraw = False
+115.0142 	EXP 	blankImage: autoDraw = False
+115.0142 	EXP 	image_5: image = u'min4.png'
+115.0142 	EXP 	image_5: autoDraw = True
+115.2167 	DATA 	Keypress: 4
+115.2474 	EXP 	image_5: autoDraw = False
+115.2474 	EXP 	blankImage: image = u'allBlank.png'
+115.2474 	EXP 	blankImage: autoDraw = True
+115.7479 	EXP 	blankImage: autoDraw = False
+115.7479 	EXP 	blankImage: autoDraw = False
+115.7479 	EXP 	image_5: image = u'min4.png'
+115.7479 	EXP 	image_5: autoDraw = True
+116.1167 	DATA 	Keypress: 4
+116.1477 	EXP 	image_5: autoDraw = False
+116.1477 	EXP 	blankImage: image = u'allBlank.png'
+116.1477 	EXP 	blankImage: autoDraw = True
+116.6478 	EXP 	blankImage: autoDraw = False
+116.6478 	EXP 	blankImage: autoDraw = False
+116.6478 	EXP 	image_3: image = u'min2.png'
+116.6478 	EXP 	image_3: autoDraw = True
+116.9677 	DATA 	Keypress: 2
+117.0135 	EXP 	image_3: autoDraw = False
+117.0135 	EXP 	blankImage: image = u'allBlank.png'
+117.0135 	EXP 	blankImage: autoDraw = True
+117.5142 	EXP 	blankImage: autoDraw = False
+117.5142 	EXP 	blankImage: autoDraw = False
+117.5142 	EXP 	image_4: image = u'min3.png'
+117.5142 	EXP 	image_4: autoDraw = True
+117.7666 	DATA 	Keypress: 3
+117.7974 	EXP 	image_4: autoDraw = False
+117.7974 	EXP 	blankImage: image = u'allBlank.png'
+117.7974 	EXP 	blankImage: autoDraw = True
+118.2981 	EXP 	blankImage: autoDraw = False
+118.2981 	EXP 	blankImage: autoDraw = False
+118.2981 	EXP 	image_5: image = u'min4.png'
+118.2981 	EXP 	image_5: autoDraw = True
+118.5333 	DATA 	Keypress: 4
+118.5641 	EXP 	image_5: autoDraw = False
+118.5641 	EXP 	blankImage: image = u'allBlank.png'
+118.5641 	EXP 	blankImage: autoDraw = True
+119.0640 	EXP 	blankImage: autoDraw = False
+119.0640 	EXP 	blankImage: autoDraw = False
+119.0640 	EXP 	image_3: image = u'min2.png'
+119.0640 	EXP 	image_3: autoDraw = True
+119.3167 	DATA 	Keypress: 2
+119.3477 	EXP 	image_3: autoDraw = False
+119.3477 	EXP 	blankImage: image = u'allBlank.png'
+119.3477 	EXP 	blankImage: autoDraw = True
+119.8476 	EXP 	blankImage: autoDraw = False
+119.8476 	EXP 	blankImage: autoDraw = False
+119.8476 	EXP 	image_5: image = u'min4.png'
+119.8476 	EXP 	image_5: autoDraw = True
+120.1830 	DATA 	Keypress: 4
+120.2139 	EXP 	image_5: autoDraw = False
+120.2139 	EXP 	blankImage: image = u'allBlank.png'
+120.2139 	EXP 	blankImage: autoDraw = True
+120.6823 	EXP 	New trial (rep=2, index=3): {'randomPaw': u'min3.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['3'], 'blank': u'allBlank.png'}
+120.7149 	EXP 	blankImage: autoDraw = False
+120.7149 	EXP 	blankImage: autoDraw = False
+120.7149 	EXP 	pos1: image = u'min1.png'
+120.7149 	EXP 	pos1: autoDraw = True
+120.9985 	DATA 	Keypress: 1
+121.0307 	EXP 	pos1: autoDraw = False
+121.0307 	EXP 	blankImage: image = u'allBlank.png'
+121.0307 	EXP 	blankImage: autoDraw = True
+121.5312 	EXP 	blankImage: autoDraw = False
+121.5312 	EXP 	blankImage: autoDraw = False
+121.5312 	EXP 	image_4: image = u'min3.png'
+121.5312 	EXP 	image_4: autoDraw = True
+121.7495 	DATA 	Keypress: 3
+121.7803 	EXP 	image_4: autoDraw = False
+121.7803 	EXP 	blankImage: image = u'allBlank.png'
+121.7803 	EXP 	blankImage: autoDraw = True
+122.2808 	EXP 	blankImage: autoDraw = False
+122.2808 	EXP 	blankImage: autoDraw = False
+122.2808 	EXP 	image_3: image = u'min2.png'
+122.2808 	EXP 	image_3: autoDraw = True
+122.6160 	DATA 	Keypress: 2
+122.6480 	EXP 	image_3: autoDraw = False
+122.6480 	EXP 	blankImage: image = u'allBlank.png'
+122.6480 	EXP 	blankImage: autoDraw = True
+123.1478 	EXP 	blankImage: autoDraw = False
+123.1478 	EXP 	blankImage: autoDraw = False
+123.1478 	EXP 	image_5: image = u'min4.png'
+123.1478 	EXP 	image_5: autoDraw = True
+123.4500 	DATA 	Keypress: 4
+123.4809 	EXP 	image_5: autoDraw = False
+123.4809 	EXP 	blankImage: image = u'allBlank.png'
+123.4809 	EXP 	blankImage: autoDraw = True
+123.9812 	EXP 	blankImage: autoDraw = False
+123.9812 	EXP 	blankImage: autoDraw = False
+123.9812 	EXP 	image_5: image = u'min4.png'
+123.9812 	EXP 	image_5: autoDraw = True
+124.3494 	DATA 	Keypress: 4
+124.3810 	EXP 	image_5: autoDraw = False
+124.3810 	EXP 	blankImage: image = u'allBlank.png'
+124.3810 	EXP 	blankImage: autoDraw = True
+124.8807 	EXP 	blankImage: autoDraw = False
+124.8807 	EXP 	blankImage: autoDraw = False
+124.8807 	EXP 	image_3: image = u'min2.png'
+124.8807 	EXP 	image_3: autoDraw = True
+125.1333 	DATA 	Keypress: 2
+125.1643 	EXP 	image_3: autoDraw = False
+125.1643 	EXP 	blankImage: image = u'allBlank.png'
+125.1643 	EXP 	blankImage: autoDraw = True
+125.6643 	EXP 	blankImage: autoDraw = False
+125.6643 	EXP 	blankImage: autoDraw = False
+125.6643 	EXP 	image_4: image = u'min3.png'
+125.6643 	EXP 	image_4: autoDraw = True
+125.9507 	DATA 	Keypress: 4
+126.2326 	DATA 	Keypress: 3
+126.2638 	EXP 	image_4: autoDraw = False
+126.2638 	EXP 	blankImage: image = u'allBlank.png'
+126.2638 	EXP 	blankImage: autoDraw = True
+126.7644 	EXP 	blankImage: autoDraw = False
+126.7644 	EXP 	blankImage: autoDraw = False
+126.7644 	EXP 	image_5: image = u'min4.png'
+126.7644 	EXP 	image_5: autoDraw = True
+126.9503 	DATA 	Keypress: 4
+126.9813 	EXP 	image_5: autoDraw = False
+126.9813 	EXP 	blankImage: image = u'allBlank.png'
+126.9813 	EXP 	blankImage: autoDraw = True
+127.4812 	EXP 	blankImage: autoDraw = False
+127.4812 	EXP 	blankImage: autoDraw = False
+127.4812 	EXP 	image_3: image = u'min2.png'
+127.4812 	EXP 	image_3: autoDraw = True
+127.7663 	DATA 	Keypress: 2
+127.7978 	EXP 	image_3: autoDraw = False
+127.7978 	EXP 	blankImage: image = u'allBlank.png'
+127.7978 	EXP 	blankImage: autoDraw = True
+128.2975 	EXP 	blankImage: autoDraw = False
+128.2975 	EXP 	blankImage: autoDraw = False
+128.2975 	EXP 	image_5: image = u'min4.png'
+128.2975 	EXP 	image_5: autoDraw = True
+128.5336 	DATA 	Keypress: 4
+128.5644 	EXP 	image_5: autoDraw = False
+128.5644 	EXP 	blankImage: image = u'allBlank.png'
+128.5644 	EXP 	blankImage: autoDraw = True
+129.0322 	EXP 	New trial (rep=3, index=0): {'randomPaw': u'min2.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['2'], 'blank': u'allBlank.png'}
+129.0649 	EXP 	blankImage: autoDraw = False
+129.0649 	EXP 	blankImage: autoDraw = False
+129.0649 	EXP 	pos1: image = u'min1.png'
+129.0649 	EXP 	pos1: autoDraw = True
+129.3169 	DATA 	Keypress: 1
+129.3477 	EXP 	pos1: autoDraw = False
+129.3477 	EXP 	blankImage: image = u'allBlank.png'
+129.3477 	EXP 	blankImage: autoDraw = True
+129.8479 	EXP 	blankImage: autoDraw = False
+129.8479 	EXP 	blankImage: autoDraw = False
+129.8479 	EXP 	image_4: image = u'min3.png'
+129.8479 	EXP 	image_4: autoDraw = True
+130.0501 	DATA 	Keypress: 3
+130.0811 	EXP 	image_4: autoDraw = False
+130.0811 	EXP 	blankImage: image = u'allBlank.png'
+130.0811 	EXP 	blankImage: autoDraw = True
+130.5810 	EXP 	blankImage: autoDraw = False
+130.5810 	EXP 	blankImage: autoDraw = False
+130.5810 	EXP 	image_3: image = u'min2.png'
+130.5810 	EXP 	image_3: autoDraw = True
+130.9333 	DATA 	Keypress: 2
+130.9646 	EXP 	image_3: autoDraw = False
+130.9646 	EXP 	blankImage: image = u'allBlank.png'
+130.9646 	EXP 	blankImage: autoDraw = True
+131.4644 	EXP 	blankImage: autoDraw = False
+131.4644 	EXP 	blankImage: autoDraw = False
+131.4644 	EXP 	image_5: image = u'min4.png'
+131.4644 	EXP 	image_5: autoDraw = True
+131.6999 	DATA 	Keypress: 4
+131.7308 	EXP 	image_5: autoDraw = False
+131.7308 	EXP 	blankImage: image = u'allBlank.png'
+131.7308 	EXP 	blankImage: autoDraw = True
+132.2312 	EXP 	blankImage: autoDraw = False
+132.2312 	EXP 	blankImage: autoDraw = False
+132.2312 	EXP 	image_5: image = u'min4.png'
+132.2312 	EXP 	image_5: autoDraw = True
+132.6665 	DATA 	Keypress: 3
+132.8497 	DATA 	Keypress: 4
+132.8811 	EXP 	image_5: autoDraw = False
+132.8811 	EXP 	blankImage: image = u'allBlank.png'
+132.8811 	EXP 	blankImage: autoDraw = True
+133.3975 	EXP 	blankImage: autoDraw = False
+133.3975 	EXP 	blankImage: autoDraw = False
+133.3975 	EXP 	image_3: image = u'min2.png'
+133.3975 	EXP 	image_3: autoDraw = True
+133.6998 	DATA 	Keypress: 2
+133.7308 	EXP 	image_3: autoDraw = False
+133.7308 	EXP 	blankImage: image = u'allBlank.png'
+133.7308 	EXP 	blankImage: autoDraw = True
+134.2309 	EXP 	blankImage: autoDraw = False
+134.2309 	EXP 	blankImage: autoDraw = False
+134.2309 	EXP 	image_4: image = u'min3.png'
+134.2309 	EXP 	image_4: autoDraw = True
+134.3670 	DATA 	Keypress: 3
+134.3977 	EXP 	image_4: autoDraw = False
+134.3977 	EXP 	blankImage: image = u'allBlank.png'
+134.3977 	EXP 	blankImage: autoDraw = True
+134.8977 	EXP 	blankImage: autoDraw = False
+134.8977 	EXP 	blankImage: autoDraw = False
+134.8977 	EXP 	image_5: image = u'min4.png'
+134.8977 	EXP 	image_5: autoDraw = True
+135.0995 	DATA 	Keypress: 4
+135.1301 	EXP 	image_5: autoDraw = False
+135.1301 	EXP 	blankImage: image = u'allBlank.png'
+135.1301 	EXP 	blankImage: autoDraw = True
+135.6310 	EXP 	blankImage: autoDraw = False
+135.6310 	EXP 	blankImage: autoDraw = False
+135.6310 	EXP 	image_3: image = u'min2.png'
+135.6310 	EXP 	image_3: autoDraw = True
+136.1331 	DATA 	Keypress: 2
+136.1643 	EXP 	image_3: autoDraw = False
+136.1643 	EXP 	blankImage: image = u'allBlank.png'
+136.1643 	EXP 	blankImage: autoDraw = True
+136.6643 	EXP 	blankImage: autoDraw = False
+136.6643 	EXP 	blankImage: autoDraw = False
+136.6643 	EXP 	image_5: image = u'min4.png'
+136.6643 	EXP 	image_5: autoDraw = True
+137.0999 	DATA 	Keypress: 4
+137.1307 	EXP 	image_5: autoDraw = False
+137.1307 	EXP 	blankImage: image = u'allBlank.png'
+137.1307 	EXP 	blankImage: autoDraw = True
+137.5987 	EXP 	New trial (rep=3, index=1): {'randomPaw': u'min3.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['3'], 'blank': u'allBlank.png'}
+137.6312 	EXP 	blankImage: autoDraw = False
+137.6312 	EXP 	blankImage: autoDraw = False
+137.6312 	EXP 	pos1: image = u'min1.png'
+137.6312 	EXP 	pos1: autoDraw = True
+138.1159 	DATA 	Keypress: 1
+138.1472 	EXP 	pos1: autoDraw = False
+138.1472 	EXP 	blankImage: image = u'allBlank.png'
+138.1472 	EXP 	blankImage: autoDraw = True
+138.6471 	EXP 	blankImage: autoDraw = False
+138.6471 	EXP 	blankImage: autoDraw = False
+138.6471 	EXP 	image_4: image = u'min3.png'
+138.6471 	EXP 	image_4: autoDraw = True
+138.9002 	DATA 	Keypress: 3
+138.9309 	EXP 	image_4: autoDraw = False
+138.9309 	EXP 	blankImage: image = u'allBlank.png'
+138.9309 	EXP 	blankImage: autoDraw = True
+139.4305 	EXP 	blankImage: autoDraw = False
+139.4305 	EXP 	blankImage: autoDraw = False
+139.4305 	EXP 	image_3: image = u'min2.png'
+139.4305 	EXP 	image_3: autoDraw = True
+139.6833 	DATA 	Keypress: 2
+139.7142 	EXP 	image_3: autoDraw = False
+139.7142 	EXP 	blankImage: image = u'allBlank.png'
+139.7142 	EXP 	blankImage: autoDraw = True
+140.2141 	EXP 	blankImage: autoDraw = False
+140.2141 	EXP 	blankImage: autoDraw = False
+140.2141 	EXP 	image_5: image = u'min4.png'
+140.2141 	EXP 	image_5: autoDraw = True
+140.4166 	DATA 	Keypress: 4
+140.4475 	EXP 	image_5: autoDraw = False
+140.4475 	EXP 	blankImage: image = u'allBlank.png'
+140.4475 	EXP 	blankImage: autoDraw = True
+140.9475 	EXP 	blankImage: autoDraw = False
+140.9475 	EXP 	blankImage: autoDraw = False
+140.9475 	EXP 	image_5: image = u'min4.png'
+140.9475 	EXP 	image_5: autoDraw = True
+141.0666 	DATA 	Keypress: 4
+141.0975 	EXP 	image_5: autoDraw = False
+141.0975 	EXP 	blankImage: image = u'allBlank.png'
+141.0975 	EXP 	blankImage: autoDraw = True
+141.5975 	EXP 	blankImage: autoDraw = False
+141.5975 	EXP 	blankImage: autoDraw = False
+141.5975 	EXP 	image_3: image = u'min2.png'
+141.5975 	EXP 	image_3: autoDraw = True
+141.7333 	DATA 	Keypress: 2
+141.7641 	EXP 	image_3: autoDraw = False
+141.7641 	EXP 	blankImage: image = u'allBlank.png'
+141.7641 	EXP 	blankImage: autoDraw = True
+142.2643 	EXP 	blankImage: autoDraw = False
+142.2643 	EXP 	blankImage: autoDraw = False
+142.2643 	EXP 	image_4: image = u'min3.png'
+142.2643 	EXP 	image_4: autoDraw = True
+142.4669 	DATA 	Keypress: 3
+142.4976 	EXP 	image_4: autoDraw = False
+142.4976 	EXP 	blankImage: image = u'allBlank.png'
+142.4976 	EXP 	blankImage: autoDraw = True
+142.9977 	EXP 	blankImage: autoDraw = False
+142.9977 	EXP 	blankImage: autoDraw = False
+142.9977 	EXP 	image_5: image = u'min4.png'
+142.9977 	EXP 	image_5: autoDraw = True
+143.1676 	DATA 	Keypress: 1
+143.4666 	DATA 	Keypress: 4
+143.4975 	EXP 	image_5: autoDraw = False
+143.4975 	EXP 	blankImage: image = u'allBlank.png'
+143.4975 	EXP 	blankImage: autoDraw = True
+143.9977 	EXP 	blankImage: autoDraw = False
+143.9977 	EXP 	blankImage: autoDraw = False
+143.9977 	EXP 	image_3: image = u'min2.png'
+143.9977 	EXP 	image_3: autoDraw = True
+144.2666 	DATA 	Keypress: 1
+144.5002 	DATA 	Keypress: 2
+144.5469 	EXP 	image_3: autoDraw = False
+144.5469 	EXP 	blankImage: image = u'allBlank.png'
+144.5469 	EXP 	blankImage: autoDraw = True
+145.0478 	EXP 	blankImage: autoDraw = False
+145.0478 	EXP 	blankImage: autoDraw = False
+145.0478 	EXP 	image_5: image = u'min4.png'
+145.0478 	EXP 	image_5: autoDraw = True
+145.3499 	DATA 	Keypress: 4
+145.3809 	EXP 	image_5: autoDraw = False
+145.3809 	EXP 	blankImage: image = u'allBlank.png'
+145.3809 	EXP 	blankImage: autoDraw = True
+145.8484 	EXP 	New trial (rep=3, index=2): {'randomPaw': u'min4.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['4'], 'blank': u'allBlank.png'}
+145.8809 	EXP 	blankImage: autoDraw = False
+145.8809 	EXP 	blankImage: autoDraw = False
+145.8809 	EXP 	pos1: image = u'min1.png'
+145.8809 	EXP 	pos1: autoDraw = True
+146.1323 	DATA 	Keypress: 1
+146.1636 	EXP 	pos1: autoDraw = False
+146.1636 	EXP 	blankImage: image = u'allBlank.png'
+146.1636 	EXP 	blankImage: autoDraw = True
+146.6639 	EXP 	blankImage: autoDraw = False
+146.6639 	EXP 	blankImage: autoDraw = False
+146.6639 	EXP 	image_4: image = u'min3.png'
+146.6639 	EXP 	image_4: autoDraw = True
+146.8649 	DATA 	Keypress: 3
+146.8966 	EXP 	image_4: autoDraw = False
+146.8966 	EXP 	blankImage: image = u'allBlank.png'
+146.8966 	EXP 	blankImage: autoDraw = True
+147.3972 	EXP 	blankImage: autoDraw = False
+147.3972 	EXP 	blankImage: autoDraw = False
+147.3972 	EXP 	image_3: image = u'min2.png'
+147.3972 	EXP 	image_3: autoDraw = True
+147.6486 	DATA 	Keypress: 2
+147.6805 	EXP 	image_3: autoDraw = False
+147.6805 	EXP 	blankImage: image = u'allBlank.png'
+147.6805 	EXP 	blankImage: autoDraw = True
+148.1972 	EXP 	blankImage: autoDraw = False
+148.1972 	EXP 	blankImage: autoDraw = False
+148.1972 	EXP 	image_5: image = u'min4.png'
+148.1972 	EXP 	image_5: autoDraw = True
+148.3164 	DATA 	Keypress: 4
+148.3470 	EXP 	image_5: autoDraw = False
+148.3470 	EXP 	blankImage: image = u'allBlank.png'
+148.3470 	EXP 	blankImage: autoDraw = True
+148.8476 	EXP 	blankImage: autoDraw = False
+148.8476 	EXP 	blankImage: autoDraw = False
+148.8476 	EXP 	image_5: image = u'min4.png'
+148.8476 	EXP 	image_5: autoDraw = True
+148.9328 	DATA 	Keypress: 4
+148.9643 	EXP 	image_5: autoDraw = False
+148.9643 	EXP 	blankImage: image = u'allBlank.png'
+148.9643 	EXP 	blankImage: autoDraw = True
+149.4636 	EXP 	blankImage: autoDraw = False
+149.4636 	EXP 	blankImage: autoDraw = False
+149.4636 	EXP 	image_3: image = u'min2.png'
+149.4636 	EXP 	image_3: autoDraw = True
+149.6999 	DATA 	Keypress: 2
+149.7311 	EXP 	image_3: autoDraw = False
+149.7311 	EXP 	blankImage: image = u'allBlank.png'
+149.7311 	EXP 	blankImage: autoDraw = True
+150.2309 	EXP 	blankImage: autoDraw = False
+150.2309 	EXP 	blankImage: autoDraw = False
+150.2309 	EXP 	image_4: image = u'min3.png'
+150.2309 	EXP 	image_4: autoDraw = True
+150.4499 	DATA 	Keypress: 3
+150.4809 	EXP 	image_4: autoDraw = False
+150.4809 	EXP 	blankImage: image = u'allBlank.png'
+150.4809 	EXP 	blankImage: autoDraw = True
+150.9808 	EXP 	blankImage: autoDraw = False
+150.9808 	EXP 	blankImage: autoDraw = False
+150.9808 	EXP 	image_5: image = u'min4.png'
+150.9808 	EXP 	image_5: autoDraw = True
+151.3001 	DATA 	Keypress: 4
+151.3307 	EXP 	image_5: autoDraw = False
+151.3307 	EXP 	blankImage: image = u'allBlank.png'
+151.3307 	EXP 	blankImage: autoDraw = True
+151.8310 	EXP 	blankImage: autoDraw = False
+151.8310 	EXP 	blankImage: autoDraw = False
+151.8310 	EXP 	image_3: image = u'min2.png'
+151.8310 	EXP 	image_3: autoDraw = True
+152.2499 	DATA 	Keypress: 2
+152.2810 	EXP 	image_3: autoDraw = False
+152.2810 	EXP 	blankImage: image = u'allBlank.png'
+152.2810 	EXP 	blankImage: autoDraw = True
+152.7812 	EXP 	blankImage: autoDraw = False
+152.7812 	EXP 	blankImage: autoDraw = False
+152.7812 	EXP 	image_5: image = u'min4.png'
+152.7812 	EXP 	image_5: autoDraw = True
+153.1178 	DATA 	Keypress: 4
+153.1643 	EXP 	image_5: autoDraw = False
+153.1643 	EXP 	blankImage: image = u'allBlank.png'
+153.1643 	EXP 	blankImage: autoDraw = True
+153.6323 	EXP 	New trial (rep=3, index=3): {'randomPaw': u'min1.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['1'], 'blank': u'allBlank.png'}
+153.6649 	EXP 	blankImage: autoDraw = False
+153.6649 	EXP 	blankImage: autoDraw = False
+153.6649 	EXP 	pos1: image = u'min1.png'
+153.6649 	EXP 	pos1: autoDraw = True
+154.0339 	DATA 	Keypress: 1
+154.0810 	EXP 	pos1: autoDraw = False
+154.0810 	EXP 	blankImage: image = u'allBlank.png'
+154.0810 	EXP 	blankImage: autoDraw = True
+154.5810 	EXP 	blankImage: autoDraw = False
+154.5810 	EXP 	blankImage: autoDraw = False
+154.5810 	EXP 	image_4: image = u'min3.png'
+154.5810 	EXP 	image_4: autoDraw = True
+154.7498 	DATA 	Keypress: 3
+154.7807 	EXP 	image_4: autoDraw = False
+154.7807 	EXP 	blankImage: image = u'allBlank.png'
+154.7807 	EXP 	blankImage: autoDraw = True
+155.2807 	EXP 	blankImage: autoDraw = False
+155.2807 	EXP 	blankImage: autoDraw = False
+155.2807 	EXP 	image_3: image = u'min2.png'
+155.2807 	EXP 	image_3: autoDraw = True
+155.4658 	DATA 	Keypress: 4
+155.7331 	DATA 	Keypress: 2
+155.7638 	EXP 	image_3: autoDraw = False
+155.7638 	EXP 	blankImage: image = u'allBlank.png'
+155.7638 	EXP 	blankImage: autoDraw = True
+156.2642 	EXP 	blankImage: autoDraw = False
+156.2642 	EXP 	blankImage: autoDraw = False
+156.2642 	EXP 	image_5: image = u'min4.png'
+156.2642 	EXP 	image_5: autoDraw = True
+156.4832 	DATA 	Keypress: 4
+156.5142 	EXP 	image_5: autoDraw = False
+156.5142 	EXP 	blankImage: image = u'allBlank.png'
+156.5142 	EXP 	blankImage: autoDraw = True
+157.0143 	EXP 	blankImage: autoDraw = False
+157.0143 	EXP 	blankImage: autoDraw = False
+157.0143 	EXP 	image_5: image = u'min4.png'
+157.0143 	EXP 	image_5: autoDraw = True
+157.3665 	DATA 	Keypress: 4
+157.3976 	EXP 	image_5: autoDraw = False
+157.3976 	EXP 	blankImage: image = u'allBlank.png'
+157.3976 	EXP 	blankImage: autoDraw = True
+157.9147 	EXP 	blankImage: autoDraw = False
+157.9147 	EXP 	blankImage: autoDraw = False
+157.9147 	EXP 	image_3: image = u'min2.png'
+157.9147 	EXP 	image_3: autoDraw = True
+158.2000 	DATA 	Keypress: 2
+158.2308 	EXP 	image_3: autoDraw = False
+158.2308 	EXP 	blankImage: image = u'allBlank.png'
+158.2308 	EXP 	blankImage: autoDraw = True
+158.7309 	EXP 	blankImage: autoDraw = False
+158.7309 	EXP 	blankImage: autoDraw = False
+158.7309 	EXP 	image_4: image = u'min3.png'
+158.7309 	EXP 	image_4: autoDraw = True
+158.9501 	DATA 	Keypress: 3
+158.9809 	EXP 	image_4: autoDraw = False
+158.9809 	EXP 	blankImage: image = u'allBlank.png'
+158.9809 	EXP 	blankImage: autoDraw = True
+159.4807 	EXP 	blankImage: autoDraw = False
+159.4807 	EXP 	blankImage: autoDraw = False
+159.4807 	EXP 	image_5: image = u'min4.png'
+159.4807 	EXP 	image_5: autoDraw = True
+159.6163 	DATA 	Keypress: 4
+159.6478 	EXP 	image_5: autoDraw = False
+159.6478 	EXP 	blankImage: image = u'allBlank.png'
+159.6478 	EXP 	blankImage: autoDraw = True
+160.1477 	EXP 	blankImage: autoDraw = False
+160.1477 	EXP 	blankImage: autoDraw = False
+160.1477 	EXP 	image_3: image = u'min2.png'
+160.1477 	EXP 	image_3: autoDraw = True
+160.4167 	DATA 	Keypress: 1
+160.6497 	DATA 	Keypress: 2
+160.6808 	EXP 	image_3: autoDraw = False
+160.6808 	EXP 	blankImage: image = u'allBlank.png'
+160.6808 	EXP 	blankImage: autoDraw = True
+161.1808 	EXP 	blankImage: autoDraw = False
+161.1808 	EXP 	blankImage: autoDraw = False
+161.1808 	EXP 	image_5: image = u'min4.png'
+161.1808 	EXP 	image_5: autoDraw = True
+161.3666 	DATA 	Keypress: 3
+161.5831 	DATA 	Keypress: 4
+161.6140 	EXP 	image_5: autoDraw = False
+161.6140 	EXP 	blankImage: image = u'allBlank.png'
+161.6140 	EXP 	blankImage: autoDraw = True
+162.0822 	EXP 	New trial (rep=4, index=0): {'randomPaw': u'min1.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['1'], 'blank': u'allBlank.png'}
+162.1149 	EXP 	blankImage: autoDraw = False
+162.1149 	EXP 	blankImage: autoDraw = False
+162.1149 	EXP 	pos1: image = u'min1.png'
+162.1149 	EXP 	pos1: autoDraw = True
+162.3997 	DATA 	Keypress: 1
+162.4310 	EXP 	pos1: autoDraw = False
+162.4310 	EXP 	blankImage: image = u'allBlank.png'
+162.4310 	EXP 	blankImage: autoDraw = True
+162.9305 	EXP 	blankImage: autoDraw = False
+162.9305 	EXP 	blankImage: autoDraw = False
+162.9305 	EXP 	image_4: image = u'min3.png'
+162.9305 	EXP 	image_4: autoDraw = True
+163.1330 	DATA 	Keypress: 3
+163.1641 	EXP 	image_4: autoDraw = False
+163.1641 	EXP 	blankImage: image = u'allBlank.png'
+163.1641 	EXP 	blankImage: autoDraw = True
+163.6641 	EXP 	blankImage: autoDraw = False
+163.6641 	EXP 	blankImage: autoDraw = False
+163.6641 	EXP 	image_3: image = u'min2.png'
+163.6641 	EXP 	image_3: autoDraw = True
+163.8999 	DATA 	Keypress: 2
+163.9307 	EXP 	image_3: autoDraw = False
+163.9307 	EXP 	blankImage: image = u'allBlank.png'
+163.9307 	EXP 	blankImage: autoDraw = True
+164.4310 	EXP 	blankImage: autoDraw = False
+164.4310 	EXP 	blankImage: autoDraw = False
+164.4310 	EXP 	image_5: image = u'min4.png'
+164.4310 	EXP 	image_5: autoDraw = True
+164.7499 	DATA 	Keypress: 4
+164.7809 	EXP 	image_5: autoDraw = False
+164.7809 	EXP 	blankImage: image = u'allBlank.png'
+164.7809 	EXP 	blankImage: autoDraw = True
+165.2809 	EXP 	blankImage: autoDraw = False
+165.2809 	EXP 	blankImage: autoDraw = False
+165.2809 	EXP 	image_5: image = u'min4.png'
+165.2809 	EXP 	image_5: autoDraw = True
+165.4833 	DATA 	Keypress: 4
+165.5141 	EXP 	image_5: autoDraw = False
+165.5141 	EXP 	blankImage: image = u'allBlank.png'
+165.5141 	EXP 	blankImage: autoDraw = True
+166.0149 	EXP 	blankImage: autoDraw = False
+166.0149 	EXP 	blankImage: autoDraw = False
+166.0149 	EXP 	image_3: image = u'min2.png'
+166.0149 	EXP 	image_3: autoDraw = True
+166.2498 	DATA 	Keypress: 2
+166.2821 	EXP 	image_3: autoDraw = False
+166.2821 	EXP 	blankImage: image = u'allBlank.png'
+166.2821 	EXP 	blankImage: autoDraw = True
+166.7811 	EXP 	blankImage: autoDraw = False
+166.7811 	EXP 	blankImage: autoDraw = False
+166.7811 	EXP 	image_4: image = u'min3.png'
+166.7811 	EXP 	image_4: autoDraw = True
+167.0332 	DATA 	Keypress: 3
+167.0642 	EXP 	image_4: autoDraw = False
+167.0642 	EXP 	blankImage: image = u'allBlank.png'
+167.0642 	EXP 	blankImage: autoDraw = True
+167.5640 	EXP 	blankImage: autoDraw = False
+167.5640 	EXP 	blankImage: autoDraw = False
+167.5640 	EXP 	image_5: image = u'min4.png'
+167.5640 	EXP 	image_5: autoDraw = True
+167.8332 	DATA 	Keypress: 4
+167.8641 	EXP 	image_5: autoDraw = False
+167.8641 	EXP 	blankImage: image = u'allBlank.png'
+167.8641 	EXP 	blankImage: autoDraw = True
+168.3646 	EXP 	blankImage: autoDraw = False
+168.3646 	EXP 	blankImage: autoDraw = False
+168.3646 	EXP 	image_3: image = u'min2.png'
+168.3646 	EXP 	image_3: autoDraw = True
+168.5996 	DATA 	Keypress: 1
+168.9668 	DATA 	Keypress: 2
+168.9975 	EXP 	image_3: autoDraw = False
+168.9975 	EXP 	blankImage: image = u'allBlank.png'
+168.9975 	EXP 	blankImage: autoDraw = True
+169.4975 	EXP 	blankImage: autoDraw = False
+169.4975 	EXP 	blankImage: autoDraw = False
+169.4975 	EXP 	image_5: image = u'min4.png'
+169.4975 	EXP 	image_5: autoDraw = True
+169.9333 	DATA 	Keypress: 4
+169.9640 	EXP 	image_5: autoDraw = False
+169.9640 	EXP 	blankImage: image = u'allBlank.png'
+169.9640 	EXP 	blankImage: autoDraw = True
+170.4320 	EXP 	New trial (rep=4, index=1): {'randomPaw': u'min3.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['3'], 'blank': u'allBlank.png'}
+170.4651 	EXP 	blankImage: autoDraw = False
+170.4651 	EXP 	blankImage: autoDraw = False
+170.4651 	EXP 	pos1: image = u'min1.png'
+170.4651 	EXP 	pos1: autoDraw = True
+170.9497 	DATA 	Keypress: 1
+170.9810 	EXP 	pos1: autoDraw = False
+170.9810 	EXP 	blankImage: image = u'allBlank.png'
+170.9810 	EXP 	blankImage: autoDraw = True
+171.4808 	EXP 	blankImage: autoDraw = False
+171.4808 	EXP 	blankImage: autoDraw = False
+171.4808 	EXP 	image_4: image = u'min3.png'
+171.4808 	EXP 	image_4: autoDraw = True
+172.1157 	DATA 	Keypress: 3
+172.1477 	EXP 	image_4: autoDraw = False
+172.1477 	EXP 	blankImage: image = u'allBlank.png'
+172.1477 	EXP 	blankImage: autoDraw = True
+172.6475 	EXP 	blankImage: autoDraw = False
+172.6475 	EXP 	blankImage: autoDraw = False
+172.6475 	EXP 	image_3: image = u'min2.png'
+172.6475 	EXP 	image_3: autoDraw = True
+172.8334 	DATA 	Keypress: 4
+173.0998 	DATA 	Keypress: 2
+173.1314 	EXP 	image_3: autoDraw = False
+173.1314 	EXP 	blankImage: image = u'allBlank.png'
+173.1314 	EXP 	blankImage: autoDraw = True
+173.6309 	EXP 	blankImage: autoDraw = False
+173.6309 	EXP 	blankImage: autoDraw = False
+173.6309 	EXP 	image_5: image = u'min4.png'
+173.6309 	EXP 	image_5: autoDraw = True
+173.7666 	DATA 	Keypress: 4
+173.7973 	EXP 	image_5: autoDraw = False
+173.7973 	EXP 	blankImage: image = u'allBlank.png'
+173.7973 	EXP 	blankImage: autoDraw = True
+174.2976 	EXP 	blankImage: autoDraw = False
+174.2976 	EXP 	blankImage: autoDraw = False
+174.2976 	EXP 	image_5: image = u'min4.png'
+174.2976 	EXP 	image_5: autoDraw = True
+174.6831 	DATA 	Keypress: 4
+174.7141 	EXP 	image_5: autoDraw = False
+174.7141 	EXP 	blankImage: image = u'allBlank.png'
+174.7141 	EXP 	blankImage: autoDraw = True
+175.2144 	EXP 	blankImage: autoDraw = False
+175.2144 	EXP 	blankImage: autoDraw = False
+175.2144 	EXP 	image_3: image = u'min2.png'
+175.2144 	EXP 	image_3: autoDraw = True
+175.4163 	DATA 	Keypress: 2
+175.4471 	EXP 	image_3: autoDraw = False
+175.4471 	EXP 	blankImage: image = u'allBlank.png'
+175.4471 	EXP 	blankImage: autoDraw = True
+175.9479 	EXP 	blankImage: autoDraw = False
+175.9479 	EXP 	blankImage: autoDraw = False
+175.9479 	EXP 	image_4: image = u'min3.png'
+175.9479 	EXP 	image_4: autoDraw = True
+176.0989 	DATA 	Keypress: 3
+176.1309 	EXP 	image_4: autoDraw = False
+176.1309 	EXP 	blankImage: image = u'allBlank.png'
+176.1309 	EXP 	blankImage: autoDraw = True
+176.6311 	EXP 	blankImage: autoDraw = False
+176.6311 	EXP 	blankImage: autoDraw = False
+176.6311 	EXP 	image_5: image = u'min4.png'
+176.6311 	EXP 	image_5: autoDraw = True
+176.8496 	DATA 	Keypress: 4
+176.8805 	EXP 	image_5: autoDraw = False
+176.8805 	EXP 	blankImage: image = u'allBlank.png'
+176.8805 	EXP 	blankImage: autoDraw = True
+177.3808 	EXP 	blankImage: autoDraw = False
+177.3808 	EXP 	blankImage: autoDraw = False
+177.3808 	EXP 	image_3: image = u'min2.png'
+177.3808 	EXP 	image_3: autoDraw = True
+177.6998 	DATA 	Keypress: 2
+177.7307 	EXP 	image_3: autoDraw = False
+177.7307 	EXP 	blankImage: image = u'allBlank.png'
+177.7307 	EXP 	blankImage: autoDraw = True
+178.2310 	EXP 	blankImage: autoDraw = False
+178.2310 	EXP 	blankImage: autoDraw = False
+178.2310 	EXP 	image_5: image = u'min4.png'
+178.2310 	EXP 	image_5: autoDraw = True
+178.5998 	DATA 	Keypress: 4
+178.6307 	EXP 	image_5: autoDraw = False
+178.6307 	EXP 	blankImage: image = u'allBlank.png'
+178.6307 	EXP 	blankImage: autoDraw = True
+179.0986 	EXP 	New trial (rep=4, index=2): {'randomPaw': u'min4.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['4'], 'blank': u'allBlank.png'}
+179.1308 	EXP 	blankImage: autoDraw = False
+179.1308 	EXP 	blankImage: autoDraw = False
+179.1308 	EXP 	pos1: image = u'min1.png'
+179.1308 	EXP 	pos1: autoDraw = True
+179.4331 	DATA 	Keypress: 1
+179.4638 	EXP 	pos1: autoDraw = False
+179.4638 	EXP 	blankImage: image = u'allBlank.png'
+179.4638 	EXP 	blankImage: autoDraw = True
+179.9643 	EXP 	blankImage: autoDraw = False
+179.9643 	EXP 	blankImage: autoDraw = False
+179.9643 	EXP 	image_4: image = u'min3.png'
+179.9643 	EXP 	image_4: autoDraw = True
+180.1663 	DATA 	Keypress: 3
+180.1971 	EXP 	image_4: autoDraw = False
+180.1971 	EXP 	blankImage: image = u'allBlank.png'
+180.1971 	EXP 	blankImage: autoDraw = True
+180.6976 	EXP 	blankImage: autoDraw = False
+180.6976 	EXP 	blankImage: autoDraw = False
+180.6976 	EXP 	image_3: image = u'min2.png'
+180.6976 	EXP 	image_3: autoDraw = True
+180.9162 	DATA 	Keypress: 2
+180.9473 	EXP 	image_3: autoDraw = False
+180.9473 	EXP 	blankImage: image = u'allBlank.png'
+180.9473 	EXP 	blankImage: autoDraw = True
+181.4476 	EXP 	blankImage: autoDraw = False
+181.4476 	EXP 	blankImage: autoDraw = False
+181.4476 	EXP 	image_5: image = u'min4.png'
+181.4476 	EXP 	image_5: autoDraw = True
+181.6167 	DATA 	Keypress: 4
+181.6478 	EXP 	image_5: autoDraw = False
+181.6478 	EXP 	blankImage: image = u'allBlank.png'
+181.6478 	EXP 	blankImage: autoDraw = True
+182.1475 	EXP 	blankImage: autoDraw = False
+182.1475 	EXP 	blankImage: autoDraw = False
+182.1475 	EXP 	image_5: image = u'min4.png'
+182.1475 	EXP 	image_5: autoDraw = True
+182.4831 	DATA 	Keypress: 4
+182.5142 	EXP 	image_5: autoDraw = False
+182.5142 	EXP 	blankImage: image = u'allBlank.png'
+182.5142 	EXP 	blankImage: autoDraw = True
+183.0141 	EXP 	blankImage: autoDraw = False
+183.0141 	EXP 	blankImage: autoDraw = False
+183.0141 	EXP 	image_3: image = u'min2.png'
+183.0141 	EXP 	image_3: autoDraw = True
+183.2333 	DATA 	Keypress: 2
+183.2641 	EXP 	image_3: autoDraw = False
+183.2641 	EXP 	blankImage: image = u'allBlank.png'
+183.2641 	EXP 	blankImage: autoDraw = True
+183.7637 	EXP 	blankImage: autoDraw = False
+183.7637 	EXP 	blankImage: autoDraw = False
+183.7637 	EXP 	image_4: image = u'min3.png'
+183.7637 	EXP 	image_4: autoDraw = True
+183.9992 	DATA 	Keypress: 3
+184.0311 	EXP 	image_4: autoDraw = False
+184.0311 	EXP 	blankImage: image = u'allBlank.png'
+184.0311 	EXP 	blankImage: autoDraw = True
+184.5302 	EXP 	blankImage: autoDraw = False
+184.5302 	EXP 	blankImage: autoDraw = False
+184.5302 	EXP 	image_5: image = u'min4.png'
+184.5302 	EXP 	image_5: autoDraw = True
+184.7835 	DATA 	Keypress: 4
+184.8145 	EXP 	image_5: autoDraw = False
+184.8145 	EXP 	blankImage: image = u'allBlank.png'
+184.8145 	EXP 	blankImage: autoDraw = True
+185.3134 	EXP 	blankImage: autoDraw = False
+185.3134 	EXP 	blankImage: autoDraw = False
+185.3134 	EXP 	image_3: image = u'min2.png'
+185.3134 	EXP 	image_3: autoDraw = True
+185.6823 	DATA 	Keypress: 2
+185.7144 	EXP 	image_3: autoDraw = False
+185.7144 	EXP 	blankImage: image = u'allBlank.png'
+185.7144 	EXP 	blankImage: autoDraw = True
+186.2144 	EXP 	blankImage: autoDraw = False
+186.2144 	EXP 	blankImage: autoDraw = False
+186.2144 	EXP 	image_5: image = u'min4.png'
+186.2144 	EXP 	image_5: autoDraw = True
+186.6331 	DATA 	Keypress: 4
+186.6637 	EXP 	image_5: autoDraw = False
+186.6637 	EXP 	blankImage: image = u'allBlank.png'
+186.6637 	EXP 	blankImage: autoDraw = True
+187.1320 	EXP 	New trial (rep=4, index=3): {'randomPaw': u'min2.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['2'], 'blank': u'allBlank.png'}
+187.1640 	EXP 	blankImage: autoDraw = False
+187.1640 	EXP 	blankImage: autoDraw = False
+187.1640 	EXP 	pos1: image = u'min1.png'
+187.1640 	EXP 	pos1: autoDraw = True
+187.4827 	DATA 	Keypress: 1
+187.5133 	EXP 	pos1: autoDraw = False
+187.5133 	EXP 	blankImage: image = u'allBlank.png'
+187.5133 	EXP 	blankImage: autoDraw = True
+188.0142 	EXP 	blankImage: autoDraw = False
+188.0142 	EXP 	blankImage: autoDraw = False
+188.0142 	EXP 	image_4: image = u'min3.png'
+188.0142 	EXP 	image_4: autoDraw = True
+188.2160 	DATA 	Keypress: 3
+188.2475 	EXP 	image_4: autoDraw = False
+188.2475 	EXP 	blankImage: image = u'allBlank.png'
+188.2475 	EXP 	blankImage: autoDraw = True
+188.7471 	EXP 	blankImage: autoDraw = False
+188.7471 	EXP 	blankImage: autoDraw = False
+188.7471 	EXP 	image_3: image = u'min2.png'
+188.7471 	EXP 	image_3: autoDraw = True
+189.0155 	DATA 	Keypress: 2
+189.0468 	EXP 	image_3: autoDraw = False
+189.0468 	EXP 	blankImage: image = u'allBlank.png'
+189.0468 	EXP 	blankImage: autoDraw = True
+189.5468 	EXP 	blankImage: autoDraw = False
+189.5468 	EXP 	blankImage: autoDraw = False
+189.5468 	EXP 	image_5: image = u'min4.png'
+189.5468 	EXP 	image_5: autoDraw = True
+189.6996 	DATA 	Keypress: 4
+189.7309 	EXP 	image_5: autoDraw = False
+189.7309 	EXP 	blankImage: image = u'allBlank.png'
+189.7309 	EXP 	blankImage: autoDraw = True
+190.2309 	EXP 	blankImage: autoDraw = False
+190.2309 	EXP 	blankImage: autoDraw = False
+190.2309 	EXP 	image_5: image = u'min4.png'
+190.2309 	EXP 	image_5: autoDraw = True
+190.6168 	DATA 	Keypress: 4
+190.6476 	EXP 	image_5: autoDraw = False
+190.6476 	EXP 	blankImage: image = u'allBlank.png'
+190.6476 	EXP 	blankImage: autoDraw = True
+191.1474 	EXP 	blankImage: autoDraw = False
+191.1474 	EXP 	blankImage: autoDraw = False
+191.1474 	EXP 	image_3: image = u'min2.png'
+191.1474 	EXP 	image_3: autoDraw = True
+191.3663 	DATA 	Keypress: 2
+191.3972 	EXP 	image_3: autoDraw = False
+191.3972 	EXP 	blankImage: image = u'allBlank.png'
+191.3972 	EXP 	blankImage: autoDraw = True
+191.8977 	EXP 	blankImage: autoDraw = False
+191.8977 	EXP 	blankImage: autoDraw = False
+191.8977 	EXP 	image_4: image = u'min3.png'
+191.8977 	EXP 	image_4: autoDraw = True
+192.1499 	DATA 	Keypress: 3
+192.1808 	EXP 	image_4: autoDraw = False
+192.1808 	EXP 	blankImage: image = u'allBlank.png'
+192.1808 	EXP 	blankImage: autoDraw = True
+192.6808 	EXP 	blankImage: autoDraw = False
+192.6808 	EXP 	blankImage: autoDraw = False
+192.6808 	EXP 	image_5: image = u'min4.png'
+192.6808 	EXP 	image_5: autoDraw = True
+192.9164 	DATA 	Keypress: 4
+192.9478 	EXP 	image_5: autoDraw = False
+192.9478 	EXP 	blankImage: image = u'allBlank.png'
+192.9478 	EXP 	blankImage: autoDraw = True
+193.4475 	EXP 	blankImage: autoDraw = False
+193.4475 	EXP 	blankImage: autoDraw = False
+193.4475 	EXP 	image_3: image = u'min2.png'
+193.4475 	EXP 	image_3: autoDraw = True
+193.6500 	DATA 	Keypress: 1
+193.9164 	DATA 	Keypress: 2
+193.9478 	EXP 	image_3: autoDraw = False
+193.9478 	EXP 	blankImage: image = u'allBlank.png'
+193.9478 	EXP 	blankImage: autoDraw = True
+194.4644 	EXP 	blankImage: autoDraw = False
+194.4644 	EXP 	blankImage: autoDraw = False
+194.4644 	EXP 	image_5: image = u'min4.png'
+194.4644 	EXP 	image_5: autoDraw = True
+194.6501 	DATA 	Keypress: 3
+194.8989 	DATA 	Keypress: 4
+194.9313 	EXP 	image_5: autoDraw = False
+194.9313 	EXP 	blankImage: image = u'allBlank.png'
+194.9313 	EXP 	blankImage: autoDraw = True
+195.3988 	EXP 	New trial (rep=5, index=0): {'randomPaw': u'min2.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['2'], 'blank': u'allBlank.png'}
+195.4313 	EXP 	blankImage: autoDraw = False
+195.4313 	EXP 	blankImage: autoDraw = False
+195.4313 	EXP 	pos1: image = u'min1.png'
+195.4313 	EXP 	pos1: autoDraw = True
+195.6824 	DATA 	Keypress: 1
+195.7143 	EXP 	pos1: autoDraw = False
+195.7143 	EXP 	blankImage: image = u'allBlank.png'
+195.7143 	EXP 	blankImage: autoDraw = True
+196.2140 	EXP 	blankImage: autoDraw = False
+196.2140 	EXP 	blankImage: autoDraw = False
+196.2140 	EXP 	image_4: image = u'min3.png'
+196.2140 	EXP 	image_4: autoDraw = True
+196.4165 	DATA 	Keypress: 3
+196.4477 	EXP 	image_4: autoDraw = False
+196.4477 	EXP 	blankImage: image = u'allBlank.png'
+196.4477 	EXP 	blankImage: autoDraw = True
+196.9471 	EXP 	blankImage: autoDraw = False
+196.9471 	EXP 	blankImage: autoDraw = False
+196.9471 	EXP 	image_3: image = u'min2.png'
+196.9471 	EXP 	image_3: autoDraw = True
+197.2160 	DATA 	Keypress: 2
+197.2476 	EXP 	image_3: autoDraw = False
+197.2476 	EXP 	blankImage: image = u'allBlank.png'
+197.2476 	EXP 	blankImage: autoDraw = True
+197.7471 	EXP 	blankImage: autoDraw = False
+197.7471 	EXP 	blankImage: autoDraw = False
+197.7471 	EXP 	image_5: image = u'min4.png'
+197.7471 	EXP 	image_5: autoDraw = True
+197.9165 	DATA 	Keypress: 4
+197.9471 	EXP 	image_5: autoDraw = False
+197.9471 	EXP 	blankImage: image = u'allBlank.png'
+197.9471 	EXP 	blankImage: autoDraw = True
+198.4483 	EXP 	blankImage: autoDraw = False
+198.4483 	EXP 	blankImage: autoDraw = False
+198.4483 	EXP 	image_5: image = u'min4.png'
+198.4483 	EXP 	image_5: autoDraw = True
+198.5997 	DATA 	Keypress: 4
+198.6312 	EXP 	image_5: autoDraw = False
+198.6312 	EXP 	blankImage: image = u'allBlank.png'
+198.6312 	EXP 	blankImage: autoDraw = True
+199.1310 	EXP 	blankImage: autoDraw = False
+199.1310 	EXP 	blankImage: autoDraw = False
+199.1310 	EXP 	image_3: image = u'min2.png'
+199.1310 	EXP 	image_3: autoDraw = True
+199.3326 	DATA 	Keypress: 2
+199.3634 	EXP 	image_3: autoDraw = False
+199.3634 	EXP 	blankImage: image = u'allBlank.png'
+199.3634 	EXP 	blankImage: autoDraw = True
+199.8642 	EXP 	blankImage: autoDraw = False
+199.8642 	EXP 	blankImage: autoDraw = False
+199.8642 	EXP 	image_4: image = u'min3.png'
+199.8642 	EXP 	image_4: autoDraw = True
+200.1987 	DATA 	Keypress: 3
+200.2302 	EXP 	image_4: autoDraw = False
+200.2302 	EXP 	blankImage: image = u'allBlank.png'
+200.2302 	EXP 	blankImage: autoDraw = True
+200.7302 	EXP 	blankImage: autoDraw = False
+200.7302 	EXP 	blankImage: autoDraw = False
+200.7302 	EXP 	image_5: image = u'min4.png'
+200.7302 	EXP 	image_5: autoDraw = True
+200.9826 	DATA 	Keypress: 4
+201.0133 	EXP 	image_5: autoDraw = False
+201.0133 	EXP 	blankImage: image = u'allBlank.png'
+201.0133 	EXP 	blankImage: autoDraw = True
+201.5304 	EXP 	blankImage: autoDraw = False
+201.5304 	EXP 	blankImage: autoDraw = False
+201.5304 	EXP 	image_3: image = u'min2.png'
+201.5304 	EXP 	image_3: autoDraw = True
+201.9507 	DATA 	Keypress: 2
+201.9975 	EXP 	image_3: autoDraw = False
+201.9975 	EXP 	blankImage: image = u'allBlank.png'
+201.9975 	EXP 	blankImage: autoDraw = True
+202.4977 	EXP 	blankImage: autoDraw = False
+202.4977 	EXP 	blankImage: autoDraw = False
+202.4977 	EXP 	image_5: image = u'min4.png'
+202.4977 	EXP 	image_5: autoDraw = True
+202.8165 	DATA 	Keypress: 4
+202.8473 	EXP 	image_5: autoDraw = False
+202.8473 	EXP 	blankImage: image = u'allBlank.png'
+202.8473 	EXP 	blankImage: autoDraw = True
+203.3153 	EXP 	New trial (rep=5, index=1): {'randomPaw': u'min1.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['1'], 'blank': u'allBlank.png'}
+203.3473 	EXP 	blankImage: autoDraw = False
+203.3473 	EXP 	blankImage: autoDraw = False
+203.3473 	EXP 	pos1: image = u'min1.png'
+203.3473 	EXP 	pos1: autoDraw = True
+203.7824 	DATA 	Keypress: 1
+203.8149 	EXP 	pos1: autoDraw = False
+203.8149 	EXP 	blankImage: image = u'allBlank.png'
+203.8149 	EXP 	blankImage: autoDraw = True
+204.3141 	EXP 	blankImage: autoDraw = False
+204.3141 	EXP 	blankImage: autoDraw = False
+204.3141 	EXP 	image_4: image = u'min3.png'
+204.3141 	EXP 	image_4: autoDraw = True
+204.6158 	DATA 	Keypress: 3
+204.6474 	EXP 	image_4: autoDraw = False
+204.6474 	EXP 	blankImage: image = u'allBlank.png'
+204.6474 	EXP 	blankImage: autoDraw = True
+205.1476 	EXP 	blankImage: autoDraw = False
+205.1476 	EXP 	blankImage: autoDraw = False
+205.1476 	EXP 	image_3: image = u'min2.png'
+205.1476 	EXP 	image_3: autoDraw = True
+205.3667 	DATA 	Keypress: 2
+205.4143 	EXP 	image_3: autoDraw = False
+205.4143 	EXP 	blankImage: image = u'allBlank.png'
+205.4143 	EXP 	blankImage: autoDraw = True
+205.9139 	EXP 	blankImage: autoDraw = False
+205.9139 	EXP 	blankImage: autoDraw = False
+205.9139 	EXP 	image_5: image = u'min4.png'
+205.9139 	EXP 	image_5: autoDraw = True
+206.1666 	DATA 	Keypress: 4
+206.1982 	EXP 	image_5: autoDraw = False
+206.1982 	EXP 	blankImage: image = u'allBlank.png'
+206.1982 	EXP 	blankImage: autoDraw = True
+206.6973 	EXP 	blankImage: autoDraw = False
+206.6973 	EXP 	blankImage: autoDraw = False
+206.6973 	EXP 	image_5: image = u'min4.png'
+206.6973 	EXP 	image_5: autoDraw = True
+206.9006 	DATA 	Keypress: 4
+206.9478 	EXP 	image_5: autoDraw = False
+206.9478 	EXP 	blankImage: image = u'allBlank.png'
+206.9478 	EXP 	blankImage: autoDraw = True
+207.4478 	EXP 	blankImage: autoDraw = False
+207.4478 	EXP 	blankImage: autoDraw = False
+207.4478 	EXP 	image_3: image = u'min2.png'
+207.4478 	EXP 	image_3: autoDraw = True
+207.6493 	DATA 	Keypress: 2
+207.6809 	EXP 	image_3: autoDraw = False
+207.6809 	EXP 	blankImage: image = u'allBlank.png'
+207.6809 	EXP 	blankImage: autoDraw = True
+208.1809 	EXP 	blankImage: autoDraw = False
+208.1809 	EXP 	blankImage: autoDraw = False
+208.1809 	EXP 	image_4: image = u'min3.png'
+208.1809 	EXP 	image_4: autoDraw = True
+208.3174 	DATA 	Keypress: 3
+208.3633 	EXP 	image_4: autoDraw = False
+208.3633 	EXP 	blankImage: image = u'allBlank.png'
+208.3633 	EXP 	blankImage: autoDraw = True
+208.8641 	EXP 	blankImage: autoDraw = False
+208.8641 	EXP 	blankImage: autoDraw = False
+208.8641 	EXP 	image_5: image = u'min4.png'
+208.8641 	EXP 	image_5: autoDraw = True
+209.0667 	DATA 	Keypress: 4
+209.1151 	EXP 	image_5: autoDraw = False
+209.1151 	EXP 	blankImage: image = u'allBlank.png'
+209.1151 	EXP 	blankImage: autoDraw = True
+209.6140 	EXP 	blankImage: autoDraw = False
+209.6140 	EXP 	blankImage: autoDraw = False
+209.6140 	EXP 	image_3: image = u'min2.png'
+209.6140 	EXP 	image_3: autoDraw = True
+210.0497 	DATA 	Keypress: 2
+210.0802 	EXP 	image_3: autoDraw = False
+210.0802 	EXP 	blankImage: image = u'allBlank.png'
+210.0802 	EXP 	blankImage: autoDraw = True
+210.5806 	EXP 	blankImage: autoDraw = False
+210.5806 	EXP 	blankImage: autoDraw = False
+210.5806 	EXP 	image_5: image = u'min4.png'
+210.5806 	EXP 	image_5: autoDraw = True
+210.9664 	DATA 	Keypress: 4
+210.9969 	EXP 	image_5: autoDraw = False
+210.9969 	EXP 	blankImage: image = u'allBlank.png'
+210.9969 	EXP 	blankImage: autoDraw = True
+211.4653 	EXP 	New trial (rep=5, index=2): {'randomPaw': u'min3.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['3'], 'blank': u'allBlank.png'}
+211.4975 	EXP 	blankImage: autoDraw = False
+211.4975 	EXP 	blankImage: autoDraw = False
+211.4975 	EXP 	pos1: image = u'min1.png'
+211.4975 	EXP 	pos1: autoDraw = True
+211.8331 	DATA 	Keypress: 1
+211.8641 	EXP 	pos1: autoDraw = False
+211.8641 	EXP 	blankImage: image = u'allBlank.png'
+211.8641 	EXP 	blankImage: autoDraw = True
+212.3640 	EXP 	blankImage: autoDraw = False
+212.3640 	EXP 	blankImage: autoDraw = False
+212.3640 	EXP 	image_4: image = u'min3.png'
+212.3640 	EXP 	image_4: autoDraw = True
+212.5159 	DATA 	Keypress: 3
+212.5474 	EXP 	image_4: autoDraw = False
+212.5474 	EXP 	blankImage: image = u'allBlank.png'
+212.5474 	EXP 	blankImage: autoDraw = True
+213.0475 	EXP 	blankImage: autoDraw = False
+213.0475 	EXP 	blankImage: autoDraw = False
+213.0475 	EXP 	image_3: image = u'min2.png'
+213.0475 	EXP 	image_3: autoDraw = True
+213.2664 	DATA 	Keypress: 2
+213.2971 	EXP 	image_3: autoDraw = False
+213.2971 	EXP 	blankImage: image = u'allBlank.png'
+213.2971 	EXP 	blankImage: autoDraw = True
+213.7974 	EXP 	blankImage: autoDraw = False
+213.7974 	EXP 	blankImage: autoDraw = False
+213.7974 	EXP 	image_5: image = u'min4.png'
+213.7974 	EXP 	image_5: autoDraw = True
+213.8497 	DATA 	Keypress: 4
+213.8804 	EXP 	image_5: autoDraw = False
+213.8804 	EXP 	blankImage: image = u'allBlank.png'
+213.8804 	EXP 	blankImage: autoDraw = True
+214.3808 	EXP 	blankImage: autoDraw = False
+214.3808 	EXP 	blankImage: autoDraw = False
+214.3808 	EXP 	image_5: image = u'min4.png'
+214.3808 	EXP 	image_5: autoDraw = True
+214.4661 	DATA 	Keypress: 4
+214.4974 	EXP 	image_5: autoDraw = False
+214.4974 	EXP 	blankImage: image = u'allBlank.png'
+214.4974 	EXP 	blankImage: autoDraw = True
+214.9976 	EXP 	blankImage: autoDraw = False
+214.9976 	EXP 	blankImage: autoDraw = False
+214.9976 	EXP 	image_3: image = u'min2.png'
+214.9976 	EXP 	image_3: autoDraw = True
+215.0819 	DATA 	Keypress: 2
+215.1137 	EXP 	image_3: autoDraw = False
+215.1137 	EXP 	blankImage: image = u'allBlank.png'
+215.1137 	EXP 	blankImage: autoDraw = True
+215.6140 	EXP 	blankImage: autoDraw = False
+215.6140 	EXP 	blankImage: autoDraw = False
+215.6140 	EXP 	image_4: image = u'min3.png'
+215.6140 	EXP 	image_4: autoDraw = True
+215.7834 	DATA 	Keypress: 3
+215.8141 	EXP 	image_4: autoDraw = False
+215.8141 	EXP 	blankImage: image = u'allBlank.png'
+215.8141 	EXP 	blankImage: autoDraw = True
+216.3156 	EXP 	blankImage: autoDraw = False
+216.3156 	EXP 	blankImage: autoDraw = False
+216.3156 	EXP 	image_5: image = u'min4.png'
+216.3156 	EXP 	image_5: autoDraw = True
+216.5497 	DATA 	Keypress: 4
+216.5805 	EXP 	image_5: autoDraw = False
+216.5805 	EXP 	blankImage: image = u'allBlank.png'
+216.5805 	EXP 	blankImage: autoDraw = True
+217.0809 	EXP 	blankImage: autoDraw = False
+217.0809 	EXP 	blankImage: autoDraw = False
+217.0809 	EXP 	image_3: image = u'min2.png'
+217.0809 	EXP 	image_3: autoDraw = True
+217.2823 	DATA 	Keypress: 1
+217.5828 	DATA 	Keypress: 2
+217.6135 	EXP 	image_3: autoDraw = False
+217.6135 	EXP 	blankImage: image = u'allBlank.png'
+217.6135 	EXP 	blankImage: autoDraw = True
+218.1141 	EXP 	blankImage: autoDraw = False
+218.1141 	EXP 	blankImage: autoDraw = False
+218.1141 	EXP 	image_5: image = u'min4.png'
+218.1141 	EXP 	image_5: autoDraw = True
+218.4318 	DATA 	Keypress: 4
+218.4644 	EXP 	image_5: autoDraw = False
+218.4644 	EXP 	blankImage: image = u'allBlank.png'
+218.4644 	EXP 	blankImage: autoDraw = True
+218.9319 	EXP 	New trial (rep=5, index=3): {'randomPaw': u'min4.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['4'], 'blank': u'allBlank.png'}
+218.9639 	EXP 	blankImage: autoDraw = False
+218.9639 	EXP 	blankImage: autoDraw = False
+218.9639 	EXP 	pos1: image = u'min1.png'
+218.9639 	EXP 	pos1: autoDraw = True
+219.1330 	DATA 	Keypress: 1
+219.1636 	EXP 	pos1: autoDraw = False
+219.1636 	EXP 	blankImage: image = u'allBlank.png'
+219.1636 	EXP 	blankImage: autoDraw = True
+219.6641 	EXP 	blankImage: autoDraw = False
+219.6641 	EXP 	blankImage: autoDraw = False
+219.6641 	EXP 	image_4: image = u'min3.png'
+219.6641 	EXP 	image_4: autoDraw = True
+219.8664 	DATA 	Keypress: 3
+219.9144 	EXP 	image_4: autoDraw = False
+219.9144 	EXP 	blankImage: image = u'allBlank.png'
+219.9144 	EXP 	blankImage: autoDraw = True
+220.4136 	EXP 	blankImage: autoDraw = False
+220.4136 	EXP 	blankImage: autoDraw = False
+220.4136 	EXP 	image_3: image = u'min2.png'
+220.4136 	EXP 	image_3: autoDraw = True
+220.5330 	DATA 	Keypress: 2
+220.5640 	EXP 	image_3: autoDraw = False
+220.5640 	EXP 	blankImage: image = u'allBlank.png'
+220.5640 	EXP 	blankImage: autoDraw = True
+221.0647 	EXP 	blankImage: autoDraw = False
+221.0647 	EXP 	blankImage: autoDraw = False
+221.0647 	EXP 	image_5: image = u'min4.png'
+221.0647 	EXP 	image_5: autoDraw = True
+221.1334 	DATA 	Keypress: 4
+221.1645 	EXP 	image_5: autoDraw = False
+221.1645 	EXP 	blankImage: image = u'allBlank.png'
+221.1645 	EXP 	blankImage: autoDraw = True
+221.6642 	EXP 	blankImage: autoDraw = False
+221.6642 	EXP 	blankImage: autoDraw = False
+221.6642 	EXP 	image_5: image = u'min4.png'
+221.6642 	EXP 	image_5: autoDraw = True
+221.7164 	DATA 	Keypress: 4
+221.7472 	EXP 	image_5: autoDraw = False
+221.7472 	EXP 	blankImage: image = u'allBlank.png'
+221.7472 	EXP 	blankImage: autoDraw = True
+222.2469 	EXP 	blankImage: autoDraw = False
+222.2469 	EXP 	blankImage: autoDraw = False
+222.2469 	EXP 	image_3: image = u'min2.png'
+222.2469 	EXP 	image_3: autoDraw = True
+222.4655 	DATA 	Keypress: 2
+222.4965 	EXP 	image_3: autoDraw = False
+222.4965 	EXP 	blankImage: image = u'allBlank.png'
+222.4965 	EXP 	blankImage: autoDraw = True
+222.9971 	EXP 	blankImage: autoDraw = False
+222.9971 	EXP 	blankImage: autoDraw = False
+222.9971 	EXP 	image_4: image = u'min3.png'
+222.9971 	EXP 	image_4: autoDraw = True
+223.1833 	DATA 	Keypress: 3
+223.2310 	EXP 	image_4: autoDraw = False
+223.2310 	EXP 	blankImage: image = u'allBlank.png'
+223.2310 	EXP 	blankImage: autoDraw = True
+223.7307 	EXP 	blankImage: autoDraw = False
+223.7307 	EXP 	blankImage: autoDraw = False
+223.7307 	EXP 	image_5: image = u'min4.png'
+223.7307 	EXP 	image_5: autoDraw = True
+223.9830 	DATA 	Keypress: 4
+224.0140 	EXP 	image_5: autoDraw = False
+224.0140 	EXP 	blankImage: image = u'allBlank.png'
+224.0140 	EXP 	blankImage: autoDraw = True
+224.5141 	EXP 	blankImage: autoDraw = False
+224.5141 	EXP 	blankImage: autoDraw = False
+224.5141 	EXP 	image_3: image = u'min2.png'
+224.5141 	EXP 	image_3: autoDraw = True
+224.8164 	DATA 	Keypress: 2
+224.8469 	EXP 	image_3: autoDraw = False
+224.8469 	EXP 	blankImage: image = u'allBlank.png'
+224.8469 	EXP 	blankImage: autoDraw = True
+225.3475 	EXP 	blankImage: autoDraw = False
+225.3475 	EXP 	blankImage: autoDraw = False
+225.3475 	EXP 	image_5: image = u'min4.png'
+225.3475 	EXP 	image_5: autoDraw = True
+225.3819 	DATA 	Keypress: 3
+225.6822 	DATA 	Keypress: 4
+225.7135 	EXP 	image_5: autoDraw = False
+225.7135 	EXP 	blankImage: image = u'allBlank.png'
+225.7135 	EXP 	blankImage: autoDraw = True
+226.1815 	EXP 	New trial (rep=6, index=0): {'randomPaw': u'min3.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['3'], 'blank': u'allBlank.png'}
+226.2143 	EXP 	blankImage: autoDraw = False
+226.2143 	EXP 	blankImage: autoDraw = False
+226.2143 	EXP 	pos1: image = u'min1.png'
+226.2143 	EXP 	pos1: autoDraw = True
+226.4333 	DATA 	Keypress: 1
+226.4638 	EXP 	pos1: autoDraw = False
+226.4638 	EXP 	blankImage: image = u'allBlank.png'
+226.4638 	EXP 	blankImage: autoDraw = True
+226.9642 	EXP 	blankImage: autoDraw = False
+226.9642 	EXP 	blankImage: autoDraw = False
+226.9642 	EXP 	image_4: image = u'min3.png'
+226.9642 	EXP 	image_4: autoDraw = True
+227.1333 	DATA 	Keypress: 3
+227.1636 	EXP 	image_4: autoDraw = False
+227.1636 	EXP 	blankImage: image = u'allBlank.png'
+227.1636 	EXP 	blankImage: autoDraw = True
+227.6639 	EXP 	blankImage: autoDraw = False
+227.6639 	EXP 	blankImage: autoDraw = False
+227.6639 	EXP 	image_3: image = u'min2.png'
+227.6639 	EXP 	image_3: autoDraw = True
+227.6828 	DATA 	Keypress: 2
+227.7137 	EXP 	image_3: autoDraw = False
+227.7137 	EXP 	blankImage: image = u'allBlank.png'
+227.7137 	EXP 	blankImage: autoDraw = True
+228.2141 	EXP 	blankImage: autoDraw = False
+228.2141 	EXP 	blankImage: autoDraw = False
+228.2141 	EXP 	image_5: image = u'min4.png'
+228.2141 	EXP 	image_5: autoDraw = True
+228.2659 	DATA 	Keypress: 4
+228.2973 	EXP 	image_5: autoDraw = False
+228.2973 	EXP 	blankImage: image = u'allBlank.png'
+228.2973 	EXP 	blankImage: autoDraw = True
+228.7968 	EXP 	blankImage: autoDraw = False
+228.7968 	EXP 	blankImage: autoDraw = False
+228.7968 	EXP 	image_5: image = u'min4.png'
+228.7968 	EXP 	image_5: autoDraw = True
+228.8163 	DATA 	Keypress: 4
+228.8474 	EXP 	image_5: autoDraw = False
+228.8474 	EXP 	blankImage: image = u'allBlank.png'
+228.8474 	EXP 	blankImage: autoDraw = True
+229.3474 	EXP 	blankImage: autoDraw = False
+229.3474 	EXP 	blankImage: autoDraw = False
+229.3474 	EXP 	image_3: image = u'min2.png'
+229.3474 	EXP 	image_3: autoDraw = True
+229.3660 	DATA 	Keypress: 2
+229.3970 	EXP 	image_3: autoDraw = False
+229.3970 	EXP 	blankImage: image = u'allBlank.png'
+229.3970 	EXP 	blankImage: autoDraw = True
+229.8975 	EXP 	blankImage: autoDraw = False
+229.8975 	EXP 	blankImage: autoDraw = False
+229.8975 	EXP 	image_4: image = u'min3.png'
+229.8975 	EXP 	image_4: autoDraw = True
+230.2154 	DATA 	Keypress: 3
+230.2640 	EXP 	image_4: autoDraw = False
+230.2640 	EXP 	blankImage: image = u'allBlank.png'
+230.2640 	EXP 	blankImage: autoDraw = True
+230.7473 	EXP 	blankImage: autoDraw = False
+230.7473 	EXP 	blankImage: autoDraw = False
+230.7473 	EXP 	image_5: image = u'min4.png'
+230.7473 	EXP 	image_5: autoDraw = True
+230.9666 	DATA 	Keypress: 4
+230.9973 	EXP 	image_5: autoDraw = False
+230.9973 	EXP 	blankImage: image = u'allBlank.png'
+230.9973 	EXP 	blankImage: autoDraw = True
+231.4977 	EXP 	blankImage: autoDraw = False
+231.4977 	EXP 	blankImage: autoDraw = False
+231.4977 	EXP 	image_3: image = u'min2.png'
+231.4977 	EXP 	image_3: autoDraw = True
+231.6829 	DATA 	Keypress: 2
+231.7138 	EXP 	image_3: autoDraw = False
+231.7138 	EXP 	blankImage: image = u'allBlank.png'
+231.7138 	EXP 	blankImage: autoDraw = True
+232.2138 	EXP 	blankImage: autoDraw = False
+232.2138 	EXP 	blankImage: autoDraw = False
+232.2138 	EXP 	image_5: image = u'min4.png'
+232.2138 	EXP 	image_5: autoDraw = True
+232.2661 	DATA 	Keypress: 4
+232.2969 	EXP 	image_5: autoDraw = False
+232.2969 	EXP 	blankImage: image = u'allBlank.png'
+232.2969 	EXP 	blankImage: autoDraw = True
+232.7652 	EXP 	New trial (rep=6, index=1): {'randomPaw': u'min4.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['4'], 'blank': u'allBlank.png'}
+232.7979 	EXP 	blankImage: autoDraw = False
+232.7979 	EXP 	blankImage: autoDraw = False
+232.7979 	EXP 	pos1: image = u'min1.png'
+232.7979 	EXP 	pos1: autoDraw = True
+232.9342 	DATA 	Keypress: 1
+232.9805 	EXP 	pos1: autoDraw = False
+232.9805 	EXP 	blankImage: image = u'allBlank.png'
+232.9805 	EXP 	blankImage: autoDraw = True
+233.4807 	EXP 	blankImage: autoDraw = False
+233.4807 	EXP 	blankImage: autoDraw = False
+233.4807 	EXP 	image_4: image = u'min3.png'
+233.4807 	EXP 	image_4: autoDraw = True
+233.5493 	DATA 	Keypress: 3
+233.5803 	EXP 	image_4: autoDraw = False
+233.5803 	EXP 	blankImage: image = u'allBlank.png'
+233.5803 	EXP 	blankImage: autoDraw = True
+234.0809 	EXP 	blankImage: autoDraw = False
+234.0809 	EXP 	blankImage: autoDraw = False
+234.0809 	EXP 	image_3: image = u'min2.png'
+234.0809 	EXP 	image_3: autoDraw = True
+234.0987 	DATA 	Keypress: 2
+234.1301 	EXP 	image_3: autoDraw = False
+234.1301 	EXP 	blankImage: image = u'allBlank.png'
+234.1301 	EXP 	blankImage: autoDraw = True
+234.5990 	DATA 	Keypress: 4
+234.6643 	EXP 	blankImage: autoDraw = False
+234.6643 	EXP 	blankImage: autoDraw = False
+234.6643 	EXP 	image_5: image = u'min4.png'
+234.6643 	EXP 	image_5: autoDraw = True
+234.6643 	EXP 	image_5: autoDraw = False
+234.6643 	EXP 	blankImage: image = u'allBlank.png'
+234.6643 	EXP 	blankImage: autoDraw = True
+235.1478 	EXP 	blankImage: autoDraw = False
+235.1478 	EXP 	blankImage: autoDraw = False
+235.1478 	EXP 	image_5: image = u'min4.png'
+235.1478 	EXP 	image_5: autoDraw = True
+235.4500 	DATA 	Keypress: 4
+235.4966 	EXP 	image_5: autoDraw = False
+235.4966 	EXP 	blankImage: image = u'allBlank.png'
+235.4966 	EXP 	blankImage: autoDraw = True
+235.9972 	EXP 	blankImage: autoDraw = False
+235.9972 	EXP 	blankImage: autoDraw = False
+235.9972 	EXP 	image_3: image = u'min2.png'
+235.9972 	EXP 	image_3: autoDraw = True
+236.4161 	DATA 	Keypress: 2
+236.4637 	EXP 	image_3: autoDraw = False
+236.4637 	EXP 	blankImage: image = u'allBlank.png'
+236.4637 	EXP 	blankImage: autoDraw = True
+236.9469 	EXP 	blankImage: autoDraw = False
+236.9469 	EXP 	blankImage: autoDraw = False
+236.9469 	EXP 	image_4: image = u'min3.png'
+236.9469 	EXP 	image_4: autoDraw = True
+237.1662 	DATA 	Keypress: 3
+237.1972 	EXP 	image_4: autoDraw = False
+237.1972 	EXP 	blankImage: image = u'allBlank.png'
+237.1972 	EXP 	blankImage: autoDraw = True
+237.6972 	EXP 	blankImage: autoDraw = False
+237.6972 	EXP 	blankImage: autoDraw = False
+237.6972 	EXP 	image_5: image = u'min4.png'
+237.6972 	EXP 	image_5: autoDraw = True
+237.8496 	DATA 	Keypress: 4
+237.8806 	EXP 	image_5: autoDraw = False
+237.8806 	EXP 	blankImage: image = u'allBlank.png'
+237.8806 	EXP 	blankImage: autoDraw = True
+238.3808 	EXP 	blankImage: autoDraw = False
+238.3808 	EXP 	blankImage: autoDraw = False
+238.3808 	EXP 	image_3: image = u'min2.png'
+238.3808 	EXP 	image_3: autoDraw = True
+238.4662 	DATA 	Keypress: 4
+238.7999 	DATA 	Keypress: 2
+238.8476 	EXP 	image_3: autoDraw = False
+238.8476 	EXP 	blankImage: image = u'allBlank.png'
+238.8476 	EXP 	blankImage: autoDraw = True
+239.3473 	EXP 	blankImage: autoDraw = False
+239.3473 	EXP 	blankImage: autoDraw = False
+239.3473 	EXP 	image_5: image = u'min4.png'
+239.3473 	EXP 	image_5: autoDraw = True
+239.3660 	DATA 	Keypress: 4
+239.3971 	EXP 	image_5: autoDraw = False
+239.3971 	EXP 	blankImage: image = u'allBlank.png'
+239.3971 	EXP 	blankImage: autoDraw = True
+239.8652 	EXP 	New trial (rep=6, index=2): {'randomPaw': u'min1.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['1'], 'blank': u'allBlank.png'}
+239.8930 	DATA 	Keypress: 4
+239.9135 	EXP 	blankImage: autoDraw = False
+239.9135 	EXP 	blankImage: autoDraw = False
+239.9135 	EXP 	pos1: image = u'min1.png'
+239.9135 	EXP 	pos1: autoDraw = True
+240.3832 	DATA 	Keypress: 1
+240.4135 	EXP 	pos1: autoDraw = False
+240.4135 	EXP 	blankImage: image = u'allBlank.png'
+240.4135 	EXP 	blankImage: autoDraw = True
+240.9141 	EXP 	blankImage: autoDraw = False
+240.9141 	EXP 	blankImage: autoDraw = False
+240.9141 	EXP 	image_4: image = u'min3.png'
+240.9141 	EXP 	image_4: autoDraw = True
+240.9496 	DATA 	Keypress: 3
+240.9808 	EXP 	image_4: autoDraw = False
+240.9808 	EXP 	blankImage: image = u'allBlank.png'
+240.9808 	EXP 	blankImage: autoDraw = True
+241.4801 	EXP 	blankImage: autoDraw = False
+241.4801 	EXP 	blankImage: autoDraw = False
+241.4801 	EXP 	image_3: image = u'min2.png'
+241.4801 	EXP 	image_3: autoDraw = True
+241.6662 	DATA 	Keypress: 2
+241.6972 	EXP 	image_3: autoDraw = False
+241.6972 	EXP 	blankImage: image = u'allBlank.png'
+241.6972 	EXP 	blankImage: autoDraw = True
+242.1981 	EXP 	blankImage: autoDraw = False
+242.1981 	EXP 	blankImage: autoDraw = False
+242.1981 	EXP 	image_5: image = u'min4.png'
+242.1981 	EXP 	image_5: autoDraw = True
+242.2995 	DATA 	Keypress: 4
+242.3307 	EXP 	image_5: autoDraw = False
+242.3307 	EXP 	blankImage: image = u'allBlank.png'
+242.3307 	EXP 	blankImage: autoDraw = True
+242.8264 	DATA 	Keypress: 1
+242.8472 	EXP 	blankImage: autoDraw = False
+242.8472 	EXP 	blankImage: autoDraw = False
+242.8472 	EXP 	image_5: image = u'min4.png'
+242.8472 	EXP 	image_5: autoDraw = True
+243.2996 	DATA 	Keypress: 2
+243.4657 	DATA 	Keypress: 4
+243.4972 	EXP 	image_5: autoDraw = False
+243.4972 	EXP 	blankImage: image = u'allBlank.png'
+243.4972 	EXP 	blankImage: autoDraw = True
+243.9966 	EXP 	blankImage: autoDraw = False
+243.9966 	EXP 	blankImage: autoDraw = False
+243.9966 	EXP 	image_3: image = u'min2.png'
+243.9966 	EXP 	image_3: autoDraw = True
+244.1996 	DATA 	Keypress: 2
+244.2304 	EXP 	image_3: autoDraw = False
+244.2304 	EXP 	blankImage: image = u'allBlank.png'
+244.2304 	EXP 	blankImage: autoDraw = True
+244.7302 	EXP 	blankImage: autoDraw = False
+244.7302 	EXP 	blankImage: autoDraw = False
+244.7302 	EXP 	image_4: image = u'min3.png'
+244.7302 	EXP 	image_4: autoDraw = True
+244.7493 	DATA 	Keypress: 3
+244.7804 	EXP 	image_4: autoDraw = False
+244.7804 	EXP 	blankImage: image = u'allBlank.png'
+244.7804 	EXP 	blankImage: autoDraw = True
+245.2803 	EXP 	blankImage: autoDraw = False
+245.2803 	EXP 	blankImage: autoDraw = False
+245.2803 	EXP 	image_5: image = u'min4.png'
+245.2803 	EXP 	image_5: autoDraw = True
+245.3329 	DATA 	Keypress: 4
+245.3635 	EXP 	image_5: autoDraw = False
+245.3635 	EXP 	blankImage: image = u'allBlank.png'
+245.3635 	EXP 	blankImage: autoDraw = True
+245.8639 	EXP 	blankImage: autoDraw = False
+245.8639 	EXP 	blankImage: autoDraw = False
+245.8639 	EXP 	image_3: image = u'min2.png'
+245.8639 	EXP 	image_3: autoDraw = True
+246.1829 	DATA 	Keypress: 2
+246.2135 	EXP 	image_3: autoDraw = False
+246.2135 	EXP 	blankImage: image = u'allBlank.png'
+246.2135 	EXP 	blankImage: autoDraw = True
+246.7136 	EXP 	blankImage: autoDraw = False
+246.7136 	EXP 	blankImage: autoDraw = False
+246.7136 	EXP 	image_5: image = u'min4.png'
+246.7136 	EXP 	image_5: autoDraw = True
+246.7660 	DATA 	Keypress: 3
+247.1000 	DATA 	Keypress: 4
+247.1308 	EXP 	image_5: autoDraw = False
+247.1308 	EXP 	blankImage: image = u'allBlank.png'
+247.1308 	EXP 	blankImage: autoDraw = True
+247.5984 	EXP 	New trial (rep=6, index=3): {'randomPaw': u'min2.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['2'], 'blank': u'allBlank.png'}
+247.6310 	EXP 	blankImage: autoDraw = False
+247.6310 	EXP 	blankImage: autoDraw = False
+247.6310 	EXP 	pos1: image = u'min1.png'
+247.6310 	EXP 	pos1: autoDraw = True
+247.6492 	DATA 	Keypress: 1
+247.6806 	EXP 	pos1: autoDraw = False
+247.6806 	EXP 	blankImage: image = u'allBlank.png'
+247.6806 	EXP 	blankImage: autoDraw = True
+248.1806 	EXP 	blankImage: autoDraw = False
+248.1806 	EXP 	blankImage: autoDraw = False
+248.1806 	EXP 	image_4: image = u'min3.png'
+248.1806 	EXP 	image_4: autoDraw = True
+248.3828 	DATA 	Keypress: 3
+248.4139 	EXP 	image_4: autoDraw = False
+248.4139 	EXP 	blankImage: image = u'allBlank.png'
+248.4139 	EXP 	blankImage: autoDraw = True
+248.9131 	EXP 	blankImage: autoDraw = False
+248.9131 	EXP 	blankImage: autoDraw = False
+248.9131 	EXP 	image_3: image = u'min2.png'
+248.9131 	EXP 	image_3: autoDraw = True
+249.1330 	DATA 	Keypress: 2
+249.1642 	EXP 	image_3: autoDraw = False
+249.1642 	EXP 	blankImage: image = u'allBlank.png'
+249.1642 	EXP 	blankImage: autoDraw = True
+249.6635 	EXP 	blankImage: autoDraw = False
+249.6635 	EXP 	blankImage: autoDraw = False
+249.6635 	EXP 	image_5: image = u'min4.png'
+249.6635 	EXP 	image_5: autoDraw = True
+249.7659 	DATA 	Keypress: 4
+249.7974 	EXP 	image_5: autoDraw = False
+249.7974 	EXP 	blankImage: image = u'allBlank.png'
+249.7974 	EXP 	blankImage: autoDraw = True
+250.2976 	EXP 	blankImage: autoDraw = False
+250.2976 	EXP 	blankImage: autoDraw = False
+250.2976 	EXP 	image_5: image = u'min4.png'
+250.2976 	EXP 	image_5: autoDraw = True
+250.6162 	DATA 	Keypress: 4
+250.6471 	EXP 	image_5: autoDraw = False
+250.6471 	EXP 	blankImage: image = u'allBlank.png'
+250.6471 	EXP 	blankImage: autoDraw = True
+251.1472 	EXP 	blankImage: autoDraw = False
+251.1472 	EXP 	blankImage: autoDraw = False
+251.1472 	EXP 	image_3: image = u'min2.png'
+251.1472 	EXP 	image_3: autoDraw = True
+251.3662 	DATA 	Keypress: 2
+251.3972 	EXP 	image_3: autoDraw = False
+251.3972 	EXP 	blankImage: image = u'allBlank.png'
+251.3972 	EXP 	blankImage: autoDraw = True
+251.8975 	EXP 	blankImage: autoDraw = False
+251.8975 	EXP 	blankImage: autoDraw = False
+251.8975 	EXP 	image_4: image = u'min3.png'
+251.8975 	EXP 	image_4: autoDraw = True
+252.1497 	DATA 	Keypress: 3
+252.1805 	EXP 	image_4: autoDraw = False
+252.1805 	EXP 	blankImage: image = u'allBlank.png'
+252.1805 	EXP 	blankImage: autoDraw = True
+252.6808 	EXP 	blankImage: autoDraw = False
+252.6808 	EXP 	blankImage: autoDraw = False
+252.6808 	EXP 	image_5: image = u'min4.png'
+252.6808 	EXP 	image_5: autoDraw = True
+252.9169 	DATA 	Keypress: 4
+252.9473 	EXP 	image_5: autoDraw = False
+252.9473 	EXP 	blankImage: image = u'allBlank.png'
+252.9473 	EXP 	blankImage: autoDraw = True
+253.4472 	EXP 	blankImage: autoDraw = False
+253.4472 	EXP 	blankImage: autoDraw = False
+253.4472 	EXP 	image_3: image = u'min2.png'
+253.4472 	EXP 	image_3: autoDraw = True
+253.7328 	DATA 	Keypress: 2
+253.7636 	EXP 	image_3: autoDraw = False
+253.7636 	EXP 	blankImage: image = u'allBlank.png'
+253.7636 	EXP 	blankImage: autoDraw = True
+254.2635 	EXP 	blankImage: autoDraw = False
+254.2635 	EXP 	blankImage: autoDraw = False
+254.2635 	EXP 	image_5: image = u'min4.png'
+254.2635 	EXP 	image_5: autoDraw = True
+254.3661 	DATA 	Keypress: 4
+254.3971 	EXP 	image_5: autoDraw = False
+254.3971 	EXP 	blankImage: image = u'allBlank.png'
+254.3971 	EXP 	blankImage: autoDraw = True
+254.8651 	EXP 	New trial (rep=7, index=0): {'randomPaw': u'min3.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['3'], 'blank': u'allBlank.png'}
+254.8977 	EXP 	blankImage: autoDraw = False
+254.8977 	EXP 	blankImage: autoDraw = False
+254.8977 	EXP 	pos1: image = u'min1.png'
+254.8977 	EXP 	pos1: autoDraw = True
+255.1332 	DATA 	Keypress: 2
+255.4330 	DATA 	Keypress: 1
+255.4637 	EXP 	pos1: autoDraw = False
+255.4637 	EXP 	blankImage: image = u'allBlank.png'
+255.4637 	EXP 	blankImage: autoDraw = True
+255.9640 	EXP 	blankImage: autoDraw = False
+255.9640 	EXP 	blankImage: autoDraw = False
+255.9640 	EXP 	image_4: image = u'min3.png'
+255.9640 	EXP 	image_4: autoDraw = True
+255.9993 	DATA 	Keypress: 3
+256.0307 	EXP 	image_4: autoDraw = False
+256.0307 	EXP 	blankImage: image = u'allBlank.png'
+256.0307 	EXP 	blankImage: autoDraw = True
+256.5302 	EXP 	blankImage: autoDraw = False
+256.5302 	EXP 	blankImage: autoDraw = False
+256.5302 	EXP 	image_3: image = u'min2.png'
+256.5302 	EXP 	image_3: autoDraw = True
+256.6995 	DATA 	Keypress: 2
+256.7305 	EXP 	image_3: autoDraw = False
+256.7305 	EXP 	blankImage: image = u'allBlank.png'
+256.7305 	EXP 	blankImage: autoDraw = True
+257.2316 	EXP 	blankImage: autoDraw = False
+257.2316 	EXP 	blankImage: autoDraw = False
+257.2316 	EXP 	image_5: image = u'min4.png'
+257.2316 	EXP 	image_5: autoDraw = True
+257.2830 	DATA 	Keypress: 4
+257.3140 	EXP 	image_5: autoDraw = False
+257.3140 	EXP 	blankImage: image = u'allBlank.png'
+257.3140 	EXP 	blankImage: autoDraw = True
+257.8134 	EXP 	blankImage: autoDraw = False
+257.8134 	EXP 	blankImage: autoDraw = False
+257.8134 	EXP 	image_5: image = u'min4.png'
+257.8134 	EXP 	image_5: autoDraw = True
+258.1662 	DATA 	Keypress: 4
+258.1976 	EXP 	image_5: autoDraw = False
+258.1976 	EXP 	blankImage: image = u'allBlank.png'
+258.1976 	EXP 	blankImage: autoDraw = True
+258.6973 	EXP 	blankImage: autoDraw = False
+258.6973 	EXP 	blankImage: autoDraw = False
+258.6973 	EXP 	image_3: image = u'min2.png'
+258.6973 	EXP 	image_3: autoDraw = True
+258.7996 	DATA 	Keypress: 2
+258.8306 	EXP 	image_3: autoDraw = False
+258.8306 	EXP 	blankImage: image = u'allBlank.png'
+258.8306 	EXP 	blankImage: autoDraw = True
+259.3304 	EXP 	blankImage: autoDraw = False
+259.3304 	EXP 	blankImage: autoDraw = False
+259.3304 	EXP 	image_4: image = u'min3.png'
+259.3304 	EXP 	image_4: autoDraw = True
+259.4990 	DATA 	Keypress: 3
+259.5302 	EXP 	image_4: autoDraw = False
+259.5302 	EXP 	blankImage: image = u'allBlank.png'
+259.5302 	EXP 	blankImage: autoDraw = True
+260.0306 	EXP 	blankImage: autoDraw = False
+260.0306 	EXP 	blankImage: autoDraw = False
+260.0306 	EXP 	image_5: image = u'min4.png'
+260.0306 	EXP 	image_5: autoDraw = True
+260.3329 	DATA 	Keypress: 4
+260.3642 	EXP 	image_5: autoDraw = False
+260.3642 	EXP 	blankImage: image = u'allBlank.png'
+260.3642 	EXP 	blankImage: autoDraw = True
+260.8639 	EXP 	blankImage: autoDraw = False
+260.8639 	EXP 	blankImage: autoDraw = False
+260.8639 	EXP 	image_3: image = u'min2.png'
+260.8639 	EXP 	image_3: autoDraw = True
+261.3156 	DATA 	Keypress: 2
+261.3464 	EXP 	image_3: autoDraw = False
+261.3464 	EXP 	blankImage: image = u'allBlank.png'
+261.3464 	EXP 	blankImage: autoDraw = True
+261.8470 	EXP 	blankImage: autoDraw = False
+261.8470 	EXP 	blankImage: autoDraw = False
+261.8470 	EXP 	image_5: image = u'min4.png'
+261.8470 	EXP 	image_5: autoDraw = True
+261.8995 	DATA 	Keypress: 3
+262.2484 	DATA 	Keypress: 4
+262.2805 	EXP 	image_5: autoDraw = False
+262.2805 	EXP 	blankImage: image = u'allBlank.png'
+262.2805 	EXP 	blankImage: autoDraw = True
+262.7484 	EXP 	New trial (rep=7, index=1): {'randomPaw': u'min1.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['1'], 'blank': u'allBlank.png'}
+262.7808 	EXP 	blankImage: autoDraw = False
+262.7808 	EXP 	blankImage: autoDraw = False
+262.7808 	EXP 	pos1: image = u'min1.png'
+262.7808 	EXP 	pos1: autoDraw = True
+262.9661 	DATA 	Keypress: 1
+262.9974 	EXP 	pos1: autoDraw = False
+262.9974 	EXP 	blankImage: image = u'allBlank.png'
+262.9974 	EXP 	blankImage: autoDraw = True
+263.4969 	EXP 	blankImage: autoDraw = False
+263.4969 	EXP 	blankImage: autoDraw = False
+263.4969 	EXP 	image_4: image = u'min3.png'
+263.4969 	EXP 	image_4: autoDraw = True
+263.5321 	DATA 	Keypress: 3
+263.5634 	EXP 	image_4: autoDraw = False
+263.5634 	EXP 	blankImage: image = u'allBlank.png'
+263.5634 	EXP 	blankImage: autoDraw = True
+264.0640 	EXP 	blankImage: autoDraw = False
+264.0640 	EXP 	blankImage: autoDraw = False
+264.0640 	EXP 	image_3: image = u'min2.png'
+264.0640 	EXP 	image_3: autoDraw = True
+264.1479 	DATA 	Keypress: 2
+264.1804 	EXP 	image_3: autoDraw = False
+264.1804 	EXP 	blankImage: image = u'allBlank.png'
+264.1804 	EXP 	blankImage: autoDraw = True
+264.6972 	EXP 	blankImage: autoDraw = False
+264.6972 	EXP 	blankImage: autoDraw = False
+264.6972 	EXP 	image_5: image = u'min4.png'
+264.6972 	EXP 	image_5: autoDraw = True
+264.7995 	DATA 	Keypress: 4
+264.8306 	EXP 	image_5: autoDraw = False
+264.8306 	EXP 	blankImage: image = u'allBlank.png'
+264.8306 	EXP 	blankImage: autoDraw = True
+265.3306 	EXP 	blankImage: autoDraw = False
+265.3306 	EXP 	blankImage: autoDraw = False
+265.3306 	EXP 	image_5: image = u'min4.png'
+265.3306 	EXP 	image_5: autoDraw = True
+265.4326 	DATA 	Keypress: 4
+265.4640 	EXP 	image_5: autoDraw = False
+265.4640 	EXP 	blankImage: image = u'allBlank.png'
+265.4640 	EXP 	blankImage: autoDraw = True
+265.9606 	DATA 	Keypress: 2
+265.9978 	EXP 	blankImage: autoDraw = False
+265.9978 	EXP 	blankImage: autoDraw = False
+265.9978 	EXP 	image_3: image = u'min2.png'
+265.9978 	EXP 	image_3: autoDraw = True
+265.9978 	EXP 	image_3: autoDraw = False
+265.9978 	EXP 	blankImage: image = u'allBlank.png'
+265.9978 	EXP 	blankImage: autoDraw = True
+266.4970 	EXP 	blankImage: autoDraw = False
+266.4970 	EXP 	image_4: image = u'min3.png'
+266.4970 	EXP 	image_4: autoDraw = True
+266.9995 	DATA 	Keypress: 3
+267.0306 	EXP 	image_4: autoDraw = False
+267.0306 	EXP 	blankImage: image = u'allBlank.png'
+267.0306 	EXP 	blankImage: autoDraw = True
+267.5301 	EXP 	blankImage: autoDraw = False
+267.5301 	EXP 	blankImage: autoDraw = False
+267.5301 	EXP 	image_5: image = u'min4.png'
+267.5301 	EXP 	image_5: autoDraw = True
+267.8495 	DATA 	Keypress: 4
+267.8802 	EXP 	image_5: autoDraw = False
+267.8802 	EXP 	blankImage: image = u'allBlank.png'
+267.8802 	EXP 	blankImage: autoDraw = True
+268.3806 	EXP 	blankImage: autoDraw = False
+268.3806 	EXP 	blankImage: autoDraw = False
+268.3806 	EXP 	image_3: image = u'min2.png'
+268.3806 	EXP 	image_3: autoDraw = True
+268.6156 	DATA 	Keypress: 2
+268.6466 	EXP 	image_3: autoDraw = False
+268.6466 	EXP 	blankImage: image = u'allBlank.png'
+268.6466 	EXP 	blankImage: autoDraw = True
+269.1474 	EXP 	blankImage: autoDraw = False
+269.1474 	EXP 	blankImage: autoDraw = False
+269.1474 	EXP 	image_5: image = u'min4.png'
+269.1474 	EXP 	image_5: autoDraw = True
+269.4323 	DATA 	Keypress: 4
+269.4631 	EXP 	image_5: autoDraw = False
+269.4631 	EXP 	blankImage: image = u'allBlank.png'
+269.4631 	EXP 	blankImage: autoDraw = True
+269.9317 	EXP 	New trial (rep=7, index=2): {'randomPaw': u'min2.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['2'], 'blank': u'allBlank.png'}
+269.9642 	EXP 	blankImage: autoDraw = False
+269.9642 	EXP 	blankImage: autoDraw = False
+269.9642 	EXP 	pos1: image = u'min1.png'
+269.9642 	EXP 	pos1: autoDraw = True
+270.2996 	DATA 	Keypress: 1
+270.3307 	EXP 	pos1: autoDraw = False
+270.3307 	EXP 	blankImage: image = u'allBlank.png'
+270.3307 	EXP 	blankImage: autoDraw = True
+270.8304 	EXP 	blankImage: autoDraw = False
+270.8304 	EXP 	blankImage: autoDraw = False
+270.8304 	EXP 	image_4: image = u'min3.png'
+270.8304 	EXP 	image_4: autoDraw = True
+270.9164 	DATA 	Keypress: 3
+270.9468 	EXP 	image_4: autoDraw = False
+270.9468 	EXP 	blankImage: image = u'allBlank.png'
+270.9468 	EXP 	blankImage: autoDraw = True
+271.4474 	EXP 	blankImage: autoDraw = False
+271.4474 	EXP 	blankImage: autoDraw = False
+271.4474 	EXP 	image_3: image = u'min2.png'
+271.4474 	EXP 	image_3: autoDraw = True
+271.5659 	DATA 	Keypress: 2
+271.5968 	EXP 	image_3: autoDraw = False
+271.5968 	EXP 	blankImage: image = u'allBlank.png'
+271.5968 	EXP 	blankImage: autoDraw = True
+272.0982 	EXP 	blankImage: autoDraw = False
+272.0982 	EXP 	blankImage: autoDraw = False
+272.0982 	EXP 	image_5: image = u'min4.png'
+272.0982 	EXP 	image_5: autoDraw = True
+272.1323 	DATA 	Keypress: 4
+272.1632 	EXP 	image_5: autoDraw = False
+272.1632 	EXP 	blankImage: image = u'allBlank.png'
+272.1632 	EXP 	blankImage: autoDraw = True
+272.6638 	EXP 	blankImage: autoDraw = False
+272.6638 	EXP 	blankImage: autoDraw = False
+272.6638 	EXP 	image_5: image = u'min4.png'
+272.6638 	EXP 	image_5: autoDraw = True
+273.0159 	DATA 	Keypress: 4
+273.0468 	EXP 	image_5: autoDraw = False
+273.0468 	EXP 	blankImage: image = u'allBlank.png'
+273.0468 	EXP 	blankImage: autoDraw = True
+273.5468 	EXP 	blankImage: autoDraw = False
+273.5468 	EXP 	blankImage: autoDraw = False
+273.5468 	EXP 	image_3: image = u'min2.png'
+273.5468 	EXP 	image_3: autoDraw = True
+273.6328 	DATA 	Keypress: 2
+273.6636 	EXP 	image_3: autoDraw = False
+273.6636 	EXP 	blankImage: image = u'allBlank.png'
+273.6636 	EXP 	blankImage: autoDraw = True
+274.1637 	EXP 	blankImage: autoDraw = False
+274.1637 	EXP 	blankImage: autoDraw = False
+274.1637 	EXP 	image_4: image = u'min3.png'
+274.1637 	EXP 	image_4: autoDraw = True
+274.2155 	DATA 	Keypress: 3
+274.2468 	EXP 	image_4: autoDraw = False
+274.2468 	EXP 	blankImage: image = u'allBlank.png'
+274.2468 	EXP 	blankImage: autoDraw = True
+274.7472 	EXP 	blankImage: autoDraw = False
+274.7472 	EXP 	blankImage: autoDraw = False
+274.7472 	EXP 	image_5: image = u'min4.png'
+274.7472 	EXP 	image_5: autoDraw = True
+274.8152 	DATA 	Keypress: 4
+274.8463 	EXP 	image_5: autoDraw = False
+274.8463 	EXP 	blankImage: image = u'allBlank.png'
+274.8463 	EXP 	blankImage: autoDraw = True
+275.3469 	EXP 	blankImage: autoDraw = False
+275.3469 	EXP 	blankImage: autoDraw = False
+275.3469 	EXP 	image_3: image = u'min2.png'
+275.3469 	EXP 	image_3: autoDraw = True
+275.4992 	DATA 	Keypress: 1
+275.8494 	DATA 	Keypress: 2
+275.8801 	EXP 	image_3: autoDraw = False
+275.8801 	EXP 	blankImage: image = u'allBlank.png'
+275.8801 	EXP 	blankImage: autoDraw = True
+276.3329 	DATA 	Keypress: 3
+276.3805 	EXP 	blankImage: autoDraw = False
+276.3805 	EXP 	blankImage: autoDraw = False
+276.3805 	EXP 	image_5: image = u'min4.png'
+276.3805 	EXP 	image_5: autoDraw = True
+276.7321 	DATA 	Keypress: 4
+276.7637 	EXP 	image_5: autoDraw = False
+276.7637 	EXP 	blankImage: image = u'allBlank.png'
+276.7637 	EXP 	blankImage: autoDraw = True
+277.2319 	EXP 	New trial (rep=7, index=3): {'randomPaw': u'min4.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['4'], 'blank': u'allBlank.png'}
+277.2581 	DATA 	Keypress: 1
+277.2965 	EXP 	blankImage: autoDraw = False
+277.2965 	EXP 	blankImage: autoDraw = False
+277.2965 	EXP 	pos1: image = u'min1.png'
+277.2965 	EXP 	pos1: autoDraw = True
+277.2965 	EXP 	pos1: autoDraw = False
+277.2965 	EXP 	blankImage: image = u'allBlank.png'
+277.2965 	EXP 	blankImage: autoDraw = True
+277.7804 	EXP 	blankImage: autoDraw = False
+277.7804 	EXP 	blankImage: autoDraw = False
+277.7804 	EXP 	image_4: image = u'min3.png'
+277.7804 	EXP 	image_4: autoDraw = True
+277.8320 	DATA 	Keypress: 3
+277.8633 	EXP 	image_4: autoDraw = False
+277.8633 	EXP 	blankImage: image = u'allBlank.png'
+277.8633 	EXP 	blankImage: autoDraw = True
+278.3319 	DATA 	Keypress: 2
+278.3973 	EXP 	blankImage: autoDraw = False
+278.3973 	EXP 	blankImage: autoDraw = False
+278.3973 	EXP 	image_3: image = u'min2.png'
+278.3973 	EXP 	image_3: autoDraw = True
+278.3973 	EXP 	image_3: autoDraw = False
+278.3973 	EXP 	blankImage: image = u'allBlank.png'
+278.3973 	EXP 	blankImage: autoDraw = True
+278.8809 	EXP 	blankImage: autoDraw = False
+278.8809 	EXP 	blankImage: autoDraw = False
+278.8809 	EXP 	image_5: image = u'min4.png'
+278.8809 	EXP 	image_5: autoDraw = True
+279.0657 	DATA 	Keypress: 4
+279.0972 	EXP 	image_5: autoDraw = False
+279.0972 	EXP 	blankImage: image = u'allBlank.png'
+279.0972 	EXP 	blankImage: autoDraw = True
+279.5972 	EXP 	blankImage: autoDraw = False
+279.5972 	EXP 	blankImage: autoDraw = False
+279.5972 	EXP 	image_5: image = u'min4.png'
+279.5972 	EXP 	image_5: autoDraw = True
+279.9839 	DATA 	Keypress: 4
+280.0306 	EXP 	image_5: autoDraw = False
+280.0306 	EXP 	blankImage: image = u'allBlank.png'
+280.0306 	EXP 	blankImage: autoDraw = True
+280.5303 	EXP 	blankImage: autoDraw = False
+280.5303 	EXP 	blankImage: autoDraw = False
+280.5303 	EXP 	image_3: image = u'min2.png'
+280.5303 	EXP 	image_3: autoDraw = True
+280.8153 	DATA 	Keypress: 2
+280.8466 	EXP 	image_3: autoDraw = False
+280.8466 	EXP 	blankImage: image = u'allBlank.png'
+280.8466 	EXP 	blankImage: autoDraw = True
+281.3160 	DATA 	Keypress: 4
+281.3476 	EXP 	blankImage: autoDraw = False
+281.3476 	EXP 	blankImage: autoDraw = False
+281.3476 	EXP 	image_4: image = u'min3.png'
+281.3476 	EXP 	image_4: autoDraw = True
+281.7329 	DATA 	Keypress: 3
+281.7639 	EXP 	image_4: autoDraw = False
+281.7639 	EXP 	blankImage: image = u'allBlank.png'
+281.7639 	EXP 	blankImage: autoDraw = True
+282.2641 	EXP 	blankImage: autoDraw = False
+282.2641 	EXP 	blankImage: autoDraw = False
+282.2641 	EXP 	image_5: image = u'min4.png'
+282.2641 	EXP 	image_5: autoDraw = True
+282.4166 	DATA 	Keypress: 4
+282.4468 	EXP 	image_5: autoDraw = False
+282.4468 	EXP 	blankImage: image = u'allBlank.png'
+282.4468 	EXP 	blankImage: autoDraw = True
+282.9471 	EXP 	blankImage: autoDraw = False
+282.9471 	EXP 	blankImage: autoDraw = False
+282.9471 	EXP 	image_3: image = u'min2.png'
+282.9471 	EXP 	image_3: autoDraw = True
+283.4825 	DATA 	Keypress: 2
+283.5143 	EXP 	image_3: autoDraw = False
+283.5143 	EXP 	blankImage: image = u'allBlank.png'
+283.5143 	EXP 	blankImage: autoDraw = True
+284.0137 	EXP 	blankImage: autoDraw = False
+284.0137 	EXP 	blankImage: autoDraw = False
+284.0137 	EXP 	image_5: image = u'min4.png'
+284.0137 	EXP 	image_5: autoDraw = True
+284.1491 	DATA 	Keypress: 3
+284.4328 	DATA 	Keypress: 4
+284.4637 	EXP 	image_5: autoDraw = False
+284.4637 	EXP 	blankImage: image = u'allBlank.png'
+284.4637 	EXP 	blankImage: autoDraw = True
+284.9317 	EXP 	New trial (rep=8, index=0): {'randomPaw': u'min4.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['4'], 'blank': u'allBlank.png'}
+284.9643 	EXP 	blankImage: autoDraw = False
+284.9643 	EXP 	blankImage: autoDraw = False
+284.9643 	EXP 	pos1: image = u'min1.png'
+284.9643 	EXP 	pos1: autoDraw = True
+285.2829 	DATA 	Keypress: 1
+285.3136 	EXP 	pos1: autoDraw = False
+285.3136 	EXP 	blankImage: image = u'allBlank.png'
+285.3136 	EXP 	blankImage: autoDraw = True
+285.7330 	DATA 	Keypress: 3
+285.8473 	EXP 	blankImage: autoDraw = False
+285.8473 	EXP 	blankImage: autoDraw = False
+285.8473 	EXP 	image_4: image = u'min3.png'
+285.8473 	EXP 	image_4: autoDraw = True
+285.8473 	EXP 	image_4: autoDraw = False
+285.8473 	EXP 	blankImage: image = u'allBlank.png'
+285.8473 	EXP 	blankImage: autoDraw = True
+285.9495 	DATA 	Keypress: 2
+286.2994 	DATA 	Keypress: 4
+286.3312 	EXP 	blankImage: autoDraw = False
+286.3312 	EXP 	blankImage: autoDraw = False
+286.3312 	EXP 	image_3: image = u'min2.png'
+286.3312 	EXP 	image_3: autoDraw = True
+286.7659 	DATA 	Keypress: 1
+287.0992 	DATA 	Keypress: 2
+287.1302 	EXP 	image_3: autoDraw = False
+287.1302 	EXP 	blankImage: image = u'allBlank.png'
+287.1302 	EXP 	blankImage: autoDraw = True
+287.6305 	EXP 	blankImage: autoDraw = False
+287.6305 	EXP 	blankImage: autoDraw = False
+287.6305 	EXP 	image_5: image = u'min4.png'
+287.6305 	EXP 	image_5: autoDraw = True
+287.9331 	DATA 	Keypress: 4
+287.9645 	EXP 	image_5: autoDraw = False
+287.9645 	EXP 	blankImage: image = u'allBlank.png'
+287.9645 	EXP 	blankImage: autoDraw = True
+288.4642 	EXP 	blankImage: autoDraw = False
+288.4642 	EXP 	blankImage: autoDraw = False
+288.4642 	EXP 	image_5: image = u'min4.png'
+288.4642 	EXP 	image_5: autoDraw = True
+288.6159 	DATA 	Keypress: 2
+288.9160 	DATA 	Keypress: 4
+288.9471 	EXP 	image_5: autoDraw = False
+288.9471 	EXP 	blankImage: image = u'allBlank.png'
+288.9471 	EXP 	blankImage: autoDraw = True
+289.4475 	EXP 	blankImage: autoDraw = False
+289.4475 	EXP 	blankImage: autoDraw = False
+289.4475 	EXP 	image_3: image = u'min2.png'
+289.4475 	EXP 	image_3: autoDraw = True
+289.4491 	DATA 	Keypress: 2
+289.4807 	EXP 	image_3: autoDraw = False
+289.4807 	EXP 	blankImage: image = u'allBlank.png'
+289.4807 	EXP 	blankImage: autoDraw = True
+289.8661 	DATA 	Keypress: 3
+290.0142 	EXP 	blankImage: autoDraw = False
+290.0142 	EXP 	blankImage: autoDraw = False
+290.0142 	EXP 	image_4: image = u'min3.png'
+290.0142 	EXP 	image_4: autoDraw = True
+290.0142 	EXP 	image_4: autoDraw = False
+290.0142 	EXP 	blankImage: image = u'allBlank.png'
+290.0142 	EXP 	blankImage: autoDraw = True
+290.1661 	DATA 	Keypress: 1
+290.3822 	DATA 	Keypress: 4
+290.4978 	EXP 	blankImage: autoDraw = False
+290.4978 	EXP 	blankImage: autoDraw = False
+290.4978 	EXP 	image_5: image = u'min4.png'
+290.4978 	EXP 	image_5: autoDraw = True
+291.1496 	DATA 	Keypress: 1
+291.7660 	DATA 	Keypress: 2
+292.1160 	DATA 	Keypress: 4
+292.1469 	EXP 	image_5: autoDraw = False
+292.1469 	EXP 	blankImage: image = u'allBlank.png'
+292.1469 	EXP 	blankImage: autoDraw = True
+292.6472 	EXP 	blankImage: autoDraw = False
+292.6472 	EXP 	blankImage: autoDraw = False
+292.6472 	EXP 	image_3: image = u'min2.png'
+292.6472 	EXP 	image_3: autoDraw = True
+292.6982 	DATA 	Keypress: 2
+292.7301 	EXP 	image_3: autoDraw = False
+292.7301 	EXP 	blankImage: image = u'allBlank.png'
+292.7301 	EXP 	blankImage: autoDraw = True
+293.1483 	DATA 	Keypress: 3
+293.2302 	EXP 	blankImage: autoDraw = False
+293.2302 	EXP 	blankImage: autoDraw = False
+293.2302 	EXP 	image_5: image = u'min4.png'
+293.2302 	EXP 	image_5: autoDraw = True
+293.5316 	DATA 	Keypress: 4
+293.5632 	EXP 	image_5: autoDraw = False
+293.5632 	EXP 	blankImage: image = u'allBlank.png'
+293.5632 	EXP 	blankImage: autoDraw = True
+294.0317 	EXP 	New trial (rep=8, index=1): {'randomPaw': u'min3.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['3'], 'blank': u'allBlank.png'}
+294.0809 	EXP 	blankImage: autoDraw = False
+294.0809 	EXP 	blankImage: autoDraw = False
+294.0809 	EXP 	pos1: image = u'min1.png'
+294.0809 	EXP 	pos1: autoDraw = True
+294.2823 	DATA 	Keypress: 2
+294.5496 	DATA 	Keypress: 1
+294.5805 	EXP 	pos1: autoDraw = False
+294.5805 	EXP 	blankImage: image = u'allBlank.png'
+294.5805 	EXP 	blankImage: autoDraw = True
+294.8660 	DATA 	Keypress: 3
+295.1143 	EXP 	blankImage: autoDraw = False
+295.1143 	EXP 	blankImage: autoDraw = False
+295.1143 	EXP 	image_4: image = u'min3.png'
+295.1143 	EXP 	image_4: autoDraw = True
+295.1143 	EXP 	image_4: autoDraw = False
+295.1143 	EXP 	blankImage: image = u'allBlank.png'
+295.1143 	EXP 	blankImage: autoDraw = True
+295.1660 	DATA 	Keypress: 2
+295.4827 	DATA 	Keypress: 4
+295.5972 	EXP 	blankImage: autoDraw = False
+295.5972 	EXP 	blankImage: autoDraw = False
+295.5972 	EXP 	image_3: image = u'min2.png'
+295.5972 	EXP 	image_3: autoDraw = True
+296.1994 	DATA 	Keypress: 2
+296.2314 	EXP 	image_3: autoDraw = False
+296.2314 	EXP 	blankImage: image = u'allBlank.png'
+296.2314 	EXP 	blankImage: autoDraw = True
+296.7307 	EXP 	blankImage: autoDraw = False
+296.7307 	EXP 	blankImage: autoDraw = False
+296.7307 	EXP 	image_5: image = u'min4.png'
+296.7307 	EXP 	image_5: autoDraw = True
+296.7487 	DATA 	Keypress: 4
+296.7976 	EXP 	image_5: autoDraw = False
+296.7976 	EXP 	blankImage: image = u'allBlank.png'
+296.7976 	EXP 	blankImage: autoDraw = True
+297.2498 	DATA 	Keypress: 4
+297.3135 	EXP 	blankImage: autoDraw = False
+297.3135 	EXP 	blankImage: autoDraw = False
+297.3135 	EXP 	image_5: image = u'min4.png'
+297.3135 	EXP 	image_5: autoDraw = True
+297.3135 	EXP 	image_5: autoDraw = False
+297.3135 	EXP 	blankImage: image = u'allBlank.png'
+297.3135 	EXP 	blankImage: autoDraw = True
+297.7327 	DATA 	Keypress: 2
+297.8474 	EXP 	blankImage: autoDraw = False
+297.8474 	EXP 	image_3: image = u'min2.png'
+297.8474 	EXP 	image_3: autoDraw = True
+297.8474 	EXP 	image_3: autoDraw = False
+297.8474 	EXP 	blankImage: image = u'allBlank.png'
+297.8474 	EXP 	blankImage: autoDraw = True
+298.1329 	DATA 	Keypress: 3
+298.3641 	EXP 	blankImage: autoDraw = False
+298.3641 	EXP 	blankImage: autoDraw = False
+298.3641 	EXP 	image_4: image = u'min3.png'
+298.3641 	EXP 	image_4: autoDraw = True
+298.3641 	EXP 	image_4: autoDraw = False
+298.3641 	EXP 	blankImage: image = u'allBlank.png'
+298.3641 	EXP 	blankImage: autoDraw = True
+298.4145 	DATA 	Keypress: 1
+298.6496 	DATA 	Keypress: 4
+298.8636 	EXP 	blankImage: autoDraw = False
+298.8636 	EXP 	image_5: image = u'min4.png'
+298.8636 	EXP 	image_5: autoDraw = True
+299.3320 	DATA 	Keypress: 4
+299.3628 	EXP 	image_5: autoDraw = False
+299.3628 	EXP 	blankImage: image = u'allBlank.png'
+299.3628 	EXP 	blankImage: autoDraw = True
+299.8639 	EXP 	blankImage: autoDraw = False
+299.8639 	EXP 	blankImage: autoDraw = False
+299.8639 	EXP 	image_3: image = u'min2.png'
+299.8639 	EXP 	image_3: autoDraw = True
+300.1660 	DATA 	Keypress: 2
+300.1969 	EXP 	image_3: autoDraw = False
+300.1969 	EXP 	blankImage: image = u'allBlank.png'
+300.1969 	EXP 	blankImage: autoDraw = True
+300.6969 	EXP 	blankImage: autoDraw = False
+300.6969 	EXP 	blankImage: autoDraw = False
+300.6969 	EXP 	image_5: image = u'min4.png'
+300.6969 	EXP 	image_5: autoDraw = True
+300.9328 	DATA 	Keypress: 4
+300.9637 	EXP 	image_5: autoDraw = False
+300.9637 	EXP 	blankImage: image = u'allBlank.png'
+300.9637 	EXP 	blankImage: autoDraw = True
+301.4316 	EXP 	New trial (rep=8, index=2): {'randomPaw': u'min2.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['2'], 'blank': u'allBlank.png'}
+301.4640 	EXP 	blankImage: autoDraw = False
+301.4640 	EXP 	blankImage: autoDraw = False
+301.4640 	EXP 	pos1: image = u'min1.png'
+301.4640 	EXP 	pos1: autoDraw = True
+301.6829 	DATA 	Keypress: 2
+301.9495 	DATA 	Keypress: 1
+301.9802 	EXP 	pos1: autoDraw = False
+301.9802 	EXP 	blankImage: image = u'allBlank.png'
+301.9802 	EXP 	blankImage: autoDraw = True
+302.4756 	DATA 	Keypress: 3
+302.5136 	EXP 	blankImage: autoDraw = False
+302.5136 	EXP 	blankImage: autoDraw = False
+302.5136 	EXP 	image_4: image = u'min3.png'
+302.5136 	EXP 	image_4: autoDraw = True
+302.5136 	EXP 	image_4: autoDraw = False
+302.5136 	EXP 	blankImage: image = u'allBlank.png'
+302.5136 	EXP 	blankImage: autoDraw = True
+302.9656 	DATA 	Keypress: 2
+303.0469 	EXP 	blankImage: autoDraw = False
+303.0469 	EXP 	image_3: image = u'min2.png'
+303.0469 	EXP 	image_3: autoDraw = True
+303.0469 	EXP 	image_3: autoDraw = False
+303.0469 	EXP 	blankImage: image = u'allBlank.png'
+303.0469 	EXP 	blankImage: autoDraw = True
+303.2493 	DATA 	Keypress: 4
+303.5263 	DATA 	Keypress: 1
+303.5468 	EXP 	blankImage: autoDraw = False
+303.5468 	EXP 	blankImage: autoDraw = False
+303.5468 	EXP 	image_5: image = u'min4.png'
+303.5468 	EXP 	image_5: autoDraw = True
+304.2156 	DATA 	Keypress: 4
+304.2464 	EXP 	image_5: autoDraw = False
+304.2464 	EXP 	blankImage: image = u'allBlank.png'
+304.2464 	EXP 	blankImage: autoDraw = True
+304.7472 	EXP 	blankImage: autoDraw = False
+304.7472 	EXP 	blankImage: autoDraw = False
+304.7472 	EXP 	image_5: image = u'min4.png'
+304.7472 	EXP 	image_5: autoDraw = True
+305.0492 	DATA 	Keypress: 4
+305.0802 	EXP 	image_5: autoDraw = False
+305.0802 	EXP 	blankImage: image = u'allBlank.png'
+305.0802 	EXP 	blankImage: autoDraw = True
+305.5809 	EXP 	blankImage: autoDraw = False
+305.5809 	EXP 	blankImage: autoDraw = False
+305.5809 	EXP 	image_3: image = u'min2.png'
+305.5809 	EXP 	image_3: autoDraw = True
+305.7826 	DATA 	Keypress: 2
+305.8139 	EXP 	image_3: autoDraw = False
+305.8139 	EXP 	blankImage: image = u'allBlank.png'
+305.8139 	EXP 	blankImage: autoDraw = True
+306.3156 	EXP 	blankImage: autoDraw = False
+306.3156 	EXP 	blankImage: autoDraw = False
+306.3156 	EXP 	image_4: image = u'min3.png'
+306.3156 	EXP 	image_4: autoDraw = True
+306.5325 	DATA 	Keypress: 3
+306.5634 	EXP 	image_4: autoDraw = False
+306.5634 	EXP 	blankImage: image = u'allBlank.png'
+306.5634 	EXP 	blankImage: autoDraw = True
+307.0638 	EXP 	blankImage: autoDraw = False
+307.0638 	EXP 	blankImage: autoDraw = False
+307.0638 	EXP 	image_5: image = u'min4.png'
+307.0638 	EXP 	image_5: autoDraw = True
+307.1661 	DATA 	Keypress: 4
+307.1970 	EXP 	image_5: autoDraw = False
+307.1970 	EXP 	blankImage: image = u'allBlank.png'
+307.1970 	EXP 	blankImage: autoDraw = True
+307.6972 	EXP 	blankImage: autoDraw = False
+307.6972 	EXP 	blankImage: autoDraw = False
+307.6972 	EXP 	image_3: image = u'min2.png'
+307.6972 	EXP 	image_3: autoDraw = True
+308.0835 	DATA 	Keypress: 2
+308.1307 	EXP 	image_3: autoDraw = False
+308.1307 	EXP 	blankImage: image = u'allBlank.png'
+308.1307 	EXP 	blankImage: autoDraw = True
+308.6302 	EXP 	blankImage: autoDraw = False
+308.6302 	EXP 	blankImage: autoDraw = False
+308.6302 	EXP 	image_5: image = u'min4.png'
+308.6302 	EXP 	image_5: autoDraw = True
+308.8490 	DATA 	Keypress: 4
+308.8807 	EXP 	image_5: autoDraw = False
+308.8807 	EXP 	blankImage: image = u'allBlank.png'
+308.8807 	EXP 	blankImage: autoDraw = True
+309.3482 	EXP 	New trial (rep=8, index=3): {'randomPaw': u'min1.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['1'], 'blank': u'allBlank.png'}
+309.3804 	EXP 	blankImage: autoDraw = False
+309.3804 	EXP 	blankImage: autoDraw = False
+309.3804 	EXP 	pos1: image = u'min1.png'
+309.3804 	EXP 	pos1: autoDraw = True
+309.8657 	DATA 	Keypress: 2
+311.0327 	DATA 	Keypress: 1
+311.0633 	EXP 	pos1: autoDraw = False
+311.0633 	EXP 	blankImage: image = u'allBlank.png'
+311.0633 	EXP 	blankImage: autoDraw = True
+311.1826 	DATA 	Keypress: 3
+311.3160 	DATA 	Keypress: 4
+311.5595 	DATA 	Keypress: 1
+311.5802 	EXP 	blankImage: autoDraw = False
+311.5802 	EXP 	blankImage: autoDraw = False
+311.5802 	EXP 	image_4: image = u'min3.png'
+311.5802 	EXP 	image_4: autoDraw = True
+311.6988 	DATA 	Keypress: 3
+311.7248 	DATA 	Keypress: 2
+311.7304 	EXP 	image_4: autoDraw = False
+311.7304 	EXP 	blankImage: image = u'allBlank.png'
+311.7304 	EXP 	blankImage: autoDraw = True
+311.7486 	DATA 	Keypress: 4
+311.9327 	DATA 	Keypress: 1
+311.9827 	DATA 	Keypress: 2
+311.9994 	DATA 	Keypress: 3
+312.0825 	DATA 	Keypress: 4
+312.2256 	DATA 	Keypress: 1
+312.2315 	EXP 	blankImage: autoDraw = False
+312.2315 	EXP 	blankImage: autoDraw = False
+312.2315 	EXP 	image_3: image = u'min2.png'
+312.2315 	EXP 	image_3: autoDraw = True
+312.2329 	DATA 	Keypress: 2
+312.2636 	EXP 	image_3: autoDraw = False
+312.2636 	EXP 	blankImage: image = u'allBlank.png'
+312.2636 	EXP 	blankImage: autoDraw = True
+312.2826 	DATA 	Keypress: 3
+312.3665 	DATA 	Keypress: 4
+312.4993 	DATA 	Keypress: 1
+312.5501 	DATA 	Keypress: 2
+312.5661 	DATA 	Keypress: 3
+312.6493 	DATA 	Keypress: 4
+312.7636 	EXP 	blankImage: autoDraw = False
+312.7636 	EXP 	blankImage: autoDraw = False
+312.7636 	EXP 	image_5: image = u'min4.png'
+312.7636 	EXP 	image_5: autoDraw = True
+312.7651 	DATA 	Keypress: 1
+312.8328 	DATA 	Keypress: 2
+312.8484 	DATA 	Keypress: 3
+312.9326 	DATA 	Keypress: 4
+312.9632 	EXP 	image_5: autoDraw = False
+312.9632 	EXP 	blankImage: image = u'allBlank.png'
+312.9632 	EXP 	blankImage: autoDraw = True
+313.0664 	DATA 	Keypress: 1
+313.1160 	DATA 	Keypress: 2
+313.1486 	DATA 	Keypress: 3
+313.2327 	DATA 	Keypress: 4
+313.3663 	DATA 	Keypress: 1
+313.3993 	DATA 	Keypress: 2
+313.4324 	DATA 	Keypress: 3
+313.4645 	EXP 	blankImage: autoDraw = False
+313.4645 	EXP 	blankImage: autoDraw = False
+313.4645 	EXP 	image_5: image = u'min4.png'
+313.4645 	EXP 	image_5: autoDraw = True
+313.5161 	DATA 	Keypress: 4
+313.5466 	EXP 	image_5: autoDraw = False
+313.5466 	EXP 	blankImage: image = u'allBlank.png'
+313.5466 	EXP 	blankImage: autoDraw = True
+313.6500 	DATA 	Keypress: 1
+313.7487 	DATA 	Keypress: 3
+313.7502 	DATA 	Keypress: 2
+313.8327 	DATA 	Keypress: 4
+313.9648 	DATA 	Keypress: 1
+314.0425 	DATA 	Keypress: 2
+314.0435 	DATA 	Keypress: 3
+314.0641 	EXP 	blankImage: autoDraw = False
+314.0641 	EXP 	blankImage: autoDraw = False
+314.0641 	EXP 	image_3: image = u'min2.png'
+314.0641 	EXP 	image_3: autoDraw = True
+314.1151 	DATA 	Keypress: 4
+314.2493 	DATA 	Keypress: 1
+314.3160 	DATA 	Keypress: 2
+314.3419 	DATA 	Keypress: 3
+314.3475 	EXP 	image_3: autoDraw = False
+314.3475 	EXP 	blankImage: image = u'allBlank.png'
+314.3475 	EXP 	blankImage: autoDraw = True
+314.3991 	DATA 	Keypress: 4
+314.5492 	DATA 	Keypress: 1
+314.5995 	DATA 	Keypress: 2
+314.6156 	DATA 	Keypress: 3
+314.6993 	DATA 	Keypress: 4
+314.8469 	EXP 	blankImage: autoDraw = False
+314.8469 	EXP 	blankImage: autoDraw = False
+314.8469 	EXP 	image_4: image = u'min3.png'
+314.8469 	EXP 	image_4: autoDraw = True
+314.8661 	DATA 	Keypress: 1
+314.8992 	DATA 	Keypress: 2
+314.9323 	DATA 	Keypress: 3
+314.9638 	EXP 	image_4: autoDraw = False
+314.9638 	EXP 	blankImage: image = u'allBlank.png'
+314.9638 	EXP 	blankImage: autoDraw = True
+314.9994 	DATA 	Keypress: 4
+315.1483 	DATA 	Keypress: 1
+315.1826 	DATA 	Keypress: 2
+315.1988 	DATA 	Keypress: 3
+315.2993 	DATA 	Keypress: 4
+315.4639 	EXP 	blankImage: autoDraw = False
+315.4639 	EXP 	blankImage: autoDraw = False
+315.4639 	EXP 	image_5: image = u'min4.png'
+315.4639 	EXP 	image_5: autoDraw = True
+315.8162 	DATA 	Keypress: 4
+315.8471 	EXP 	image_5: autoDraw = False
+315.8471 	EXP 	blankImage: image = u'allBlank.png'
+315.8471 	EXP 	blankImage: autoDraw = True
+316.3468 	EXP 	blankImage: autoDraw = False
+316.3468 	EXP 	blankImage: autoDraw = False
+316.3468 	EXP 	image_3: image = u'min2.png'
+316.3468 	EXP 	image_3: autoDraw = True
+316.4991 	DATA 	Keypress: 2
+316.5299 	EXP 	image_3: autoDraw = False
+316.5299 	EXP 	blankImage: image = u'allBlank.png'
+316.5299 	EXP 	blankImage: autoDraw = True
+317.0261 	DATA 	Keypress: 3
+317.0472 	EXP 	blankImage: autoDraw = False
+317.0472 	EXP 	blankImage: autoDraw = False
+317.0472 	EXP 	image_5: image = u'min4.png'
+317.0472 	EXP 	image_5: autoDraw = True
+317.3161 	DATA 	Keypress: 4
+317.3481 	EXP 	image_5: autoDraw = False
+317.3481 	EXP 	blankImage: image = u'allBlank.png'
+317.3481 	EXP 	blankImage: autoDraw = True
+317.7825 	DATA 	Keypress: 4
+317.8149 	EXP 	New trial (rep=9, index=0): {'randomPaw': u'min1.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['1'], 'blank': u'allBlank.png'}
+317.8474 	EXP 	blankImage: autoDraw = False
+317.8474 	EXP 	blankImage: autoDraw = False
+317.8474 	EXP 	pos1: image = u'min1.png'
+317.8474 	EXP 	pos1: autoDraw = True
+318.0825 	DATA 	Keypress: 2
+318.4315 	DATA 	Keypress: 1
+318.4628 	EXP 	pos1: autoDraw = False
+318.4628 	EXP 	blankImage: image = u'allBlank.png'
+318.4628 	EXP 	blankImage: autoDraw = True
+318.6827 	DATA 	Keypress: 3
+318.9832 	DATA 	Keypress: 2
+318.9976 	EXP 	blankImage: autoDraw = False
+318.9976 	EXP 	blankImage: autoDraw = False
+318.9976 	EXP 	image_4: image = u'min3.png'
+318.9976 	EXP 	image_4: autoDraw = True
+318.9976 	EXP 	image_4: autoDraw = False
+318.9976 	EXP 	blankImage: image = u'allBlank.png'
+318.9976 	EXP 	blankImage: autoDraw = True
+319.2162 	DATA 	Keypress: 4
+319.4918 	DATA 	Keypress: 1
+319.4975 	EXP 	blankImage: autoDraw = False
+319.4975 	EXP 	image_3: image = u'min2.png'
+319.4975 	EXP 	image_3: autoDraw = True
+319.9659 	DATA 	Keypress: 2
+319.9969 	EXP 	image_3: autoDraw = False
+319.9969 	EXP 	blankImage: image = u'allBlank.png'
+319.9969 	EXP 	blankImage: autoDraw = True
+320.3152 	DATA 	Keypress: 4
+320.5300 	EXP 	blankImage: autoDraw = False
+320.5300 	EXP 	blankImage: autoDraw = False
+320.5300 	EXP 	image_5: image = u'min4.png'
+320.5300 	EXP 	image_5: autoDraw = True
+320.5300 	EXP 	image_5: autoDraw = False
+320.5300 	EXP 	blankImage: image = u'allBlank.png'
+320.5300 	EXP 	blankImage: autoDraw = True
+320.7492 	DATA 	Keypress: 4
+321.0312 	DATA 	Keypress: 2
+321.0475 	EXP 	blankImage: autoDraw = False
+321.0475 	EXP 	blankImage: autoDraw = False
+321.0475 	EXP 	image_5: image = u'min4.png'
+321.0475 	EXP 	image_5: autoDraw = True
+321.0475 	EXP 	image_5: autoDraw = False
+321.0475 	EXP 	blankImage: image = u'allBlank.png'
+321.0475 	EXP 	blankImage: autoDraw = True
+321.4826 	DATA 	Keypress: 3
+321.5301 	EXP 	blankImage: autoDraw = False
+321.5301 	EXP 	blankImage: autoDraw = False
+321.5301 	EXP 	image_3: image = u'min2.png'
+321.5301 	EXP 	image_3: autoDraw = True
+321.7159 	DATA 	Keypress: 1
+321.9318 	DATA 	Keypress: 4
+322.1329 	DATA 	Keypress: 2
+322.1635 	EXP 	image_3: autoDraw = False
+322.1635 	EXP 	blankImage: image = u'allBlank.png'
+322.1635 	EXP 	blankImage: autoDraw = True
+322.6634 	EXP 	blankImage: autoDraw = False
+322.6634 	EXP 	blankImage: autoDraw = False
+322.6634 	EXP 	image_4: image = u'min3.png'
+322.6634 	EXP 	image_4: autoDraw = True
+322.9826 	DATA 	Keypress: 4
+323.2489 	DATA 	Keypress: 3
+323.2797 	EXP 	image_4: autoDraw = False
+323.2797 	EXP 	blankImage: image = u'allBlank.png'
+323.2797 	EXP 	blankImage: autoDraw = True
+323.7800 	EXP 	blankImage: autoDraw = False
+323.7800 	EXP 	blankImage: autoDraw = False
+323.7800 	EXP 	image_5: image = u'min4.png'
+323.7800 	EXP 	image_5: autoDraw = True
+323.9991 	DATA 	Keypress: 4
+324.0299 	EXP 	image_5: autoDraw = False
+324.0299 	EXP 	blankImage: image = u'allBlank.png'
+324.0299 	EXP 	blankImage: autoDraw = True
+324.5300 	EXP 	blankImage: autoDraw = False
+324.5300 	EXP 	blankImage: autoDraw = False
+324.5300 	EXP 	image_3: image = u'min2.png'
+324.5300 	EXP 	image_3: autoDraw = True
+324.7328 	DATA 	Keypress: 2
+324.7635 	EXP 	image_3: autoDraw = False
+324.7635 	EXP 	blankImage: image = u'allBlank.png'
+324.7635 	EXP 	blankImage: autoDraw = True
+325.2638 	EXP 	blankImage: autoDraw = False
+325.2638 	EXP 	blankImage: autoDraw = False
+325.2638 	EXP 	image_5: image = u'min4.png'
+325.2638 	EXP 	image_5: autoDraw = True
+325.6163 	DATA 	Keypress: 4
+325.6469 	EXP 	image_5: autoDraw = False
+325.6469 	EXP 	blankImage: image = u'allBlank.png'
+325.6469 	EXP 	blankImage: autoDraw = True
+326.1149 	EXP 	New trial (rep=9, index=1): {'randomPaw': u'min2.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['2'], 'blank': u'allBlank.png'}
+326.1476 	EXP 	blankImage: autoDraw = False
+326.1476 	EXP 	blankImage: autoDraw = False
+326.1476 	EXP 	pos1: image = u'min1.png'
+326.1476 	EXP 	pos1: autoDraw = True
+326.2829 	DATA 	Keypress: 1
+326.3138 	EXP 	pos1: autoDraw = False
+326.3138 	EXP 	blankImage: image = u'allBlank.png'
+326.3138 	EXP 	blankImage: autoDraw = True
+326.7658 	DATA 	Keypress: 3
+326.8474 	EXP 	blankImage: autoDraw = False
+326.8474 	EXP 	blankImage: autoDraw = False
+326.8474 	EXP 	image_4: image = u'min3.png'
+326.8474 	EXP 	image_4: autoDraw = True
+326.8474 	EXP 	image_4: autoDraw = False
+326.8474 	EXP 	blankImage: image = u'allBlank.png'
+326.8474 	EXP 	blankImage: autoDraw = True
+327.1825 	DATA 	Keypress: 2
+327.3632 	EXP 	blankImage: autoDraw = False
+327.3632 	EXP 	blankImage: autoDraw = False
+327.3632 	EXP 	image_3: image = u'min2.png'
+327.3632 	EXP 	image_3: autoDraw = True
+327.3632 	EXP 	image_3: autoDraw = False
+327.3632 	EXP 	blankImage: image = u'allBlank.png'
+327.3632 	EXP 	blankImage: autoDraw = True
+327.3829 	DATA 	Keypress: 4
+327.5661 	DATA 	Keypress: 1
+327.8636 	EXP 	blankImage: autoDraw = False
+327.8636 	EXP 	image_5: image = u'min4.png'
+327.8636 	EXP 	image_5: autoDraw = True
+332.8473 	EXP 	image_5: autoDraw = False
+353.2483 	DATA 	Keypress: grave
+353.2990 	DATA 	Keypress: 1
+353.3658 	DATA 	Keypress: 2
+353.3990 	DATA 	Keypress: 3
+353.4656 	DATA 	Keypress: 4
+353.4966 	EXP 	image_5: autoDraw = False
+353.4966 	EXP 	blankImage: image = u'allBlank.png'
+353.4966 	EXP 	blankImage: autoDraw = True
+353.9966 	EXP 	blankImage: autoDraw = False
+353.9966 	EXP 	blankImage: autoDraw = False
+353.9966 	EXP 	image_5: image = u'min4.png'
+353.9966 	EXP 	image_5: autoDraw = True
+354.0822 	DATA 	Keypress: 4
+354.1130 	EXP 	image_5: autoDraw = False
+354.1130 	EXP 	blankImage: image = u'allBlank.png'
+354.1130 	EXP 	blankImage: autoDraw = True
+354.5325 	DATA 	Keypress: 2
+354.6474 	EXP 	blankImage: autoDraw = False
+354.6474 	EXP 	blankImage: autoDraw = False
+354.6474 	EXP 	image_3: image = u'min2.png'
+354.6474 	EXP 	image_3: autoDraw = True
+354.6474 	EXP 	image_3: autoDraw = False
+354.6474 	EXP 	blankImage: image = u'allBlank.png'
+354.6474 	EXP 	blankImage: autoDraw = True
+354.9654 	DATA 	Keypress: 3
+355.1641 	EXP 	blankImage: autoDraw = False
+355.1641 	EXP 	blankImage: autoDraw = False
+355.1641 	EXP 	image_4: image = u'min3.png'
+355.1641 	EXP 	image_4: autoDraw = True
+355.1641 	EXP 	image_4: autoDraw = False
+355.1641 	EXP 	blankImage: image = u'allBlank.png'
+355.1641 	EXP 	blankImage: autoDraw = True
+355.2820 	DATA 	Keypress: 4
+355.5824 	DATA 	Keypress: 4
+355.6471 	EXP 	blankImage: autoDraw = False
+355.6471 	EXP 	blankImage: autoDraw = False
+355.6471 	EXP 	image_5: image = u'min4.png'
+355.6471 	EXP 	image_5: autoDraw = True
+355.8483 	DATA 	Keypress: 2
+356.2660 	DATA 	Keypress: 4
+356.2971 	EXP 	image_5: autoDraw = False
+356.2971 	EXP 	blankImage: image = u'allBlank.png'
+356.2971 	EXP 	blankImage: autoDraw = True
+356.7499 	DATA 	Keypress: 4
+356.7967 	EXP 	blankImage: autoDraw = False
+356.7967 	EXP 	blankImage: autoDraw = False
+356.7967 	EXP 	image_3: image = u'min2.png'
+356.7967 	EXP 	image_3: autoDraw = True
+357.1158 	DATA 	Keypress: 2
+357.1468 	EXP 	image_3: autoDraw = False
+357.1468 	EXP 	blankImage: image = u'allBlank.png'
+357.1468 	EXP 	blankImage: autoDraw = True
+357.6468 	EXP 	blankImage: autoDraw = False
+357.6468 	EXP 	blankImage: autoDraw = False
+357.6468 	EXP 	image_5: image = u'min4.png'
+357.6468 	EXP 	image_5: autoDraw = True
+357.7658 	DATA 	Keypress: 3
+358.0152 	DATA 	Keypress: 4
+358.0467 	EXP 	image_5: autoDraw = False
+358.0467 	EXP 	blankImage: image = u'allBlank.png'
+358.0467 	EXP 	blankImage: autoDraw = True
+358.5148 	EXP 	New trial (rep=9, index=2): {'randomPaw': u'min4.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['4'], 'blank': u'allBlank.png'}
+358.5469 	EXP 	blankImage: autoDraw = False
+358.5469 	EXP 	blankImage: autoDraw = False
+358.5469 	EXP 	pos1: image = u'min1.png'
+358.5469 	EXP 	pos1: autoDraw = True
+358.9493 	DATA 	Keypress: 1
+358.9798 	EXP 	pos1: autoDraw = False
+358.9798 	EXP 	blankImage: image = u'allBlank.png'
+358.9798 	EXP 	blankImage: autoDraw = True
+359.4803 	EXP 	blankImage: autoDraw = False
+359.4803 	EXP 	blankImage: autoDraw = False
+359.4803 	EXP 	image_4: image = u'min3.png'
+359.4803 	EXP 	image_4: autoDraw = True
+359.5491 	DATA 	Keypress: 3
+359.5799 	EXP 	image_4: autoDraw = False
+359.5799 	EXP 	blankImage: image = u'allBlank.png'
+359.5799 	EXP 	blankImage: autoDraw = True
+360.0800 	EXP 	blankImage: autoDraw = False
+360.0800 	EXP 	blankImage: autoDraw = False
+360.0800 	EXP 	image_3: image = u'min2.png'
+360.0800 	EXP 	image_3: autoDraw = True
+360.1825 	DATA 	Keypress: 2
+360.2134 	EXP 	image_3: autoDraw = False
+360.2134 	EXP 	blankImage: image = u'allBlank.png'
+360.2134 	EXP 	blankImage: autoDraw = True
+360.6325 	DATA 	Keypress: 4
+360.7474 	EXP 	blankImage: autoDraw = False
+360.7474 	EXP 	blankImage: autoDraw = False
+360.7474 	EXP 	image_5: image = u'min4.png'
+360.7474 	EXP 	image_5: autoDraw = True
+360.7474 	EXP 	image_5: autoDraw = False
+360.7474 	EXP 	blankImage: image = u'allBlank.png'
+360.7474 	EXP 	blankImage: autoDraw = True
+361.0489 	DATA 	Keypress: 4
+361.2638 	EXP 	blankImage: autoDraw = False
+361.2638 	EXP 	blankImage: autoDraw = False
+361.2638 	EXP 	image_5: image = u'min4.png'
+361.2638 	EXP 	image_5: autoDraw = True
+361.2638 	EXP 	image_5: autoDraw = False
+361.2638 	EXP 	blankImage: image = u'allBlank.png'
+361.2638 	EXP 	blankImage: autoDraw = True
+361.4152 	DATA 	Keypress: 2
+361.7803 	EXP 	blankImage: autoDraw = False
+361.7803 	EXP 	blankImage: autoDraw = False
+361.7803 	EXP 	image_3: image = u'min2.png'
+361.7803 	EXP 	image_3: autoDraw = True
+361.7803 	EXP 	image_3: autoDraw = False
+361.7803 	EXP 	blankImage: image = u'allBlank.png'
+361.7803 	EXP 	blankImage: autoDraw = True
+361.8324 	DATA 	Keypress: 3
+362.1151 	DATA 	Keypress: 1
+362.2638 	EXP 	blankImage: autoDraw = False
+362.2638 	EXP 	blankImage: autoDraw = False
+362.2638 	EXP 	image_4: image = u'min3.png'
+362.2638 	EXP 	image_4: autoDraw = True
+362.3824 	DATA 	Keypress: 4
+362.8980 	DATA 	Keypress: 3
+362.9299 	EXP 	image_4: autoDraw = False
+362.9299 	EXP 	blankImage: image = u'allBlank.png'
+362.9299 	EXP 	blankImage: autoDraw = True
+363.4467 	EXP 	blankImage: autoDraw = False
+363.4467 	EXP 	blankImage: autoDraw = False
+363.4467 	EXP 	image_5: image = u'min4.png'
+363.4467 	EXP 	image_5: autoDraw = True
+363.7324 	DATA 	Keypress: 4
+363.7632 	EXP 	image_5: autoDraw = False
+363.7632 	EXP 	blankImage: image = u'allBlank.png'
+363.7632 	EXP 	blankImage: autoDraw = True
+364.2634 	EXP 	blankImage: autoDraw = False
+364.2634 	EXP 	blankImage: autoDraw = False
+364.2634 	EXP 	image_3: image = u'min2.png'
+364.2634 	EXP 	image_3: autoDraw = True
+364.4823 	DATA 	Keypress: 2
+364.5132 	EXP 	image_3: autoDraw = False
+364.5132 	EXP 	blankImage: image = u'allBlank.png'
+364.5132 	EXP 	blankImage: autoDraw = True
+364.9823 	DATA 	Keypress: 3
+365.0141 	EXP 	blankImage: autoDraw = False
+365.0141 	EXP 	blankImage: autoDraw = False
+365.0141 	EXP 	image_5: image = u'min4.png'
+365.0141 	EXP 	image_5: autoDraw = True
+365.4989 	DATA 	Keypress: 4
+365.5299 	EXP 	image_5: autoDraw = False
+365.5299 	EXP 	blankImage: image = u'allBlank.png'
+365.5299 	EXP 	blankImage: autoDraw = True
+365.9980 	EXP 	New trial (rep=9, index=3): {'randomPaw': u'min3.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['3'], 'blank': u'allBlank.png'}
+366.0305 	EXP 	blankImage: autoDraw = False
+366.0305 	EXP 	blankImage: autoDraw = False
+366.0305 	EXP 	pos1: image = u'min1.png'
+366.0305 	EXP 	pos1: autoDraw = True
+366.5665 	DATA 	Keypress: 1
+366.5975 	EXP 	pos1: autoDraw = False
+366.5975 	EXP 	blankImage: image = u'allBlank.png'
+366.5975 	EXP 	blankImage: autoDraw = True
+367.0968 	EXP 	blankImage: autoDraw = False
+367.0968 	EXP 	blankImage: autoDraw = False
+367.0968 	EXP 	image_4: image = u'min3.png'
+367.0968 	EXP 	image_4: autoDraw = True
+367.2659 	DATA 	Keypress: 3
+367.2974 	EXP 	image_4: autoDraw = False
+367.2974 	EXP 	blankImage: image = u'allBlank.png'
+367.2974 	EXP 	blankImage: autoDraw = True
+367.7969 	EXP 	blankImage: autoDraw = False
+367.7969 	EXP 	blankImage: autoDraw = False
+367.7969 	EXP 	image_3: image = u'min2.png'
+367.7969 	EXP 	image_3: autoDraw = True
+367.8158 	DATA 	Keypress: 2
+367.8467 	EXP 	image_3: autoDraw = False
+367.8467 	EXP 	blankImage: image = u'allBlank.png'
+367.8467 	EXP 	blankImage: autoDraw = True
+368.2317 	DATA 	Keypress: 4
+368.3805 	EXP 	blankImage: autoDraw = False
+368.3805 	EXP 	blankImage: autoDraw = False
+368.3805 	EXP 	image_5: image = u'min4.png'
+368.3805 	EXP 	image_5: autoDraw = True
+368.3805 	EXP 	image_5: autoDraw = False
+368.3805 	EXP 	blankImage: image = u'allBlank.png'
+368.3805 	EXP 	blankImage: autoDraw = True
+368.6649 	DATA 	Keypress: 4
+368.8971 	EXP 	blankImage: autoDraw = False
+368.8971 	EXP 	blankImage: autoDraw = False
+368.8971 	EXP 	image_5: image = u'min4.png'
+368.8971 	EXP 	image_5: autoDraw = True
+368.8971 	EXP 	image_5: autoDraw = False
+368.8971 	EXP 	blankImage: image = u'allBlank.png'
+368.8971 	EXP 	blankImage: autoDraw = True
+369.3797 	EXP 	blankImage: autoDraw = False
+369.3797 	EXP 	blankImage: autoDraw = False
+369.3797 	EXP 	image_3: image = u'min2.png'
+369.3797 	EXP 	image_3: autoDraw = True
+369.6988 	DATA 	Keypress: 2
+369.7294 	EXP 	image_3: autoDraw = False
+369.7294 	EXP 	blankImage: image = u'allBlank.png'
+369.7294 	EXP 	blankImage: autoDraw = True
+370.2304 	EXP 	blankImage: autoDraw = False
+370.2304 	EXP 	blankImage: autoDraw = False
+370.2304 	EXP 	image_4: image = u'min3.png'
+370.2304 	EXP 	image_4: autoDraw = True
+370.5823 	DATA 	Keypress: 3
+370.6133 	EXP 	image_4: autoDraw = False
+370.6133 	EXP 	blankImage: image = u'allBlank.png'
+370.6133 	EXP 	blankImage: autoDraw = True
+371.1136 	EXP 	blankImage: autoDraw = False
+371.1136 	EXP 	blankImage: autoDraw = False
+371.1136 	EXP 	image_5: image = u'min4.png'
+371.1136 	EXP 	image_5: autoDraw = True
+371.4823 	DATA 	Keypress: 4
+371.5135 	EXP 	image_5: autoDraw = False
+371.5135 	EXP 	blankImage: image = u'allBlank.png'
+371.5135 	EXP 	blankImage: autoDraw = True
+372.0138 	EXP 	blankImage: autoDraw = False
+372.0138 	EXP 	blankImage: autoDraw = False
+372.0138 	EXP 	image_3: image = u'min2.png'
+372.0138 	EXP 	image_3: autoDraw = True
+372.2660 	DATA 	Keypress: 2
+372.2975 	EXP 	image_3: autoDraw = False
+372.2975 	EXP 	blankImage: image = u'allBlank.png'
+372.2975 	EXP 	blankImage: autoDraw = True
+372.7969 	EXP 	blankImage: autoDraw = False
+372.7969 	EXP 	blankImage: autoDraw = False
+372.7969 	EXP 	image_5: image = u'min4.png'
+372.7969 	EXP 	image_5: autoDraw = True
+372.8491 	DATA 	Keypress: 4
+372.8801 	EXP 	image_5: autoDraw = False
+372.8801 	EXP 	blankImage: image = u'allBlank.png'
+372.8801 	EXP 	blankImage: autoDraw = True
+373.3481 	EXP 	New trial (rep=10, index=0): {'randomPaw': u'min1.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['1'], 'blank': u'allBlank.png'}
+373.3802 	EXP 	blankImage: autoDraw = False
+373.3802 	EXP 	blankImage: autoDraw = False
+373.3802 	EXP 	pos1: image = u'min1.png'
+373.3802 	EXP 	pos1: autoDraw = True
+373.5158 	DATA 	Keypress: 1
+373.5468 	EXP 	pos1: autoDraw = False
+373.5468 	EXP 	blankImage: image = u'allBlank.png'
+373.5468 	EXP 	blankImage: autoDraw = True
+374.0470 	EXP 	blankImage: autoDraw = False
+374.0470 	EXP 	blankImage: autoDraw = False
+374.0470 	EXP 	image_4: image = u'min3.png'
+374.0470 	EXP 	image_4: autoDraw = True
+374.0823 	DATA 	Keypress: 3
+374.1132 	EXP 	image_4: autoDraw = False
+374.1132 	EXP 	blankImage: image = u'allBlank.png'
+374.1132 	EXP 	blankImage: autoDraw = True
+374.6137 	EXP 	blankImage: autoDraw = False
+374.6137 	EXP 	blankImage: autoDraw = False
+374.6137 	EXP 	image_3: image = u'min2.png'
+374.6137 	EXP 	image_3: autoDraw = True
+374.6153 	DATA 	Keypress: 2
+374.6469 	EXP 	image_3: autoDraw = False
+374.6469 	EXP 	blankImage: image = u'allBlank.png'
+374.6469 	EXP 	blankImage: autoDraw = True
+375.1470 	EXP 	blankImage: autoDraw = False
+375.1470 	EXP 	blankImage: autoDraw = False
+375.1470 	EXP 	image_5: image = u'min4.png'
+375.1470 	EXP 	image_5: autoDraw = True
+375.1658 	DATA 	Keypress: 4
+375.2135 	EXP 	image_5: autoDraw = False
+375.2135 	EXP 	blankImage: image = u'allBlank.png'
+375.2135 	EXP 	blankImage: autoDraw = True
+375.6963 	EXP 	blankImage: autoDraw = False
+375.6963 	EXP 	blankImage: autoDraw = False
+375.6963 	EXP 	image_5: image = u'min4.png'
+375.6963 	EXP 	image_5: autoDraw = True
+375.9814 	DATA 	Keypress: 4
+376.0127 	EXP 	image_5: autoDraw = False
+376.0127 	EXP 	blankImage: image = u'allBlank.png'
+376.0127 	EXP 	blankImage: autoDraw = True
+376.5135 	EXP 	blankImage: autoDraw = False
+376.5135 	EXP 	blankImage: autoDraw = False
+376.5135 	EXP 	image_3: image = u'min2.png'
+376.5135 	EXP 	image_3: autoDraw = True
+376.7324 	DATA 	Keypress: 2
+376.7632 	EXP 	image_3: autoDraw = False
+376.7632 	EXP 	blankImage: image = u'allBlank.png'
+376.7632 	EXP 	blankImage: autoDraw = True
+377.2639 	EXP 	blankImage: autoDraw = False
+377.2639 	EXP 	blankImage: autoDraw = False
+377.2639 	EXP 	image_4: image = u'min3.png'
+377.2639 	EXP 	image_4: autoDraw = True
+377.3158 	DATA 	Keypress: 3
+377.3465 	EXP 	image_4: autoDraw = False
+377.3465 	EXP 	blankImage: image = u'allBlank.png'
+377.3465 	EXP 	blankImage: autoDraw = True
+377.7990 	DATA 	Keypress: 4
+377.8806 	EXP 	blankImage: autoDraw = False
+377.8806 	EXP 	blankImage: autoDraw = False
+377.8806 	EXP 	image_5: image = u'min4.png'
+377.8806 	EXP 	image_5: autoDraw = True
+377.8806 	EXP 	image_5: autoDraw = False
+377.8806 	EXP 	blankImage: image = u'allBlank.png'
+377.8806 	EXP 	blankImage: autoDraw = True
+378.3325 	DATA 	Keypress: 1
+378.3638 	EXP 	blankImage: autoDraw = False
+378.3638 	EXP 	blankImage: autoDraw = False
+378.3638 	EXP 	image_3: image = u'min2.png'
+378.3638 	EXP 	image_3: autoDraw = True
+378.8159 	DATA 	Keypress: 2
+378.8465 	EXP 	image_3: autoDraw = False
+378.8465 	EXP 	blankImage: image = u'allBlank.png'
+378.8465 	EXP 	blankImage: autoDraw = True
+379.3469 	EXP 	blankImage: autoDraw = False
+379.3469 	EXP 	blankImage: autoDraw = False
+379.3469 	EXP 	image_5: image = u'min4.png'
+379.3469 	EXP 	image_5: autoDraw = True
+379.6989 	DATA 	Keypress: 4
+379.7301 	EXP 	image_5: autoDraw = False
+379.7301 	EXP 	blankImage: image = u'allBlank.png'
+379.7301 	EXP 	blankImage: autoDraw = True
+380.1983 	EXP 	New trial (rep=10, index=1): {'randomPaw': u'min3.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['3'], 'blank': u'allBlank.png'}
+380.2310 	EXP 	blankImage: autoDraw = False
+380.2310 	EXP 	blankImage: autoDraw = False
+380.2310 	EXP 	pos1: image = u'min1.png'
+380.2310 	EXP 	pos1: autoDraw = True
+380.3157 	DATA 	Keypress: 1
+380.3465 	EXP 	pos1: autoDraw = False
+380.3465 	EXP 	blankImage: image = u'allBlank.png'
+380.3465 	EXP 	blankImage: autoDraw = True
+380.7824 	DATA 	Keypress: 3
+380.8800 	EXP 	blankImage: autoDraw = False
+380.8800 	EXP 	blankImage: autoDraw = False
+380.8800 	EXP 	image_4: image = u'min3.png'
+380.8800 	EXP 	image_4: autoDraw = True
+380.8800 	EXP 	image_4: autoDraw = False
+380.8800 	EXP 	blankImage: image = u'allBlank.png'
+380.8800 	EXP 	blankImage: autoDraw = True
+381.1491 	DATA 	Keypress: 2
+381.3754 	DATA 	Keypress: 4
+381.3810 	EXP 	blankImage: autoDraw = False
+381.3810 	EXP 	blankImage: autoDraw = False
+381.3810 	EXP 	image_3: image = u'min2.png'
+381.3810 	EXP 	image_3: autoDraw = True
+381.6658 	DATA 	Keypress: 1
+381.9489 	DATA 	Keypress: 2
+381.9801 	EXP 	image_3: autoDraw = False
+381.9801 	EXP 	blankImage: image = u'allBlank.png'
+381.9801 	EXP 	blankImage: autoDraw = True
+382.4803 	EXP 	blankImage: autoDraw = False
+382.4803 	EXP 	blankImage: autoDraw = False
+382.4803 	EXP 	image_5: image = u'min4.png'
+382.4803 	EXP 	image_5: autoDraw = True
+382.6157 	DATA 	Keypress: 3
+382.7157 	DATA 	Keypress: 4
+382.7467 	EXP 	image_5: autoDraw = False
+382.7467 	EXP 	blankImage: image = u'allBlank.png'
+382.7467 	EXP 	blankImage: autoDraw = True
+383.2469 	EXP 	blankImage: autoDraw = False
+383.2469 	EXP 	blankImage: autoDraw = False
+383.2469 	EXP 	image_5: image = u'min4.png'
+383.2469 	EXP 	image_5: autoDraw = True
+388.2300 	EXP 	image_5: autoDraw = False
+392.7158 	DATA 	Keypress: 1
+392.7987 	DATA 	Keypress: 3
+392.8156 	DATA 	Keypress: 2
+392.8312 	DATA 	Keypress: 4
+392.8638 	EXP 	image_5: autoDraw = False
+392.8638 	EXP 	blankImage: image = u'allBlank.png'
+392.8638 	EXP 	blankImage: autoDraw = True
+393.3634 	EXP 	blankImage: autoDraw = False
+393.3634 	EXP 	blankImage: autoDraw = False
+393.3634 	EXP 	image_3: image = u'min2.png'
+393.3634 	EXP 	image_3: autoDraw = True
+393.5659 	DATA 	Keypress: 2
+393.6126 	EXP 	image_3: autoDraw = False
+393.6126 	EXP 	blankImage: image = u'allBlank.png'
+393.6126 	EXP 	blankImage: autoDraw = True
+394.1134 	EXP 	blankImage: autoDraw = False
+394.1134 	EXP 	blankImage: autoDraw = False
+394.1134 	EXP 	image_4: image = u'min3.png'
+394.1134 	EXP 	image_4: autoDraw = True
+394.2822 	DATA 	Keypress: 4
+394.5486 	DATA 	Keypress: 3
+394.5802 	EXP 	image_4: autoDraw = False
+394.5802 	EXP 	blankImage: image = u'allBlank.png'
+394.5802 	EXP 	blankImage: autoDraw = True
+395.0804 	EXP 	blankImage: autoDraw = False
+395.0804 	EXP 	blankImage: autoDraw = False
+395.0804 	EXP 	image_5: image = u'min4.png'
+395.0804 	EXP 	image_5: autoDraw = True
+395.1650 	DATA 	Keypress: 1
+395.4486 	DATA 	Keypress: 4
+395.4802 	EXP 	image_5: autoDraw = False
+395.4802 	EXP 	blankImage: image = u'allBlank.png'
+395.4802 	EXP 	blankImage: autoDraw = True
+395.9801 	EXP 	blankImage: autoDraw = False
+395.9801 	EXP 	blankImage: autoDraw = False
+395.9801 	EXP 	image_3: image = u'min2.png'
+395.9801 	EXP 	image_3: autoDraw = True
+396.0656 	DATA 	Keypress: 1
+396.4490 	DATA 	Keypress: 2
+396.4801 	EXP 	image_3: autoDraw = False
+396.4801 	EXP 	blankImage: image = u'allBlank.png'
+396.4801 	EXP 	blankImage: autoDraw = True
+396.9803 	EXP 	blankImage: autoDraw = False
+396.9803 	EXP 	blankImage: autoDraw = False
+396.9803 	EXP 	image_5: image = u'min4.png'
+396.9803 	EXP 	image_5: autoDraw = True
+397.0490 	DATA 	Keypress: 3
+397.3490 	DATA 	Keypress: 4
+397.3801 	EXP 	image_5: autoDraw = False
+397.3801 	EXP 	blankImage: image = u'allBlank.png'
+397.3801 	EXP 	blankImage: autoDraw = True
+397.8479 	EXP 	New trial (rep=10, index=2): {'randomPaw': u'min2.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['2'], 'blank': u'allBlank.png'}
+397.8804 	EXP 	blankImage: autoDraw = False
+397.8804 	EXP 	blankImage: autoDraw = False
+397.8804 	EXP 	pos1: image = u'min1.png'
+397.8804 	EXP 	pos1: autoDraw = True
+398.3491 	DATA 	Keypress: 1
+398.3800 	EXP 	pos1: autoDraw = False
+398.3800 	EXP 	blankImage: image = u'allBlank.png'
+398.3800 	EXP 	blankImage: autoDraw = True
+398.8801 	EXP 	blankImage: autoDraw = False
+398.8801 	EXP 	blankImage: autoDraw = False
+398.8801 	EXP 	image_4: image = u'min3.png'
+398.8801 	EXP 	image_4: autoDraw = True
+399.0490 	DATA 	Keypress: 3
+399.0973 	EXP 	image_4: autoDraw = False
+399.0973 	EXP 	blankImage: image = u'allBlank.png'
+399.0973 	EXP 	blankImage: autoDraw = True
+399.5802 	EXP 	blankImage: autoDraw = False
+399.5802 	EXP 	blankImage: autoDraw = False
+399.5802 	EXP 	image_3: image = u'min2.png'
+399.5802 	EXP 	image_3: autoDraw = True
+399.6991 	DATA 	Keypress: 2
+399.7306 	EXP 	image_3: autoDraw = False
+399.7306 	EXP 	blankImage: image = u'allBlank.png'
+399.7306 	EXP 	blankImage: autoDraw = True
+400.2297 	EXP 	blankImage: autoDraw = False
+400.2297 	EXP 	blankImage: autoDraw = False
+400.2297 	EXP 	image_5: image = u'min4.png'
+400.2297 	EXP 	image_5: autoDraw = True
+400.2654 	DATA 	Keypress: 4
+400.2962 	EXP 	image_5: autoDraw = False
+400.2962 	EXP 	blankImage: image = u'allBlank.png'
+400.2962 	EXP 	blankImage: autoDraw = True
+400.7968 	EXP 	blankImage: autoDraw = False
+400.7968 	EXP 	blankImage: autoDraw = False
+400.7968 	EXP 	image_5: image = u'min4.png'
+400.7968 	EXP 	image_5: autoDraw = True
+400.8483 	DATA 	Keypress: 4
+400.8798 	EXP 	image_5: autoDraw = False
+400.8798 	EXP 	blankImage: image = u'allBlank.png'
+400.8798 	EXP 	blankImage: autoDraw = True
+401.3751 	DATA 	Keypress: 2
+401.4130 	EXP 	blankImage: autoDraw = False
+401.4130 	EXP 	blankImage: autoDraw = False
+401.4130 	EXP 	image_3: image = u'min2.png'
+401.4130 	EXP 	image_3: autoDraw = True
+401.4130 	EXP 	image_3: autoDraw = False
+401.4130 	EXP 	blankImage: image = u'allBlank.png'
+401.4130 	EXP 	blankImage: autoDraw = True
+401.8963 	EXP 	blankImage: autoDraw = False
+401.8963 	EXP 	blankImage: autoDraw = False
+401.8963 	EXP 	image_4: image = u'min3.png'
+401.8963 	EXP 	image_4: autoDraw = True
+402.1487 	DATA 	Keypress: 3
+402.1803 	EXP 	image_4: autoDraw = False
+402.1803 	EXP 	blankImage: image = u'allBlank.png'
+402.1803 	EXP 	blankImage: autoDraw = True
+402.6801 	EXP 	blankImage: autoDraw = False
+402.6801 	EXP 	blankImage: autoDraw = False
+402.6801 	EXP 	image_5: image = u'min4.png'
+402.6801 	EXP 	image_5: autoDraw = True
+402.8155 	DATA 	Keypress: 1
+403.1646 	DATA 	Keypress: 4
+403.1959 	EXP 	image_5: autoDraw = False
+403.1959 	EXP 	blankImage: image = u'allBlank.png'
+403.1959 	EXP 	blankImage: autoDraw = True
+403.6968 	EXP 	blankImage: autoDraw = False
+403.6968 	EXP 	blankImage: autoDraw = False
+403.6968 	EXP 	image_3: image = u'min2.png'
+403.6968 	EXP 	image_3: autoDraw = True
+404.1654 	DATA 	Keypress: 2
+404.1967 	EXP 	image_3: autoDraw = False
+404.1967 	EXP 	blankImage: image = u'allBlank.png'
+404.1967 	EXP 	blankImage: autoDraw = True
+404.6963 	EXP 	blankImage: autoDraw = False
+404.6963 	EXP 	blankImage: autoDraw = False
+404.6963 	EXP 	image_5: image = u'min4.png'
+404.6963 	EXP 	image_5: autoDraw = True
+405.0323 	DATA 	Keypress: 4
+405.0631 	EXP 	image_5: autoDraw = False
+405.0631 	EXP 	blankImage: image = u'allBlank.png'
+405.0631 	EXP 	blankImage: autoDraw = True
+405.5316 	EXP 	New trial (rep=10, index=3): {'randomPaw': u'min4.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['4'], 'blank': u'allBlank.png'}
+405.5636 	EXP 	blankImage: autoDraw = False
+405.5636 	EXP 	blankImage: autoDraw = False
+405.5636 	EXP 	pos1: image = u'min1.png'
+405.5636 	EXP 	pos1: autoDraw = True
+406.0836 	DATA 	Keypress: 1
+406.1302 	EXP 	pos1: autoDraw = False
+406.1302 	EXP 	blankImage: image = u'allBlank.png'
+406.1302 	EXP 	blankImage: autoDraw = True
+406.6299 	EXP 	blankImage: autoDraw = False
+406.6299 	EXP 	blankImage: autoDraw = False
+406.6299 	EXP 	image_4: image = u'min3.png'
+406.6299 	EXP 	image_4: autoDraw = True
+406.7645 	DATA 	Keypress: 3
+406.7965 	EXP 	image_4: autoDraw = False
+406.7965 	EXP 	blankImage: image = u'allBlank.png'
+406.7965 	EXP 	blankImage: autoDraw = True
+407.2959 	EXP 	blankImage: autoDraw = False
+407.2959 	EXP 	blankImage: autoDraw = False
+407.2959 	EXP 	image_3: image = u'min2.png'
+407.2959 	EXP 	image_3: autoDraw = True
+407.3986 	DATA 	Keypress: 2
+407.4303 	EXP 	image_3: autoDraw = False
+407.4303 	EXP 	blankImage: image = u'allBlank.png'
+407.4303 	EXP 	blankImage: autoDraw = True
+407.9305 	EXP 	blankImage: autoDraw = False
+407.9305 	EXP 	blankImage: autoDraw = False
+407.9305 	EXP 	image_5: image = u'min4.png'
+407.9305 	EXP 	image_5: autoDraw = True
+407.9990 	DATA 	Keypress: 4
+408.0294 	EXP 	image_5: autoDraw = False
+408.0294 	EXP 	blankImage: image = u'allBlank.png'
+408.0294 	EXP 	blankImage: autoDraw = True
+408.5301 	EXP 	blankImage: autoDraw = False
+408.5301 	EXP 	blankImage: autoDraw = False
+408.5301 	EXP 	image_5: image = u'min4.png'
+408.5301 	EXP 	image_5: autoDraw = True
+408.7645 	DATA 	Keypress: 4
+408.7966 	EXP 	image_5: autoDraw = False
+408.7966 	EXP 	blankImage: image = u'allBlank.png'
+408.7966 	EXP 	blankImage: autoDraw = True
+409.2965 	EXP 	blankImage: autoDraw = False
+409.2965 	EXP 	blankImage: autoDraw = False
+409.2965 	EXP 	image_3: image = u'min2.png'
+409.2965 	EXP 	image_3: autoDraw = True
+409.5310 	DATA 	Keypress: 2
+409.5640 	EXP 	image_3: autoDraw = False
+409.5640 	EXP 	blankImage: image = u'allBlank.png'
+409.5640 	EXP 	blankImage: autoDraw = True
+410.0635 	EXP 	blankImage: autoDraw = False
+410.0635 	EXP 	blankImage: autoDraw = False
+410.0635 	EXP 	image_4: image = u'min3.png'
+410.0635 	EXP 	image_4: autoDraw = True
+410.1158 	DATA 	Keypress: 3
+410.1470 	EXP 	image_4: autoDraw = False
+410.1470 	EXP 	blankImage: image = u'allBlank.png'
+410.1470 	EXP 	blankImage: autoDraw = True
+410.6474 	EXP 	blankImage: autoDraw = False
+410.6474 	EXP 	blankImage: autoDraw = False
+410.6474 	EXP 	image_5: image = u'min4.png'
+410.6474 	EXP 	image_5: autoDraw = True
+410.8156 	DATA 	Keypress: 4
+410.8463 	EXP 	image_5: autoDraw = False
+410.8463 	EXP 	blankImage: image = u'allBlank.png'
+410.8463 	EXP 	blankImage: autoDraw = True
+411.3463 	EXP 	blankImage: autoDraw = False
+411.3463 	EXP 	blankImage: autoDraw = False
+411.3463 	EXP 	image_3: image = u'min2.png'
+411.3463 	EXP 	image_3: autoDraw = True
+411.6656 	DATA 	Keypress: 2
+411.6967 	EXP 	image_3: autoDraw = False
+411.6967 	EXP 	blankImage: image = u'allBlank.png'
+411.6967 	EXP 	blankImage: autoDraw = True
+412.1963 	EXP 	blankImage: autoDraw = False
+412.1963 	EXP 	blankImage: autoDraw = False
+412.1963 	EXP 	image_5: image = u'min4.png'
+412.1963 	EXP 	image_5: autoDraw = True
+412.3814 	DATA 	Keypress: 3
+412.5993 	DATA 	Keypress: 4
+412.6302 	EXP 	image_5: autoDraw = False
+412.6302 	EXP 	blankImage: image = u'allBlank.png'
+412.6302 	EXP 	blankImage: autoDraw = True
+413.0980 	EXP 	New trial (rep=11, index=0): {'randomPaw': u'min4.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['4'], 'blank': u'allBlank.png'}
+413.1300 	EXP 	blankImage: autoDraw = False
+413.1300 	EXP 	blankImage: autoDraw = False
+413.1300 	EXP 	pos1: image = u'min1.png'
+413.1300 	EXP 	pos1: autoDraw = True
+413.3824 	DATA 	Keypress: 1
+413.4140 	EXP 	pos1: autoDraw = False
+413.4140 	EXP 	blankImage: image = u'allBlank.png'
+413.4140 	EXP 	blankImage: autoDraw = True
+413.9130 	EXP 	blankImage: autoDraw = False
+413.9130 	EXP 	blankImage: autoDraw = False
+413.9130 	EXP 	image_4: image = u'min3.png'
+413.9130 	EXP 	image_4: autoDraw = True
+414.0823 	DATA 	Keypress: 3
+414.1132 	EXP 	image_4: autoDraw = False
+414.1132 	EXP 	blankImage: image = u'allBlank.png'
+414.1132 	EXP 	blankImage: autoDraw = True
+414.6131 	EXP 	blankImage: autoDraw = False
+414.6131 	EXP 	blankImage: autoDraw = False
+414.6131 	EXP 	image_3: image = u'min2.png'
+414.6131 	EXP 	image_3: autoDraw = True
+414.8827 	DATA 	Keypress: 2
+414.9135 	EXP 	image_3: autoDraw = False
+414.9135 	EXP 	blankImage: image = u'allBlank.png'
+414.9135 	EXP 	blankImage: autoDraw = True
+415.4134 	EXP 	blankImage: autoDraw = False
+415.4134 	EXP 	blankImage: autoDraw = False
+415.4134 	EXP 	image_5: image = u'min4.png'
+415.4134 	EXP 	image_5: autoDraw = True
+415.4988 	DATA 	Keypress: 4
+415.5303 	EXP 	image_5: autoDraw = False
+415.5303 	EXP 	blankImage: image = u'allBlank.png'
+415.5303 	EXP 	blankImage: autoDraw = True
+416.0300 	EXP 	blankImage: autoDraw = False
+416.0300 	EXP 	blankImage: autoDraw = False
+416.0300 	EXP 	image_5: image = u'min4.png'
+416.0300 	EXP 	image_5: autoDraw = True
+416.3485 	DATA 	Keypress: 4
+416.3796 	EXP 	image_5: autoDraw = False
+416.3796 	EXP 	blankImage: image = u'allBlank.png'
+416.3796 	EXP 	blankImage: autoDraw = True
+416.8797 	EXP 	blankImage: autoDraw = False
+416.8797 	EXP 	blankImage: autoDraw = False
+416.8797 	EXP 	image_3: image = u'min2.png'
+416.8797 	EXP 	image_3: autoDraw = True
+417.2144 	DATA 	Keypress: 2
+417.2465 	EXP 	image_3: autoDraw = False
+417.2465 	EXP 	blankImage: image = u'allBlank.png'
+417.2465 	EXP 	blankImage: autoDraw = True
+417.7467 	EXP 	blankImage: autoDraw = False
+417.7467 	EXP 	blankImage: autoDraw = False
+417.7467 	EXP 	image_4: image = u'min3.png'
+417.7467 	EXP 	image_4: autoDraw = True
+418.0656 	DATA 	Keypress: 3
+418.0969 	EXP 	image_4: autoDraw = False
+418.0969 	EXP 	blankImage: image = u'allBlank.png'
+418.0969 	EXP 	blankImage: autoDraw = True
+418.5968 	EXP 	blankImage: autoDraw = False
+418.5968 	EXP 	blankImage: autoDraw = False
+418.5968 	EXP 	image_5: image = u'min4.png'
+418.5968 	EXP 	image_5: autoDraw = True
+418.8151 	DATA 	Keypress: 4
+418.8457 	EXP 	image_5: autoDraw = False
+418.8457 	EXP 	blankImage: image = u'allBlank.png'
+418.8457 	EXP 	blankImage: autoDraw = True
+419.3463 	EXP 	blankImage: autoDraw = False
+419.3463 	EXP 	blankImage: autoDraw = False
+419.3463 	EXP 	image_3: image = u'min2.png'
+419.3463 	EXP 	image_3: autoDraw = True
+419.7649 	DATA 	Keypress: 2
+419.7961 	EXP 	image_3: autoDraw = False
+419.7961 	EXP 	blankImage: image = u'allBlank.png'
+419.7961 	EXP 	blankImage: autoDraw = True
+420.2970 	EXP 	blankImage: autoDraw = False
+420.2970 	EXP 	blankImage: autoDraw = False
+420.2970 	EXP 	image_5: image = u'min4.png'
+420.2970 	EXP 	image_5: autoDraw = True
+420.7161 	DATA 	Keypress: escape

@@ -1,0 +1,452 @@
+8.2385 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+14.6422 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([ 0.,  0.,  0.]), colorSpace='rgb', fullscr=UNKNOWN, gamma=None, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x1140e2dd0>, multiSample=False, name='window1', numSamples=2, pos=[0, 0], screen=0, size=array([1440,  900]), stereo=False, units=u'norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+14.6423 	EXP 	window1: recordFrameIntervals = False
+14.8042 	EXP 	window1: recordFrameIntervals = True
+14.9585 	WARNING 	t of last frame was 37.95ms (=1/26)
+15.1382 	EXP 	window1: recordFrameIntervals = False
+15.3455 	EXP 	Created instructionsGeneral = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='instructionsGeneral', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text=unicode(...), units=u'norm', win=Window(...), wrapWidth=1)
+15.3478 	EXP 	Created image_paw1 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_paw1', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.3551 	EXP 	Created text = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text', opacity=1.0, ori=0, pos=array([ 0. ,  0.8]), rgb=array([ 1.,  1.,  1.]), text=u'Press 1 when Chase is here ', units=u'norm', win=Window(...), wrapWidth=1)
+15.3570 	EXP 	Created image_paw2 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_paw2', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.3630 	EXP 	Created text_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_2', opacity=1.0, ori=0, pos=array([ 0. ,  0.8]), rgb=array([ 1.,  1.,  1.]), text=u'Press 2 when Rubble is here ', units=u'norm', win=Window(...), wrapWidth=1)
+15.3645 	EXP 	Created image_paw3 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_paw3', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.3705 	EXP 	Created text_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_3', opacity=1.0, ori=0, pos=array([ 0. ,  0.8]), rgb=array([ 1.,  1.,  1.]), text=u'Press 3 when Marshall is here ', units=u'norm', win=Window(...), wrapWidth=1)
+15.3723 	EXP 	Created image_paw4 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_paw4', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.3775 	EXP 	Created text_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_4', opacity=1.0, ori=0, pos=array([ 0. ,  0.8]), rgb=array([ 1.,  1.,  1.]), text=u'Press 4 when Rocky is here ', units=u'norm', win=Window(...), wrapWidth=1)
+15.3825 	EXP 	Created text_5 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_5', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'Get Ready...', units=u'norm', win=Window(...), wrapWidth=1)
+15.3853 	EXP 	Created text_6 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_6', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'GO!', units=u'norm', win=Window(...), wrapWidth=1)
+15.3867 	EXP 	Created image = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.3881 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.3932 	EXP 	Created text_7 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_7', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'Take a short break ', units=u'norm', win=Window(...), wrapWidth=1)
+15.3964 	EXP 	Created text_5 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_5', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'Get Ready...', units=u'norm', win=Window(...), wrapWidth=1)
+15.3984 	EXP 	Created text_6 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_6', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'GO!', units=u'norm', win=Window(...), wrapWidth=1)
+15.3999 	EXP 	Created pos1 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='pos1', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4013 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4027 	EXP 	Created image_4 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_4', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4040 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4068 	EXP 	Created image_3 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_3', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4082 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4095 	EXP 	Created image_5 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4108 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4133 	EXP 	Created image_5 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4157 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4176 	EXP 	Created image_3 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_3', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4196 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4219 	EXP 	Created image_4 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_4', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4235 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4250 	EXP 	Created image_5 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4266 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4283 	EXP 	Created image_3 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_3', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4299 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4313 	EXP 	Created image_5 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4326 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4364 	EXP 	Created text_7 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_7', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'Take a short break ', units=u'norm', win=Window(...), wrapWidth=1)
+15.4398 	EXP 	Created text_5 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_5', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'Get Ready...', units=u'norm', win=Window(...), wrapWidth=1)
+15.4419 	EXP 	Created text_6 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_6', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'GO!', units=u'norm', win=Window(...), wrapWidth=1)
+15.4433 	EXP 	Created pos1 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='pos1', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4447 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4460 	EXP 	Created image_4 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_4', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4474 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4489 	EXP 	Created image_3 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_3', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4503 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4516 	EXP 	Created image_5 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4530 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4544 	EXP 	Created image_5 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4558 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4571 	EXP 	Created image_3 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_3', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4585 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4599 	EXP 	Created image_4 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_4', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4612 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4626 	EXP 	Created image_5 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4640 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4654 	EXP 	Created image_3 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_3', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4668 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4681 	EXP 	Created image_5 = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4695 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4731 	EXP 	Created text_7 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_7', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'Take a short break ', units=u'norm', win=Window(...), wrapWidth=1)
+15.4763 	EXP 	Created text_5 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_5', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'Get Ready...', units=u'norm', win=Window(...), wrapWidth=1)
+15.4784 	EXP 	Created text_6 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_6', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'GO!', units=u'norm', win=Window(...), wrapWidth=1)
+15.4802 	EXP 	Created image = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4820 	EXP 	Created blankImage = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='blankImage', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 2.,  2.]), texRes=128, units=u'norm', win=Window(...))
+15.4911 	EXP 	Created goodJob = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='goodJob', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=unicode(...), units=u'norm', win=Window(...), wrapWidth=1)
+15.5045 	EXP 	window1: blendMode = 'avg'
+15.5211 	EXP 	instructionsGeneral: color = 'white (named)'
+15.5211 	EXP 	instructionsGeneral: autoDraw = True
+15.5246 	EXP 	window1: blendMode = 'avg'
+15.5388 	EXP 	window1: blendMode = 'avg'
+15.5557 	EXP 	window1: blendMode = 'avg'
+15.5721 	EXP 	window1: blendMode = 'avg'
+15.5888 	EXP 	window1: blendMode = 'avg'
+15.6057 	EXP 	window1: blendMode = 'avg'
+15.6223 	EXP 	window1: blendMode = 'avg'
+15.6388 	EXP 	window1: blendMode = 'avg'
+15.6557 	EXP 	window1: blendMode = 'avg'
+15.6722 	EXP 	window1: blendMode = 'avg'
+15.6890 	EXP 	window1: blendMode = 'avg'
+15.7055 	EXP 	window1: blendMode = 'avg'
+15.7221 	EXP 	window1: blendMode = 'avg'
+15.7381 	EXP 	window1: blendMode = 'avg'
+15.7555 	EXP 	window1: blendMode = 'avg'
+15.7724 	EXP 	window1: blendMode = 'avg'
+15.7887 	EXP 	window1: blendMode = 'avg'
+15.8056 	EXP 	window1: blendMode = 'avg'
+15.8221 	EXP 	window1: blendMode = 'avg'
+15.8390 	EXP 	window1: blendMode = 'avg'
+15.8556 	EXP 	window1: blendMode = 'avg'
+15.8721 	EXP 	window1: blendMode = 'avg'
+15.8890 	EXP 	window1: blendMode = 'avg'
+15.9055 	EXP 	window1: blendMode = 'avg'
+15.9224 	EXP 	window1: blendMode = 'avg'
+15.9388 	EXP 	window1: blendMode = 'avg'
+15.9557 	EXP 	window1: blendMode = 'avg'
+15.9721 	EXP 	window1: blendMode = 'avg'
+15.9883 	EXP 	window1: blendMode = 'avg'
+16.0054 	EXP 	window1: blendMode = 'avg'
+16.0223 	EXP 	window1: blendMode = 'avg'
+16.0386 	EXP 	window1: blendMode = 'avg'
+16.0551 	EXP 	window1: blendMode = 'avg'
+16.0721 	EXP 	window1: blendMode = 'avg'
+16.0890 	EXP 	window1: blendMode = 'avg'
+16.1054 	EXP 	window1: blendMode = 'avg'
+16.1223 	EXP 	window1: blendMode = 'avg'
+16.1387 	EXP 	window1: blendMode = 'avg'
+16.1557 	EXP 	window1: blendMode = 'avg'
+16.1720 	EXP 	window1: blendMode = 'avg'
+16.1887 	EXP 	window1: blendMode = 'avg'
+16.2056 	EXP 	window1: blendMode = 'avg'
+16.2221 	EXP 	window1: blendMode = 'avg'
+16.2391 	EXP 	window1: blendMode = 'avg'
+16.2554 	EXP 	window1: blendMode = 'avg'
+16.2718 	EXP 	window1: blendMode = 'avg'
+16.2888 	EXP 	window1: blendMode = 'avg'
+16.3053 	EXP 	window1: blendMode = 'avg'
+16.3216 	EXP 	window1: blendMode = 'avg'
+16.3394 	EXP 	window1: blendMode = 'avg'
+16.3554 	EXP 	window1: blendMode = 'avg'
+16.3723 	EXP 	window1: blendMode = 'avg'
+16.3888 	EXP 	window1: blendMode = 'avg'
+16.4055 	EXP 	window1: blendMode = 'avg'
+16.4224 	EXP 	window1: blendMode = 'avg'
+16.4388 	EXP 	window1: blendMode = 'avg'
+16.4551 	EXP 	window1: blendMode = 'avg'
+16.4722 	EXP 	window1: blendMode = 'avg'
+16.4888 	EXP 	window1: blendMode = 'avg'
+16.5057 	EXP 	window1: blendMode = 'avg'
+16.5221 	EXP 	window1: blendMode = 'avg'
+16.5391 	EXP 	window1: blendMode = 'avg'
+16.5555 	EXP 	window1: blendMode = 'avg'
+16.5724 	EXP 	window1: blendMode = 'avg'
+16.5886 	EXP 	window1: blendMode = 'avg'
+16.6055 	EXP 	window1: blendMode = 'avg'
+16.6224 	EXP 	window1: blendMode = 'avg'
+16.6391 	EXP 	window1: blendMode = 'avg'
+16.6423 	DATA 	Keypress: space
+16.6729 	EXP 	Imported pawStimuli.xlsx as conditions, 1 conditions, 5 params
+16.6731 	EXP 	Created sequence: sequential, trialTypes=1, nReps=1, seed=None
+16.6735 	EXP 	New trial (rep=0, index=0): {'pawPatrol1': u'min1.png', 'pawPatrol2': u'min2.png', 'pawPatrol3': u'min3.png', 'pawPatrol4': u'min4.png', 'blank': u'allBlank.png'}
+16.8406 	EXP 	window1: blendMode = 'avg'
+16.8542 	EXP 	instructionsGeneral: autoDraw = False
+16.8542 	EXP 	image_paw1: image = u'min1.png'
+16.8542 	EXP 	text: color = 'black (named)'
+16.8542 	EXP 	image_paw1: autoDraw = True
+16.8542 	EXP 	text: autoDraw = True
+16.8552 	EXP 	window1: blendMode = 'avg'
+16.8739 	DATA 	Keypress: space
+16.9048 	EXP 	window1: blendMode = 'avg'
+16.9115 	EXP 	image_paw1: autoDraw = False
+16.9115 	EXP 	text: autoDraw = False
+16.9115 	EXP 	image_paw2: image = u'min2.png'
+16.9115 	EXP 	text_2: color = 'black (named)'
+16.9115 	EXP 	image_paw2: autoDraw = True
+16.9115 	EXP 	text_2: autoDraw = True
+16.9123 	EXP 	window1: blendMode = 'avg'
+16.9214 	EXP 	window1: blendMode = 'avg'
+16.9389 	EXP 	window1: blendMode = 'avg'
+16.9563 	EXP 	window1: blendMode = 'avg'
+16.9726 	EXP 	window1: blendMode = 'avg'
+16.9889 	EXP 	window1: blendMode = 'avg'
+17.0056 	EXP 	window1: blendMode = 'avg'
+17.0222 	EXP 	window1: blendMode = 'avg'
+17.0390 	EXP 	window1: blendMode = 'avg'
+17.0554 	EXP 	window1: blendMode = 'avg'
+17.0718 	EXP 	window1: blendMode = 'avg'
+17.0888 	EXP 	window1: blendMode = 'avg'
+17.1052 	EXP 	window1: blendMode = 'avg'
+17.1223 	DATA 	Keypress: space
+17.1517 	EXP 	window1: blendMode = 'avg'
+17.1622 	EXP 	image_paw2: autoDraw = False
+17.1622 	EXP 	text_2: autoDraw = False
+17.1622 	EXP 	image_paw3: image = u'min3.png'
+17.1622 	EXP 	text_3: color = 'black (named)'
+17.1622 	EXP 	image_paw3: autoDraw = True
+17.1622 	EXP 	text_3: autoDraw = True
+17.1631 	EXP 	window1: blendMode = 'avg'
+17.1715 	EXP 	window1: blendMode = 'avg'
+17.1887 	EXP 	window1: blendMode = 'avg'
+17.2057 	EXP 	window1: blendMode = 'avg'
+17.2222 	EXP 	window1: blendMode = 'avg'
+17.2391 	EXP 	window1: blendMode = 'avg'
+17.2552 	EXP 	window1: blendMode = 'avg'
+17.2722 	EXP 	window1: blendMode = 'avg'
+17.2889 	EXP 	window1: blendMode = 'avg'
+17.3055 	EXP 	window1: blendMode = 'avg'
+17.3225 	EXP 	window1: blendMode = 'avg'
+17.3389 	EXP 	window1: blendMode = 'avg'
+17.3555 	EXP 	window1: blendMode = 'avg'
+17.3732 	DATA 	Keypress: space
+17.4115 	EXP 	window1: blendMode = 'avg'
+17.4214 	EXP 	image_paw3: autoDraw = False
+17.4214 	EXP 	text_3: autoDraw = False
+17.4214 	EXP 	image_paw4: image = u'min4.png'
+17.4214 	EXP 	text_4: color = 'black (named)'
+17.4214 	EXP 	image_paw4: autoDraw = True
+17.4214 	EXP 	text_4: autoDraw = True
+17.4222 	EXP 	window1: blendMode = 'avg'
+17.4392 	EXP 	window1: blendMode = 'avg'
+17.4556 	EXP 	window1: blendMode = 'avg'
+17.4722 	EXP 	window1: blendMode = 'avg'
+17.4887 	EXP 	window1: blendMode = 'avg'
+17.5062 	EXP 	window1: blendMode = 'avg'
+17.5222 	EXP 	window1: blendMode = 'avg'
+17.5391 	EXP 	window1: blendMode = 'avg'
+17.5555 	EXP 	window1: blendMode = 'avg'
+17.5722 	EXP 	window1: blendMode = 'avg'
+17.5886 	EXP 	window1: blendMode = 'avg'
+17.6055 	EXP 	window1: blendMode = 'avg'
+17.6218 	EXP 	window1: blendMode = 'avg'
+17.6400 	EXP 	window1: blendMode = 'avg'
+17.6556 	EXP 	window1: blendMode = 'avg'
+17.6722 	EXP 	window1: blendMode = 'avg'
+17.6892 	EXP 	window1: blendMode = 'avg'
+17.7056 	EXP 	window1: blendMode = 'avg'
+17.7222 	EXP 	window1: blendMode = 'avg'
+17.7389 	EXP 	window1: blendMode = 'avg'
+17.7555 	EXP 	window1: blendMode = 'avg'
+17.7722 	EXP 	window1: blendMode = 'avg'
+17.7887 	EXP 	window1: blendMode = 'avg'
+17.8057 	EXP 	window1: blendMode = 'avg'
+17.8219 	EXP 	window1: blendMode = 'avg'
+17.8389 	EXP 	window1: blendMode = 'avg'
+17.8552 	EXP 	window1: blendMode = 'avg'
+17.8718 	EXP 	window1: blendMode = 'avg'
+17.8888 	EXP 	window1: blendMode = 'avg'
+17.9051 	EXP 	window1: blendMode = 'avg'
+17.9222 	EXP 	window1: blendMode = 'avg'
+17.9387 	EXP 	window1: blendMode = 'avg'
+17.9557 	EXP 	window1: blendMode = 'avg'
+17.9723 	EXP 	window1: blendMode = 'avg'
+17.9887 	EXP 	window1: blendMode = 'avg'
+18.0058 	EXP 	window1: blendMode = 'avg'
+18.0222 	EXP 	window1: blendMode = 'avg'
+18.0382 	EXP 	window1: blendMode = 'avg'
+18.0556 	EXP 	window1: blendMode = 'avg'
+18.0722 	EXP 	window1: blendMode = 'avg'
+18.0887 	EXP 	window1: blendMode = 'avg'
+18.1057 	EXP 	window1: blendMode = 'avg'
+18.1228 	DATA 	Keypress: space
+18.1240 	EXP 	window1: blendMode = 'avg'
+18.1381 	EXP 	image_paw4: autoDraw = False
+18.1381 	EXP 	text_4: autoDraw = False
+18.1381 	EXP 	text_5: autoDraw = True
+18.1387 	EXP 	window1: blendMode = 'avg'
+18.1543 	EXP 	window1: blendMode = 'avg'
+18.1720 	EXP 	window1: blendMode = 'avg'
+18.1886 	EXP 	window1: blendMode = 'avg'
+18.2054 	EXP 	window1: blendMode = 'avg'
+18.2221 	EXP 	window1: blendMode = 'avg'
+18.2388 	EXP 	window1: blendMode = 'avg'
+18.2558 	EXP 	window1: blendMode = 'avg'
+18.2719 	EXP 	window1: blendMode = 'avg'
+18.2885 	EXP 	window1: blendMode = 'avg'
+18.3052 	EXP 	window1: blendMode = 'avg'
+18.3219 	EXP 	window1: blendMode = 'avg'
+18.3387 	EXP 	window1: blendMode = 'avg'
+18.3554 	EXP 	window1: blendMode = 'avg'
+18.3722 	EXP 	window1: blendMode = 'avg'
+18.3889 	EXP 	window1: blendMode = 'avg'
+18.4053 	EXP 	window1: blendMode = 'avg'
+18.4221 	EXP 	window1: blendMode = 'avg'
+18.4388 	EXP 	window1: blendMode = 'avg'
+18.4557 	EXP 	window1: blendMode = 'avg'
+18.4719 	EXP 	window1: blendMode = 'avg'
+18.4884 	EXP 	window1: blendMode = 'avg'
+18.5053 	EXP 	window1: blendMode = 'avg'
+18.5220 	EXP 	window1: blendMode = 'avg'
+18.5387 	EXP 	window1: blendMode = 'avg'
+18.5555 	EXP 	window1: blendMode = 'avg'
+18.5722 	EXP 	window1: blendMode = 'avg'
+18.5885 	EXP 	window1: blendMode = 'avg'
+18.6053 	EXP 	window1: blendMode = 'avg'
+18.6220 	EXP 	window1: blendMode = 'avg'
+18.6388 	EXP 	window1: blendMode = 'avg'
+18.6555 	EXP 	window1: blendMode = 'avg'
+18.6716 	EXP 	window1: blendMode = 'avg'
+18.6885 	EXP 	window1: blendMode = 'avg'
+18.7052 	EXP 	window1: blendMode = 'avg'
+18.7224 	EXP 	window1: blendMode = 'avg'
+18.7386 	EXP 	window1: blendMode = 'avg'
+18.7554 	EXP 	window1: blendMode = 'avg'
+18.7720 	EXP 	window1: blendMode = 'avg'
+18.7885 	EXP 	window1: blendMode = 'avg'
+18.8052 	EXP 	window1: blendMode = 'avg'
+18.8219 	EXP 	window1: blendMode = 'avg'
+18.8386 	EXP 	window1: blendMode = 'avg'
+18.8555 	EXP 	window1: blendMode = 'avg'
+18.8722 	EXP 	window1: blendMode = 'avg'
+18.8883 	EXP 	window1: blendMode = 'avg'
+18.9053 	EXP 	window1: blendMode = 'avg'
+18.9220 	EXP 	window1: blendMode = 'avg'
+18.9387 	EXP 	window1: blendMode = 'avg'
+18.9554 	EXP 	window1: blendMode = 'avg'
+18.9722 	EXP 	window1: blendMode = 'avg'
+18.9892 	EXP 	window1: blendMode = 'avg'
+19.0051 	EXP 	window1: blendMode = 'avg'
+19.0218 	EXP 	window1: blendMode = 'avg'
+19.0386 	EXP 	window1: blendMode = 'avg'
+19.0554 	EXP 	window1: blendMode = 'avg'
+19.0721 	EXP 	window1: blendMode = 'avg'
+19.0886 	EXP 	window1: blendMode = 'avg'
+19.1055 	EXP 	window1: blendMode = 'avg'
+19.1380 	EXP 	text_5: autoDraw = False
+19.1389 	EXP 	window1: blendMode = 'avg'
+19.1544 	EXP 	text_6: autoDraw = True
+19.1551 	EXP 	window1: blendMode = 'avg'
+19.1720 	EXP 	window1: blendMode = 'avg'
+19.1884 	EXP 	window1: blendMode = 'avg'
+19.2052 	EXP 	window1: blendMode = 'avg'
+19.2221 	EXP 	window1: blendMode = 'avg'
+19.2388 	EXP 	window1: blendMode = 'avg'
+19.2555 	EXP 	window1: blendMode = 'avg'
+19.2722 	EXP 	window1: blendMode = 'avg'
+19.2884 	EXP 	window1: blendMode = 'avg'
+19.3054 	EXP 	window1: blendMode = 'avg'
+19.3221 	EXP 	window1: blendMode = 'avg'
+19.3389 	EXP 	window1: blendMode = 'avg'
+19.3553 	EXP 	window1: blendMode = 'avg'
+19.3720 	EXP 	window1: blendMode = 'avg'
+19.3888 	EXP 	window1: blendMode = 'avg'
+19.4046 	EXP 	window1: blendMode = 'avg'
+19.4220 	EXP 	window1: blendMode = 'avg'
+19.4388 	EXP 	window1: blendMode = 'avg'
+19.4555 	EXP 	window1: blendMode = 'avg'
+19.4716 	EXP 	window1: blendMode = 'avg'
+19.4884 	EXP 	window1: blendMode = 'avg'
+19.5053 	EXP 	window1: blendMode = 'avg'
+19.5220 	EXP 	window1: blendMode = 'avg'
+19.5387 	EXP 	window1: blendMode = 'avg'
+19.5554 	EXP 	window1: blendMode = 'avg'
+19.5721 	EXP 	window1: blendMode = 'avg'
+19.5886 	EXP 	window1: blendMode = 'avg'
+19.6053 	EXP 	window1: blendMode = 'avg'
+19.6219 	EXP 	window1: blendMode = 'avg'
+19.6386 	EXP 	window1: blendMode = 'avg'
+19.6557 	EXP 	window1: blendMode = 'avg'
+19.6710 	EXP 	window1: blendMode = 'avg'
+19.6887 	EXP 	window1: blendMode = 'avg'
+19.7048 	EXP 	window1: blendMode = 'avg'
+19.7228 	EXP 	window1: blendMode = 'avg'
+19.7391 	EXP 	window1: blendMode = 'avg'
+19.7553 	EXP 	window1: blendMode = 'avg'
+19.7721 	EXP 	window1: blendMode = 'avg'
+19.7887 	EXP 	window1: blendMode = 'avg'
+19.8054 	EXP 	window1: blendMode = 'avg'
+19.8212 	EXP 	window1: blendMode = 'avg'
+19.8389 	EXP 	window1: blendMode = 'avg'
+19.8554 	EXP 	window1: blendMode = 'avg'
+19.8722 	EXP 	window1: blendMode = 'avg'
+19.8887 	EXP 	window1: blendMode = 'avg'
+19.9064 	EXP 	window1: blendMode = 'avg'
+19.9207 	EXP 	window1: blendMode = 'avg'
+19.9386 	EXP 	window1: blendMode = 'avg'
+19.9553 	EXP 	window1: blendMode = 'avg'
+19.9721 	EXP 	window1: blendMode = 'avg'
+19.9885 	EXP 	window1: blendMode = 'avg'
+20.0052 	EXP 	window1: blendMode = 'avg'
+20.0219 	EXP 	window1: blendMode = 'avg'
+20.0387 	EXP 	window1: blendMode = 'avg'
+20.0554 	EXP 	window1: blendMode = 'avg'
+20.0719 	EXP 	window1: blendMode = 'avg'
+20.0884 	EXP 	window1: blendMode = 'avg'
+20.1053 	EXP 	window1: blendMode = 'avg'
+20.1321 	EXP 	Imported random.xlsx as conditions, 4 conditions, 4 params
+20.1327 	EXP 	Created sequence: random, trialTypes=4, nReps=25, seed=None
+20.1331 	EXP 	New trial (rep=0, index=0): {'randomPaw': u'min4.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['4'], 'blank': u'allBlank.png'}
+20.1713 	EXP 	text_6: autoDraw = False
+20.1713 	EXP 	text_5: autoDraw = False
+20.1713 	EXP 	text_6: autoDraw = False
+20.1713 	EXP 	image: image = u'min4.png'
+20.1713 	EXP 	image: autoDraw = True
+20.7717 	DATA 	Keypress: 4
+20.8196 	EXP 	image: autoDraw = False
+20.8196 	EXP 	blankImage: image = u'allBlank.png'
+20.8196 	EXP 	blankImage: autoDraw = True
+21.2721 	EXP 	New trial (rep=0, index=1): {'randomPaw': u'min1.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['1'], 'blank': u'allBlank.png'}
+21.3042 	EXP 	blankImage: autoDraw = False
+21.3042 	EXP 	blankImage: autoDraw = False
+21.3042 	EXP 	image: image = u'min1.png'
+21.3042 	EXP 	image: autoDraw = True
+21.7898 	DATA 	Keypress: 1
+21.8199 	EXP 	image: autoDraw = False
+21.8199 	EXP 	blankImage: image = u'allBlank.png'
+21.8199 	EXP 	blankImage: autoDraw = True
+22.2890 	EXP 	New trial (rep=0, index=2): {'randomPaw': u'min2.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['2'], 'blank': u'allBlank.png'}
+22.3205 	EXP 	blankImage: autoDraw = False
+22.3205 	EXP 	blankImage: autoDraw = False
+22.3205 	EXP 	image: image = u'min2.png'
+22.3205 	EXP 	image: autoDraw = True
+22.6898 	DATA 	Keypress: 2
+22.7210 	EXP 	image: autoDraw = False
+22.7210 	EXP 	blankImage: image = u'allBlank.png'
+22.7210 	EXP 	blankImage: autoDraw = True
+23.1887 	EXP 	New trial (rep=0, index=3): {'randomPaw': u'min3.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['3'], 'blank': u'allBlank.png'}
+23.2213 	EXP 	blankImage: autoDraw = False
+23.2213 	EXP 	blankImage: autoDraw = False
+23.2213 	EXP 	image: image = u'min3.png'
+23.2213 	EXP 	image: autoDraw = True
+23.4897 	DATA 	Keypress: 3
+23.5206 	EXP 	image: autoDraw = False
+23.5206 	EXP 	blankImage: image = u'allBlank.png'
+23.5206 	EXP 	blankImage: autoDraw = True
+23.9889 	EXP 	New trial (rep=1, index=0): {'randomPaw': u'min2.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['2'], 'blank': u'allBlank.png'}
+24.0211 	EXP 	blankImage: autoDraw = False
+24.0211 	EXP 	blankImage: autoDraw = False
+24.0211 	EXP 	image: image = u'min2.png'
+24.0211 	EXP 	image: autoDraw = True
+24.4896 	DATA 	Keypress: 2
+24.5204 	EXP 	image: autoDraw = False
+24.5204 	EXP 	blankImage: image = u'allBlank.png'
+24.5204 	EXP 	blankImage: autoDraw = True
+24.9888 	EXP 	New trial (rep=1, index=1): {'randomPaw': u'min4.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['4'], 'blank': u'allBlank.png'}
+25.0212 	EXP 	blankImage: autoDraw = False
+25.0212 	EXP 	blankImage: autoDraw = False
+25.0212 	EXP 	image: image = u'min4.png'
+25.0212 	EXP 	image: autoDraw = True
+25.3066 	DATA 	Keypress: 4
+25.3373 	EXP 	image: autoDraw = False
+25.3373 	EXP 	blankImage: image = u'allBlank.png'
+25.3373 	EXP 	blankImage: autoDraw = True
+25.8055 	EXP 	New trial (rep=1, index=2): {'randomPaw': u'min3.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['3'], 'blank': u'allBlank.png'}
+25.8375 	EXP 	blankImage: autoDraw = False
+25.8375 	EXP 	blankImage: autoDraw = False
+25.8375 	EXP 	image: image = u'min3.png'
+25.8375 	EXP 	image: autoDraw = True
+26.3394 	DATA 	Keypress: 3
+26.3710 	EXP 	image: autoDraw = False
+26.3710 	EXP 	blankImage: image = u'allBlank.png'
+26.3710 	EXP 	blankImage: autoDraw = True
+26.8381 	EXP 	New trial (rep=1, index=3): {'randomPaw': u'min1.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['1'], 'blank': u'allBlank.png'}
+26.8704 	EXP 	blankImage: autoDraw = False
+26.8704 	EXP 	blankImage: autoDraw = False
+26.8704 	EXP 	image: image = u'min1.png'
+26.8704 	EXP 	image: autoDraw = True
+27.3388 	DATA 	Keypress: 2
+27.7387 	DATA 	Keypress: 1
+27.7705 	EXP 	image: autoDraw = False
+27.7705 	EXP 	blankImage: image = u'allBlank.png'
+27.7705 	EXP 	blankImage: autoDraw = True
+28.2387 	EXP 	New trial (rep=2, index=0): {'randomPaw': u'min1.png', 'allowableKey': ['2', '1', '3', '4'], 'correctKey': ['1'], 'blank': u'allBlank.png'}
+28.2707 	EXP 	blankImage: autoDraw = False
+28.2707 	EXP 	blankImage: autoDraw = False
+28.2707 	EXP 	image: image = u'min1.png'
+28.2707 	EXP 	image: autoDraw = True
+28.3066 	DATA 	Keypress: escape
