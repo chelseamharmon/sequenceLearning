@@ -791,8 +791,8 @@ if thisTrial_3 != None:
 
 blank = 'allBlank.png'
 minImages = ['min1.png', 'min3.png', 'min2.png', 'min4.png', 'min4.png', 'min2.png', 'min3.png', 'min4.png', 'min2.png' , 'min4.png']
-correctResponses = [['1'],['3'],['2'], ['4'], ['4'], ['2'], ['3'], ['4'], ['2'], ['4']]
-correctResponsesKeys = ['1','3','2', '4', '4', '2', '3', '4','2', '4']
+correctResponses = [['7'],['1'],['4'], ['0'], ['0'], ['4'], ['1'], ['0'], ['4'], ['0']]
+correctResponsesKeys = ['7','1','4', '0', '0', '4', '1', '0','4', '0']
 
 jj = 1
 
@@ -852,7 +852,7 @@ for thisTrial_3 in trials_3:
                 # keyboard checking is just starting
                 win.callOnFlip(key_resp_9.clock.reset)  # t=0 on next screen flip
             if key_resp_9.status == STARTED:
-                theseKeys = event.getKeys(keyList=['1', '2', '3', '4'])
+                theseKeys = event.getKeys(keyList=['7', '4', '1', '0'])
                 
                 # check for quit:
                 if "escape" in theseKeys:
@@ -1119,8 +1119,8 @@ if thisTrial_3 != None:
 
 blank = 'allBlank.png'
 minImages = ['min1.png', 'min3.png', 'min2.png', 'min4.png', 'min4.png', 'min2.png', 'min3.png', 'min4.png', 'min2.png' , 'min4.png']
-correctResponses = [['1'],['3'],['2'], ['4'], ['4'], ['2'], ['3'], ['4'], ['2'], ['4']]
-correctResponsesKeys = ['1','3','2', '4', '4', '2', '3', '4','2', '4']
+correctResponses = [['7'],['1'],['4'], ['0'], ['0'], ['4'], ['1'], ['0'], ['4'], ['0']]
+correctResponsesKeys = ['7','1','4', '0', '0', '4', '1', '0','4', '0']
 
 jj = 1
 
@@ -1180,7 +1180,7 @@ for thisTrial_3 in trials_3:
                 # keyboard checking is just starting
                 win.callOnFlip(key_resp_9.clock.reset)  # t=0 on next screen flip
             if key_resp_9.status == STARTED:
-                theseKeys = event.getKeys(keyList=['1', '2', '3', '4'])
+                theseKeys = event.getKeys(keyList=['7', '4', '1', '0'])
                 
                 # check for quit:
                 if "escape" in theseKeys:
