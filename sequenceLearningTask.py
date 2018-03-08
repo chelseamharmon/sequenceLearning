@@ -521,24 +521,12 @@ for thisTrial_2 in trials_2:
                 key_resp_9.rt.append(key_resp_9.clock.getTime())
                 # was this 'correct'?
                 if ((theseKeys) == (correctKey) and (key_resp_9.rt[-1] > goTime)):
-                    print('this is allowable key', allowableKey)
-                    print('this is these keys, what you pressed', theseKeys)
-                    print('this is the correct key', correctKey)
                     trials_2.addData('stimulusPresent.t', goTime)
-                    print(key_resp_9.keys[0])
-                    print(correctKeyPress)
-                    if (key_resp_9.keys == correctKey):
-                        print(key_resp_9.keys[0])
-                        print(correctKeyPress)
-                        print(correctKey)
-                        key_resp_9_corr = 1
+                    if (len(key_resp_9.keys) == 1):
                         trialCorrect = 1
-                        trials_2.addData('keyRespCorrect', key_resp_9_corr)
                         trials_2.addData('trialCorrect',trialCorrect)
                     else:
-                        key_resp_9_corr = 0
                         trialCorrect = 0 
-                        trials_2.addData('keyRespCorrect', key_resp_9_corr)
                         trials_2.addData('trialCorrect', trialCorrect)
                     continueRoutine = False
                 else:
@@ -636,6 +624,8 @@ for thisTrial_2 in trials_2:
             thisComponent.setAutoDraw(False)
     thisExp.nextEntry()
     
+    
+    
 # completed 25 repeats of 'trials_2'
 
 
@@ -712,7 +702,7 @@ for thisComponent in break_2Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
 
-#------Prepare to start Routine "instructions2"-------
+# ------Prepare to start Routine "instructions2"-------
 t = 0
 instructions2Clock.reset()  # clock
 frameN = -1
@@ -791,8 +781,8 @@ if thisTrial_3 != None:
 
 blank = 'allBlank.png'
 minImages = ['min1.png', 'min3.png', 'min2.png', 'min4.png', 'min4.png', 'min2.png', 'min3.png', 'min4.png', 'min2.png' , 'min4.png']
-correctResponses = [['7'],['1'],['4'], ['0'], ['0'], ['4'], ['1'], ['0'], ['4'], ['0']]
-correctResponsesKeys = ['7','1','4', '0', '0', '4', '1', '0','4', '0']
+correctResponses = [['num_7'],['num_1'],['num_4'], ['num_0'], ['num_0'], ['num_4'], ['num_1'], ['num_0'], ['num_4'], ['num_0']]
+correctResponsesKeys = ['num_7','num_1','num_4', 'num_0', 'num_0', 'num_4', 'num_1', 'num_0','num_4', 'num_0']
 
 jj = 1
 
@@ -852,7 +842,7 @@ for thisTrial_3 in trials_3:
                 # keyboard checking is just starting
                 win.callOnFlip(key_resp_9.clock.reset)  # t=0 on next screen flip
             if key_resp_9.status == STARTED:
-                theseKeys = event.getKeys(keyList=['7', '4', '1', '0'])
+                theseKeys = event.getKeys(keyList=['num_7', 'num_4', 'num_1', 'num_0'])
                 
                 # check for quit:
                 if "escape" in theseKeys:
@@ -861,15 +851,11 @@ for thisTrial_3 in trials_3:
                     key_resp_9.keys.extend(theseKeys)  # storing all keys
                     key_resp_9.rt.append(key_resp_9.clock.getTime())
                     # was this 'correct'?
+#                    getEvents(returnRaw=True, asKeys=True, allowRepeats=True)
+#                    event.getKeys()
                     if ((theseKeys) == (correctResponses[ii]) and (key_resp_9.rt[-1] > goTime) ):
                         trials_3.addData('stimulusPresent.t',goTime)
-                        if (key_resp_9.keys == (correctResponsesKeys[ii])):
-                            if (key_resp_9.rt[-1] > goTime): 
-                                key_resp_9_corr = 1
-                                trials_3.addData('keyRespCorrect', key_resp_9_corr) 
-                            else: 
-                                key_resp_9_corr = 0
-                                trials_3.addData('keyRespCorrect', key_resp_9_corr) 
+                        if (len(key_resp_9.keys) == 1):
                             trialCorrect = 1
                             trials_3.addData('trialCorrect',trialCorrect)
                         else: 
@@ -1101,7 +1087,6 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in instructions2Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-
         
 # -------Setting Up Repition for Block 3 -------
 # set up handler to look after randomisation of conditions etc
@@ -1119,8 +1104,8 @@ if thisTrial_3 != None:
 
 blank = 'allBlank.png'
 minImages = ['min1.png', 'min3.png', 'min2.png', 'min4.png', 'min4.png', 'min2.png', 'min3.png', 'min4.png', 'min2.png' , 'min4.png']
-correctResponses = [['7'],['1'],['4'], ['0'], ['0'], ['4'], ['1'], ['0'], ['4'], ['0']]
-correctResponsesKeys = ['7','1','4', '0', '0', '4', '1', '0','4', '0']
+correctResponses = [['num_7'],['num_1'],['num_4'], ['num_0'], ['num_0'], ['num_4'], ['num_1'], ['num_0'], ['num_4'], ['num_0']]
+correctResponsesKeys = ['num_7','num_1','num_4', 'num_0', 'num_0', 'num_4', 'num_1', 'num_0','num_4', 'num_0']
 
 jj = 1
 
@@ -1180,7 +1165,7 @@ for thisTrial_3 in trials_3:
                 # keyboard checking is just starting
                 win.callOnFlip(key_resp_9.clock.reset)  # t=0 on next screen flip
             if key_resp_9.status == STARTED:
-                theseKeys = event.getKeys(keyList=['7', '4', '1', '0'])
+                theseKeys = event.getKeys(keyList=['num_7', 'num_4', 'num_1', 'num_0'])
                 
                 # check for quit:
                 if "escape" in theseKeys:
@@ -1191,13 +1176,7 @@ for thisTrial_3 in trials_3:
                     # was this 'correct'?
                     if ((theseKeys) == (correctResponses[ii]) and (key_resp_9.rt[-1] > goTime) ):
                         trials_3.addData('stimulusPresent.t',goTime)
-                        if (key_resp_9.keys == (correctResponsesKeys[ii])):
-                            if (key_resp_9.rt[-1] > goTime): 
-                                key_resp_9_corr = 1
-                                trials_3.addData('keyRespCorrect', key_resp_9_corr) 
-                            else: 
-                                key_resp_9_corr = 0
-                                trials_3.addData('keyRespCorrect', key_resp_9_corr) 
+                        if (len(key_resp_9.keys) == 1):
                             trialCorrect = 1
                             trials_3.addData('trialCorrect',trialCorrect)
                         else: 
@@ -1508,16 +1487,8 @@ for thisTrial_2 in trials_2:
                 key_resp_9.rt.append(key_resp_9.clock.getTime())
                 # was this 'correct'?
                 if ((theseKeys) == (correctKey) and (key_resp_9.rt[-1] > goTime)):
-                    print('this is allowable key', allowableKey)
-                    print('this is these keys, what you pressed', theseKeys)
-                    print('this is the correct key', correctKey)
                     trials_2.addData('stimulusPresent.t', goTime)
-                    print(key_resp_9.keys[0])
-                    print(correctKeyPress)
-                    if (key_resp_9.keys == correctKey):
-                        print(key_resp_9.keys[0])
-                        print(correctKeyPress)
-                        print(correctKey)
+                    if (len(key_resp_9.keys) == 1):
                         key_resp_9_corr = 1
                         trialCorrect = 1
                         trials_2.addData('keyRespCorrect', key_resp_9_corr)
@@ -1624,146 +1595,8 @@ for thisTrial_2 in trials_2:
     thisExp.nextEntry()
     
 # completed 25 repeats of 'trials_2'
-
-
-# ------Prepare to start Routine "break_2"-------
-t = 0
-break_2Clock.reset()  # clock
-frameN = -1
-continueRoutine = True
-routineTimer.add(120.000000) #How long the screen will be up for 
-# update component parameters for each repeat
-break_2Response = event.BuilderKeyResponse()
-# keep track of which components have finished
-break_2Components = [text_7, break_2Response]
-for thisComponent in break_2Components:
-    if hasattr(thisComponent, 'status'):
-        thisComponent.status = NOT_STARTED
-
-#-------Start Routine "break_2"-------
-while continueRoutine and routineTimer.getTime() > 0:
-    # get current time
-    t = break_2Clock.getTime()
-    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-    # update/draw components on each frame
-            
-    # *text_7* updates
-    if t >= 0.0 and text_7.status == NOT_STARTED:
-        #keep track of start time/frame for later 
-        text_7.tStart = t 
-        text_7.frameNStart = frameN #extract frame index
-        text_7.setAutoDraw(True)
-    frameRemains = 0.0 + 120.0- win.monitorFramePeriod * 0.75 #most of one frame period left
-    if text_7.status == STARTED and t >= frameRemains: 
-        text_7.setAutoDraw(False) 
-            
-     # *break_2Response* updates
-    if t >= 0.0 and break_2Response.status == NOT_STARTED:
-        # keep track of start time/frame for later
-        break_2Response.tStart = t
-        break_2Response.frameNStart = frameN  # exact frame index
-        break_2Response.status = STARTED 
-        # keyboard checking is just startgin
-    frameRemains = 0.0 + 120- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if break_2Response.status == STARTED and t >= frameRemains:
-        break_2Response.status == STOPPED
-    if break_2Response.status == STARTED: 
-        theseKeys = event.getKeys(keyList=['space', 'enter', 'return'])
         
-        # check for quit:
-        if "escape" in theseKeys:
-            endExpNow = True
-        if len(theseKeys) > 0:  # at least one key was pressed
-            # a response ends the routine
-            continueRoutine = False
-                
-    # check if all components have finished
-    if not continueRoutine:  # a component has requested a forced-end of Routine
-        break
-    continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in break_2Components:
-        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-            continueRoutine = True
-            break  # at least one component has not yet finished
-    
-    # check for quit (the Esc key)
-    if endExpNow or event.getKeys(keyList=["escape"]):
-        core.quit()
-    
-    # refresh the screen
-    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-        win.flip()
-
-# -------Ending Routine "break_2"-------
-for thisComponent in break_2Components:
-    if hasattr(thisComponent, "setAutoDraw"):
-        thisComponent.setAutoDraw(False)
-
-# ------Prepare to start Routine "instructions2"-------
-t = 0
-instructions2Clock.reset()  # clock
-frameN = -1
-continueRoutine = True
-routineTimer.add(2.000000)
-# update component parameters for each repeat
-# keep track of which components have finished
-instructions2Components = [text_5, text_6]
-for thisComponent in instructions2Components:
-    if hasattr(thisComponent, 'status'):
-        thisComponent.status = NOT_STARTED
-
-# -------Start Routine "instructions2"-------
-while continueRoutine and routineTimer.getTime() > 0:
-    # get current time
-    t = instructions2Clock.getTime()
-    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-    # update/draw components on each frame
-    
-    # *text_5* updates
-    if t >= 0.0 and text_5.status == NOT_STARTED:
-        # keep track of start time/frame for later
-        text_5.tStart = t
-        text_5.frameNStart = frameN  # exact frame index
-        text_5.setAutoDraw(True)
-    frameRemains = 0.0 + 1.0- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_5.status == STARTED and t >= frameRemains:
-        text_5.setAutoDraw(False)
-    
-    # *text_6* updates
-    if t >= 1 and text_6.status == NOT_STARTED:
-        # keep track of start time/frame for later
-        text_6.tStart = t
-        text_6.frameNStart = frameN  # exact frame index
-        text_6.setAutoDraw(True)
-    frameRemains = 1 + 1.0- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_6.status == STARTED and t >= frameRemains:
-        text_6.setAutoDraw(False)
-    
-    # check if all components have finished
-    if not continueRoutine:  # a component has requested a forced-end of Routine
-        break
-    continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in instructions2Components:
-        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-            continueRoutine = True
-            break  # at least one component has not yet finished
-    
-    # check for quit (the Esc key)
-    if endExpNow or event.getKeys(keyList=["escape"]):
-        core.quit()
-    
-    # refresh the screen
-    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-        win.flip()
-
-# -------Ending Routine "instructions2"-------
-for thisComponent in instructions2Components:
-    if hasattr(thisComponent, "setAutoDraw"):
-        thisComponent.setAutoDraw(False)
-
-
-        
-        # ------Prepare to start Routine "end"-------
+# ------Prepare to start Routine "end"-------
 t = 0
 endClock.reset()  # clock
 frameN = -1
