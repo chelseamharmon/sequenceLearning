@@ -35,7 +35,10 @@ expInfo['date'] = data.getDateStr()  # add a simple timestamp
 expInfo['expName'] = expName
 
 # Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
-filename = _thisDir + os.sep + u'data' + os.sep + '%s_%s' % (expInfo['participant'], expInfo['date'])
+
+#filename = _thisDir + os.sep + u'data' + os.sep + '%s_%s' % (expInfo['participant'], expInfo['date'])
+
+filename = _thisDir + os.sep + u'data/PA%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])
 
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
@@ -92,7 +95,7 @@ text = visual.TextStim(win=win, name='text',
 # Initialize components for Routine "instructions2"
 instructions2Clock = core.Clock()
 text_5 = visual.TextStim(win=win, name='text_5',
-    text='Get Ready... \n\n Remember to go as fast as you can!',
+    text='Get Ready... \n\nRemember to go as fast as you can!',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1,
@@ -176,7 +179,7 @@ image_5 = visual.ImageStim(
 # Initialize components for Routine "end"
 endClock = core.Clock()
 goodJob = visual.TextStim(win=win, name='goodJob',
-    text='You did it!!!! \n\nYou caught 400 minions! \n\nGreat Job!!',
+    text='You did it!!!! \n\nYou caught 400 minions! \n\nGreat Job!! \n\n\n\n\n\n(experimenter press spacebar)',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1,
@@ -230,7 +233,7 @@ blankImage = visual.ImageStim(
 # Initialize components for Routine "end"
 endClock = core.Clock()
 goodJob = visual.TextStim(win=win, name='goodJob',
-    text='You did it!!!! \n\nYou caught 400 minions! \n\nGreat Job!!',
+    text='You did it!!!! \n\nYou caught 400 minions! \n\nGreat Job!! \n\n\n\n\n\n(experimenter press spacebar)',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1,
@@ -252,7 +255,7 @@ routineTimer = core.CountdownTimer()  # to track time remaining of each (non-sli
 # set up handler to look after randomisation of conditions etc
 #trials = data.TrialHandler(nReps=1, method='sequential', 
 #    extraInfo=expInfo, originPath=-1,
-#    trialList=data.importConditions('pawStimuli1.xlsx'),
+#    trialList=data.importConditions('images/pawStimuli1.xlsx'),
 #    seed=None, name='trials')
 #thisExp.addLoop(trials)  # add the loop to the experiment
 #thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
@@ -339,7 +342,7 @@ for thisComponent in instructionsComponents:
 # set up handler to look after randomisation of conditions etc
 trials = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('pawStimuli1.xlsx'),
+    trialList=data.importConditions('images/pawStimuli1.xlsx'),
     seed=None, name='trials')
 thisExp.addLoop(trials)  # add the loop to the experiment
 thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
@@ -348,7 +351,7 @@ if thisTrial != None:
     for paramName in thisTrial.keys():
         exec(paramName + '= thisTrial.' + paramName)
         
-minImages = ['practiceMin1.png', 'practiceMin2.png', 'practiceMin3.png', 'practiceMin4.png']
+minImages = ['images/practiceMin1.png', 'images/practiceMin2.png', 'images/practiceMin3.png', 'images/practiceMin4.png']
 listNumbers = ['1', '2', '3', '4']
 
 
@@ -517,7 +520,7 @@ for thisComponent in instructions2Components:
 # set up handler to look after randomisation of conditions etc
 trials_3 = data.TrialHandler(nReps=10, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('pawStimuli.xlsx'),
+    trialList=data.importConditions('images/pawStimuli.xlsx'),
     seed=None, name='trials_3')
 thisExp.addLoop(trials_3)  # add the loop to the experiment
 thisTrial_3 = trials_3.trialList[0] # so we can initialise stimuli with some values
@@ -527,8 +530,8 @@ if thisTrial_3 != None:
         exec(paramName + '= thisTrial_3.' + paramName)
 
 
-blank = 'allBlank.png'
-minImages = ['min1.png', 'min3.png', 'min2.png', 'min4.png', 'min4.png', 'min2.png', 'min3.png', 'min4.png']
+blank = 'images/allBlank.png'
+minImages = ['images/min1.png', 'images/min3.png', 'images/min2.png', 'images/min4.png', 'images/min4.png', 'images/min2.png', 'images/min3.png', 'images/min4.png']
 correctResponses = [['num_7'],['num_1'],['num_4'], ['num_0'], ['num_0'], ['num_4'], ['num_1'], ['num_0']]
 correctResponsesKeys = ['num_7','num_1','num_4', 'num_0', 'num_0', 'num_4', 'num_1', 'num_0']
 
@@ -841,7 +844,7 @@ for thisComponent in instructions2Components:
 # set up handler to look after randomisation of conditions etc
 trials_3 = data.TrialHandler(nReps=10, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('pawStimuli.xlsx'),
+    trialList=data.importConditions('images/pawStimuli.xlsx'),
     seed=None, name='trials_3')
 thisExp.addLoop(trials_3)  # add the loop to the experiment
 thisTrial_3 = trials_3.trialList[0] # so we can initialise stimuli with some values
@@ -851,8 +854,8 @@ if thisTrial_3 != None:
         exec(paramName + '= thisTrial_3.' + paramName)
 
 
-blank = 'allBlank.png'
-minImages = ['min1.png', 'min3.png', 'min2.png', 'min4.png', 'min4.png', 'min2.png', 'min3.png', 'min4.png']
+blank = 'images/allBlank.png'
+minImages = ['images/min1.png', 'images/min3.png', 'images/min2.png', 'images/min4.png', 'images/min4.png', 'images/min2.png', 'images/min3.png', 'images/min4.png']
 correctResponses = [['num_7'],['num_1'],['num_4'], ['num_0'], ['num_0'], ['num_4'], ['num_1'], ['num_0']]
 correctResponsesKeys = ['num_7','num_1','num_4', 'num_0', 'num_0', 'num_4', 'num_1', 'num_0']
 
@@ -1164,7 +1167,7 @@ for thisComponent in instructions2Components:
 #set up handler to look after randomisation of conditions for Block 3 etc
 trials_2 = data.TrialHandler(nReps=20, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions(u'random.xlsx'),
+    trialList=data.importConditions(u'images/random.xlsx'),
     seed=None, name='trials_2')
 thisExp.addLoop(trials_2)  # add the loop to the experiment
 thisTrial_2 = trials_2.trialList[0]  # so we can initialise stimuli with some values
@@ -1492,7 +1495,7 @@ for thisComponent in instructions2Components:
 # set up handler to look after randomisation of conditions etc
 trials_3 = data.TrialHandler(nReps=10, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('pawStimuli.xlsx'),
+    trialList=data.importConditions('images/pawStimuli.xlsx'),
     seed=None, name='trials_3')
 thisExp.addLoop(trials_3)  # add the loop to the experiment
 thisTrial_3 = trials_3.trialList[0] # so we can initialise stimuli with some values
@@ -1502,8 +1505,8 @@ if thisTrial_3 != None:
         exec(paramName + '= thisTrial_3.' + paramName)
 
 
-blank = 'allBlank.png'
-minImages = ['min1.png', 'min3.png', 'min2.png', 'min4.png', 'min4.png', 'min2.png', 'min3.png', 'min4.png']
+blank = 'images/allBlank.png'
+minImages = ['images/min1.png', 'images/min3.png', 'images/min2.png', 'images/min4.png', 'images/min4.png', 'images/min2.png', 'images/min3.png', 'images/min4.png']
 correctResponses = [['num_7'],['num_1'],['num_4'], ['num_0'], ['num_0'], ['num_4'], ['num_1'], ['num_0']]
 correctResponsesKeys = ['num_7','num_1','num_4', 'num_0', 'num_0', 'num_4', 'num_1', 'num_0']
 
@@ -1682,7 +1685,7 @@ for thisTrial_3 in trials_3:
 # set up handler to look after randomisation of conditions etc
 trials_questions = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('pawStimuli.xlsx'),
+    trialList=data.importConditions('images/pawStimuli.xlsx'),
     seed=None, name='trials_questions')
 thisExp.addLoop(trials_questions)  # add the loop to the experiment
 thisTrial_questions = trials_questions.trialList[0] # so we can initialise stimuli with some values
@@ -1797,7 +1800,7 @@ for thisComponent in questionsComponents:
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
         
-QImages = ['Q1.png', 'Q2.png', 'Q3.png', 'Q4.png']
+QImages = ['images/Q1.png', 'images/Q2.png', 'images/Q3.png', 'images/Q4.png']
 
 #for thisTrial in trials:
 #    currentLoop = trials
@@ -2070,7 +2073,7 @@ for thisTrial in trials:
     
 # completed 1 repeats of 'trials'7
 
-QImages = ['minRecall0.png']
+QImages = ['images/minRecall0.png']
 
 #for thisTrial in trials:
 #    currentLoop = trials
@@ -2173,7 +2176,7 @@ for ii in range(len(QImages)):
 # set up handler to look after randomisation of conditions etc
 trials_test = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('pawStimuli.xlsx'),
+    trialList=data.importConditions('images/pawStimuli.xlsx'),
     seed=None, name='trials_test')
 thisExp.addLoop(trials_test)  # add the loop to the experiment
 thisTrial_test = trials_test.trialList[0] # so we can initialise stimuli with some values
@@ -2183,7 +2186,7 @@ if thisTrial_test != None:
         exec(paramName + '= thisTrial_test.' + paramName)
 
 
-minImages = ['min1Recall.png', 'min3Recall.png', 'min2Recall.png', 'min4Recall.png', 'min4Recall.png', 'min2Recall.png', 'min3Recall.png', 'min4Recall.png', 'min1Recall.png']
+minImages = ['images/min1Recall.png', 'images/min3Recall.png', 'images/min2Recall.png', 'images/min4Recall.png', 'images/min4Recall.png', 'images/min2Recall.png', 'images/min3Recall.png', 'images/min4Recall.png', 'images/min1Recall.png']
 correctResponses = [['3'],['2'], ['4'], ['4'], ['2'], ['3'], ['4'], ['2'],['1'] ]
 allowableResponses = [['1'],['2'],['3'], ['4']]
 
@@ -2357,7 +2360,7 @@ for thisTrial_test in trials_test:
 # set up handler to look after randomisation of conditions etc
 trials_recogtest = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('pawStimuli.xlsx'),
+    trialList=data.importConditions('images/pawStimuli.xlsx'),
     seed=None, name='trials_recogtest')
 thisExp.addLoop(trials_recogtest)  # add the loop to the experiment
 thisTrial_recogtest = trials_recogtest.trialList[0] # so we can initialise stimuli with some values
@@ -2367,7 +2370,7 @@ if thisTrial_recogtest != None:
         exec(paramName + '= thisTrial_recogtest.' + paramName)
 
 
-recogImages = ['recognition1.png', 'recognition2.png']
+recogImages = ['images/recognition1.png', 'images/recognition2.png']
 recogCorrectResponses = [['1'],['3']]
 
 jj = 1
