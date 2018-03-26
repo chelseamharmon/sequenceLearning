@@ -95,7 +95,7 @@ text = visual.TextStim(win=win, name='text',
 # Initialize components for Routine "instructions2"
 instructions2Clock = core.Clock()
 text_5 = visual.TextStim(win=win, name='text_5',
-    text='Get Ready... \n\nRemember to go as fast as you can!',
+    text='Get Ready... ',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1,
@@ -131,6 +131,15 @@ blankImage = visual.ImageStim(
 break_2Clock = core.Clock()
 text_7 = visual.TextStim(win=win, name='text_7',
     text='Take a short break \n\n(Press spacebar when you are ready to continue) ',
+    font='Arial',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1,
+    depth=0.0);
+    
+# Initialize components for Routine "instructions3"
+instructions3Clock = core.Clock()
+instructions3 = visual.TextStim(win=win, name='instructions3',
+    text='Are you ready? \n\n\nRemember to go as fast as you can! \n\n\n\n\n\n(Press spacebar when you are ready to continue) ',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1,
@@ -453,6 +462,82 @@ for thisTrial in trials:
         # the Routine "practice" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
 
+# ------Prepare to start Routine "instructions3"-------
+t = 0
+instructions3Clock.reset()  # clock
+frameN = -1
+continueRoutine = True
+routineTimer.add(120.000000)
+# update component parameters for each repeat
+instructions3.setColor('white', colorSpace='rgb')
+instructions3Response = event.BuilderKeyResponse()
+# keep track of which components have finished
+instructions3Components = [instructions3, instructions3Response]
+for thisComponent in instructions3Components:
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+# -------Start Routine "instructions"-------
+while continueRoutine and routineTimer.getTime() > 0:
+    # get current time
+    t = instructions3Clock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *instructionsGeneral* updates
+    if t >= 0.0 and instructions3.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        instructions3.tStart = t
+        instructions3.frameNStart = frameN  # exact frame index
+        instructions3.setAutoDraw(True)
+    frameRemains = 0.0 + 120.0- win.monitorFramePeriod * 0.75  # most of one frame period left
+    if instructions3.status == STARTED and t >= frameRemains:
+        instructions3.setAutoDraw(False)
+    
+    # *instructionsResponse* updates
+    if t >= 0.0 and instructions3Response.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        instructions3Response.tStart = t
+        instructions3Response.frameNStart = frameN  # exact frame index
+        instructions3Response.status = STARTED
+        # keyboard checking is just starting
+        event.clearEvents(eventType='keyboard')
+    frameRemains = 0.0 + 120- win.monitorFramePeriod * 0.75  # most of one frame period left
+    if instructions3Response.status == STARTED and t >= frameRemains:
+        instructions3Response.status = STOPPED
+    if instructions3Response.status == STARTED:
+        theseKeys = event.getKeys(keyList=['space', 'enter', 'return'])
+        
+        # check for quit:
+        if "escape" in theseKeys:
+            endExpNow = True
+        if len(theseKeys) > 0:  # at least one key was pressed
+            # a response ends the routine
+            continueRoutine = False
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in instructions3Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # check for quit (the Esc key)
+    if endExpNow or event.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "instructions3"-------
+for thisComponent in instructions3Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+
+
 #------Prepare to start Routine "instructions2"-------
 t = 0
 instructions2Clock.reset()  # clock
@@ -530,7 +615,7 @@ if thisTrial_3 != None:
         exec(paramName + '= thisTrial_3.' + paramName)
 
 
-blank = 'images/allBlank.png'
+blankImage1 = ['images/allBlank.png']
 minImages = ['images/min1.png', 'images/min3.png', 'images/min2.png', 'images/min4.png', 'images/min4.png', 'images/min2.png', 'images/min3.png', 'images/min4.png']
 correctResponses = [['num_7'],['num_1'],['num_4'], ['num_0'], ['num_0'], ['num_4'], ['num_1'], ['num_0']]
 correctResponsesKeys = ['num_7','num_1','num_4', 'num_0', 'num_0', 'num_4', 'num_1', 'num_0']
@@ -653,7 +738,7 @@ for thisTrial_3 in trials_3:
         continueRoutine = True
         routineTimer.add(0.500000)
         # update component parameters for each repeat
-        blankImage.setImage(blank)
+        blankImage.setImage('images/allBlank.png')
         # keep track of which components have finished
         stimBlankComponents = [blankImage]
         for thisComponent in stimBlankComponents:
@@ -854,7 +939,7 @@ if thisTrial_3 != None:
         exec(paramName + '= thisTrial_3.' + paramName)
 
 
-blank = 'images/allBlank.png'
+blankImage1 = ['images/allBlank.png']
 minImages = ['images/min1.png', 'images/min3.png', 'images/min2.png', 'images/min4.png', 'images/min4.png', 'images/min2.png', 'images/min3.png', 'images/min4.png']
 correctResponses = [['num_7'],['num_1'],['num_4'], ['num_0'], ['num_0'], ['num_4'], ['num_1'], ['num_0']]
 correctResponsesKeys = ['num_7','num_1','num_4', 'num_0', 'num_0', 'num_4', 'num_1', 'num_0']
@@ -977,7 +1062,7 @@ for thisTrial_3 in trials_3:
         continueRoutine = True
         routineTimer.add(0.500000)
         # update component parameters for each repeat
-        blankImage.setImage(blank)
+        blankImage.setImage('images/allBlank.png')
         # keep track of which components have finished
         stimBlankComponents = [blankImage]
         for thisComponent in stimBlankComponents:
@@ -1162,8 +1247,11 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in instructions2Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-        
-        
+
+
+
+blankImage1 = ['images/allBlank.png']
+
 #set up handler to look after randomisation of conditions for Block 3 etc
 trials_2 = data.TrialHandler(nReps=20, method='random', 
     extraInfo=expInfo, originPath=-1,
@@ -1303,7 +1391,7 @@ for thisTrial_2 in trials_2:
     continueRoutine = True
     routineTimer.add(0.500000)
     # update component parameters for each repeat
-    blankImage.setImage(blank)
+    blankImage.setImage('images/allBlank.png')
     # keep track of which components have finished
     stimBlankComponents = [blankImage]
     for thisComponent in stimBlankComponents:
@@ -1505,7 +1593,8 @@ if thisTrial_3 != None:
         exec(paramName + '= thisTrial_3.' + paramName)
 
 
-blank = 'images/allBlank.png'
+
+blankImage1 = ['images/allBlank.png']
 minImages = ['images/min1.png', 'images/min3.png', 'images/min2.png', 'images/min4.png', 'images/min4.png', 'images/min2.png', 'images/min3.png', 'images/min4.png']
 correctResponses = [['num_7'],['num_1'],['num_4'], ['num_0'], ['num_0'], ['num_4'], ['num_1'], ['num_0']]
 correctResponsesKeys = ['num_7','num_1','num_4', 'num_0', 'num_0', 'num_4', 'num_1', 'num_0']
@@ -1628,7 +1717,7 @@ for thisTrial_3 in trials_3:
         continueRoutine = True
         routineTimer.add(0.500000)
         # update component parameters for each repeat
-        blankImage.setImage(blank)
+        blankImage.setImage('images/allBlank.png')
         # keep track of which components have finished
         stimBlankComponents = [blankImage]
         for thisComponent in stimBlankComponents:
@@ -2306,7 +2395,7 @@ for thisTrial_test in trials_test:
         continueRoutine = True
         routineTimer.add(0.500000)
         # update component parameters for each repeat
-        blankImage.setImage(blank)
+        blankImage.setImage('images/allBlank.png')
         # keep track of which components have finished
         stimBlankComponents = [blankImage]
         for thisComponent in stimBlankComponents:
@@ -2416,7 +2505,7 @@ for thisTrial_recogtest in trials_recogtest:
                 pos1.frameNStart = frameN  # exact frame index
                 pos1.setAutoDraw(True)
                 goTime = t
-            frameRemains = 0.0 + 50.0- win.monitorFramePeriod * 0.75  # most of one frame period left
+            frameRemains = 0.0 + 300.0- win.monitorFramePeriod * 0.75  # most of one frame period left
             if pos1.status == STARTED and t >= frameRemains:
                 pos1.setAutoDraw(False)
             if pos1.status == STARTED:  # only update if drawing
@@ -2445,6 +2534,7 @@ for thisTrial_recogtest in trials_recogtest:
                         trials_test.addData('trialCorrect',trialCorrect)
                         trials_test.addData('recallResponse',theseKeys)
                         trials_test.addData('recallResponseTime',t)
+                        continueRoutine = False
                     else: 
                         trialCorrect = 0
                         trials_test.addData('trialCorrect',trialCorrect)
@@ -2488,7 +2578,7 @@ t = 0
 finishClock.reset()  # clock
 frameN = -1
 continueRoutine = True
-routineTimer.add(5.000000)
+routineTimer.add(300.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
 finishComponents = [thankYou]

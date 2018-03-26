@@ -1780,7 +1780,6 @@ if thisTrial_questions != None:
 #logging.flush()
 
 
-
 # ------Prepare to start Routine "questions"-------
 t = 0
 questionsClock.reset()  # clock
@@ -2303,7 +2302,7 @@ for thisTrial_test in trials_test:
         continueRoutine = True
         routineTimer.add(0.500000)
         # update component parameters for each repeat
-        blankImage.setImage(blank)
+        blankImage.setImage('images/allBlank.png')
         # keep track of which components have finished
         stimBlankComponents = [blankImage]
         for thisComponent in stimBlankComponents:
@@ -2413,7 +2412,7 @@ for thisTrial_recogtest in trials_recogtest:
                 pos1.frameNStart = frameN  # exact frame index
                 pos1.setAutoDraw(True)
                 goTime = t
-            frameRemains = 0.0 + 50.0- win.monitorFramePeriod * 0.75  # most of one frame period left
+            frameRemains = 0.0 + 300.0- win.monitorFramePeriod * 0.75  # most of one frame period left
             if pos1.status == STARTED and t >= frameRemains:
                 pos1.setAutoDraw(False)
             if pos1.status == STARTED:  # only update if drawing
@@ -2442,6 +2441,7 @@ for thisTrial_recogtest in trials_recogtest:
                         trials_test.addData('trialCorrect',trialCorrect)
                         trials_test.addData('recallResponse',theseKeys)
                         trials_test.addData('recallResponseTime',t)
+                        continueRoutine = False
                     else: 
                         trialCorrect = 0
                         trials_test.addData('trialCorrect',trialCorrect)
@@ -2476,8 +2476,7 @@ for thisTrial_recogtest in trials_recogtest:
         thisExp.nextEntry()
     jj = jj + 1 
     if(jj == 2):
-        break 
-        
+        break
         
         
 # ------Prepare to start Routine "finish"-------
@@ -2485,7 +2484,7 @@ t = 0
 finishClock.reset()  # clock
 frameN = -1
 continueRoutine = True
-routineTimer.add(5.000000)
+routineTimer.add(300.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
 finishComponents = [thankYou]
