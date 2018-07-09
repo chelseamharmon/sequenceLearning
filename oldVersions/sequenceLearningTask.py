@@ -1,6 +1,9 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
+Created by Chelsea Harmon 
+March 26, 2018
+
 This experiment was created using PsychoPy2 Experiment Builder (v1.76.00),
     on Mon Mar 12 15:54:01 2018
 If you publish work using this script please cite the PsychoPy publications:
