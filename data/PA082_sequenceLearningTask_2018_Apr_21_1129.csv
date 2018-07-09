@@ -1,0 +1,6 @@
+trials_questions.thisRepN,trials_questions.thisTrialN,trials_questions.thisN,trials_questions.thisIndex,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,questionsResponses,AnswerFinished.keys,AnswerFinished.rt,RecordAnswer.keys,RecordAnswer.rt,date,frameRate,expName,session,participant,
+0,-1,-1,0,,,,,['2'],,,,,2018_Apr_21_1129,60.0527478551,sequenceLearningTask,001,082,
+0,-1,-1,0,,,,,['2'],,,,,2018_Apr_21_1129,60.0527478551,sequenceLearningTask,001,082,
+0,-1,-1,0,,,,,['2'],,,,,2018_Apr_21_1129,60.0527478551,sequenceLearningTask,001,082,
+0,-1,-1,0,,,,,['3'],,,,,2018_Apr_21_1129,60.0527478551,sequenceLearningTask,001,082,
+0,-1,-1,0,0,0,0,0,,return,6.17528335401, 3back nback none,"[1.9257735079154372, 2.5591723318211734, 3.54244165844284, 3.992197330109775, 4.425414738478139, 5.309296126710251, 5.4087968855164945, 5.492147894110531, 5.92543709743768]",2018_Apr_21_1129,60.0527478551,sequenceLearningTask,001,082,
