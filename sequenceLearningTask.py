@@ -70,7 +70,7 @@ else:
 # Initialize components for Routine "instructions"
 instructionsClock = core.Clock()
 instructionsGeneral = visual.TextStim(win=win, name='instructionsGeneral',
-    text="\n\nCatch the minions before they escape. \n\n\nRemember to go as fast as you can! \n\n\n\n\n\n(experimenter press spacebar)",
+    text="\n\nCatch the minions as fast as you can! \n\n\n\n\n\n(experimenter press spacebar)",
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color=1.0, colorSpace='rgb', opacity=1,
