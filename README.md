@@ -1,5 +1,5 @@
 # Sequence Learning Task 
-The goal of this study is to investigate how crEA-exposure influences motor sequence learning in school age children (6-12 years old) compared to a group of comparison children with no crEA exposure.
+The goal of this study is to investigate how caregiving related early adversity (crEA) exposure influences motor sequence learning in school age children (6-12 years old) compared to a group of comparison children with no crEA exposure.
 
 First subject ran March 18, 2018 (34 subjects) 
 Switched to Touchscreen Version June 12, 2018
