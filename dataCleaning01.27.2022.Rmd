@@ -611,81 +611,100 @@ table(taskData$participant, taskData$Group)
 
 
 
+
+#Removing data for incomplete or repeated 
+```{r}
+#Removing incomplete data 
+taskData <- taskData[!taskData$participant=='112',] #2 blocks only 
+taskData <- taskData[!taskData$participant=='253',] #has only 1 block
+taskData <- taskData[!taskData$participant=='311',] #only 2 blocks
+taskData <- taskData[!taskData$participant=='317',] #only did a few trials of block 1 
+
+#Repeated subject pre and post touch screen == 6 
+#Repeated subject post touch screen twice == 3, 31
+
+taskData <- taskData[!taskData$participant=='6',] #just use pre touch screen data so remove from post touch screen data sheet 
+
+unique(taskData[taskData$participant=='3',]$date) #on elvis has two dates of data April 21 2019 and June 27 2019 - V2W2 - dates close together - check data entry master to see when this subject came in 
+
+#View(taskData[taskData$participant=='3',]) 
+unique(taskData[taskData$participant=='31',]$date)
+
+unique(taskData[taskData$participant=='33',]$date)
+#View(taskData[taskData$participant=='33',])
+
+names(taskData)
+
+taskData %>% filter(participant=="3") %>%
+  group_by(TrialNum) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE)))
+
+
+taskDataSubj3 <- 
+  taskData %>% filter(participant=="3")
+
+taskDataSubj3
+unique(taskDataSubj3$session)
+
+
+taskDataSubj3$trialnumall <- 1:640
+taskDataSubj3[1:320,]$trialnumall <- 0
+taskDataSubj3[321:640,]$trialnumall <- 1
+taskDataSubj3 %>% 
+  group_by(trialnumall, Group) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE)))
+
+#data was repeated 2x (they are the same) because there was an extra data collected o6/27/2019 where no data was actually collected. Here I am going to remove the repeated trials 321-640
+
+taskDataSubj3 <- taskDataSubj3[taskDataSubj3$trialnumall==0,]
+length(taskDataSubj3)
+taskData <- taskData[!taskData$participant=='3',] 
+
+
+taskDataSubj3 <- taskDataSubj3[,1:26]
+
+
+table(taskData$participant, taskData$Group)
+
+#Removing the repeated data for subject 31 
+taskData %>% filter(participant=="31") %>%
+  group_by(date1, Group) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE)))
+
+
+taskData[taskData$participant==31,]$date1=="2019-06-07"
+
+unique(taskData[taskData$date1=="2019-06-07",]$participant)
+
+taskData<- taskData[!taskData$date1=="2019-06-07",] 
+
+table(taskData$participant, taskData$Group)
+
+taskData <- dplyr::rename(taskData, Block = Group)
+
+write.csv(taskData, "dataPostTouchCleaned1.28.2022.csv", row.names=F)
+
+table(taskDataPreTouch$participant, taskDataPreTouch$Group)
+taskDataPreTouch <- dplyr::rename(taskDataPreTouch, Block = Group)
+
+write.csv(taskDataPreTouch, "dataPreTouchCleaned1.28.2022.csv", row.names=F)
+
+
+```
+
+
+
+
 #Merging pre and post touch data 
 
 ```{r}
 taskData
 taskDataPreTouch
 
+unique(taskData$participant)
+unique(taskDataPreTouch$participant)
+
 ```
 
-
-
-##EXCLUDE THIS FOR NOW AND COME BACK AND CHECK ON THESE SUBJECTS - SKIP TO NEXT SECTION
-#Checking for complete Blocks
-```{r}
-#CONTROL + SHIFT + C
-
-# #excluding particpants who dont have complete data
-# blocksCompleted = rep(1,length(unique(taskData$participant)))
-# blocksAccum = rep(1,length(unique(taskData$participant)))
-# 
-# 
-# subject1 = as.character(taskData$participant[1])
-# blocksCompleted[1] <- sum(taskData$participant==subject1)
-# library(dplyr)
-# 
-# subjectList <- (distinct(taskData, participant))
-# subj2 <- as.character(subjectList$participant)
-# 
-# for(i in 1:length(subj2)){
-#   blocksCompleted[i] <- sum(taskData$participant==subj2[[i]])
-# }
-# 
-# #blocksLength
-# blocksLength <- rbind(subj2, blocksCompleted)
-# #blocksLength[blocksLength$blocksCompleted < 4,]
-# blocksLength
-# 
-# sum(blocksCompleted<320) # 1 subject does not have comlete data
-# 
-# 
-# length(subj2) #32 subjects 7/13
-# length(subj2) #67 subjects 10/02
-# 
-# taskData$participant <- as.factor(taskData$participant)
-```
-
-
-##For now remove subjects that are fishy and come back for them later 
-
-#Removing
-112      0      0     80     80
-#245    160     80     80      0 check 
-253      0      0      0     80
-#301    160    160      0      0 #check
-#308     87     73     80     80 #check
-317      0      0      0      7
-#89     160    160      0      0 #check
-311      0      7     80     73
-
-#Remove outliers  
-```{r}
-taskData <- taskData[!taskData$participant=='112',] #2 blocks only 
-#taskData <- taskData[!taskData$participant=='245',]  #check 
-taskData <- taskData[!taskData$participant=='253',] #has only 1 block
-#taskData <- taskData[!taskData$participant=='301',] #check looks fine
-#taskData <- taskData[!taskData$participant=='308',] #check looks fine
-taskData <- taskData[!taskData$participant=='317',] 
-#taskData <- taskData[!taskData$participant=='89',] #check looks fine 
-taskData <- taskData[!taskData$participant=='311',] #only 2 trials
-
-length(unique(taskData$participant))
-
-#write.csv(taskData, "dataPostTouchCleaned1.15.2019.csv", row.names=F)
-
-table(taskData$participant, taskData$Group)
-#View(taskData)
-```
 
 
