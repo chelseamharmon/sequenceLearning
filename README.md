@@ -12,4 +12,9 @@ Subjects data from June 15, 2018 - June 20, 2018 Sequence was wrong on new versi
 
 Additional Authors: Harmon, C., Bloom, P., Fields, A., VanTieghem, M., Choy, T., Camacho, N., Gibson, L., Umbach, R., Heleniak, C., Tottenham, N.
 
-
+#Data Cleaninng 
+run dataCleaning01.27.2022.Rmd (shows how inputs were created from raw data) - takes inputs pre_touchscreen.task.data_11.16.21.csv and post_touchscreen.task.data_11.16.21.csv and cleans filed - outputs:
+dataPostTouchCleaned1.28.2022.csv
+questionnaireDataPostTouchCleaned1.28.2022.csv
+dataPreTouchCleaned1.28.2022.csv
+questionnaireDataPretTouchCleaned1.28.2022.csv
