@@ -44,7 +44,8 @@ theme_set(theme_bw() + theme(panel.grid = element_blank(),
 
 #Getting Data From data Folder output from Psychopy 
 
-```{r,include=FALSE}
+```.R
+{r,include=FALSE}
 
 all.file.names <- list.files(path = "/Users/chelseaharmon/Dropbox/danlab/Tasks/motorSequenceLearning/sequenceLearning/data/V1W1", pattern = ".csv")
 length(all.file.names)
@@ -108,7 +109,8 @@ length(W1.file.path.names)
 ```
 
 #Grabbing Wave 2 data 
-```{r,include=FALSE}
+```.R
+{r,include=FALSE}
 
 W2.all.file.names <- list.files(path = "/Users/chelseaharmon/Dropbox/danlab/Tasks/motorSequenceLearning/sequenceLearning/data/V2W2", pattern = ".csv")
 length(W2.all.file.names)
@@ -166,7 +168,8 @@ length(W2.file.path.names)
 
 
 #Making sepearte csv with demographcis or W1 and W2 
-```{r}
+```.R
+{r}
 #wave 1
 length(W1.file.path.names)
 #242
@@ -205,7 +208,8 @@ write.csv(taskData, file= "Wave1RawData_12.03.21.csv", row.names = F)
 
 #Making csv with all subjects data
 
-```{r, include=FALSE}
+```.R
+{r, include=FALSE}
 #Because thius was run aleady we can load the data at the bottom of this code chunk 
 #
 # #taskData1 <- read.csv((file.path.names[1]), stringsAsFactors = F)
@@ -280,7 +284,8 @@ count(taskData$participant)
 
 
 #Seperatng touch screen 
-```{r}
+```.R
+{r}
 #View(taskData[taskData$allowableKey=="['num_7', 'num_4', 'num_1', 'num_0']",])
 #taskData$preTouchScreen <- ifelse(taskData$allowableKey=="['num_7', 'num_4', 'num_1', 'num_0']", 1, 0)
 #taskData$expName
@@ -341,7 +346,8 @@ head(taskDataTouch)
 
 
 #Cleaning touch screen data 
-```{r}
+```.R
+{r}
 
 #head(taskDataTouch)
 #names(taskDataTouch)
@@ -381,7 +387,8 @@ head(taskDataTouch)
 
 #Cleaning pre touch screen data 
 
-```{r}
+```.R
+{r}
 taskDataPreTouch <- read.csv("pre_touchscreen.task.data_11.16.21.csv")
 
 (unique(taskDataPreTouch$repetitionNumber))
@@ -414,7 +421,8 @@ write.csv(questionnaireDataPreTouch, "questionnaireDataPretTouchCleaned1.28.2022
 
 #seperating data into blocks, pre touch screen 
 
-```{r}
+```.R
+{r}
 
 unique(taskDataPreTouch$participant)[2]
 
@@ -455,7 +463,8 @@ unique(taskData$participant)
 
 
 #seperating pre touch screen into Blocks 
-```{r}
+```.R
+{r}
 
 taskDataPreTouchBlocks1 <- taskDataPreTouch 
 #taskDataPreTouchBlocks1$Group <-  taskDataPreTouchBlocks1$Trial
@@ -489,7 +498,8 @@ table(taskDataPreTouch$participant, taskDataPreTouch$Group)
 
 
 #Cleaning post touch screen data 
-```{r, include=FALSE}
+```.R
+{r, include=FALSE}
 taskData <- read.csv("post_touchscreen.task.data_11.16.21.csv")
 head(taskData)
 
@@ -551,7 +561,8 @@ write.csv(questionnaireDataTouch, "questionnaireDataPostTouchCleaned1.28.2022.cs
 
 
 #seperating data into Blocks 
-```{r}
+```.R
+{r}
 
 taskData$repetitionNumber
 
@@ -631,7 +642,8 @@ table(taskData$participant, taskData$Group)
 
 
 #Removing data for incomplete or repeated 
-```{r}
+```.R
+{r}
 #Removing incomplete data 
 taskData <- taskData[!taskData$participant=='112',] #2 blocks only 
 taskData <- taskData[!taskData$participant=='253',] #has only 1 block
@@ -707,15 +719,14 @@ taskDataPreTouch <- dplyr::rename(taskDataPreTouch, Block = Group)
 
 write.csv(taskDataPreTouch, "dataPreTouchCleaned1.28.2022.csv", row.names=F)
 
-
 ```
-
 
 
 
 #Merging pre and post touch data 
 
-```{r}
+```.R
+{r}
 
 #head(taskDataPreTouch)
 taskDataPreTouch <- read.csv("dataPreTouchCleaned1.28.2022.csv")
@@ -741,7 +752,8 @@ unique(taskData$PreTouchByDate)
 unique(taskDataPreTouch$PreTouchByDate)
 ```
 
-```{r}
+```.R
+{r}
 head(taskDataPreTouch)
 #taskDataPreTouch$key_resp_9.rt
 
