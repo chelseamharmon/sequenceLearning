@@ -210,8 +210,9 @@ write.csv(taskData, file= "Wave1RawData_12.03.21.csv", row.names = F)
 
 ```.R
 {r, include=FALSE}
-#Because thius was run aleady we can load the data at the bottom of this code chunk 
-#
+
+#Because this was run aleady we can load the data at the bottom of this code chunk 
+
 # #taskData1 <- read.csv((file.path.names[1]), stringsAsFactors = F)
 # 
 # #file.path.names[1]
