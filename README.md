@@ -789,3 +789,252 @@ write.csv(allTaskData, "allTaskDataCleaned1.28.2022.csv", row.names=F)
 ```
 
 
+# Getting demographic data and Plottinng (see SequenceFixingDemographicsAndModelsCorrectBlock1.19.2022.Rmd for Frequentist models before prospectus and sequencePlottingAndAnalyses01.27.2022.Rmd for set up of Bayesian models after prospectus) 
+
+```.R
+{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+set.seed(1234)
+library(knitr)
+library(tidyverse)
+library(broom)
+library(ggplot2)
+library(plyr)
+library(dplyr)
+library(tidyr)
+library(brms)
+library(bmlm)
+
+
+knitr::opts_chunk$set(echo = T, cache = F, tidy = F, warning = F, message = F)  # Code not shown by default
+
+# Set global ggplot theme
+theme_set(theme_bw() + theme(panel.grid = element_blank(),
+                             strip.text = element_blank(),
+                             strip.background = element_blank(),
+                             legend.position = "none"))
+
+
+#### USE GROUPINGS FROM DATA ENTRY MASTER ON THE SERVER
+taskData <- read.csv("allTaskDataCleaned1.28.2022.csv")
+head(taskData)
+length(unique(taskData$participant))
+
+```
+
+```.R
+{r}
+#removing subjects for no demographics PA227 PA228 PA229
+taskData <- taskData[!taskData$participant=="227",]
+taskData <- taskData[!taskData$participant=="228",]
+taskData <- taskData[!taskData$participant=="229",]
+
+length(unique(taskData$participant))
+```
+
+
+adding demo data 
+```.R
+{r}
+
+W1.demo <- read.csv("MASTER_W1_20210223.csv")
+
+W1.demo <- W1.demo[,c("IDENT_SUBID", "GROUP", "SUBAGE_Session1","DEM_3_GENDER_CHILD","DEM_FINAL_CHILD_RACE", "SCHOOLGRADE")]
+
+names(W1.demo)
+#CGH_SUM_SWITCHES #looking for these variables in the document
+#CGH_AGE_EARLY#looking for these variables in the document
+
+W1.demo$participant <- substr(W1.demo$IDENT_SUBID, start=3, stop=5)
+W1.demo$participant <- as.numeric(sub("^0+", "", W1.demo$participant))
+
+unique(W1.demo$IDENT_SUBID)
+W1_data_withDEMO <- merge(W1.demo, taskData, by="participant")
+
+unique(W1_data_withDEMO$participant)==unique(taskData$participant)
+length(unique(W1_data_withDEMO$participant))
+length(unique(taskData$participant))
+W1_data_withDEMO[W1_data_withDEMO$participant==225,]
+
+
+W2.demo <- read.csv("MASTER_W2_20200417.csv")
+head(W2.demo)
+W2.demo <- W2.demo[,c("IDENT_SUBID", "GROUP","SUBAGE_Session2", "SCHOOLGRADE", "DEM_1_DATESESS2")] #"DEM_FINAL_CHILD_RACE", missing from W2 so much retrieve from wave 1 demos 
+W2.demo$participant <- substr(W2.demo$IDENT_SUBID, start=3, stop=5)
+W2.demo$participant <- as.numeric(sub("^0+", "", W2.demo$participant))
+unique(W2.demo$participant)
+
+length(unique(taskData$participant))
+
+unique(taskData$participant)
+#rbind(W1.demo, W2.demo)
+
+
+W2.subset <- subset(W2.demo, select=c(SUBAGE_Session2, IDENT_SUBID, participant, SCHOOLGRADE))
+
+#merge(W1.demo, taskData)
+
+
+W1.demoTask <- merge(W1.demo, taskData)
+
+
+demo_TaskData <- merge(W1.demoTask, W2.subset, by="participant")
+demo_TaskData
+names(W1.demoTask)
+W2.subset
+
+#classifying by date does not work because Wave 1 and Wave 2 were happenign simultanously 
+#demo_TaskData$Wave <- ifelse(demo_TaskData$date1 > "2019-04-07", "Wave2", "Wave1")
+
+list.of.Wave2.participants <- c(22, 21, 27, 50, 40, 16, 12, 53, 3, 37, 36, 45, 35, 30, 17, 43, 9, 38, 41, 5, 4, 66, 6, 57, 56, 31, 7, 8, 71, 11, 10, 49, 74, 20, 23, 48, 34, 3, 33, 25, 24, 69, 42, 70, 59, 58, 60, 61, 64)
+
+#repeated data PA006 PA031 PA058 PA059 PA060 PA061 PA069
+#61, 60, 58, 59 completed wave 2 on Aug 4 2019 
+#69 completed W2 on Jul 14 2019
+#31 completed W2 on Jun 7 2019 
+#6 completed W2 Jun 1 2019 
+
+subsetDemoTask <- demo_TaskData[demo_TaskData$TrialNum==1,]
+#subsetDemoTask
+subsetDemoTask[subsetDemoTask$participant==c(list.of.Wave2.participants),]
+#View(demo_TaskData[demo_TaskData$TrialNum==1,])
+
+demo_TaskData$SUBAGE_Session2
+
+demo_TaskData$Age <- ifelse(is.element(demo_TaskData$participant, list.of.Wave2.participants), demo_TaskData$SUBAGE_Session2, demo_TaskData$SUBAGE_Session1)
+
+#ifelse(is.element(demo_TaskData$participant, !list.of.Wave2.participants), demo_TaskData$SUBAGE_Session1, demo_TaskData$SUBAGE_Session2)
+
+
+#demo_TaskData$Wave == "Wave1"
+#demo_TaskData$Grade <- ifelse(demo_TaskData$Wave == "Wave1", demo_TaskData$SCHOOLGRADE.x, demo_TaskData$SCHOOLGRADE.y)
+
+demo_TaskData$Wave <- ifelse(is.element(demo_TaskData$participant, list.of.Wave2.participants), "Wave2", "Wave1")
+
+demo_TaskData$Grade <- ifelse(is.element(demo_TaskData$participant, list.of.Wave2.participants), demo_TaskData$SCHOOLGRADE.y, demo_TaskData$SCHOOLGRADE.x)
+
+names(demo_TaskData)
+#subsetTaskData <- subset(demo_TaskData, select = c(participant, GROUP, Age, SUBAGE_Session1,SUBAGE_Session2, DEM_3_GENDER_CHILD, DEM_FINAL_CHILD_RACE, Grade, responseTimeCorrect, date1, repetitionNumber, TrialNum, Block, Wave))
+
+#View(subsetTaskData[subsetTaskData$participant==31,])
+#View(taskData[taskData$participant==31,])
+
+#View(subsetTaskData[subsetTaskData$TrialNum==1,])
+#length(unique(subsetTaskData$participant))
+
+#View(taskData)
+#April 7 2019 was when wave 2 started <- but wave 1 was still ongoing 
+```
+
+
+
+#Looking at demographics - Age and Group 
+```.R
+{r}
+#taskData <- subsetTaskData
+taskData <- demo_TaskData
+taskData$AgeYears <- as.factor(trunc(taskData$Age))
+length(unique(taskData$participant))
+
+summaryAllValues <- taskData %>% 
+  group_by(participant, Block, Age, GROUP) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE)))
+
+summaryAllValues$AgeYears <- as.factor(trunc(summaryAllValues$Age))
+class(summaryAllValues$Age)
+
+summaryAllValueswide <- summaryAllValues %>%
+  spread(Block, responseTimeCorrect)
+
+length(unique(summaryAllValueswide$participant))
+
+
+ggplot(data=summaryAllValues, aes(Block, responseTimeCorrect, group=participant,color=AgeYears)) +
+  geom_point() + 
+  geom_line() +
+  theme(legend.position = "right", strip.text.x = element_text(colour = "black")) + 
+  facet_wrap(~GROUP) 
+
+ggplot(data=summaryAllValues, aes(Age, forcats::fct_reorder(as.factor(participant), Age), color=GROUP)) + 
+  geom_point() + 
+  theme(legend.position = "right", strip.text.x = element_text(colour = "black")) 
+
+ggplot(data=summaryAllValues, aes(Age, forcats::fct_reorder(as.factor(participant), Age), color=GROUP)) + 
+  geom_point() + 
+  facet_wrap(~GROUP) + 
+  #theme(legend.position = "right", strip.text.x = element_text(colour = "black")) + 
+  theme( strip.text.x = element_text(colour = "black")) 
+
+summaryAllValueswide
+
+ggplot(data=summaryAllValueswide, aes(AgeYears, color=GROUP, fill=GROUP)) + 
+  geom_bar() + 
+  facet_wrap(~GROUP) + 
+  geom_text(stat='count', aes(label=..count..), vjust=-1) + 
+  ylim(0, 30) + 
+  labs(title="Groups broken down by Age")+
+  theme( strip.text.x = element_text(colour = "black")) 
+  
+
+
+ggplot(data=summaryAllValueswide, aes(GROUP, color=GROUP, fill=GROUP)) + 
+  geom_bar() + 
+  geom_text(stat='count', aes(label=..count..), vjust=-1) + 
+  ylim(0, 95) + 
+  labs(title="Groups")+
+  theme( strip.text.x = element_text(colour = "black")) 
+
+
+
+summaryAllValueswide$GroupBinary <- ifelse(summaryAllValueswide$GROUP=="C", "comps", "crEAs")
+
+ggplot(data=summaryAllValueswide, aes(GroupBinary, color=GroupBinary, fill=GroupBinary)) + 
+  geom_bar() + 
+  geom_text(stat='count', aes(label=..count..), vjust=-1) + 
+  ylim(0, 180) + 
+  labs(title="Total N (comps vs. crEAs)")+
+  theme( strip.text.x = element_text(colour = "black")) 
+
+ggplot(data=summaryAllValueswide, aes(AgeYears, color=GroupBinary, fill=GroupBinary)) + 
+  geom_bar() + 
+  facet_wrap(~GroupBinary) + 
+  geom_text(stat='count', aes(label=..count..), vjust=-1) + 
+  ylim(0, 30) + 
+  labs(title="Total N (comps vs. crEAs) by Age")+
+  theme( strip.text.x = element_text(colour = "black")) 
+
+
+summaryAllValues <- taskData %>% 
+  group_by(participant, Block, Age, GROUP, PreTouchByDate) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE))) %>%
+  spread(Block, responseTimeCorrect) %>%
+  mutate(GroupBinary = ifelse(GROUP=="C", "comps", "crEAs")) %>% 
+  mutate(PreTouchByDate = ifelse(PreTouchByDate==0, "Keyboard", "Touchscreen")) %>%
+  mutate(AgeYears = as.factor(trunc(Age)))
+
+class(summaryAllValues$PreTouchByDate)
+
+ggplot(data=summaryAllValues, aes(AgeYears, color=PreTouchByDate, fill=PreTouchByDate)) + 
+  geom_bar() + 
+  facet_wrap(~GroupBinary) + 
+  geom_text(stat='count', aes(label=..count..), vjust=-1, color="black") + 
+  ylim(0, 50) + 
+  labs(title="Total N (comps vs. crEAs) by Age")+
+  theme( strip.text.x = element_text(colour = "black"), legend.position="right") 
+
+ggplot(data=summaryAllValues, aes(AgeYears)) + 
+  geom_bar() + 
+  facet_wrap(~GroupBinary) + 
+  geom_text(stat='count', aes(label=..count..), vjust=-1, color="black") + 
+  ylim(0, 50) + 
+  labs(title="Total N (comps vs. crEAs) by Age")+
+  theme( strip.text.x = element_text(colour = "black"))
+
+length(summaryAllValues$participant)
+mean(summaryAllValueswide$Age)
+summaryAllValues
+
+```
+
+
+
