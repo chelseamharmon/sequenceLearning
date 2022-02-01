@@ -22,6 +22,8 @@ theme_set(theme_bw() + theme(panel.grid = element_blank(),
                              strip.text = element_blank(),
                              strip.background = element_blank(),
                              legend.position = "none"))
+
+#Change path to /danl/PACCT/subject_data/task-data/V1W1/sequence and /danl/PACCT/subject_data/task-data/V2W2/sequence when looking on the server 
 ```
 
 #Getting Data From data Folder output from Psychopy 
@@ -598,8 +600,7 @@ length(unique(taskData$participant))
 unique(taskData$participant)
 
 
-write.csv(taskData, "dataPostTouchCleaned1.28.2022.csv", row.names=F)
-
+#write.csv(taskData, "dataPostTouchCleaned1.28.2022.csv", row.names=F)
 #write.csv(taskData, "dataPostTouchCleaned1.15.2019.csv", row.names=F)
 
 
@@ -698,11 +699,63 @@ write.csv(taskDataPreTouch, "dataPreTouchCleaned1.28.2022.csv", row.names=F)
 #Merging pre and post touch data 
 
 ```{r}
-taskData
-taskDataPreTouch
+
+#head(taskDataPreTouch)
+taskDataPreTouch <- read.csv("dataPreTouchCleaned1.28.2022.csv")
+taskData <-  read.csv("dataPostTouchCleaned1.28.2022.csv")
 
 unique(taskData$participant)
 unique(taskDataPreTouch$participant)
+
+head(taskData)
+
+unique(taskData$session)
+#View(taskData[which(taskData$trialIncorrect==1),])
+
+#Check who has two sessions - looks like participant 22 only has session 2 no session 1 - should be okay
+
+taskData %>% 
+  filter(participant==22) %>% 
+  group_by(Block, session) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE)))
+
+unique(taskData[which(taskData$session==2),]$participant)
+unique(taskData$PreTouchByDate)
+unique(taskDataPreTouch$PreTouchByDate)
+```
+
+```{r}
+head(taskDataPreTouch)
+#taskDataPreTouch$key_resp_9.rt
+
+#sapply(taskDataPreTouch$key_resp_9.rt, tail, 1)
+
+#sapply(taskDataPreTouch$key_resp_9.rt[[2]], tail, 1)
+#testing with 2 (length 2 response times) and testing with 35 (length 3 response times)
+(strsplit(taskDataPreTouch$key_resp_9.rt, split = ","))[[2]]
+gsub("^.*, |]", "", taskDataPreTouch$key_resp_9.rt[[2]]) #replace anything BEFORE the , with nothing and replace the last ']' with nothing
+gsub("\\[|\\]|, .*", "", taskDataPreTouch$key_resp_9.rt[[2]]) #replace anything AFTER the , with nothing and replace the last ']' with nothing
+
+#(strsplit(taskDataPreTouch$key_resp_9.rt, split = ","))[[35]]
+#gsub("^.*, |]", "", taskDataPreTouch$key_resp_9.rt[[35]]) #replace anything before the , with nothing and replace the last ']' with nothing
+
+taskDataPreTouch$responseTimeCorrect <- gsub("\\[|\\]|^.*, ", "", taskDataPreTouch$key_resp_9.rt)
+taskDataPreTouch$trialIncorrect <- ifelse(taskDataPreTouch$trialCorrect==0, 1,NA)
+taskDataPreTouch$responseTimeIncorrect <- ifelse(taskDataPreTouch$trialIncorrect==1, gsub("\\[|\\]|, .*", "", taskDataPreTouch$key_resp_9.rt), NA)
+taskDataPreTouch
+
+#taskDataAll <- 
+
+taskDataSubset <- taskData %>%
+  subset(select=c('participant', 'date1', 'stimulusPresent.t', 'repetitionNumber', 'anticipatoryResponse', 'responseTimeCorrect', 'responseTimeIncorrect', 'trialIncorrect', 'PreTouchByDate', 'TrialNum', 'Block')) #Taking out the informative variables of pressLoc and correctLocation which would come in handy if you wanted to verify that an incorrect press was outside of the dimensional location. May also be important for varifying anticipatory responsnes 
+taskDataPreTouchSubset <- taskDataPreTouch %>%
+  subset(select=c('participant', 'date1', 'stimulusPresent.t', 'repetitionNumber', 'anticipatoryResponse', 'responseTimeCorrect', 'responseTimeIncorrect', 'trialIncorrect', 'PreTouchByDate', 'TrialNum', 'Block'))
+
+allTaskData<- rbind(taskDataSubset, taskDataPreTouchSubset)
+
+
+
+write.csv(allTaskData, "allTaskDataCleaned1.28.2022.csv", row.names=F)
 
 ```
 

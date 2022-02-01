@@ -1,0 +1,2138 @@
+---
+title: "Pre Analysis Plotting"
+author: "Chelsea Harmon"
+date: "10/13/2021"
+output:
+  html_document: 
+    toc: yes
+    toc_float: 
+      smooth_scross: true
+      collapsed: false 
+    number_sections: true  
+  word_document: default
+---
+
+#For Bayesian modelling - model outputs 
+https://vincentarelbundock.github.io/marginaleffects/articles/contrasts.html
+https://vincentarelbundock.github.io/marginaleffects/
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+library(tidyverse)
+library(broom)
+library(ggplot2)
+library(plyr)
+library(dplyr)
+library(tidyr)
+
+knitr::opts_chunk$set(echo = T, cache = F, tidy = F, warning = F, message = F)  # Code not shown by default
+
+# Set global ggplot theme
+theme_set(theme_bw() + theme(panel.grid = element_blank(),
+                             strip.text = element_blank(),
+                             strip.background = element_blank(),
+                             legend.position = "none"))
+
+
+#### USE GROUPINGS FROM DATA ENTRY MASTER ON THE SERVER
+taskData <- read.csv("all.subject.task.data_11.16.21.csv")
+head(taskData)
+length(unique(taskData$participant))
+
+
+```
+#MUST DO BLOCKS BEFORE MERGING AND CHANGING ORDER OF TRIAL NUM 
+
+
+
+
+
+#Checking repeating subjects and pre post touch screen 
+```{r}
+length(unique(taskData$participant))
+
+#removing subjects for incorrect version 
+taskData <- taskData[!taskData$participant=="98",]
+taskData <- taskData[!taskData$participant=="127",]
+taskData <- taskData[!taskData$participant=="136",]
+taskData <- taskData[!taskData$participant=="86",]
+
+#removing subjects for no demographics PA227 PA228 PA229
+taskData <- taskData[!taskData$participant=="227",]
+taskData <- taskData[!taskData$participant=="228",]
+taskData <- taskData[!taskData$participant=="229",]
+
+
+length(unique(taskData$participant))
+
+
+#Task Data Touch Screen seperate data frame - possibly save this for later 
+#taskDataTouch <- taskData[complete.cases(taskData$correctLocation), ]
+#taskDataTouchCheck <- taskData[taskData$preTouchScreen ==1,]
+
+#unique(taskDataTouch$participant)
+#unique(taskDataTouchCheck$participant)
+
+unique(taskData$date)
+taskData$date1 <- substr(taskData$date, start=1, stop=11)
+taskData$date1 
+taskData$date1 <- as.Date(taskData$date1, format = ("%Y_%b_%d"))
+class(taskData$date1)
+
+taskData$PreTouchByDate<- ifelse(taskData$date1 > "2018-06-12", 0, 1)
+unique(taskData$participant)
+
+unique(taskData$participant[taskData$PreTouchByDate==1])
+unique(taskData$participant[taskData$PreTouchByDate==0])
+length(unique(taskData$participant[taskData$PreTouchByDate==1]))
+length(unique(taskData$participant[taskData$PreTouchByDate==0]))
+
+data_PreTouch <- taskData[taskData$PreTouchByDate==1,]
+taskData <- taskData[taskData$PreTouchByDate==0,]
+
+length(unique(taskData$participant))
+#248 have post touch screen - 2 of which did the task twice so we really havve 246 subjects 
+
+length(unique(data_PreTouch$participant))
+#33 have pre touch screen data  - 
+
+head(taskData)
+242-33
+```
+
+
+#seperating data into Blocks (took out pre touch screen)
+```{r}
+taskData$repetitionNumber
+
+taskData$TrialNum <- sequence(rle(taskData$participant)$lengths)
+
+taskData$TrialNum
+
+
+taskDataBlocks1 <- taskData
+#taskDataBlocks1$Group <-  taskDataBlocks1$Trial
+
+#Post Touch screen has sequence length 8 for 10 sequences per block 
+taskDataBlocks1$Block1 <- taskDataBlocks1$TrialNum <= 80 #100
+taskDataBlocks1$Block2 <- between(taskDataBlocks1$Trial, 81, 160)  #101,  200 ) 
+taskDataBlocks1$Block3 <- between(taskDataBlocks1$Trial, 161, 240) #201,  300 ) 
+taskDataBlocks1$Block4 <- between(taskDataBlocks1$Trial, 241, 320)   #301,  400 ) 
+
+taskDataBlocks1$Block[taskDataBlocks1$Block1 == TRUE] <- "Block1"
+taskDataBlocks1$Block[taskDataBlocks1$Block2 == TRUE] <- "Block2"
+taskDataBlocks1$Block[taskDataBlocks1$Block3 == TRUE] <- "Block3"
+taskDataBlocks1$Block[taskDataBlocks1$Block4 == TRUE] <- "Block4"
+#Group <- taskDataBlocks1$Group
+Block <- taskDataBlocks1$Block
+
+PostTouchScreenByBlock <- taskDataBlocks1
+
+taskData$Block <- taskDataBlocks1$Block
+head(taskData)
+
+unique(taskData$Block)
+
+names(taskData)
+length(unique(taskData$participant))
+
+length(unique(taskData$participant))
+
+#write.csv(taskData, "dataPostTouchCleaned1.15.2019.csv", row.names=F)
+
+table(taskData$participant, taskData$Block)
+
+
+
+#View(taskData)
+
+
+#What are anticipatory responses that are incorrect??? 
+```
+
+#Remove incomplete Data  
+```{r}
+#Subject 3 did the task twice 
+#Subject 31 did task twice 
+# #taskData <- taskData[!taskData$participant=='89',] #check looks fine 
+taskData <- taskData[!taskData$participant=='112',] #2 blocks only 
+# #taskData <- taskData[!taskData$participant=='245',]  #check, looks good 
+taskData <- taskData[!taskData$participant=='253',] #has only 1 block
+# #taskData <- taskData[!taskData$participant=='301',] #check looks fine
+# #taskData <- taskData[!taskData$participant=='c308',] #check looks fine
+taskData <- taskData[!taskData$participant=='311',] #only 2 Blocks
+taskData <- taskData[!taskData$participant=='317',] #only did 7 inidividual trials in block 1 
+
+
+PostTouchScreenByBlock <- PostTouchScreenByBlock[!PostTouchScreenByBlock$participant=='112',] #2 blocks only 
+# #taskData <- taskData[!taskData$participant=='245',]  #check, looks good 
+PostTouchScreenByBlock <- PostTouchScreenByBlock[!PostTouchScreenByBlock$participant=='253',] #has only 1 block
+# #taskData <- taskData[!taskData$participant=='301',] #check looks fine
+# #taskData <- taskData[!taskData$participant=='c308',] #check looks fine
+PostTouchScreenByBlock <- PostTouchScreenByBlock[!PostTouchScreenByBlock$participant=='311',] #only 2 Blocks
+PostTouchScreenByBlock <- PostTouchScreenByBlock[!PostTouchScreenByBlock$participant=='317',] #only did 7 inidividual trials in block 1 
+
+# length(unique(taskData$participant))
+# 
+# #write.csv(taskData, "dataPostTouchCleaned1.15.2019.csv", row.names=F)
+# 
+# table(taskData$participant, taskData$Group)
+# #View(taskData)
+```
+
+
+adding demo data 
+```{r}
+
+W1.demo <- read.csv("MASTER_W1_20210223.csv")
+
+W1.demo <- W1.demo[,c("IDENT_SUBID", "GROUP", "SUBAGE_Session1","DEM_3_GENDER_CHILD","DEM_FINAL_CHILD_RACE", "SCHOOLGRADE")]
+
+names(W1.demo)
+#CGH_SUM_SWITCHES #looking for these variables in the document
+#CGH_AGE_EARLY#looking for these variables in the document
+
+W1.demo$participant <- substr(W1.demo$IDENT_SUBID, start=3, stop=5)
+W1.demo$participant <- as.numeric(sub("^0+", "", W1.demo$participant))
+
+unique(W1.demo$IDENT_SUBID)
+W1_data_withDEMO <- merge(W1.demo, taskData, by="participant")
+
+unique(W1_data_withDEMO$participant)==unique(taskData$participant)
+length(unique(W1_data_withDEMO$participant))
+length(unique(taskData$participant))
+W1_data_withDEMO[W1_data_withDEMO$participant==225,]
+
+
+W2.demo <- read.csv("MASTER_W2_20200417.csv")
+head(W2.demo)
+W2.demo <- W2.demo[,c("IDENT_SUBID", "GROUP","SUBAGE_Session2", "SCHOOLGRADE", "DEM_1_DATESESS2")] #"DEM_FINAL_CHILD_RACE", missing from W2 so much retrieve from wave 1 demos 
+W2.demo$participant <- substr(W2.demo$IDENT_SUBID, start=3, stop=5)
+W2.demo$participant <- as.numeric(sub("^0+", "", W2.demo$participant))
+unique(W2.demo$participant)
+
+length(unique(taskData$participant))
+
+unique(taskData$participant)
+#rbind(W1.demo, W2.demo)
+
+
+W2.subset <- subset(W2.demo, select=c(SUBAGE_Session2, IDENT_SUBID, participant, SCHOOLGRADE))
+
+#merge(W1.demo, taskData)
+
+
+W1.demoTask <- merge(W1.demo, taskData)
+
+
+demo_TaskData <- merge(W1.demoTask, W2.subset, by="participant")
+demo_TaskData
+names(W1.demoTask)
+W2.subset
+
+#classifying by date does not work because Wave 1 and Wave 2 were happenign simultanously 
+#demo_TaskData$Wave <- ifelse(demo_TaskData$date1 > "2019-04-07", "Wave2", "Wave1")
+
+list.of.Wave2.participants <- c(22, 21, 27, 50, 40, 16, 12, 53, 3, 37, 36, 45, 35, 30, 17, 43, 9, 38, 41, 5, 4, 66, 6, 57, 56, 31, 7, 8, 71, 11, 10, 49, 74, 20, 23, 48, 34, 3, 33, 25, 24, 69, 42, 70, 59, 58, 60, 61, 64)
+
+#repeated data PA006 PA031 PA058 PA059 PA060 PA061 PA069
+#61, 60, 58, 59 completed wave 2 on Aug 4 2019 
+#69 completed W2 on Jul 14 2019
+#31 completed W2 on Jun 7 2019 
+#6 completed W2 Jun 1 2019 
+
+subsetDemoTask <- demo_TaskData[demo_TaskData$TrialNum==1,]
+#subsetDemoTask
+subsetDemoTask[subsetDemoTask$participant==c(list.of.Wave2.participants),]
+#View(demo_TaskData[demo_TaskData$TrialNum==1,])
+
+demo_TaskData$SUBAGE_Session2
+
+demo_TaskData$Age <- ifelse(is.element(demo_TaskData$participant, list.of.Wave2.participants), demo_TaskData$SUBAGE_Session2, demo_TaskData$SUBAGE_Session1)
+
+#ifelse(is.element(demo_TaskData$participant, !list.of.Wave2.participants), demo_TaskData$SUBAGE_Session1, demo_TaskData$SUBAGE_Session2)
+
+
+#demo_TaskData$Wave == "Wave1"
+#demo_TaskData$Grade <- ifelse(demo_TaskData$Wave == "Wave1", demo_TaskData$SCHOOLGRADE.x, demo_TaskData$SCHOOLGRADE.y)
+
+demo_TaskData$Wave <- ifelse(is.element(demo_TaskData$participant, list.of.Wave2.participants), "Wave2", "Wave1")
+
+demo_TaskData$Grade <- ifelse(is.element(demo_TaskData$participant, list.of.Wave2.participants), demo_TaskData$SCHOOLGRADE.y, demo_TaskData$SCHOOLGRADE.x)
+
+names(demo_TaskData)
+subsetTaskData <- subset(demo_TaskData, select = c(participant, GROUP, Age, SUBAGE_Session1,SUBAGE_Session2, DEM_3_GENDER_CHILD, DEM_FINAL_CHILD_RACE, Grade, responseTimeCorrect, date1, repetitionNumber, TrialNum, Block, Wave))
+
+#View(subsetTaskData[subsetTaskData$participant==31,])
+#View(taskData[taskData$participant==31,])
+
+#View(subsetTaskData[subsetTaskData$TrialNum==1,])
+length(unique(subsetTaskData$participant))
+
+#View(taskData)
+#April 7 2019 was when wave 2 started <- but wave 1 was still ongoing 
+```
+
+
+
+#Looking at demographics - Age and Group 
+```{r}
+taskData <- subsetTaskData
+taskData$AgeYears <- as.factor(trunc(taskData$Age))
+length(unique(taskData$participant))
+
+summaryAllValues <- taskData %>% 
+  group_by(participant, Block, Age, GROUP) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE)))
+
+summaryAllValues$AgeYears <- as.factor(trunc(summaryAllValues$Age))
+class(summaryAllValues$Age)
+
+summaryAllValueswide <- summaryAllValues %>%
+  spread(Block, responseTimeCorrect)
+
+length(unique(summaryAllValueswide$participant))
+
+
+ggplot(data=summaryAllValues, aes(Block, responseTimeCorrect, group=participant,color=AgeYears)) +
+  geom_point() + 
+  geom_line() +
+  theme(legend.position = "right", strip.text.x = element_text(colour = "black")) + 
+  facet_wrap(~GROUP) 
+
+ggplot(data=summaryAllValues, aes(Age, forcats::fct_reorder(as.factor(participant), Age), color=GROUP)) + 
+  geom_point() + 
+  theme(legend.position = "right", strip.text.x = element_text(colour = "black")) 
+
+ggplot(data=summaryAllValues, aes(Age, forcats::fct_reorder(as.factor(participant), Age), color=GROUP)) + 
+  geom_point() + 
+  facet_wrap(~GROUP) + 
+  #theme(legend.position = "right", strip.text.x = element_text(colour = "black")) + 
+  theme( strip.text.x = element_text(colour = "black")) 
+
+summaryAllValueswide
+
+ggplot(data=summaryAllValueswide, aes(AgeYears, color=GROUP, fill=GROUP)) + 
+  geom_bar() + 
+  facet_wrap(~GROUP) + 
+  geom_text(stat='count', aes(label=..count..), vjust=-1) + 
+  ylim(0, 30) + 
+  labs(title="Groups broken down by Age")+
+  theme( strip.text.x = element_text(colour = "black")) 
+  
+
+
+ggplot(data=summaryAllValueswide, aes(GROUP, color=GROUP, fill=GROUP)) + 
+  geom_bar() + 
+  geom_text(stat='count', aes(label=..count..), vjust=-1) + 
+  ylim(0, 95) + 
+  labs(title="Groups")+
+  theme( strip.text.x = element_text(colour = "black")) 
+
+
+
+summaryAllValueswide$GroupBinary <- ifelse(summaryAllValueswide$GROUP=="C", "comps", "crEAs")
+
+ggplot(data=summaryAllValueswide, aes(GroupBinary, color=GroupBinary, fill=GroupBinary)) + 
+  geom_bar() + 
+  geom_text(stat='count', aes(label=..count..), vjust=-1) + 
+  ylim(0, 180) + 
+  labs(title="Total N (comps vs. crEAs)")+
+  theme( strip.text.x = element_text(colour = "black")) 
+
+ggplot(data=summaryAllValueswide, aes(AgeYears, color=GroupBinary, fill=GroupBinary)) + 
+  geom_bar() + 
+  facet_wrap(~GroupBinary) + 
+  geom_text(stat='count', aes(label=..count..), vjust=-1) + 
+  ylim(0, 30) + 
+  labs(title="Total N (comps vs. crEAs) by Age")+
+  theme( strip.text.x = element_text(colour = "black")) 
+
+length(summaryAllValues$participant)
+mean(summaryAllValueswide$Age)
+summaryAllValues
+
+```
+
+#Removing outliers 
+
+
+```{r}
+
+
+
+summaryAllValues<- taskData %>% 
+  group_by(participant, Block, Age, GROUP) %>%
+  filter(!is.na(responseTimeCorrect)) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+
+summaryAllValues$AgeYears <- as.factor(trunc(summaryAllValues$Age))
+
+
+ggplot(data=summaryAllValues, aes(Block, mean, group=participant,color=AgeYears)) +
+  geom_point() + 
+  geom_line() +
+  #geom_text(aes(label=participant),hjust=0, vjust=0) + 
+  theme(legend.position = "right", strip.text.x = element_text(colour = "black")) + 
+  facet_wrap(~GROUP) 
+
+ggplot(data=summaryAllValues, aes(Block, mean, group=participant,color=AgeYears)) +
+  geom_point() + 
+  geom_line() +
+    geom_text(aes(label=participant),hjust=0, vjust=0) + 
+  theme(legend.position = "right", strip.text.x = element_text(colour = "black")) + 
+  facet_wrap(~GROUP) 
+```
+
+#Individual data points outliers examining
+```{r}
+length(unique(taskData$participant))
+
+
+summaryParticipantRT <- taskData %>% 
+  group_by(participant) %>%
+  summarise_at(vars(responseTimeCorrect),funs(meanRT = mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+summaryParticipantRT
+
+taskDataWithMean <- merge(taskData, summaryParticipantRT)
+taskDataWithMean$normalizedRT <- taskDataWithMean$responseTimeCorrect/taskDataWithMean$meanRT
+
+unique(taskDataWithMean$participant)
+
+taskDataWithMean[taskDataWithMean$responseTimeCorrect > taskDataWithMean$responseTimeCorrect + 3*taskDataWithMean$sd,]
+
+unique(taskDataWithMean$responseTimeCorrect < taskDataWithMean$responseTimeCorrect - 3*taskDataWithMean$sd)
+
+taskDataWithMean$ThreeSDsLow <- taskDataWithMean$meanRT - 3*taskDataWithMean$sd
+taskDataWithMean$ThreeSDsHigh <- taskDataWithMean$meanRT +  3*taskDataWithMean$sd
+
+count(taskDataWithMean$outliersLow)
+count(taskDataWithMean$outliersHigh)
+
+count(RT$outliersLow)
+count(RT$outliersHigh)
+
+#taskDataWithMean
+
+RT <- subset(taskDataWithMean, select=c("participant", "AgeYears",  "responseTimeCorrect","meanRT" , "ThreeSDsLow", "Block"))
+
+RT$ThreeSDsHigh <- taskDataWithMean$meanRT + 3*taskDataWithMean$sd
+RT$ThreeSDsLow <- taskDataWithMean$meanRT - 3*taskDataWithMean$sd
+
+RT$outliersLow <- RT$responseTimeCorrect < RT$ThreeSDsLow
+RT$outliersHigh <- RT$responseTimeCorrect > RT$ThreeSDsHigh
+
+taskDataWithMean$outliersLow <- taskDataWithMean$responseTimeCorrect < taskDataWithMean$ThreeSDsLow
+taskDataWithMean$outliersHigh <- taskDataWithMean$responseTimeCorrect > taskDataWithMean$ThreeSDsHigh
+
+
+head(RT)
+
+TooFastOutlierTrials <- na.omit(RT[RT$outliersLow==TRUE,])
+TooSlowOutlierTrials <- na.omit(RT[RT$outliersHigh==TRUE,])
+
+TooFastOutlierTrials
+
+ggplot(TooFastOutlierTrials, aes(x=as.character(participant), color=AgeYears, fill=AgeYears))  + 
+    geom_bar() +
+geom_text(stat='count', aes(label=..count..), vjust=-1) +
+  theme(axis.text.x = element_text(angle = 90, size = 8)) + 
+  theme(legend.position = "right")
+
+ggplot(TooFastOutlierTrials, aes(x=as.character(participant), color=AgeYears, fill=AgeYears))  + 
+    geom_bar() +
+  facet_wrap(~Block) + 
+geom_text(stat='count', aes(label=..count..), vjust=-1) +
+  theme(axis.text.x = element_text(angle = 90, size = 8)) + 
+  theme(legend.position = "right")
+
+
+ggplot(TooSlowOutlierTrials, aes(x=as.character(participant), color=AgeYears, fill=AgeYears))  + 
+    geom_bar() +
+geom_text(stat='count', aes(label=..count..), vjust=-1) +
+  theme(axis.text.x = element_text(angle = 90, size = 8)) + 
+  theme(legend.position = "right")
+
+ggplot(TooSlowOutlierTrials, aes(x=as.character(participant), color=AgeYears, fill=AgeYears))  + 
+    geom_bar() +
+  facet_wrap(~Block) + 
+geom_text(stat='count', aes(label=..count..), vjust=-1) +
+  theme(axis.text.x = element_text(angle = 90, size = 8)) + 
+  theme(legend.position = "right")
+
+
+class(TooSlowOutlierTrials$Block)
+TooSlowOutlierTrials$Block <- as.factor(TooSlowOutlierTrials$Block)
+
+TooSlowOutlierTrials %>%
+  group_by("participant", "Block") %>%
+  count("participant")
+
+TooSlowOutlierTrials %>%
+  count("AgeYears")
+
+
+TooFastOutlierTrials %>%
+  group_by("participant", "Block") %>%
+  count("participant")
+
+TooFastOutlierTrials %>%
+  count("AgeYears")
+
+
+TooSlowOutlierTrials %>% 
+  group_by(participant, Block) %>% 
+  do(data.frame(nrow=nrow(.)))
+
+
+#No outliers for correct response RT 
+
+ggplot(TooSlowOutlierTrials, aes(ThreeSDsLow, responseTimeCorrect, color=as.factor(participant))) + 
+  geom_point() + 
+  geom_text(aes(label=participant),hjust=0, vjust=0) 
+
+
+
+
+ggplot(TooFastOutlierTrials, aes(ThreeSDsHigh, responseTimeCorrect, color=as.factor(participant))) + 
+  geom_point() + 
+  geom_text(aes(label=participant),hjust=0, vjust=0) 
+
+
+ggplot(TooSlowOutlierTrials, aes(ThreeSDsLow, responseTimeCorrect, color=AgeYears)) + 
+  geom_point() + 
+  geom_text(aes(label=participant),hjust=0, vjust=0)  + 
+  theme(legend.position = "right")
+
+ggplot(TooSlowOutlierTrials, aes(ThreeSDsLow, responseTimeCorrect, color=AgeYears)) + 
+  geom_point() + 
+  geom_text(aes(label=participant),hjust=0, vjust=0)  + 
+  theme(legend.position = "right")
+
+TooSlowOutlierTrialsMinusOne <- TooSlowOutlierTrials[!TooSlowOutlierTrials$participant == 121,]
+
+
+
+ggplot(TooSlowOutlierTrialsMinusOne, aes(ThreeSDsLow, responseTimeCorrect, color=AgeYears)) + 
+  geom_point() + 
+  geom_text(aes(label=participant),hjust=0, vjust=0)  + 
+  theme(legend.position = "right")
+
+ggplot(TooFastOutlierTrials, aes(ThreeSDsHigh, responseTimeCorrect, color=AgeYears)) + 
+  geom_point() + 
+  geom_text(aes(label=participant),hjust=0, vjust=0) + 
+  theme(legend.position = "right")
+```
+
+
+#Removing individual trial outliers  - not the same number of trials were removed, perhaps some are NA but need to check 
+```{r}
+taskData %>% 
+  group_by(Block) %>%
+  count("participant")
+
+
+unique(taskDataWithMean$outliersLow)
+RT
+taskDataWithMean
+
+ na.omit(RT[RT$outliersLow==TRUE,])
+
+taskDataWithMeanNoOutlier <- taskDataWithMean[taskDataWithMean$outliersLow==FALSE,] #Removing subject trials that were too slow 
+
+taskDataWithMeanNoOutlier <- taskDataWithMeanNoOutlier[taskDataWithMeanNoOutlier$outliersHigh==FALSE,] #Removing subject trials that were too fast #Does this make sense 
+
+
+taskDataWithMeanNoOutlier %>% 
+  group_by(Block) %>%
+  count("participant")
+
+checkignRemoval <- taskDataWithMeanNoOutlier %>% 
+  group_by(Block) %>%
+  count("participant")
+checkingALl
+checkignRemoval
+checkingALl <- taskData %>% 
+  group_by(Block) %>%
+  count("participant")
+
+check <- merge(checkingALl, checkignRemoval, by ="participant")
+check$removed <- check$freq.x-check$freq.y
+check
+
+ggplot(check, aes(participant, removed)) + 
+  geom_point()
+
+
+```
+
+
+```{r}
+#View(subset(taskDataWithMean, select=c("participant", "repetitionNumber", "responseTimeCorrect", "Block", "TrialNum")))
+
+#View(subset(taskData, select=c("participant", "repetitionNumber", "responseTimeCorrect", "Block", "TrialNum")))
+#View(subset(W1, select=c("participant", "repetitionNumber", "responseTimeCorrect")))
+
+
+#Wave2RawData <- read.csv("Wave2RawData_12.03.21.csv")
+#Wave1RawData <- read.csv("Wave1RawData_12.03.21.csv")
+
+#View(subset(Wave1RawData, select=c("participant", "repetitionNumber", "responseTimeCorrect")))
+
+#View(subset(Wave2RawData, select=c("participant", "repetitionNumber", "responseTimeCorrect")))
+```
+
+
+
+
+#Removivng one obvoius outlier  
+
+```{r}
+
+
+summaryAllValues <- taskData %>%
+  group_by(participant, Block, Age, GROUP) %>%
+  filter(!is.na(responseTimeCorrect)) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+summaryAllValues$AgeYears <- as.factor(trunc(summaryAllValues$Age))
+
+summaryAllValues[summaryAllValues$mean < mean(taskData$responseTimeCorrect, na.rm=T) - 3*sd(taskData$responseTimeCorrect, na.rm=T),]
+
+summaryAllValues[summaryAllValues$mean > mean(taskData$responseTimeCorrect, na.rm=T) + 3*sd(taskData$responseTimeCorrect, na.rm=T),]
+
+taskData <- taskData[!taskData$participant==121,]
+
+
+```
+
+
+
+
+
+
+
+```{r}
+head(taskData)
+
+
+summaryAllValues <- taskData %>% 
+  group_by(participant, Block) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+summaryAllValues
+
+RT_correct <- merge(taskData, summaryAllValues)
+names(RT_correct)
+
+
+#RT_correct <- merge(summaryAllValues, demos, by="participant")
+
+ggplot(data=RT_correct, aes(Block, mean, group=participant, color=GROUP)) +
+  facet_wrap(~GROUP) + 
+  geom_point() + 
+  geom_line() +
+  theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black")) 
+
+#Remove Outliers 
+count(RT_correct$mean > 3)
+unique(RT_correct[RT_correct$mean >3,]$Age)
+unique(RT_correct[RT_correct$mean >3,]$GROUP)
+
+unique(RT_correct[RT_correct$mean >3,]$Participant)
+
+RT_correctNOOutliers <- RT_correct[RT_correct$mean <3,]
+RT_correctNOOutliers <- RT_correctNOOutliers[!is.na(RT_correctNOOutliers$Block),]
+
+ggplot(data=RT_correctNOOutliers, aes(Block, mean, group=participant, color=GROUP)) +
+  facet_wrap(~GROUP) + 
+  geom_point() + 
+  geom_line() +
+  theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black")) 
+
+
+summaryAllValuesGroup <- RT_correctNOOutliers %>% 
+  group_by(GROUP, Block) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+summaryAllValuesGroup
+RT_correctNOOutliers
+summaryAllValuesGroup
+
+ggplot(data=RT_correctNOOutliers, aes(Block, mean, color=GROUP)) +
+  facet_wrap(~GROUP) + 
+  geom_point() + 
+  geom_line(aes(group=participant)) +
+  geom_point(data=summaryAllValuesGroup, aes(Block, mean), colour=("black")) + 
+  geom_errorbar(data=summaryAllValuesGroup,aes(ymin=mean-sd, ymax=mean+sd),  width=0.2, color="black")   +
+  theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black")) 
+
+ggplot(data=RT_correctNOOutliers, aes(Block, mean, color=GROUP)) +
+  facet_wrap(~GROUP) + 
+  geom_point() + 
+  geom_line(aes(group=participant)) +
+  geom_point(data=summaryAllValuesGroup, aes(Block, mean), colour=("black")) + 
+  geom_errorbar(data=summaryAllValuesGroup,aes(ymin=mean-se, ymax=mean+se),  width=0.2, color="black")   +
+  theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black")) 
+```
+
+
+```{r} 
+
+summaryAllValuesGroup
+
+ggplot(data=summaryAllValuesGroup, aes(Block, mean, color=GROUP)) +
+  facet_wrap(~GROUP) + 
+  geom_point() + 
+  #geom_point(data=summaryAllValuesGroup, aes(Block, mean), colour=("black")) + 
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se),  width=0.2)   +
+  theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black")) 
+
+
+summaryAllValuesGroupWide <- RT_correctNOOutliers %>% 
+  group_by(GROUP, Block, AgeYears) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+summaryAllValuesGroupWide
+
+ggplot(data=summaryAllValuesGroupWide, aes(Block, mean, color=AgeYears)) +
+  facet_wrap(~GROUP) + 
+  geom_point() + 
+  #geom_line(aes(group=participant)) +
+  #geom_point(data=summaryAllValuesGroup, aes(Block, mean), colour=("black")) + 
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se),  width=0.2)   +
+  theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black")) 
+
+
+# 
+# names(summaryAllValuesGroupWide)
+# summaryAllValuesGroupWide %>%
+#   filter(AgeBinary=="6-9") %>%
+#            ggplot(aes(Block, mean, color=AgeBinary)) +
+#            facet_wrap(~GROUP) + 
+#            geom_point() + 
+#            #geom_line(aes(group=participant)) +
+#            #geom_point(data=summaryAllValuesGroup, aes(Block, mean), colour=("black")) + 
+#            geom_errorbar(aes(ymin=mean-se, ymax=mean+se),  width=0.2)   +
+#            theme(legend.position = "top") + 
+#            theme( strip.text.x = element_text(colour = "black")) 
+# 
+# summaryAllValuesGroupWide %>%
+#   filter(AgeBinary=="10-12") %>%
+#            ggplot(aes(Block, mean, color=AgeBinary)) +
+#            facet_wrap(~GROUP) + 
+#            geom_point() + 
+#            #geom_line(aes(group=participant)) +
+#            #geom_point(data=summaryAllValuesGroup, aes(Block, mean), colour=("black")) + 
+#            geom_errorbar(aes(ymin=mean-se, ymax=mean+se),  width=0.2)   +
+#            theme(legend.position = "top") + 
+#            theme( strip.text.x = element_text(colour = "black")) 
+
+RT_correctNOOutliers$GroupBinary <- ifelse(RT_correctNOOutliers$GROUP=="C" , "comps", "crEAs")
+
+summaryAllValuesGroupBinaryWide <- RT_correctNOOutliers %>% 
+  group_by(GroupBinary, Block) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+summaryAllValuesGroupBinaryWide
+
+ggplot(data=summaryAllValuesGroupBinaryWide, aes(Block, mean, color=GroupBinary)) +
+  facet_wrap(~GroupBinary) + 
+  geom_point() + 
+  #geom_line(aes(group=participant)) +
+  #geom_point(data=summaryAllValuesGroup, aes(Block, mean), colour=("black")) + 
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se),  width=0.2)   +
+  theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black")) 
+
+
+
+summaryAllValuesGroupBinaryAgeWide <- RT_correctNOOutliers %>% 
+  group_by(GroupBinary, Block, AgeYears) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+summaryAllValuesGroupBinaryAgeWide
+summaryAllValuesGroupBinaryAgeWide<- na.omit(summaryAllValuesGroupBinaryAgeWide)
+ggplot(data=summaryAllValuesGroupBinaryAgeWide, aes(Block, mean, color=AgeYears)) +
+  facet_wrap(~GroupBinary) + 
+  geom_point() + 
+  #geom_line(aes(group=participant)) +
+  #geom_point(data=summaryAllValuesGroup, aes(Block, mean), colour=("black")) + 
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se),  width=0.2)   +
+  theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black")) 
+
+
+ggplot(data=summaryAllValuesGroupBinaryAgeWide, aes(Block, mean, color=AgeYears)) +
+  facet_wrap(~GroupBinary) + 
+  geom_point() + 
+  geom_line(aes(group=AgeYears)) +
+  #geom_point(data=summaryAllValuesGroup, aes(Block, mean), colour=("black")) + 
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se),  width=0.2)   +
+  theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black")) 
+
+
+RT_correctNOOutliersNo6 <- na.omit(RT_correctNOOutliers[!RT_correctNOOutliers$AgeYears==6,])
+
+summaryAllValuesGroupBinaryWideNo6 <- RT_correctNOOutliersNo6 %>% 
+  group_by(GroupBinary, Block) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+summaryAllValuesGroupBinaryWideNo6
+
+
+ggplot(data=summaryAllValuesGroupBinaryWideNo6, aes(Block, mean, color=GroupBinary)) +
+  facet_wrap(~GroupBinary) + 
+  geom_point() + 
+  #geom_line(aes(group=participant)) +
+  #geom_point(data=summaryAllValuesGroup, aes(Block, mean), colour=("black")) + 
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se),  width=0.2)   +
+  theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black"))  + 
+  ggtitle("No 6 year olds")
+
+
+names(taskDataWithMean)
+taskDataWithMean$GroupBinary <- ifelse(taskDataWithMean$GROUP=="C" , "comps", "crEAs")
+
+
+summaryAllValuesGroupBinaryWideNormal <- taskDataWithMean %>% 
+  group_by(GroupBinary, Block) %>%
+  summarise_at(vars(normalizedRT),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+summaryAllValuesGroupBinaryWideNormal
+
+ggplot(data=summaryAllValuesGroupBinaryWideNormal, aes(Block, mean, color=GroupBinary)) +
+  facet_wrap(~GroupBinary) + 
+  geom_point() + 
+  #geom_line(aes(group=participant)) +
+  #geom_point(data=summaryAllValuesGroup, aes(Block, mean), colour=("black")) + 
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se),  width=0.2)   +
+  theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black")) 
+
+```
+
+
+
+
+```{r}
+
+
+summaryAllValues <- taskData %>% 
+  group_by(participant, Block) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+summaryAllValues
+
+RT_correct <- merge(taskData, summaryAllValues)
+names(RT_correct)
+
+head(taskData)
+
+length(unique(RT_correct$participant))
+table(RT_correct$participant, RT_correct$GROUP)
+RT_correct$AgeYears <- as.factor(trunc(RT_correct$Age))
+
+
+taskDataCOMPS <- taskData[taskData$GROUP=="C",]
+taskDataCOMPS <- taskDataCOMPS[!is.na(taskDataCOMPS$Block),]
+taskDataCOMPS$AgeYears <- as.factor(trunc(taskDataCOMPS$Age))
+head(taskDataCOMPS)
+length(unique(taskDataCOMPS$participant))
+
+
+GroupByAge <- taskDataCOMPS %>% 
+  group_by(Block, AgeYears) %>% 
+  summarise_at(vars(responseTimeCorrect), funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+
+
+GroupBySubject <- taskDataCOMPS %>% 
+  group_by(participant, Block, AgeYears) %>% 
+  summarise_at(vars(responseTimeCorrect), funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+GroupBySubject
+
+
+ggplot(GroupByAge, aes(Block, mean, group=AgeYears, color=AgeYears)) + 
+  #facet_wrap(~AgeYears) + 
+  geom_point()  + 
+  geom_line() + 
+  theme(legend.position = "right") + 
+  theme( strip.text.x = element_text(colour = "black")) +
+  ggtitle("Comparison")
+
+
+ggplot(GroupByAge, aes(Block, mean, group=AgeYears, color=AgeYears)) + 
+  #facet_wrap(~AgeYears) + 
+  geom_point()  + 
+  geom_line() + 
+  geom_pointrange(aes(ymin=mean-se, ymax=mean+se))   +
+  geom_jitter(data=GroupBySubject, alpha=0.4) +
+  theme(legend.position = "right") + 
+  theme( strip.text.x = element_text(colour = "black")) +
+  ggtitle("Comparison")
+
+ggplot(GroupByAge, aes(Block, mean, group=AgeYears, color=AgeYears)) + 
+  #facet_wrap(~AgeYears) + 
+  geom_point()  + 
+  geom_line()+
+  geom_pointrange(aes(ymin=mean-se, ymax=mean+se))  + 
+  theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black"))  +
+  ggtitle("Comparison")
+
+ggplot(GroupByAge, aes(Block, mean, group=AgeYears, color=AgeYears)) + 
+  #facet_wrap(~AgeYears) + 
+  geom_point()  + 
+  geom_line()+
+  geom_pointrange(aes(ymin=mean-sd, ymax=mean+sd))  + 
+  theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black"))  +
+  ggtitle("Comparison")
+
+ggplot(GroupByAge, aes(Block, mean, group=AgeYears, color=AgeYears)) + 
+  geom_point()  + 
+  geom_line()+
+  geom_pointrange(aes(ymin=mean-se, ymax=mean+se))   +
+ facet_wrap(~AgeYears) + 
+  theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black"))  +
+  ggtitle("Comparison (error bars = SE)")
+
+#ggsave("GroupSubcategoriesa11.25.2021.png", height=8, width = 10)
+
+ggplot(GroupByAge, aes(Block, mean, group=AgeYears, color=AgeYears)) + 
+  geom_point()  + 
+  geom_line()+
+  geom_pointrange(aes(ymin=mean-sd, ymax=mean+sd))   +
+ facet_wrap(~AgeYears) + 
+  theme(legend.position = "right") + 
+  theme( strip.text.x = element_text(colour = "black"))  +
+  ggtitle("Comparison (error bars = SD)")
+
+
+
+
+
+summaryAllValuesCOMPS <- taskDataCOMPS %>% 
+  group_by(GROUP, Block) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+summaryAllValuesCOMPS
+
+
+ggplot(GroupByAge, aes(Block, mean, color=AgeYears)) + 
+  geom_point(aes(group=AgeYears))  + 
+  geom_line(aes(group=AgeYears))+
+  geom_pointrange(aes(ymin=mean-se, ymax=mean+se))   +
+  theme(legend.position = "top") + 
+  geom_point(data=summaryAllValuesCOMPS, aes(Block, mean), colour=("black")) + 
+  geom_errorbar(data=summaryAllValuesCOMPS,aes(ymin=mean-se, ymax=mean+se),  width=0.2, color="black")   +
+  theme( strip.text.x = element_text(colour = "black"))  +
+  ggtitle("Comparison (error bars = SE)")
+GroupByAge
+
+GroupByAge[GroupByAge$AgeYears==NA,]
+```
+
+
+```{r}
+
+
+taskData$AgeYears <- as.factor(trunc(taskData$Age))
+taskDataNoNA <- taskData[!is.na(taskData$Block),]
+
+GroupByAgeAll <- taskDataNoNA %>% 
+  group_by(Block, AgeYears, GROUP) %>% 
+  summarise_at(vars(responseTimeCorrect), funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+
+
+GroupBySubjectAll <- taskDataNoNA %>% 
+  group_by(participant, Block, AgeYears, GROUP) %>% 
+  summarise_at(vars(responseTimeCorrect), funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+GroupBySubjectAll
+
+
+summaryAllValues <- taskDataNoNA %>% 
+  group_by(GROUP, Block) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+summaryAllValues
+
+GroupByAgeAll
+ggplot(GroupByAgeAll, aes(Block, mean, color=AgeYears)) + 
+  geom_point(aes(group=AgeYears))  + 
+  geom_line(aes(group=AgeYears))+
+  facet_wrap(~GROUP) + 
+  geom_pointrange(aes(ymin=mean-se, ymax=mean+se))   +
+  theme(legend.position = "top") + 
+  #geom_point(data=summaryAllValuesCOMPS, aes(Block, mean), colour=("black")) + 
+  #geom_errorbar(data=summaryAllValuesCOMPS,aes(ymin=mean-se, ymax=mean+se),  width=0.2, color="black")   +
+  theme( strip.text.x = element_text(colour = "black"))  +
+  ggtitle("Comparison (error bars = SE)")
+
+#taskDataNoNA$responseTimeCorrect
+ggplot(taskDataNoNA, aes(Block, responseTimeCorrect, color=AgeYears)) + 
+  geom_point(aes(group=participant))  + 
+  #geom_line(aes(group=participant))+
+  facet_wrap(~GROUP) + 
+  #geom_pointrange(aes(ymin=mean-se, ymax=mean+se))   +
+  theme(legend.position = "top") + 
+  
+  geom_text(aes(label=participant),hjust=0, vjust=0) + 
+  #geom_point(data=summaryAllValuesCOMPS, aes(Block, mean), colour=("black")) + 
+  #geom_errorbar(data=summaryAllValuesCOMPS,aes(ymin=mean-se, ymax=mean+se),  width=0.2, color="black")   +
+  theme( strip.text.x = element_text(colour = "black"))  +
+  ggtitle("Comparison (error bars = SE)")
+
+
+```
+#Full models 
+```{r}
+unique(taskDataNoNA$GROUP)
+taskDataNoNA$GroupBinary <- ifelse(taskDataNoNA$GROUP=="C", 0, 1)
+
+RT_4 <- lmer(responseTimeCorrect~GroupBinary + 
+                DEM_3_GENDER_CHILD + 
+                Age + #controlling for age 
+                Block + 
+                Block*GroupBinary + 
+                (Block|participant), 
+              data=taskDataNoNA)
+summary(RT_4)
+
+RT_4.2 <- glmer(responseTimeCorrect~GroupBinary + 
+                DEM_3_GENDER_CHILD + 
+                Age + #controlling for age 
+                Block + 
+                Block*GroupBinary + 
+                (Block|participant), 
+              data=taskDataNoNA)
+summary(RT_4.2)
+
+
+summaryParticipantRT <- taskDataNoNA %>% 
+  group_by(participant) %>%
+  summarise_at(vars(responseTimeCorrect),funs(meanRT = mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+summaryParticipantRT
+
+taskDataWithMean <- merge(taskDataNoNA, summaryParticipantRT)
+taskDataWithMean$normalizedRT <- taskDataWithMean$responseTimeCorrect/taskDataWithMean$meanRT
+
+
+names(taskDataWithMean)
+
+RT_5 <- lmer(normalizedRT~GroupBinary + 
+                DEM_3_GENDER_CHILD + 
+                Age + #controlling for age 
+                #AgeBinary*GroupBinary + 
+                Block + 
+                Block*GroupBinary + 
+                (Block|participant), 
+              data=taskDataWithMean)
+summary(RT_5)
+
+RT_5.2 <- glmer(normalizedRT~GroupBinary + 
+                DEM_3_GENDER_CHILD + 
+                Age + #controlling for age 
+                #AgeBinary*GroupBinary + 
+                Block + 
+                Block*GroupBinary + 
+                (Block|participant), 
+              data=taskDataWithMean)
+summary(RT_5.2)
+
+taskDataWithMean<- taskDataWithMean %>% mutate(Block_num=recode(Block, 
+                                             "Block1"=-1.5, 
+                                             "Block2"=-0.5,  
+                                             "Block3"=0.5, 
+                                             "Block4"=1.5))
+
+
+
+RT_5.1 <- lmer(normalizedRT~GroupBinary + 
+                DEM_3_GENDER_CHILD + 
+                Age + #controlling for age 
+                #AgeBinary*GroupBinary + 
+                Block_num + 
+                Block_num*GroupBinary + 
+                (Block_num|participant), 
+              data=taskDataWithMean)
+summary(RT_4)
+
+summary(RT_5)
+summary(RT_5.1)
+
+```
+
+Models without 6 year olds
+```{r}
+taskDataNoNANo6 <- taskDataNoNA[!taskDataNoNA$AgeYears==6,]
+RT_4.2 <- lmer(responseTimeCorrect~GroupBinary + 
+                DEM_3_GENDER_CHILD + 
+                Age + #controlling for age 
+                Block + 
+                Block*GroupBinary + 
+                (Block|participant), 
+              data=taskDataNoNANo6)
+summary(RT_4.2)
+
+taskDataWithMeanNo6 <- taskDataWithMean[!taskDataWithMean$AgeYears==6,]
+
+RT_5.2 <- lmer(normalizedRT~GroupBinary + 
+                DEM_3_GENDER_CHILD + 
+                Age + #controlling for age 
+                Block + 
+                Block*GroupBinary + 
+                (Block|participant), 
+              data=taskDataWithMeanNo6)
+summary(RT_5.2)
+```
+
+```{r}
+
+taskDataWithMean<- taskDataWithMean %>% mutate(Block_num=recode(Block, 
+                                             "Block1"=-1.5, 
+                                             "Block2"=-0.5,  
+                                             "Block3"=0.5, 
+                                             "Block4"=1.5))
+
+taskDataWithMean$BlockBinary <- ifelse(taskDataWithMean$Block=="Block3", 0, 1)
+
+
+RT_7 <- lmer(responseTimeCorrect~GroupBinary + 
+                DEM_3_GENDER_CHILD + 
+                Age + #controlling for age 
+                #AgeBinary*GroupBinary + 
+                BlockBinary + 
+                BlockBinary*GroupBinary + 
+                (BlockBinary|participant), 
+              data=taskDataWithMean)
+
+
+RT_7.1 <- lmer(normalizedRT~GroupBinary + 
+                DEM_3_GENDER_CHILD + 
+                Age + #controlling for age 
+                #AgeBinary*GroupBinary + 
+                BlockBinary + 
+                BlockBinary*GroupBinary + 
+                (BlockBinary|participant), 
+              data=taskDataWithMean)
+
+summary(RT_7)
+summary(RT_7.1)
+
+
+
+
+```
+#Block Binary
+
+```{r}
+
+summaryAllValues <- taskDataWithMean %>% 
+  group_by(GroupBinary, BlockBinary) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+
+summaryAllValues$BlockBinary <- ifelse(summaryAllValues$BlockBinary==0, "Random", "Sequence")
+
+summaryAllValues
+
+summaryAllValues$GroupBinary <- ifelse(summaryAllValues$GroupBinary==0, "Comps", "crEAs")
+
+ggplot(summaryAllValues, aes(BlockBinary, mean, color=GroupBinary)) + 
+  geom_point()  + 
+  facet_wrap(~GroupBinary) + 
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se, width=0.5))  +
+  theme(legend.position = "top") + 
+  #geom_point(data=summaryAllValuesCOMPS, aes(Block, mean), colour=("black")) + 
+  #geom_errorbar(data=summaryAllValuesCOMPS,aes(ymin=mean-se, ymax=mean+se),  width=0.2, color="black")   +
+  theme( strip.text.x = element_text(colour = "black"))  +
+  ggtitle("Comparison (error bars = SE)")
+
+
+
+summaryAllValues <- taskDataWithMean %>% 
+  group_by(GroupBinary, BlockBinary) %>%
+  summarise_at(vars(normalizedRT),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+
+summaryAllValues$BlockBinary <- ifelse(summaryAllValues$BlockBinary==0, "Random", "Sequence")
+summaryAllValues$GroupBinary <- ifelse(summaryAllValues$GroupBinary==0, "Comps", "crEAs")
+
+summaryAllValues
+
+
+ggplot(summaryAllValues, aes(BlockBinary, mean, color=GroupBinary)) + 
+  geom_point()  + 
+  facet_wrap(~GroupBinary) + 
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se, width=0.5))  +
+  theme(legend.position = "top") + 
+  #geom_point(data=summaryAllValuesCOMPS, aes(Block, mean), colour=("black")) + 
+  #geom_errorbar(data=summaryAllValuesCOMPS,aes(ymin=mean-se, ymax=mean+se),  width=0.2, color="black")   +
+  theme( strip.text.x = element_text(colour = "black"))  +
+  ggtitle("Comparison (error bars = SE)")
+
+```
+
+
+
+
+#Full models sepearting into just block 2 and 3 
+```{r}
+#For each subject, subtract Block 3 - 2 and then look at group - the model is the same (if you look at Block 3 and Block 2 for each indiviaul group and or age but ehre it allows you to do it without claculating based on outcomes of model)
+
+
+taskDataNOOuliter<- taskData[!taskData$participant==106,]
+taskDataNOOuliter<- taskDataNOOuliter[!taskDataNOOuliter$participant==247,]
+taskDataNOOuliter<- taskDataNOOuliter[!taskDataNOOuliter$participant==121,]
+
+
+RT_4 <- lmer(responseTimeCorrect~GROUP + 
+                DEM_3_GENDER_CHILD + 
+                Age + #controlling for age 
+                #AgeBinary*GroupBinary + 
+                Block + 
+                Block*GROUP + 
+                (Block|participant), 
+              data=taskDataNOOuliter)
+summary(RT_4)
+
+
+
+taskData2Blocks <- taskDataNOOuliter %>%
+  filter(Block==c("Block3", "Block2")) 
+
+RT_5 <- lmer(responseTimeCorrect~GROUP + 
+                DEM_3_GENDER_CHILD + 
+                Age + #controlling for age 
+                #AgeBinary*GroupBinary + 
+                Block + 
+                Block*Age + 
+                Block*GROUP + 
+                (Block|participant), 
+              data=taskData2Blocks)
+summary(RT_5)
+
+
+taskData2BlocksDiff <- taskData2Blocks %>%
+  group_by(participant, Block) %>% 
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE))) %>%
+  spread(Block, responseTimeCorrect) %>% 
+  mutate(Diff = Block3-Block2)
+  
+
+taskData2BlocksDiffWide <- merge(taskData2BlocksDiff, taskData[,1:5])
+#names()
+
+RT_6 <- lmer(responseTimeCorrect~GROUP + 
+                DEM_3_GENDER_CHILD + 
+               Block + 
+                Age + #controlling for age 
+               (Block|participant), 
+             data = taskData2Blocks)
+summary(RT_6)
+
+RT_6.1 <- lmer(responseTimeCorrect~GROUP + 
+                DEM_3_GENDER_CHILD + 
+               Block + 
+                 Age +
+                Age*GROUP + #controlling for age 
+               (Block|participant), 
+             data = taskData2Blocks)
+summary(RT_6.1)
+
+taskData2Blocks$GroupBinary <- ifelse(taskData2Blocks$GROUP=="C", "comps", "crEAs")
+RT_7 <- lmer(responseTimeCorrect~GroupBinary + 
+                DEM_3_GENDER_CHILD + 
+               Block + 
+                Age + #controlling for age 
+               (Block|participant), 
+             data = taskData2Blocks)
+summary(RT_7)
+
+
+names(taskData2BlocksDiffWide)
+taskData2BlocksDiffWide$GroupBinary <- ifelse(taskData2BlocksDiffWide$GROUP=="C", "comps", "crEAs")
+
+RT_8 <- lm(data = taskData2BlocksDiffWide, Diff~GROUP + 
+                DEM_3_GENDER_CHILD + 
+                Age)  #controlling for age
+summary(RT_8)
+
+RT_8.1 <- lm(data = taskData2BlocksDiffWide, Diff~GROUP + 
+                DEM_3_GENDER_CHILD + 
+                Age+
+                GROUP*Age)  #controlling for age
+summary(RT_8.1)
+
+
+RT_8.2 <- lm(data = taskData2BlocksDiffWide, Diff~GroupBinary + 
+                DEM_3_GENDER_CHILD + 
+                Age+
+                GroupBinary*Age)  #controlling for age
+summary(RT_8.2)
+
+#mutate(Diff = Block2-Block3)
+
+RT_8.3 <- lm(data = taskData2BlocksDiffWide, Diff~GroupBinary + 
+                DEM_3_GENDER_CHILD + 
+                Age)  #controlling for age
+summary(RT_8.3)
+
+taskData2BlocksDiffWide
+
+ggplot(taskData2BlocksDiffWide, aes(GROUP, Diff,  color=Age)) + 
+  geom_point()
+
+ggplot(taskData2BlocksDiffWide, aes(GroupBinary, Diff,  color=Age)) + 
+  geom_point()
+
+taskData2BlocksDiff
+
+ggplot(taskData2BlocksDiffWide, aes(GroupBinary, Diff,  color=Age)) + 
+  geom_point()
+
+taskData2BlocksDiffWide
+
+
+taskData2BlocksDiffWide <- merge(taskData2BlocksDiff, unique(taskData[,1:4]))
+taskData2BlocksDiffLong<- gather(taskData2BlocksDiffWide, key="Block", value="meanRT", 2:3)
+
+taskData2BlocksDiffLong$AgeYears <- as.factor(trunc(taskData2BlocksDiffLong$Age))
+
+ggplot(taskData2BlocksDiffLong, aes(Block, meanRT,  group=participant, color=AgeYears)) + 
+  geom_point() + 
+  geom_line()
+
+
+ggplot(taskData2BlocksDiffLong, aes(Block, meanRT,  group=participant, color=AgeYears)) + 
+  geom_point() + 
+  geom_line()+ 
+  facet_wrap(~GROUP)
+
+ggplot(taskData2BlocksDiffLong, aes(Block, meanRT,  group=participant, color=GROUP)) + 
+  geom_point() + 
+  geom_line()+ 
+  facet_wrap(~AgeYears)
+
+
+
+library(psych)
+describe(taskData2BlocksDiffLong$meanRT)
+taskData2BlocksDiffLong[taskData2BlocksDiffLong$meanRT>(3*.7),]
+
+
+#removing outliers 
+taskData2BlocksDiffLong<- taskData2BlocksDiffLong[!taskData2BlocksDiffLong$participant==106,]
+taskData2BlocksDiffLong<- taskData2BlocksDiffLong[!taskData2BlocksDiffLong$participant==247,]
+taskData2BlocksDiffLong<- taskData2BlocksDiffLong[!taskData2BlocksDiffLong$participant==121,]
+
+ggplot(taskData2BlocksDiffLong, aes(Block, meanRT,  group=participant, color=GROUP)) + 
+  geom_point() + 
+  geom_line()+ 
+  facet_wrap(~AgeYears) + 
+    theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black")) 
+
+
+ggplot(taskData2BlocksDiffLong, aes(Block, meanRT,  group=participant, color=AgeYears)) + 
+  geom_point() + 
+  geom_line()+ 
+  facet_wrap(~GROUP) + 
+    theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black")) 
+
+
+
+
+meanGroups<- taskData2BlocksDiffLong %>%
+  group_by(AgeYears, GROUP, Block) %>%
+  summarise_at(vars(meanRT),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+
+meanGroups
+
+ggplot(meanGroups, aes(Block, mean,  group=AgeYears, color=AgeYears)) + 
+  geom_point() + 
+  geom_line()+ 
+  facet_wrap(~GROUP) + 
+    theme(legend.position = "top") +
+    geom_errorbar(aes(ymin=mean-se, ymax=mean+se),  width=0.2)   +
+  theme( strip.text.x = element_text(colour = "black")) 
+
+#names()
+```
+
+#averaging Block 2 and 4 comparing to Block 3 
+```{r}
+taskData3Blocks <- taskData %>%
+  filter(Block==c("Block3", "Block2", "Block4")) 
+
+#taskData3Blocks$RandomMinusSequence <- 
+  
+taskData3Blocks<- taskData3Blocks %>%
+  group_by(participant, Block) %>% 
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE))) %>%
+  spread(Block, responseTimeCorrect) %>% 
+  mutate(RandomMinusSequence = Block3-(Block2+Block4)/2)
+
+
+
+taskData3BlocksDiffWide <- merge(taskData3Blocks, unique(taskData[,1:4]))
+taskData3BlocksDiffLong<- gather(taskData3BlocksDiffWide, key="Block", value="meanRT", 2:4)
+
+taskData3BlocksDiffLong
+
+
+taskData3BlocksDiffLong$AgeYears <- as.factor(trunc(taskData3BlocksDiffLong$Age))
+
+ggplot(taskData3BlocksDiffLong, aes(Block, meanRT,  group=participant, color=AgeYears)) + 
+  geom_point() + 
+  geom_line()
+
+
+ggplot(taskData3BlocksDiffLong, aes(Block, meanRT,  group=participant, color=AgeYears)) + 
+  geom_point() + 
+  geom_line()+ 
+  facet_wrap(~GROUP)
+
+ggplot(taskData3BlocksDiffLong, aes(Block, meanRT,  group=participant, color=GROUP)) + 
+  geom_point() + 
+  geom_line()+ 
+  facet_wrap(~AgeYears)
+
+
+
+describe(taskData2BlocksDiffLong$meanRT)
+taskData2BlocksDiffLong[taskData2BlocksDiffLong$meanRT>(3*.19),]
+
+
+#removing outliers 
+taskData3BlocksDiffLong<- taskData3BlocksDiffLong[!taskData3BlocksDiffLong$participant==106,]
+taskData3BlocksDiffLong<- taskData3BlocksDiffLong[!taskData3BlocksDiffLong$participant==247,]
+taskData3BlocksDiffLong<- taskData3BlocksDiffLong[!taskData3BlocksDiffLong$participant==121,]
+
+ggplot(taskData3BlocksDiffLong, aes(Block, meanRT,  group=participant, color=GROUP)) + 
+  geom_point() + 
+  geom_line()+ 
+  facet_wrap(~AgeYears) + 
+    theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black")) 
+
+
+ggplot(taskData3BlocksDiffLong, aes(Block, meanRT,  group=participant, color=AgeYears)) + 
+  geom_point() + 
+  geom_line()+ 
+  facet_wrap(~GROUP) + 
+    theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black")) 
+
+
+
+
+meanGroups<- taskData3BlocksDiffLong %>%
+  group_by(AgeYears, GROUP, Block) %>%
+  summarise_at(vars(meanRT),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+
+
+
+ggplot(meanGroups, aes(Block, mean,  group=GROUP, color=GROUP)) + 
+  geom_point() + 
+  geom_line()+ 
+  facet_wrap(~AgeYears) + 
+    theme(legend.position = "top") +
+    geom_errorbar(aes(ymin=mean-se, ymax=mean+se),  width=0.2)   +
+  theme( strip.text.x = element_text(colour = "black")) 
+
+taskData3BlocksDiffLong$GroupBinary <- ifelse(taskData3BlocksDiffLong$GROUP=="C", "comps", "crEAs")
+meanGroups<- taskData3BlocksDiffLong %>%
+  group_by(AgeYears, GroupBinary, Block) %>%
+  summarise_at(vars(meanRT),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+
+
+ggplot(meanGroups, aes(Block, mean,  group=GroupBinary, color=GroupBinary)) + 
+  geom_point() + 
+  geom_line()+ 
+  facet_wrap(~AgeYears) + 
+    theme(legend.position = "top") +
+    geom_errorbar(aes(ymin=mean-se, ymax=mean+se),  width=0.2)   +
+  theme( strip.text.x = element_text(colour = "black")) 
+
+
+
+ggplot(meanGroups, aes(Block, mean,  group=AgeYears, color=AgeYears)) + 
+  geom_point() + 
+  geom_line()+ 
+  facet_wrap(~GroupBinary) + 
+    theme(legend.position = "top") +
+    geom_errorbar(aes(ymin=mean-se, ymax=mean+se),  width=0.2)   +
+  theme( strip.text.x = element_text(colour = "black")) 
+
+
+
+ggplot(taskData3BlocksDiffLong, aes(GroupBinary, RandomMinusSequence,  group=AgeYears, color=AgeYears)) + 
+  geom_point() + 
+  #geom_line()+ 
+  #facet_wrap(~GroupBinary) + 
+    theme(legend.position = "top") +
+   # geom_errorbar(aes(ymin=mean-se, ymax=mean+se),  width=0.2)   +
+  theme( strip.text.x = element_text(colour = "black")) 
+
+
+#names()
+```
+
+
+
+
+```{r}
+
+names(taskData)
+
+taskData$GroupBinary <- ifelse(taskData$GROUP=="C" , "comp", "crEAs")
+
+ 
+
+RT_1 <- lmer(responseTimeCorrect~GroupBinary + 
+                DEM_3_GENDER_CHILD + 
+                Age +
+                Block + 
+                Block*GroupBinary + 
+              Age*GroupBinary+ 
+               (Block|participant), 
+              data=taskData)
+
+summary(RT_1)
+
+RT_2 <- lmer(responseTimeCorrect~GroupBinary + 
+                DEM_3_GENDER_CHILD + 
+                Age + 
+                Block + 
+                (Block|participant),
+              data=taskData)
+
+summary(RT_2)
+
+
+taskData$AgeBinary <- ifelse(as.numeric(taskData$Age) < 10, "6-9", "10-12")
+
+
+RT_3 <- lmer(responseTimeCorrect~GroupBinary + 
+                DEM_3_GENDER_CHILD + 
+                AgeBinary +
+                AgeBinary*GroupBinary + 
+                Block + 
+                Block*GroupBinary + 
+                (Block|participant), 
+              data=taskData)
+summary(RT_3)
+
+taskDataYounger<- taskData[taskData$AgeBinary=="6-9",]
+
+taskDataOlder<- taskData[!taskData$AgeBinary=="6-9",]
+
+
+#RT_younger <- lmer(responseTimeCorrect~GroupBinary + 
+#                DEM_3_GENDER_CHILD + 
+#                Age +
+#                Block +
+#               Age*GroupBinary + 
+#                (Block|participant), 
+#              data=taskDataYounger)
+#summary(RT_younger)
+
+RT_younger <- lmer(responseTimeCorrect~GroupBinary + 
+                DEM_3_GENDER_CHILD + 
+                Age +
+                Block +
+                Block*GroupBinary + 
+                (Block|participant), 
+              data=taskDataYounger)
+summary(RT_younger)
+
+# RT_older <- lmer(responseTimeCorrect~GroupBinary + 
+#                 DEM_3_GENDER_CHILD + 
+#                 Age +
+#                 Block + 
+#                 Age*GroupBinary + 
+#                 (Block|participant), 
+#               data=taskDataOlder)
+# summary(RT_older)
+
+RT_older <- lmer(responseTimeCorrect~GroupBinary + 
+                DEM_3_GENDER_CHILD + 
+                Age +
+                Block + 
+                Block*GroupBinary + 
+                (Block|participant), 
+              data=taskDataOlder)
+summary(RT_older)
+
+
+
+anova(RT_3)
+anova(RT_younger)
+anova(RT_older)
+```
+
+#Table for lm 
+```{r}
+
+kable(tidy(RT_8.3) %>% mutate_if(is.numeric, funs(round(., digits = 2))))
+
+```
+
+
+#Table for lmer 
+
+
+
+
+
+#Normalizing (after outlier removed)
+```{r}
+names(RT_correctNOOutliers)
+
+summaryAllValues <- RT_correctNOOutliers %>% 
+  group_by(participant, GROUP, Block, AgeYears) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+
+summaryAllValues <- as.data.frame(summaryAllValues)
+summaryAllValues$participant <- as.factor(summaryAllValues$participant)
+summaryAllValues
+
+summarySubjectRT <- RT_correctNOOutliers %>% 
+  group_by(participant) %>%
+  summarise_at(vars(responseTimeCorrect), funs(mean(., na.rm=TRUE)))
+
+summarySubjectRT
+normalizing <- merge(summarySubjectRT, summaryAllValues, by="participant")
+#normalizing$normalizedValues <- normalizing$responseTimeCorrect.y/normalizing$responseTimeCorrect.x
+normalizing
+normalizing$normalizedValues <- normalizing$mean/normalizing$responseTimeCorrect
+head(normalizing)
+
+normalizing <- normalizing[!is.na(normalizing$Block),]
+
+
+RT_normalized <- ggplot(data=normalizing, 
+          aes(Block, normalizedValues, group=participant, colour=GROUP)) +
+  geom_point() + 
+  geom_line() + 
+  theme_bw() +
+  labs(title="RT (all trials)",
+        x ="Block (time)", y = "Normalized RT")+
+  theme(legend.position = "none")
+RT_normalized
+
+
+summaryAllValues <- normalizing %>% 
+  group_by(GROUP, Block) %>%
+  summarise_at(vars(normalizedValues), funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+
+#summaryAllValues$participant <- 1
+
+head(summaryAllValues)
+#View(taskData)
+normalizing
+summaryAllValues
+
+summaryAllValues <- summaryAllValues[!is.na(summaryAllValues$Block),]
+
+ggplot(data=normalizing, aes(Block, normalizedValues, group=participant, color=GROUP)) +
+  geom_point() + 
+  geom_line() + 
+  theme(legend.position = "right")
+
+ggplot(data=normalizing, aes(Block, normalizedValues, group=participant, color=GROUP)) +
+  geom_point() + 
+  geom_line() + 
+  facet_wrap(~GROUP) +
+  theme(legend.position = "right")
+
+ggplot(data=normalizing, aes(Block, normalizedValues, group=participant, color=AgeYears)) +
+  geom_point() + 
+  geom_line() + 
+  facet_wrap(~GROUP) +
+  theme(legend.position = "right")
+
+ggplot(summaryAllValues, aes(Block, mean, group=GROUP, color=GROUP)) + 
+  geom_point() + 
+  geom_line() + 
+  facet_wrap(~GROUP) + 
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=0.2) +
+  theme(legend.position = "right")
+  
+ggplot(summaryAllValues, aes(Block, mean, group=GROUP, color=GROUP)) + 
+  geom_point() + 
+  geom_line() + 
+  #facet_wrap(~GROUP) + 
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=0.2) +
+  theme(legend.position = "right")
+
+
+```
+#Models based on nnormalized data - how to normalize correctly? 
+```{r}
+
+summaryAllValues <- taskData %>% 
+  group_by(participant) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE),
+                                              sd(.,na.rm=T),se=sd/sqrt(n()))) %>%
+  merge(taskData) %>%
+  mutate(normalizedRT = (responseTimeCorrect-mean)/mean)
+
+summaryAllValues
+
+#do I want to subtract mean of the block of mean of the subjects?? I think I want to subtract the participant mean #(or mean of the group?!)
+
+
+summaryNormValues <- summaryAllValues %>% 
+  group_by(participant, Block, GROUP, Age) %>%
+  summarise_at(vars(normalizedRT),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+summaryNormValues
+
+
+  
+ggplot(summaryNormValues, aes(Block, mean, group=participant, color=GROUP)) + 
+  geom_point() + 
+  geom_line() + 
+  #facet_wrap(~GROUP) + 
+  #geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=0.2) +
+  theme(legend.position = "right")
+
+
+summaryNormValuesNOOutliers <- summaryNormValues[!summaryNormValues$mean > 1,]
+summaryNormValuesNOOutliers <- #summaryNormValuesNOOutliers[!summaryNormValuesNOOutliers$mean < -.5,]
+
+summaryNormValuesNOOutliers <- summaryNormValuesNOOutliers[!is.na(summaryNormValuesNOOutliers$Block),]
+
+
+#summaryNormValuesGroups <- normalizingAllData %>% 
+#  group_by(Block, GROUP, AgeYears) %>%
+#  summarise_at(vars(normalizedValues),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+#summaryNormValuesGroups
+
+  
+ggplot(summaryNormValuesNOOutliers, aes(Block, mean, group=participant, color=GROUP)) + 
+  geom_point() + 
+  geom_line() + 
+  #facet_wrap(~GROUP) + 
+  #geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=0.2) +
+  theme(legend.position = "right")
+
+
+summaryAllValues <- summaryAllValues[!summaryAllValues$mean > 1,]
+
+RT_1normalized <- lmer(normalizedRT~GROUP + 
+                DEM_3_GENDER_CHILD + 
+                Age +
+                #Age*GROUP + 
+                Block + 
+                Block*GROUP + 
+                (Block|participant), 
+              data=summaryAllValues)
+summary(RT_1normalized)
+
+
+RT_2normalized <- lmer(normalizedRT~GroupBinary + 
+                DEM_3_GENDER_CHILD + 
+                Age +
+                #Age*GroupBinary + 
+                Block + 
+                Block*GroupBinary + 
+                (Block|participant), 
+              data=summaryAllValues)
+summary(RT_2normalized)
+
+RT_2normalized <- lmer(normalizedRT~GroupBinary + 
+                DEM_3_GENDER_CHILD + 
+                AgeBinary +
+                AgeBinary*GroupBinary + 
+                Block + 
+                Block*GroupBinary + 
+                (Block|participant), 
+              data=summaryAllValues)
+summary(RT_2normalized)
+
+```
+
+
+#Normalize to age? 
+```{r}
+#Normalizing by Age Group Means 
+AgeGroupMeans <- GroupBySubject %>% 
+  group_by(AgeYears) %>% 
+  summarise_at(vars(mean), funs(mean(., na.rm=TRUE)))
+AgeGroupMeans
+
+GroupBySubject
+GroupByAge
+
+GroupByAge %>%
+  group_by(AgeYears) %>%
+  mean-AgeGroupMeans$mean
+  
+normalizing <- merge(AgeGroupMeans, GroupBySubject, by="AgeYears")
+normalizing$normalizedValues <- normalizing$mean.y/normalizing$mean.x
+normalizing
+
+ggplot(normalizing, aes(Block, normalizedValues, group=participant, color=AgeYears)) + 
+  geom_point()  + 
+  geom_line()+
+  #geom_pointrange(aes(ymin=mean-sd, ymax=mean+sd))   +
+ facet_wrap(~AgeYears) + 
+  theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black"))  +
+  ggtitle("Comparison ")
+AgeGroupMeans
+
+
+
+ggplot(normalizing, aes(Block, normalizedValues, color=AgeYears)) + 
+  geom_point()  + 
+  geom_line(aes(group=participant))+
+  #geom_pointrange(aes(ymin=mean-sd, ymax=mean+sd))   +
+ facet_wrap(~AgeYears) +
+  geom_point(data=GroupByAge, aes(Block, mean, color="bl")) +
+  theme(legend.position = "top") + 
+  theme( strip.text.x = element_text(colour = "black"))  +
+  ggtitle("Comparison ")
+mean(GroupBySubject$mean)
+
+GroupBySubject
+
+# df %>%
+#   mutate(mean_var1 = mean(var1)) %>%
+#   group_by(plate) %>%
+#   mutate(mean_var1_plate = mean(var1)) %>%
+#   ungroup() %>%
+#   mutate(var1_normalized = var1 * mean_var1/mean_var1_plate) %>%
+#   select(plate, var1_normalized)
+# 
+# GroupBySubject
+# 
+# taskDataCOMPS %>%
+#   group_by(Block) %>%
+#   mutate(normRT = mean(responseTimeCorrect)) %>%
+#   ungroup() %>%
+#   mutate(mean_normalized = mean * mean_var1/mean_var1_plate) %>%
+#   select(plate, var1_normalized)
+
+```
+
+
+```{r}
+
+
+summaryAllValues <- taskData %>% 
+  group_by(participant, GROUP) %>%
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+
+summaryAllValues <- as.data.frame(summaryAllValues)
+summaryAllValues$participant <- as.factor(summaryAllValues$participant)
+summaryAllValues
+
+summarySubjectRT <- taskData %>% 
+  group_by(participant, Block) %>%
+  summarise_at(vars(responseTimeCorrect), funs(mean(., na.rm=TRUE)))
+summarySubjectRT
+
+normalizing <- merge(summarySubjectRT, summaryAllValues, by="participant")
+#normalizing$normalizedValues <- normalizing$responseTimeCorrect.y/normalizing$responseTimeCorrect.x
+normalizing
+normalizing$normalizedValues <- normalizing$mean/normalizing$responseTimeCorrect
+head(normalizing)
+
+
+normalizing$participant <- as.factor(normalizing$participant)
+normalizing
+
+ggplot(data=normalizing, 
+          aes(Block, normalizedValues, group=participant, colour=participant)) +
+  geom_point() + 
+  geom_line() + 
+  theme_bw() +
+  labs(title="RT (all trials)",
+        x ="Group", y = "Normalized RT")+
+  theme(legend.position = "none")
+
+```
+
+
+
+
+```{R}
+GroupByAge <- RT_correct %>% 
+  group_by(Block, GROUP, AgeYears) %>% 
+  summarise_at(vars(responseTimeCorrect), funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+
+GroupByAge
+
+
+ggplot(GroupByAge, aes(Block, mean, group=AgeYears, color=AgeYears)) + 
+  facet_wrap(~AgeYears) + 
+  geom_point()  + 
+  geom_pointrange(aes(ymin=mean-se, ymax=mean+se))  
+  #facet_wrap(~AgeYears) 
+
+ggplot(RT_correct, aes(Block, mean, color=GROUP)) + 
+  geom_point()  
+  #geom_pointrange(aes(ymin=mean-sd, ymax=mean+sd))
+
+#
+ggplot(RT_correctNOOutliers, aes(Block, mean, group=GROUP,color=GROUP)) + 
+  geom_point()  + 
+  geom_pointrange(aes(ymin=mean-sd, ymax=mean+sd))+
+  facet_wrap(~GROUP ~AgeYears)  
+  
+RT_correct %>% 
+  group_by(GROUP, AgeYears, Block) %>% 
+  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+
+
+```
+
+
+```{r}
+x = c(0:30)
+y = c(0:30)
+
+df <- data.frame(x,y)
+
+ggplot(data=df, aes(x, y)) + 
+  geom_point()
+
+```
+
+
+
+
+
+#conservative outlier removvals 
+```{r}
+# 
+# merge(summaryAllValues, taskData)
+# mean(summaryAllValues$sd)
+# 
+# summaryAllValues[summaryAllValues$sd > 3,] 
+# summaryAllValuesOutliers <- summaryAllValues[summaryAllValues$sd >3,] 
+# 
+# ggplot(data=summaryAllValuesOutliers, aes(Block, mean, group=participant,color=AgeYears)) +
+#   geom_point() + 
+#   geom_text(aes(label=participant),hjust=0, vjust=0) + 
+#   geom_line() +
+#   theme(legend.position = "right", strip.text.x = element_text(colour = "black")) + 
+#   facet_wrap(~GROUP) 
+# 
+# summaryAllValuesOutliers <- summaryAllValuesOutliers[!is.na(summaryAllValuesOutliers$participant),]
+# summaryAllValuesOutliers
+# 
+# 
+# 
+# summaryAllValues %>% 
+#   subset(participant==c(59, 70, 106, 114, 121, 236, 247, 303)) %>% 
+#   ggplot(aes(Block, mean, group=participant,color=AgeYears)) + 
+#   geom_point() + 
+#   geom_line()
+# 
+# summaryAllValues %>% 
+#   subset(participant==c(59, 70, 106, 114, 121, 236, 247, 303)) 
+# 
+# summaryAllValues
+# #table(summaryAllValues$participant, summaryAllValues$Block)
+# 
+# outlierParticipant = c(59, 70, 106, 114, 121, 236, 247, 303)
+# outlierParticipant
+# 
+# summaryAllValues %>% 
+#   subset(participant==outlierParticipant) 
+# summaryAllValues[summaryAllValues$participant==outlierParticipant,]
+# 
+# summaryAllValues[summaryAllValues$participant==59,]
+# 
+# outliers6 <- rbind(
+#       #summaryAllValues[summaryAllValues$participant==59,], #only block 1 is an outlier 
+#       #summaryAllValues[summaryAllValues$participant==70,], #only block 1 is an outlier
+#       summaryAllValues[summaryAllValues$participant==106,], 
+#       summaryAllValues[summaryAllValues$participant==114,], 
+#       summaryAllValues[summaryAllValues$participant==121,], 
+#       summaryAllValues[summaryAllValues$participant==236,], 
+#       summaryAllValues[summaryAllValues$participant==247,],
+#       summaryAllValues[summaryAllValues$participant==303,])
+# 
+# outliers8 <- rbind(
+#       summaryAllValues[summaryAllValues$participant==59,], #only block 1 is an outlier 
+#       summaryAllValues[summaryAllValues$participant==70,], #only block 1 is an outlier
+#       summaryAllValues[summaryAllValues$participant==106,], 
+#       summaryAllValues[summaryAllValues$participant==114,], 
+#       summaryAllValues[summaryAllValues$participant==121,], 
+#       summaryAllValues[summaryAllValues$participant==236,], 
+#       summaryAllValues[summaryAllValues$participant==247,],
+#       summaryAllValues[summaryAllValues$participant==303,])
+# 
+# ggplot(data=outliers6, aes(Block, mean, group=participant,color=AgeYears)) +
+#   geom_point() + 
+#   geom_text(aes(label=participant),hjust=0, vjust=0) + 
+#   geom_line() +
+#   theme(legend.position = "right", strip.text.x = element_text(colour = "black")) + 
+#   facet_wrap(~GROUP) 
+# #remove everyone who had at least one block outlier
+# outliers8
+# 
+# ggplot(data=outliers8, aes(Block, mean, group=participant,color=AgeYears)) +
+#   geom_point() + 
+#   geom_text(aes(label=participant),hjust=0, vjust=0) + 
+#   geom_line() +
+#   theme(legend.position = "right", strip.text.x = element_text(colour = "black")) + 
+#   facet_wrap(~GROUP) 
+
+```
+
+#Closer look at keyboard 
+```{r}
+names(data_demoPreTouch)
+unique(data_demoPreTouch$participant)
+
+summaryPreTouch <- data_demoPreTouch %>% 
+  group_by(participant, Age, GROUP) %>%
+  summarise_at(vars(key_resp_9.corr),funs(count()))
+
+unique(data_demoPreTouch$key_resp_9.corr)
+
+as.numeric(data_demoPreTouch$key_resp_9.rt)
+
+summaryPreTouch$AgeYears <- as.factor(trunc(summaryPreTouch$Age))
+
+summaryPreTouch
+
+data_demoPreTouch %>% str_replace_all("\\[|\\]", "")
+
+
+
+ggplot(summaryPreTouch, aes(GROUP, fill=GROUP)) + 
+  geom_bar() +
+  geom_text(stat='count', aes(label=..count..), vjust=-1) 
+
+ggplot(summaryPreTouch, aes(AgeYears, fill=GROUP)) + 
+  geom_bar() +
+  facet_wrap(~GROUP) +
+  geom_text(stat='count', aes(label=..count..), vjust=-1) 
+
+ggplot(summaryPreTouch, aes(GROUP, fill=GROUP)) + 
+  geom_point() +  
+  geom_text(aes(label=participant),hjust=0, vjust=0)
+
+
+```
+
+#Pre touch screen was put in another file 
+```{r}
+
+
+data_demoPreTouch$TrialNum <- sequence(rle(data_demoPreTouch$participant)$lengths)
+
+unique(data_demoPreTouch$TrialNum)
+names(data_demoPreTouch)
+head(data_demoPreTouch)
+
+taskDataBlocks1 <- data_demoPreTouch
+#taskDataBlocks1$Group <-  taskDataBlocks1$Trial
+
+#Post Touch screen has sequence length 8 for 10 sequences per block 
+taskDataBlocks1$Block1 <- taskDataBlocks1$TrialNum <= 80 #100
+taskDataBlocks1$Block2 <- between(taskDataBlocks1$Trial, 81, 160)  #101,  200 ) 
+taskDataBlocks1$Block3 <- between(taskDataBlocks1$Trial, 161, 240) #201,  300 ) 
+taskDataBlocks1$Block4 <- between(taskDataBlocks1$Trial, 241, 320)   #301,  400 ) 
+
+taskDataBlocks1$Block[taskDataBlocks1$Block1 == TRUE] <- "Block1"
+taskDataBlocks1$Block[taskDataBlocks1$Block2 == TRUE] <- "Block2"
+taskDataBlocks1$Block[taskDataBlocks1$Block3 == TRUE] <- "Block3"
+taskDataBlocks1$Block[taskDataBlocks1$Block4 == TRUE] <- "Block4"
+#Group <- taskDataBlocks1$Group
+Block <- taskDataBlocks1$Block
+
+
+PreTouchScreenBYBlock <- taskDataBlocks1
+
+
+```
+
+```{r}
+names(PreTouchScreenBYBlock)
+
+summaryAllValues <- PreTouchScreenBYBlock %>% 
+  group_by(participant, Block) %>%
+  summarise_at(vars(keyRespCorrect),funs(mean(., na.rm=TRUE), sd(., na.rm=T),se=sd/sqrt(n())))
+summaryAllValues
+
+length(unique(summaryAllValues$participant))
+
+#Check data for 58, 4 blocks no correct responses #CHECK
+#60 only has 2 blocks - no correct responses 
+#73 only has 2 blocks - no correct responses 
+#Check data for 80, 4 blocks no correct responses #CHECK
+#84 only has 2 blocks - no correct responses 
+#97 only has 2 blocks - no correct responses 
+
+
+#Remove incomplete Data from keyboard responses 
+
+PreTouchScreenBYBlock <- PreTouchScreenBYBlock[!PreTouchScreenBYBlock$participant=='60',] #2 blocks only 
+PreTouchScreenBYBlock <- PreTouchScreenBYBlock[!PreTouchScreenBYBlock$participant=='73',] #2 blocks only 
+PreTouchScreenBYBlock <- PreTouchScreenBYBlock[!PreTouchScreenBYBlock$participant=='84',] #2 blocks only 
+PreTouchScreenBYBlock <- PreTouchScreenBYBlock[!PreTouchScreenBYBlock$participant=='97',] #2 blocks only  
+
+
+
+summaryAllValues <- PreTouchScreenBYBlock %>% 
+  group_by(participant, Block, Age, GROUP) %>%
+  summarise_at(vars(keyRespCorrect),funs(mean(., na.rm=TRUE)))
+
+length(unique(summaryAllValues$participant))
+
+summaryAllValues$AgeYears <- as.factor(trunc(summaryAllValues$Age))
+class(summaryAllValues$Age)
+
+summaryAllValueswide <- summaryAllValues %>%
+  spread(Block, keyRespCorrect)
+
+head(summaryAllValueswide)
+summaryAllValueswide$GroupBinary <- ifelse(summaryAllValueswide$GROUP=="C", "comps", "crEAs")
+
+ggplot(data=summaryAllValueswide, aes(GROUP, color=GROUP, fill=GROUP)) + 
+  geom_bar() + 
+  geom_text(stat='count', aes(label=..count..), vjust=-1) + 
+  ylim(0, 30) + 
+  labs(title="External Keyboard Data")+
+  theme( strip.text.x = element_text(colour = "black")) 
+
+head(summaryAllValueswide)
+ggplot(data=summaryAllValueswide, aes(AgeYears, color=GROUP, fill=GROUP)) + 
+  geom_bar() + 
+  facet_wrap(~GROUP) + 
+  geom_text(stat='count', aes(label=..count..), vjust=-1) + 
+  ylim(0, 20) + 
+  labs(title="External Keyboard Data")+
+  theme( strip.text.x = element_text(colour = "black")) 
+
+
+ggplot(data=summaryAllValueswide, aes(GroupBinary, color=GroupBinary, fill=GroupBinary)) + 
+  geom_bar() + 
+  geom_text(stat='count', aes(label=..count..), vjust=-1) + 
+  ylim(0, 50) + 
+  labs(title="External Keyboard Data")+
+  theme( strip.text.x = element_text(colour = "black")) 
+
+ggplot(data=summaryAllValueswide, aes(AgeYears, color=GroupBinary, fill=GroupBinary)) + 
+  geom_bar() + 
+  facet_wrap(~GroupBinary) + 
+  geom_text(stat='count', aes(label=..count..), vjust=-1) + 
+  ylim(0, 20) + 
+  labs(title="External Keyboard Data broken down by Age ")+
+  theme( strip.text.x = element_text(colour = "black")) 
+
+```
+
+
+
+
+
+
+
