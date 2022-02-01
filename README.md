@@ -790,7 +790,8 @@ write.csv(allTaskData, "allTaskDataCleaned1.28.2022.csv", row.names=F)
 ```
 
 
-# Getting demographic data and Plottinng (see SequenceFixingDemographicsAndModelsCorrectBlock1.19.2022.Rmd for Frequentist models before prospectus and sequencePlottingAndAnalyses01.27.2022.Rmd for set up of Bayesian models after prospectus) 
+# Getting demographic data and Plottinng 
+(see SequenceFixingDemographicsAndModelsCorrectBlock1.19.2022.Rmd for Frequentist models before prospectus and sequencePlottingAndAnalyses01.27.2022.Rmd for set up of Bayesian models after prospectus) 
 
 ```.R
 {r setup, include=FALSE}
