@@ -1039,4 +1039,57 @@ summaryAllValues
 ```
 
 
+# Bayesian Modelling 
+
+```.R
+{r}
+head(taskData)
+taskData$GroupBinary <- ifelse(taskData$GROUP=="C", 0, 1)
+names(taskData)
+taskData$AgeMeanCentered <- taskData$Age - mean(taskData$Age)
+mean(taskData$AgeMeanCentered)
+
+
+taskData %>% 
+  mutate(scale(Age, center=T, scale=FALSE))
+
+taskData <- taskData %>%
+  mutate(AgeMeanCenter = mean(Age, na.rm=T)) %>%
+  mutate(AgeMeanCentered = Age - AgeMeanCenter)
+
+
+
+brms_1 <- brm(responseTimeCorrect ~ GroupBinary + 
+                DEM_3_GENDER_CHILD + #controlling for Gender
+                AgeMeanCentered + #controlling for age 
+                Block + 
+                Block*GroupBinary + 
+                (Block|participant), 
+              data=taskData,
+              seed=111)
+summary(brms_1)
+
+
+
+```
+
+#Plotting the model predictions
+
+```.R
+{r}
+pred.data <- NULL 
+
+for (i in unique(taskData$participant)){
+  predict.Block <- data.frame(
+    Block = c("Block1", "Block2", "Block3", "Block4"), 
+    participant=i)
+  pred.data <- rbind(pred.data, predict.Block)
+}
+
+head(pred.data)
+
+pred.data.fill <- cbind(pred.data, fitted(brms_1, re_formula=NULL))
+
+```
+
 
