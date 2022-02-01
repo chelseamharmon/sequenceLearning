@@ -926,6 +926,9 @@ names(demo_TaskData)
 
 #View(taskData)
 #April 7 2019 was when wave 2 started <- but wave 1 was still ongoing 
+
+write.csv(demo_TaskData, "allTaskDataCleaned_withDemo1.28.2022.csv", row.names=F)
+
 ```
 
 
@@ -1041,17 +1044,36 @@ summaryAllValues
 
 # Bayesian Modelling 
 
+Copy data to [habanero](https://confluence.columbia.edu/confluence/display/rcs/Habanero+-+Working+on+Habanero) from local computer. Then copy 
+```.bash
+#from local computer 
+scp allTaskDataCleaned_withDemo1.28.2022.csv cmh2228@habanero.rcs.columbia.edu:/rigel/psych/users/cmh2228/sequenceLearning/ 
+
+#from evlis, lab server 
+cd /danl/Collaborations/Harmon_SeqLearn/sequenceLearning/sequenceLearning
+scp cmh2228@habanero.rcs.columbia.edu:/rigel/psych/users/cmh2228/sequenceLearning/allTaskDataCleaned_withDemo1.28.2022.csv .
+
+```
+
+On elvis, lab server 
+can also run Rscript bayesModel1.R
 ```.R
 {r}
+library(dplyr)
+library(brms)
+library(bmlm)
+
+taskData <- read.csv("allTaskDataCleaned_withDemo1.28.2022.csv")
+
 head(taskData)
 taskData$GroupBinary <- ifelse(taskData$GROUP=="C", 0, 1)
-names(taskData)
+#names(taskData)
 taskData$AgeMeanCentered <- taskData$Age - mean(taskData$Age)
 mean(taskData$AgeMeanCentered)
 
 
-taskData %>% 
-  mutate(scale(Age, center=T, scale=FALSE))
+#taskData %>% 
+#  mutate(scale(Age, center=T, scale=FALSE))
 
 taskData <- taskData %>%
   mutate(AgeMeanCenter = mean(Age, na.rm=T)) %>%
@@ -1069,8 +1091,7 @@ brms_1 <- brm(responseTimeCorrect ~ GroupBinary +
               seed=111)
 summary(brms_1)
 
-
-
+save(brms_1, file = "brms_1.RData")
 ```
 
 #Plotting the model predictions
