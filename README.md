@@ -5,7 +5,7 @@ The goal of this study is to investigate how caregiving related early adversity 
 First subject ran March 18, 2018 (34 subjects) 
 Switched to Touchscreen Version June 12, 2018
 
-Subjects data from June 15, 2018 - June 20, 2018 Sequence was wrong on new version (sequence, random, random, sequence, i.e. do not use PA098 PA127 PA136 PA086) 
+Subjects data from June 15, 2018 - June 22, 2018 Sequence was wrong on new version (sequence, random, random, sequence, i.e. do not use PA098 PA127 PA136 PA086, PA089) 
 
 Subjects were removed when adding demographic data for having incorrect demographic data/experimenter error/insufficent collection (PA227, PA228, PA229)
 
