@@ -2,7 +2,7 @@
 The goal of this study is to investigate how caregiving related early adversity (crEA) exposure influences implicit motor sequence learning in school age children (6-12 years old) compared to a group of comparison children with no crEA exposure.
 
 # Important Notes 
-First subject ran March 18, 2018 (34 subjects) 
+First subject ran March 18, 2018 (33 subjects) 
 Switched to Touchscreen Version June 12, 2018
 
 Subjects data from June 15, 2018 - June 22, 2018 Sequence was wrong on new version (sequence, random, random, sequence, i.e. do not use PA098 PA127 PA136 PA086, PA089) 
