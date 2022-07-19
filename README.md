@@ -15,7 +15,7 @@ Subjects were removed when adding demographic data for having incorrect demograp
 Additional Authors: Harmon, C., Bloom, P., Fields, A., VanTieghem, M., Choy, T., Camacho, N., Gibson, L., Umbach, R., Heleniak, C., Tottenham, N.
 
 # Data Cleaning 
-see dataCleaning01.27.2022.Rmd (see below - shows how inputs were created from raw data) - takes inputs pre_touchscreen.task.data_11.16.21.csv and post_touchscreen.task.data_11.16.21.csv and cleans filed - outputs:
+see dataCleaning01.27.2022.Rmd (see below - shows how inputs were created from raw data) - from original Dropbox folders, finds subjects longest data (or takes inputs pre_touchscreen.task.data_11.16.21.csv and post_touchscreen.task.data_11.16.21.csv) and cleans files - outputs:
 dataPostTouchCleaned1.28.2022.csv
 questionnaireDataPostTouchCleaned1.28.2022.csv
 dataPreTouchCleaned1.28.2022.csv
