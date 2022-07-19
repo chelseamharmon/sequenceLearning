@@ -35,13 +35,13 @@ length(all.file.names)
 #all.file.names
 #517 files 
 
-#write.table(all.file.names, file = "all.file.namesV1W1_11.17.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
+write.table(all.file.names, file = "all.file.namesV1W1_11.17.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
 
 all.file.path.names <- 1:length(all.file.names)
 for(i in 1:length(all.file.names)){all.file.path.names[i] <- paste("/Users/chelseaharmon/Dropbox/danlab/Tasks/motorSequenceLearning/sequenceLearning/data/V1W1/",all.file.names[i], sep='')
 }
 
-#write.table(all.file.path.names, file = "all.file.pathsV1W1_11.17.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
+write.table(all.file.path.names, file = "all.file.pathsV1W1_11.17.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
 
 data.list.all <- list()
 length(all.file.path.names)
@@ -76,7 +76,7 @@ length(W1.subject.list)
 
 W1.use.these.data.files <- use.these.data.files
 
-#write.table(W1.use.these.data.files, file = "file.namesV1W1_11.16.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
+write.table(W1.use.these.data.files, file = "file.namesV1W1_11.16.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
 
 
 W1.file.path.names <- 1:length(W1.use.these.data.files)
@@ -86,8 +86,8 @@ for(i in 1:length(W1.use.these.data.files)){W1.file.path.names[i] <- paste("/Use
 }
 
 length(W1.file.path.names)
-
-#write.table(W1.file.path.names, file = "file.pathsV1W1_11.17.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
+W1.file.path.names
+write.table(W1.file.path.names, file = "file.pathsV1W1_11.17.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
 
 ```
 
@@ -98,13 +98,13 @@ W2.all.file.names <- list.files(path = "/Users/chelseaharmon/Dropbox/danlab/Task
 length(W2.all.file.names)
 #101
 
-#write.table(all.file.names, file = "all.file.namesV2W2_11.17.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
+write.table(all.file.names, file = "all.file.namesV2W2_11.17.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
 
 W2.all.file.path.names <- 1:length(W2.all.file.names)
 for(i in 1:length(W2.all.file.names)){W2.all.file.path.names[i] <- paste("/Users/chelseaharmon/Dropbox/danlab/Tasks/motorSequenceLearning/sequenceLearning/data/V2W2/",W2.all.file.names[i], sep='')
 }
 
-#write.table(all.file.path.names, file = "all.file.pathsV2W2_05.17.20.txt", quote = F, row.names = F, col.names = F, sep = ",")
+write.table(all.file.path.names, file = "all.file.pathsV2W2_05.17.20.txt", quote = F, row.names = F, col.names = F, sep = ",")
 
 W2.data.list.all <- list()
 
@@ -137,7 +137,7 @@ W2.subject.list
 length(W2.subject.list)
 #48
 
-#write.table(W2.use.these.data.files, file = "file.namesV2W2_11.17.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
+write.table(W2.use.these.data.files, file = "file.namesV2W2_11.17.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
 
 
 W2.file.path.names <- 1:length(W2.use.these.data.files)
@@ -145,117 +145,122 @@ for(i in 1:length(W2.use.these.data.files)){W2.file.path.names[i] <- paste("/Use
 }
 length(W2.file.path.names)
 
-#write.table(W2.file.path.names, file = "file.pathsV2W2_11.16.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
+write.table(W2.file.path.names, file = "file.pathsV2W2_11.16.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
+both.waves.file.path.name
+
 ```
 
 
-#Making sepearte csv with demographcis or W1 and W2 
-```{r}
-#wave 1
-length(W1.file.path.names)
-#242
-taskData <- read.csv((W1.file.path.names[1]), stringsAsFactors = F)
 
-W1.file.path.names <- W1.file.path.names[-1]
-W1.use.these.data.files <- W1.use.these.data.files[-1]
+#Making csv with all subjects data
+
+```{r, include=FALSE}
+#Because thius was run aleady we can load the data at the bottom of this code chunk
+
+#taskData1 <- read.csv((file.path.names[1]), stringsAsFactors = F)
+
+#file.path.names[1]
+#taskData <- read.csv((file.path.names[1]), stringsAsFactors = F)
+all.use.these.data.files <- c(W1.use.these.data.files,W2.use.these.data.files)
+
+#write.table(all.use.these.data.files, file = "all.file.names_11.16.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
+(all.use.these.data.files)
+length(all.use.these.data.files)
+
+length(W1.use.these.data.files)
+length(W2.use.these.data.files)
+#
+# 242+48
+#
+both.waves.file.path.name <- c(W1.file.path.names, W2.file.path.names)
+write.table(both.waves.file.path.name, file = "all.file.paths_11.16.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
+#
+length(both.waves.file.path.name)
+#
+write.table(both.waves.file.path.name, file = "both.waves.file.paths_11.16.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
+#
+taskData <- read.csv((both.waves.file.path.name[1]), stringsAsFactors = F)
+unique(taskData$participant)
+length(taskData$participant)
+both.waves.file.path.name <- both.waves.file.path.name[-1]
+all.use.these.data.files <- all.use.these.data.files[-1]
+both.waves.file.path.name[242]
+taskData3 <- read.csv((both.waves.file.path.name[242]), stringsAsFactors = F)
+length(taskData3$participant)
 
 
-for(i in 1:length(W1.file.path.names)){
-  subData <- read.csv(W1.file.path.names[i])
+#dirTask <- "/Users/chelseaharmon/Dropbox/danlab/Tasks/motorSequenceLearning/sequenceLearning/data/V1W1/"
+#use.these.data.files <- use.these.data.files[-1]
+length(all.use.these.data.files)
+length(both.waves.file.path.name)
+both.waves.file.path.name
+2:length(both.waves.file.path.name)
+length(taskData$participant)
+
+length(both.waves.file.path.name)
+i=2
+both.waves.file.path.name[1]
+both.waves.file.path.name[1]
+
+for(i in 2:length(both.waves.file.path.name)){
+  subData <- read.csv(both.waves.file.path.name[i])
   taskData <- plyr::rbind.fill(taskData, subData)
 }
 
 
+head(taskData)
+length(unique(taskData$participant))
+table(taskData$participant)
+
+length(both.waves.file.path.name)
 (unique(taskData$participant))
+(length(unique(taskData$participant)))
 
 
-
-#renaming subjects who were mis-entered 
+#Renaming strangely named participants
 taskData$participant[taskData$participant=="PA101"] <- 101
 taskData$participant[taskData$participant=="PA246"] <- 246
 taskData$participant[taskData$participant=="PA325"] <- 325
 taskData$participant[taskData$participant=="PA326"] <- 326
 taskData$participant[taskData$participant=="PA246"] <- 246
-#taskData$participant[taskData$participant=="PA008"] <- 8
-#taskData$participant[taskData$participant=="PA010_V2W2"] <- 10
-#taskData$participant[taskData$participant=="PA025"] <- 25
-#taskData$participant[taskData$participant=="pa034"] <- 34
-#taskData$participant[taskData$participant=="PA070_V2W2"] <- 70
+taskData$participant[taskData$participant=="PA008"] <- 008
+taskData$participant[taskData$participant=="PA010_V2W2"] <- 010
+taskData$participant[taskData$participant=="PA025"] <- 025
+taskData$participant[taskData$participant=="pa034"] <- 034
+taskData$participant[taskData$participant=="PA070_V2W2"] <- 070
 
-write.csv(taskData, file= "Wave1RawData_12.03.21.csv", row.names = F)
+#repeated data PA006 PA031 PA058 PA059 PA060 PA061 PA069
 
-```
+names(taskData)
 
-#Making csv with all subjects data
-
-```{r, include=FALSE}
-#Because thius was run aleady we can load the data at the bottom of this code chunk 
-#
-# #taskData1 <- read.csv((file.path.names[1]), stringsAsFactors = F)
-# 
-# #file.path.names[1]
-# #taskData <- read.csv((file.path.names[1]), stringsAsFactors = F)
-# all.use.these.data.files <- c(W1.use.these.data.files,W2.use.these.data.files)
-# 
-# #write.table(all.use.these.data.files, file = "all.file.names_11.16.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
-# (all.use.these.data.files)
-# length(W1.use.these.data.files) 
-# length(W2.use.these.data.files)
-# 
-# 242+48
-# 
-# both.waves.file.path.name <- c(W1.file.path.names, W2.file.path.names)
-# #write.table(both.waves.file.path.name, file = "all.file.paths_11.16.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
-# 
-# length(both.waves.file.path.name)
-# 
-# #write.table(both.waves.file.path.name, file = "both.waves.file.paths_11.16.21.txt", quote = F, row.names = F, col.names = F, sep = ",")
-# 
-# taskData <- read.csv((both.waves.file.path.name[1]), stringsAsFactors = F)
-# 
-# both.waves.file.path.name <- both.waves.file.path.name[-1]
-# all.use.these.data.files <- all.use.these.data.files[-1]
-# 
-# 
-# #dirTask <- "/Users/chelseaharmon/Dropbox/danlab/Tasks/motorSequenceLearning/sequenceLearning/data/V1W1/"
-# #use.these.data.files <- use.these.data.files[-1]
-# all.use.these.data.files
-# both.waves.file.path.name
-# 
-# 
-# for(i in 1:length(both.waves.file.path.name)){
-#   subData <- read.csv(both.waves.file.path.name[i])
-#   taskData <- plyr::rbind.fill(taskData, subData)
-# }
-# 
-# 
-# length(taskData)
-# length(unique(taskData$participant))
-# (unique(taskData$participant))
-# (length(unique(taskData$participant)))
-# 
-#
-##Renaming strangely named participants 
-# taskData$participant[taskData$participant=="PA101"] <- 101
-# taskData$participant[taskData$participant=="PA246"] <- 246
-# taskData$participant[taskData$participant=="PA325"] <- 325
-# taskData$participant[taskData$participant=="PA326"] <- 326
-# taskData$participant[taskData$participant=="PA246"] <- 246
-# taskData$participant[taskData$participant=="PA008"] <- 008
-# taskData$participant[taskData$participant=="PA010_V2W2"] <- 010
-# taskData$participant[taskData$participant=="PA025"] <- 025
-# taskData$participant[taskData$participant=="pa034"] <- 034
-# taskData$participant[taskData$participant=="PA070_V2W2"] <- 070
-# 
-# #repeated data PA006 PA031 PA058 PA059 PA060 PA061 PA069
-# 
-# names(taskData)
-
+#formerly (with extra PA003 data doulbes (off by 1 error) )
 #write.csv(taskData, file= "all.subject.task.data_11.16.21.csv", row.names = F)
-taskData <- read.csv("all.subject.task.data_11.16.21.csv")
+#taskData <- read.csv("all.subject.task.data_11.16.21.csv")
+
+
+#new 
+write.csv(taskData, file= "all.subject.task.data_07.18.22.csv", row.names = F)
+taskData <- read.csv("all.subject.task.data_07.18.22.csv")
+
+
 length(unique(taskData$participant))
 
+
+table(taskData$participant)
+
 count(taskData$participant)
+
+unique(taskData[taskData$participant=="3",]$date)
+
+length(taskData[taskData$participant=="3",]$date)
+
+table(taskData$participant)
+
+
+unique(taskData[taskData$participant=="6",]$date)
+
+unique(taskData[taskData$participant=="61",]$date)
+length(taskData[taskData$participant=="61",]$date)
 
 #View(taskData)
 #IMPORTANT: Demographic data should be merged with subject data AFTER separating into block - In this script we seperate pre and post touch screen data into blocks - look at SequenceFixingDemographicsAndModelsCorrectBlock1.19.2022.Rmd for next step of adding demographics - 
@@ -284,6 +289,8 @@ taskData <- taskData[!taskData$participant=="98",]
 taskData <- taskData[!taskData$participant=="127",]
 taskData <- taskData[!taskData$participant=="136",]
 taskData <- taskData[!taskData$participant=="86",]
+taskData <- taskData[!taskData$participant=="89",]
+
 
 
 length(unique(taskData$participant))
@@ -313,12 +320,13 @@ length(unique(taskData$participant[taskData$PreTouchByDate==0]))
 taskDataTouch <- taskData[taskData$PreTouchByDate==1,]
 taskData <- taskData[taskData$PreTouchByDate==0,]
 
-(unique(taskDataTouch$participant))
+length(unique(taskDataTouch$participant))
 length(unique(taskData$participant))
 head(taskDataTouch)
 
-#write.csv(taskData, file= "post_touchscreen.task.data_11.16.21.csv", row.names = F)
-#write.csv(taskDataTouch, file= "pre_touchscreen.task.data_11.16.21.csv", row.names = F)
+
+write.csv(taskData, file= "post_touchscreen.task.data_11.16.21.csv", row.names = F)
+write.csv(taskDataTouch, file= "pre_touchscreen.task.data_11.16.21.csv", row.names = F)
 
 ```
 
@@ -465,6 +473,8 @@ write.csv(taskDataPreTouch, "dataPreTouchCleaned1.28.2022.csv", row.names=F)
 
 table(taskDataPreTouch$participant, taskDataPreTouch$Group)
 
+
+
 #What are anticipatory responses that are incorrect??? 
 
 ```
@@ -521,6 +531,7 @@ length(subject75data$repetitionNumber)
 subject31data <- taskData[(taskData$participant==31),]
 length(subject75data$repetitionNumber)
 
+
 #table(taskData$participant, taskData$pawPatrol1) >337
 #table(taskData$participant, taskData$pawPatrol1) 
 
@@ -543,7 +554,7 @@ taskData$TrialNum <- sequence(rle(taskData$participant)$lengths)
 
 unique(taskData$TrialNum)
 
-
+taskData
 # taskDataNoOutliers <- taskData[taskData$responseTimeCorrect < 100,]
 # 
 # ggplot(data=taskDataNoOutliers, aes(TrialNum, responseTimeCorrect, group=participant, color=participant)) + 
@@ -607,6 +618,28 @@ unique(taskData$participant)
 
 table(taskData$participant, taskData$Group)
 
+head(taskData)
+
+summaryRT <- taskData %>% 
+  group_by(Group) %>% 
+  summarise_at(vars(responseTimeCorrect), funs(mean(., na.rm=TRUE), sd(., na.rm=T))) 
+head(summaryRT)
+
+
+ggplot(data=summaryRT, aes(Group, mean)) +
+  geom_point()
+
+summaryRT <- taskData %>% 
+  group_by(participant,Group) %>% 
+  summarise_at(vars(responseTimeCorrect), funs(mean(., na.rm=TRUE), sd(., na.rm=T))) 
+head(summaryRT)
+
+
+ggplot(data=summaryRT, aes(Group, mean)) +
+  geom_point()
+
+
+
 #What are anticipatory responses that are incorrect??? 
 ```
 
@@ -648,21 +681,21 @@ taskDataSubj3
 unique(taskDataSubj3$session)
 
 
-taskDataSubj3$trialnumall <- 1:640
-taskDataSubj3[1:320,]$trialnumall <- 0
-taskDataSubj3[321:640,]$trialnumall <- 1
-taskDataSubj3 %>% 
-  group_by(trialnumall, Group) %>%
-  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE)))
+#taskDataSubj3$trialnumall <- 1:640
+#taskDataSubj3[1:320,]$trialnumall <- 0
+#taskDataSubj3[321:640,]$trialnumall <- 1
+#taskDataSubj3 %>% 
+#  group_by(trialnumall, Group) %>%
+#  summarise_at(vars(responseTimeCorrect),funs(mean(., na.rm=TRUE)))
 
 #data was repeated 2x (they are the same) because there was an extra data collected o6/27/2019 where no data was actually collected. Here I am going to remove the repeated trials 321-640
 
-taskDataSubj3 <- taskDataSubj3[taskDataSubj3$trialnumall==0,]
-length(taskDataSubj3)
-taskData <- taskData[!taskData$participant=='3',] 
+#taskDataSubj3 <- taskDataSubj3[taskDataSubj3$trialnumall==0,]
+#length(taskDataSubj3)
+#taskData <- taskData[!taskData$participant=='3',] 
 
 
-taskDataSubj3 <- taskDataSubj3[,1:26]
+#taskDataSubj3 <- taskDataSubj3[,1:26]
 
 
 table(taskData$participant, taskData$Group)
@@ -722,6 +755,7 @@ taskData %>%
 unique(taskData[which(taskData$session==2),]$participant)
 unique(taskData$PreTouchByDate)
 unique(taskDataPreTouch$PreTouchByDate)
+
 ```
 
 ```{r}
@@ -752,10 +786,52 @@ taskDataPreTouchSubset <- taskDataPreTouch %>%
   subset(select=c('participant', 'date1', 'stimulusPresent.t', 'repetitionNumber', 'anticipatoryResponse', 'responseTimeCorrect', 'responseTimeIncorrect', 'trialIncorrect', 'PreTouchByDate', 'TrialNum', 'Block'))
 
 allTaskData<- rbind(taskDataSubset, taskDataPreTouchSubset)
+head(allTaskData)
 
 
+class(allTaskData$responseTimeCorrect)
 
+allTaskData$responseTimeCorrect <- as.numeric(allTaskData$responseTimeCorrect)
+
+summaryRT <- allTaskData %>% 
+  group_by(participant, Block) %>% 
+  summarise_at(vars(responseTimeCorrect), funs(mean(., na.rm=TRUE), sd(., na.rm=T))) %>% 
+  merge(allTaskData, .,)
+head(summaryRT)
+
+ggplot(data=summaryRT, aes(Block, mean)) +
+  geom_point()
+
+allTaskData$trialIncorrectCoded <- ifelse(is.na(allTaskData$responseTimeIncorrect), 0, 1)
+
+
+summaryRT <- allTaskData %>% 
+  filter(trialIncorrectCoded==1) %>%
+  group_by(participant, Block) %>% 
+  summarise_at(vars(responseTimeCorrect), funs(mean(., na.rm=TRUE), sd(., na.rm=T))) %>% 
+  merge(allTaskData, .,)
+head(summaryRT)
+
+ggplot(data=summaryRT, aes(Block, mean)) +
+  geom_point()
 write.csv(allTaskData, "allTaskDataCleaned1.28.2022.csv", row.names=F)
+
+```
+
+#Moved this to above! 
+#Removing additional subject after realizing they compelted incorrect version of task 
+```{r}
+# taskData <- read.csv("allTaskDataCleaned_withDemo1.28.2022.csv")
+# unique(taskData$participant)
+# length(taskData)
+# length(taskData$participant) #85760
+# 
+# taskData <- taskData[!taskData$participant==89,]
+# length(taskData$participant)
+# length(taskData)
+# 
+# 85760-85440
+# write.csv(taskData, "allTaskDataCleaned6.22.2022.csv", row.names=F)
 
 ```
 
