@@ -22,7 +22,7 @@ dataPreTouchCleaned1.28.2022.csv
 questionnaireDataPretTouchCleaned1.28.2022.csv
 
 
-# Getting demographic data and Plottinng 
+# Getting demographic data and Plotting 
 (see SequenceFixingDemographicsAndModelsCorrectBlock1.19.2022.Rmd for Frequentist models before prospectus and sequencePlottingAndAnalyses01.27.2022.Rmd for set up of Bayesian models after prospectus) 
 
 
