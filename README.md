@@ -84,4 +84,49 @@ pred.data.fill <- cbind(pred.data, fitted(brms_1, re_formula=NULL))
 
 ```
 
+#Running brms on docker on Ginsburg server
+https://confluence.columbia.edu/confluence/display/rcs/Ginsburg+-+Job+Examples
+
+```.bash
+ssh -Y cmh2228@ginsburg.rcs.columbia.edu
+
+cd /burg/psych/users/cmh2228/sequenceLearning
+
+#Copy files from elvis 
+scp charmon@elvis.psych.columbia.edu:/danl/Collaborations/Harmon_SeqLearn/sequenceLearning/sequenceLearning/task_data_EF_11.02.22.csv . 
+scp charmon@elvis.psych.columbia.edu:/danl/Collaborations/Harmon_SeqLearn/sequenceLearning/sequenceLearning/EF_T.csv . 
+scp charmon@elvis.psych.columbia.edu:/danl/Collaborations/Harmon_SeqLearn/sequenceLearning/sequenceLearning/brms_EF.R . 
+
+#Add the following to top of brms_EF.R script: 
+#!/bin/sh
+
+#SBATCH --account=psych
+#SBATCH --job-name=sequenceLearning_brms
+#SBATCH -c 1
+#SBATCH --time=48:30:00
+#SBATCH --mem-per-cpu=32gb
+
+#check status of the job
+sacct
+
+#view job  
+nano slurm*
+
+#Installing singularity
+#https://docs.sylabs.io/guides/2.6/user-guide/quick_start.html
+
+git clone https://github.com/sylabs/singularity.git
+cd singularity
+git fetch --all
+git checkout 2.6.1
+./autogen.sh
+./configure --prefix=/usr/local # didn't work fully 
+make #didn't work fully 
+sudo make install #didn't work fully 
+
+singularity pull docker://ghcr.io/jbris/stan-cmdstanr-docker:latest #didn't work --no singularity command 
+#reached out to rcs 7/19/23
+
+```
+
 
