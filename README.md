@@ -65,7 +65,7 @@ summary(brms_1)
 save(brms_1, file = "brms_1.RData")
 ```
 
-#Plotting the model predictions
+# Plotting the model predictions
 
 ```.R
 {r}
@@ -84,7 +84,7 @@ pred.data.fill <- cbind(pred.data, fitted(brms_1, re_formula=NULL))
 
 ```
 
-#Running brms on docker on Ginsburg server
+# Running brms on docker on Ginsburg server
 https://confluence.columbia.edu/confluence/display/rcs/Ginsburg+-+Job+Examples
 
 ```.bash
